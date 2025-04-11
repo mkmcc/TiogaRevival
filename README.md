@@ -63,11 +63,12 @@ brew install gsl cairo pango pkg-config
 * A sample of [research figures](https://mikemccourt.com/figure-gallery/) from my astronomy papers.
 * A [lunar calendar](https://github.com/mkmcc/moon-poster) that I made for planning night hikes.
 * Some [research posters](https://github.com/mkmcc/Posters) that I made in grad school.
+* If you're interested in more examples, I have code for a number of my plots [here](https://github.com/mkmcc/TiogaPlots).
 
 
 ## Has this been tested?
 
-Not extensively, no.
+Not really, no.  And neither do I know how to code in Ruby.
 But it has allowed me to remake plots from my thesis, website, and my research posters, without issue.
 I haven't been able to build for nearly a decade.
 And if you're looking at this repo, you're probably desperate to be able to use some old work of yours.
