@@ -1,0 +1,14 @@
+This is the README for the Tioga samples folder.
+
+The samples can serve both as a tutorial and a source of code
+fragments to provide a start on writing your own Tioga documents.
+
+The "sine.rb" file is used in the Tutorial.
+
+The "figures" folder has the most basic stuff.
+
+Next comes "plots" which extends the discussion to the methods
+needed to make plots.
+
+For more information and a suggested exploration path, see
+the Tutorial in the Tioga documentation.

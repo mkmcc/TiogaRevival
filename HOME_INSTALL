@@ -1,0 +1,18 @@
+#! /bin/sh 
+set -e
+if [ -z "$HOME_LIB" ]; then
+    HOME_LIB=$HOME/lib/ruby
+fi
+if [ -z "$RUBY" ]; then
+    RUBY=ruby
+fi
+
+$RUBY setup.rb config --prefix=$HOME --siteruby=$HOME_LIB \
+    --siterubyver=$HOME_LIB \
+    --siterubyverarch=$HOME_LIB
+$RUBY setup.rb setup 
+$RUBY setup.rb install
+export RUBYLIB=$HOME_LIB
+cd tests 
+$RUBY ts_Tioga.rb 
+echo "Don't" 'forget to set RUBYLIB='"$HOME_LIB"' in your shell config file !'

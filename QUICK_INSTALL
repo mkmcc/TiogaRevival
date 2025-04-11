@@ -1,0 +1,10 @@
+#! /bin/sh 
+set -e
+if [ -z "$RUBY" ]; then
+    RUBY=ruby
+fi
+$RUBY setup.rb config 
+$RUBY setup.rb setup 
+$RUBY setup.rb install
+cd tests 
+$RUBY ts_Tioga.rb 
