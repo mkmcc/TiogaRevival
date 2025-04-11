@@ -66,6 +66,12 @@ brew install gsl cairo pango pkg-config
 * If you're interested in more examples, I have code for a number of my plots [here](https://github.com/mkmcc/TiogaPlots).
 
 
+## Where is the Tioga documentation
+
+Just in case, I made a copy of the official documentation and added it to this repo.
+It is under the folder `docs/`, and mirrored here: [Offline RDoc Documentation](https://mikemccourt.com/TiogaRevival/)
+
+
 ## Has this been tested?
 
 Not really, no.  And neither do I know how to code in Ruby.
