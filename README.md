@@ -68,6 +68,8 @@ brew install gsl cairo pango pkg-config
 
 ## Where is the Tioga documentation
 
+The official documentation is on [sourceforge](https://tioga.sourceforge.net/doc/).
+
 Just in case, I made a copy of the official documentation and added it to this repo.
 It is under the folder `docs/`, and mirrored here: [Offline RDoc Documentation](https://mikemccourt.com/TiogaRevival/)
 
