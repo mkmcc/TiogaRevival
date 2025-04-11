@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>module Tioga::ColorConstants - RDoc Documentation</title>
+
+<link href="../fonts.css" rel="stylesheet">
+<link href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/search_index.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/searcher.js"></script>
+<script src="../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="module">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="ColorConstants.html#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="ColorConstants.html#module-Tioga::ColorConstants-label-Color+names">Color names</a>
+    <li><a href="ColorConstants.html#module-Tioga::ColorConstants-label-Concerning+the+use+of+colors+in+plots">Concerning the use of colors in plots</a>
+  </ul>
+</div>
+
+
+  <div id="class-metadata">
+    
+    
+    
+    
+    
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="module-Tioga::ColorConstants">
+  <h1 id="module-Tioga::ColorConstants" class="module">
+    module Tioga::ColorConstants
+  </h1>
+
+  <section class="description">
+    
+<h1 id="module-Tioga::ColorConstants-label-Color+names">Color names<span><a href="ColorConstants.html#module-Tioga::ColorConstants-label-Color+names">&para;</a> <a href="ColorConstants.html#documentation">&uarr;</a></span></h1>
+
+<p>The table at the end of this webpage has about 200 color names and the
+corresponding red-green-blue triples of intensities.  These color names can
+be used wherever a color is called for in tioga. To use the same colors in
+text, your TeX preamble should have the following:</p>
+
+<pre>\include{color_names}</pre>
+
+<p>The file <code>color_names.tex</code> is included in the tioga download and
+defines the full set of color names given below.  To set some text in
+color, simply use something like the following:</p>
+
+<pre>\textcolor{Crimson}{This will appear in crimson.}</pre>
+
+<p>By the way, if you want to use color_names.tex, but don&#39;t want copies
+of it scattered around, you can put it in a directory that is on the LaTeX
+search path.  Check your system for details.  On Linux, I believe you can
+“export” the path to TEXINPUTS.  On the Mac, you can try putting the file
+in ~/Library/texmf/tex/latex. Then add the needed line to your TeX files by
+doing this in your initialize method for the plots:</p>
+
+<pre>t.tex_preamble += &quot;\n\\include{color_names}\n&quot;</pre>
+
+<p>In addition to the list of predefined color names, there is a table below
+giving a small sample of each color.</p>
+<hr>
+
+<h1 id="module-Tioga::ColorConstants-label-Concerning+the+use+of+colors+in+plots">Concerning the use of colors in plots<span><a href="ColorConstants.html#module-Tioga::ColorConstants-label-Concerning+the+use+of+colors+in+plots">&para;</a> <a href="ColorConstants.html#documentation">&uarr;</a></span></h1>
+
+<p>When you pick colors for your plots, keep in mind that color deficiency,
+commonly known as “color blindness”, is a common genetic trait.  People
+with color deficiency are not blind to colors, they simply don&#39;t
+distinguish as many different colors as someone with normal color vision. 
+For example, reds and greens might be the same (“reens” or “geds”?) and
+only brightness would show up as different.  But the reds/greens would
+still appear to be different colors than the blues.</p>
+
+<p>Two common forms of color deficiency are called “protanopia” and
+“deuteranopia”.  Here&#39;s how they are described on the website <a
+href="http://colorvisiontesting.com/color2.htm">What Is Colorblindness</a>.</p>
+<ul><li>
+<p>For the protanope, the brightness of red, orange, and yellow is much
+reduced compared to normal. This dimming can be so pronounced that reds may
+be confused with black or dark gray, and red traffic lights may appear to
+be extinguished. They may learn to distinguish reds from yellows and from
+greens primarily on the basis of their apparent brightness or lightness,
+not on any perceptible hue difference. <a
+href="ColorConstants.html#Violet">Violet</a>, lavender, and purple are
+indistinguishable from various shades of blue because their reddish
+components are so dimmed as to be invisible. E.g. <a
+href="ColorConstants.html#Pink">Pink</a> flowers, reflecting both red light
+and blue light, may appear just blue to the protanope.</p>
+</li></ul>
+
+<p><img src="../images/normalcolor72gif.png" /> <img
+src="../images/protanope72gif.png" /></p>
+<ul><li>
+<p>The deuteranope suffers the same hue discrimination problems as the
+protanope, but without the abnormal dimming. The names red, orange, yellow,
+and green really mean very little to him aside from being different names
+that every one else around him seems to be able to agree on. Similarly,
+violet, lavender, purple, and blue, seem to be too many names to use
+logically for hues that all look alike to him.</p>
+</li></ul>
+
+<p><img src="../images/normalcolor72gif.png" /> <img
+src="../images/deuteranope72gif.png" /></p>
+<hr>
+
+<p>To be considerate of your color deficient friends, pick color sets that are
+distinguishable for them too. Here&#39;s an example of a plot using six
+colors. In the first version on the left, the colors of the lines are <a
+href="ColorConstants.html#BrightBlue">BrightBlue</a>, <a
+href="ColorConstants.html#Goldenrod">Goldenrod</a>, <a
+href="ColorConstants.html#Coral">Coral</a>, <a
+href="ColorConstants.html#Lilac">Lilac</a>, <a
+href="ColorConstants.html#FireBrick">FireBrick</a>, and <a
+href="ColorConstants.html#RoyalPurple">RoyalPurple</a>. The lower left
+version uses the often seen combination of red, green, blue, cyan, magenta,
+and yellow.</p>
+
+<p>On the right are the same plots as they might appear to someone with
+protanopia (made using <a
+href="http://www.vischeck.com/vischeck/vischeckURL.php">VischeckURL</a> – a
+very useful site).</p>
+
+<p><img src="../images/color_choices.png" /></p>
+
+<p>By using the first set of colors rather than the second, you get a plot
+that looks good for those in your audience with normal color vision and is
+much easier on those with a color deficiency. Why not do it?</p>
+<hr>
+<hr>
+
+<p><img src="../images/colors1.png" /></p>
+
+<p><img src="../images/colors2.png" /></p>
+
+<p><img src="../images/colors3.png" /></p>
+
+<p><img src="../images/colors4.png" /></p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <section class="constants-list">
+      <header>
+        <h3>Constants</h3>
+      </header>
+      <dl>
+      
+        <dt id="AliceBlue">AliceBlue
+        
+        <dd>
+        
+      
+        <dt id="AntiqueWhite">AntiqueWhite
+        
+        <dd>
+        
+      
+        <dt id="Aqua">Aqua
+        
+        <dd>
+        
+      
+        <dt id="Aquamarine">Aquamarine
+        
+        <dd>
+        
+      
+        <dt id="Avocado">Avocado
+        
+        <dd>
+        
+      
+        <dt id="Azure">Azure
+        
+        <dd>
+        
+      
+        <dt id="Beige">Beige
+        
+        <dd>
+        
+      
+        <dt id="Bisque">Bisque
+        
+        <dd>
+        
+      
+        <dt id="Black">Black
+        
+        <dd>
+        
+      
+        <dt id="BlanchedAlmond">BlanchedAlmond
+        
+        <dd>
+        
+      
+        <dt id="Blue">Blue
+        
+        <dd>
+        
+      
+        <dt id="BlueGreen">BlueGreen
+        
+        <dd>
+        
+      
+        <dt id="BlueViolet">BlueViolet
+        
+        <dd>
+        
+      
+        <dt id="BrickRed">BrickRed
+        
+        <dd>
+        
+      
+        <dt id="BrightBlue">BrightBlue
+        
+        <dd>
+        
+      
+        <dt id="BrightPink">BrightPink
+        
+        <dd>
+        
+      
+        <dt id="Brown">Brown
+        
+        <dd>
+        
+      
+        <dt id="Burgundy">Burgundy
+        
+        <dd>
+        
+      
+        <dt id="BurlyWood">BurlyWood
+        
+        <dd>
+        
+      
+        <dt id="CadetBlue">CadetBlue
+        
+        <dd>
+        
+      
+        <dt id="Cement">Cement
+        
+        <dd>
+        
+      
+        <dt id="Chartreuse">Chartreuse
+        
+        <dd>
+        
+      
+        <dt id="Chiffon">Chiffon
+        
+        <dd>
+        
+      
+        <dt id="Chocolate">Chocolate
+        
+        <dd>
+        
+      
+        <dt id="Coral">Coral
+        
+        <dd>
+        
+      
+        <dt id="CornflowerBlue">CornflowerBlue
+        
+        <dd>
+        
+      
+        <dt id="Cornsilk">Cornsilk
+        
+        <dd>
+        
+      
+        <dt id="Crimson">Crimson
+        
+        <dd>
+        
+      
+        <dt id="Cyan">Cyan
+        
+        <dd>
+        
+      
+        <dt id="DarkBlue">DarkBlue
+        
+        <dd>
+        
+      
+        <dt id="DarkChocolate">DarkChocolate
+        
+        <dd>
+        
+      
+        <dt id="DarkCyan">DarkCyan
+        
+        <dd>
+        
+      
+        <dt id="DarkGoldenrod">DarkGoldenrod
+        
+        <dd>
+        
+      
+        <dt id="DarkGray">DarkGray
+        
+        <dd>
+        
+      
+        <dt id="DarkGreen">DarkGreen
+        
+        <dd>
+        
+      
+        <dt id="DarkGrey">DarkGrey
+        
+        <dd>
+        
+      
+        <dt id="DarkKhaki">DarkKhaki
+        
+        <dd>
+        
+      
+        <dt id="DarkLavender">DarkLavender
+        
+        <dd>
+        
+      
+        <dt id="DarkMagenta">DarkMagenta
+        
+        <dd>
+        
+      
+        <dt id="DarkOliveGreen">DarkOliveGreen
+        
+        <dd>
+        
+      
+        <dt id="DarkOrange">DarkOrange
+        
+        <dd>
+        
+      
+        <dt id="DarkOrchid">DarkOrchid
+        
+        <dd>
+        
+      
+        <dt id="DarkPeriwinkle">DarkPeriwinkle
+        
+        <dd>
+        
+      
+        <dt id="DarkPurpleBlue">DarkPurpleBlue
+        
+        <dd>
+        
+      
+        <dt id="DarkRed">DarkRed
+        
+        <dd>
+        
+      
+        <dt id="DarkRoyalBlue">DarkRoyalBlue
+        
+        <dd>
+        
+      
+        <dt id="DarkSalmon">DarkSalmon
+        
+        <dd>
+        
+      
+        <dt id="DarkSeaGreen">DarkSeaGreen
+        
+        <dd>
+        
+      
+        <dt id="DarkSlateBlue">DarkSlateBlue
+        
+        <dd>
+        
+      
+        <dt id="DarkSlateGray">DarkSlateGray
+        
+        <dd>
+        
+      
+        <dt id="DarkSlateGrey">DarkSlateGrey
+        
+        <dd>
+        
+      
+        <dt id="DarkSmoke">DarkSmoke
+        
+        <dd>
+        
+      
+        <dt id="DarkTurquoise">DarkTurquoise
+        
+        <dd>
+        
+      
+        <dt id="DarkViolet">DarkViolet
+        
+        <dd>
+        
+      
+        <dt id="DeepPink">DeepPink
+        
+        <dd>
+        
+      
+        <dt id="DeepSkyBlue">DeepSkyBlue
+        
+        <dd>
+        
+      
+        <dt id="DimGray">DimGray
+        
+        <dd>
+        
+      
+        <dt id="DimGrey">DimGrey
+        
+        <dd>
+        
+      
+        <dt id="DodgerBlue">DodgerBlue
+        
+        <dd>
+        
+      
+        <dt id="FireBrick">FireBrick
+        
+        <dd>
+        
+      
+        <dt id="FloralWhite">FloralWhite
+        
+        <dd>
+        
+      
+        <dt id="ForestGreen">ForestGreen
+        
+        <dd>
+        
+      
+        <dt id="Fuchsia">Fuchsia
+        
+        <dd>
+        
+      
+        <dt id="Gainsboro">Gainsboro
+        
+        <dd>
+        
+      
+        <dt id="GhostWhite">GhostWhite
+        
+        <dd>
+        
+      
+        <dt id="Gold">Gold
+        
+        <dd>
+        
+      
+        <dt id="GoldenBrown">GoldenBrown
+        
+        <dd>
+        
+      
+        <dt id="Goldenrod">Goldenrod
+        
+        <dd>
+        
+      
+        <dt id="GrassGreen">GrassGreen
+        
+        <dd>
+        
+      
+        <dt id="Gray">Gray
+        
+        <dd>
+        
+      
+        <dt id="GrayBlue">GrayBlue
+        
+        <dd>
+        
+      
+        <dt id="Green">Green
+        
+        <dd>
+        
+      
+        <dt id="GreenYellow">GreenYellow
+        
+        <dd>
+        
+      
+        <dt id="Grey">Grey
+        
+        <dd>
+        
+      
+        <dt id="Honeydew">Honeydew
+        
+        <dd>
+        
+      
+        <dt id="HotPink">HotPink
+        
+        <dd>
+        
+      
+        <dt id="IndianRed">IndianRed
+        
+        <dd>
+        
+      
+        <dt id="Indigo">Indigo
+        
+        <dd>
+        
+      
+        <dt id="Ivory">Ivory
+        
+        <dd>
+        
+      
+        <dt id="Khaki">Khaki
+        
+        <dd>
+        
+      
+        <dt id="Lavender">Lavender
+        
+        <dd>
+        
+      
+        <dt id="LavenderBlue">LavenderBlue
+        
+        <dd>
+        
+      
+        <dt id="LavenderBlush">LavenderBlush
+        
+        <dd>
+        
+      
+        <dt id="LawnGreen">LawnGreen
+        
+        <dd>
+        
+      
+        <dt id="LemonChiffon">LemonChiffon
+        
+        <dd>
+        
+      
+        <dt id="LightBlue">LightBlue
+        
+        <dd>
+        
+      
+        <dt id="LightBrightGreen">LightBrightGreen
+        
+        <dd>
+        
+      
+        <dt id="LightChartreuse">LightChartreuse
+        
+        <dd>
+        
+      
+        <dt id="LightCoral">LightCoral
+        
+        <dd>
+        
+      
+        <dt id="LightCrimson">LightCrimson
+        
+        <dd>
+        
+      
+        <dt id="LightCyan">LightCyan
+        
+        <dd>
+        
+      
+        <dt id="LightDullGreen">LightDullGreen
+        
+        <dd>
+        
+      
+        <dt id="LightGold">LightGold
+        
+        <dd>
+        
+      
+        <dt id="LightGrassGreen">LightGrassGreen
+        
+        <dd>
+        
+      
+        <dt id="LightGray">LightGray
+        
+        <dd>
+        
+      
+        <dt id="LightGreen">LightGreen
+        
+        <dd>
+        
+      
+        <dt id="LightGrey">LightGrey
+        
+        <dd>
+        
+      
+        <dt id="LightMustard">LightMustard
+        
+        <dd>
+        
+      
+        <dt id="LightOliveGreen">LightOliveGreen
+        
+        <dd>
+        
+      
+        <dt id="LightOrchid">LightOrchid
+        
+        <dd>
+        
+      
+        <dt id="LightPlum">LightPlum
+        
+        <dd>
+        
+      
+        <dt id="LightRose">LightRose
+        
+        <dd>
+        
+      
+        <dt id="LightSalmon">LightSalmon
+        
+        <dd>
+        
+      
+        <dt id="LightSandyBrown">LightSandyBrown
+        
+        <dd>
+        
+      
+        <dt id="LightSeaGreen">LightSeaGreen
+        
+        <dd>
+        
+      
+        <dt id="LightSienna">LightSienna
+        
+        <dd>
+        
+      
+        <dt id="LightSkyBlue">LightSkyBlue
+        
+        <dd>
+        
+      
+        <dt id="LightSlateGray">LightSlateGray
+        
+        <dd>
+        
+      
+        <dt id="LightSlateGrey">LightSlateGrey
+        
+        <dd>
+        
+      
+        <dt id="LightSteelBlue">LightSteelBlue
+        
+        <dd>
+        
+      
+        <dt id="LightTurquoise">LightTurquoise
+        
+        <dd>
+        
+      
+        <dt id="LightYellow">LightYellow
+        
+        <dd>
+        
+      
+        <dt id="LightYellowGreen">LightYellowGreen
+        
+        <dd>
+        
+      
+        <dt id="Lilac">Lilac
+        
+        <dd>
+        
+      
+        <dt id="Lime">Lime
+        
+        <dd>
+        
+      
+        <dt id="LimeGreen">LimeGreen
+        
+        <dd>
+        
+      
+        <dt id="Linen">Linen
+        
+        <dd>
+        
+      
+        <dt id="Magenta">Magenta
+        
+        <dd>
+        
+      
+        <dt id="Maroon">Maroon
+        
+        <dd>
+        
+      
+        <dt id="Mauve">Mauve
+        
+        <dd>
+        
+      
+        <dt id="MediumAquamarine">MediumAquamarine
+        
+        <dd>
+        
+      
+        <dt id="MediumBlue">MediumBlue
+        
+        <dd>
+        
+      
+        <dt id="MediumGreen">MediumGreen
+        
+        <dd>
+        
+      
+        <dt id="MediumOrange">MediumOrange
+        
+        <dd>
+        
+      
+        <dt id="MediumOrchid">MediumOrchid
+        
+        <dd>
+        
+      
+        <dt id="MediumPurple">MediumPurple
+        
+        <dd>
+        
+      
+        <dt id="MediumSeaGreen">MediumSeaGreen
+        
+        <dd>
+        
+      
+        <dt id="MediumSlateBlue">MediumSlateBlue
+        
+        <dd>
+        
+      
+        <dt id="MediumSpringGreen">MediumSpringGreen
+        
+        <dd>
+        
+      
+        <dt id="MediumTurquoise">MediumTurquoise
+        
+        <dd>
+        
+      
+        <dt id="MediumVioletRed">MediumVioletRed
+        
+        <dd>
+        
+      
+        <dt id="MidnightBlue">MidnightBlue
+        
+        <dd>
+        
+      
+        <dt id="MintCream">MintCream
+        
+        <dd>
+        
+      
+        <dt id="MistyRose">MistyRose
+        
+        <dd>
+        
+      
+        <dt id="Moccasin">Moccasin
+        
+        <dd>
+        
+      
+        <dt id="MustardSeed">MustardSeed
+        
+        <dd>
+        
+      
+        <dt id="NavajoWhite">NavajoWhite
+        
+        <dd>
+        
+      
+        <dt id="Navy">Navy
+        
+        <dd>
+        
+      
+        <dt id="OldLace">OldLace
+        
+        <dd>
+        
+      
+        <dt id="Olive">Olive
+        
+        <dd>
+        
+      
+        <dt id="OliveDrab">OliveDrab
+        
+        <dd>
+        
+      
+        <dt id="Orange">Orange
+        
+        <dd>
+        
+      
+        <dt id="OrangeRed">OrangeRed
+        
+        <dd>
+        
+      
+        <dt id="Orchid">Orchid
+        
+        <dd>
+        
+      
+        <dt id="PaleGoldenrod">PaleGoldenrod
+        
+        <dd>
+        
+      
+        <dt id="PaleGreen">PaleGreen
+        
+        <dd>
+        
+      
+        <dt id="PaleTurquoise">PaleTurquoise
+        
+        <dd>
+        
+      
+        <dt id="PaleVioletRed">PaleVioletRed
+        
+        <dd>
+        
+      
+        <dt id="PapayaWhip">PapayaWhip
+        
+        <dd>
+        
+      
+        <dt id="PeachPuff">PeachPuff
+        
+        <dd>
+        
+      
+        <dt id="Periwinkle">Periwinkle
+        
+        <dd>
+        
+      
+        <dt id="Peru">Peru
+        
+        <dd>
+        
+      
+        <dt id="Pink">Pink
+        
+        <dd>
+        
+      
+        <dt id="Plum">Plum
+        
+        <dd>
+        
+      
+        <dt id="PowderBlue">PowderBlue
+        
+        <dd>
+        
+      
+        <dt id="Pumpkin">Pumpkin
+        
+        <dd>
+        
+      
+        <dt id="Purple">Purple
+        
+        <dd>
+        
+      
+        <dt id="PurpleBlue">PurpleBlue
+        
+        <dd>
+        
+      
+        <dt id="PurpleGray">PurpleGray
+        
+        <dd>
+        
+      
+        <dt id="Red">Red
+        
+        <dd>
+        
+      
+        <dt id="RedBrown">RedBrown
+        
+        <dd>
+        
+      
+        <dt id="RedOrange">RedOrange
+        
+        <dd>
+        
+      
+        <dt id="Rose">Rose
+        
+        <dd>
+        
+      
+        <dt id="RosyBrown">RosyBrown
+        
+        <dd>
+        
+      
+        <dt id="RoyalBlue">RoyalBlue
+        
+        <dd>
+        
+      
+        <dt id="RoyalPurple">RoyalPurple
+        
+        <dd>
+        
+      
+        <dt id="SaddleBrown">SaddleBrown
+        
+        <dd>
+        
+      
+        <dt id="Saffron">Saffron
+        
+        <dd>
+        
+      
+        <dt id="Salmon">Salmon
+        
+        <dd>
+        
+      
+        <dt id="SalmonRed">SalmonRed
+        
+        <dd>
+        
+      
+        <dt id="SandyBrown">SandyBrown
+        
+        <dd>
+        
+      
+        <dt id="SeaGreen">SeaGreen
+        
+        <dd>
+        
+      
+        <dt id="Seashell">Seashell
+        
+        <dd>
+        
+      
+        <dt id="Sienna">Sienna
+        
+        <dd>
+        
+      
+        <dt id="Silver">Silver
+        
+        <dd>
+        
+      
+        <dt id="SkyBlue">SkyBlue
+        
+        <dd>
+        
+      
+        <dt id="SlateBlue">SlateBlue
+        
+        <dd>
+        
+      
+        <dt id="SlateGray">SlateGray
+        
+        <dd>
+        
+      
+        <dt id="SlateGrey">SlateGrey
+        
+        <dd>
+        
+      
+        <dt id="Smoke">Smoke
+        
+        <dd>
+        
+      
+        <dt id="Snow">Snow
+        
+        <dd>
+        
+      
+        <dt id="SoftYellow">SoftYellow
+        
+        <dd>
+        
+      
+        <dt id="SpringGreen">SpringGreen
+        
+        <dd>
+        
+      
+        <dt id="SteelBlue">SteelBlue
+        
+        <dd>
+        
+      
+        <dt id="Tan">Tan
+        
+        <dd>
+        
+      
+        <dt id="Teal">Teal
+        
+        <dd>
+        
+      
+        <dt id="Thistle">Thistle
+        
+        <dd>
+        
+      
+        <dt id="Tomato">Tomato
+        
+        <dd>
+        
+      
+        <dt id="Turquoise">Turquoise
+        
+        <dd>
+        
+      
+        <dt id="Violet">Violet
+        
+        <dd>
+        
+      
+        <dt id="WarmGray">WarmGray
+        
+        <dd>
+        
+      
+        <dt id="Wheat">Wheat
+        
+        <dd>
+        
+      
+        <dt id="White">White
+        
+        <dd>
+        
+      
+        <dt id="WhiteSmoke">WhiteSmoke
+        
+        <dd>
+        
+      
+        <dt id="Yellow">Yellow
+        
+        <dd>
+        
+      
+        <dt id="YellowGreen">YellowGreen
+        
+        <dd>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

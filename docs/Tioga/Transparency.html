@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Tioga::Transparency - RDoc Documentation</title>
+
+<link href="../fonts.css" rel="stylesheet">
+<link href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/search_index.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/searcher.js"></script>
+<script src="../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="Transparency.html#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Doc< FigureMaker
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="Transparency.html#method-i-fill_opacity">#fill_opacity</a>
+    
+    <li ><a href="Transparency.html#method-i-fill_transparency">#fill_transparency</a>
+    
+    <li ><a href="Transparency.html#method-i-opacity_for_fill">#opacity_for_fill</a>
+    
+    <li ><a href="Transparency.html#method-i-opacity_for_stroke">#opacity_for_stroke</a>
+    
+    <li ><a href="Transparency.html#method-i-stroke_opacity">#stroke_opacity</a>
+    
+    <li ><a href="Transparency.html#method-i-stroke_transparency">#stroke_transparency</a>
+    
+    <li ><a href="Transparency.html#method-i-transparency_for_fill">#transparency_for_fill</a>
+    
+    <li ><a href="Transparency.html#method-i-transparency_for_stroke">#transparency_for_stroke</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Tioga::Transparency">
+  <h1 id="class-Tioga::Transparency" class="class">
+    class Tioga::Transparency
+  </h1>
+
+  <section class="description">
+    
+<p>These are the attributes for using transparency in PDF graphics.  The
+transparency is speficied by a fraction, with 1.0 for fully transparent and
+0.0 for fully opaque.  Since transparency can also be thought of in terms
+of opacity, there are accessors defined in those terms also.  Thus, for
+example, setting <a
+href="Transparency.html#method-i-fill_opacity">#fill_opacity</a> to 0.2 is
+equivalent to setting <a
+href="Transparency.html#method-i-fill_transparency">#fill_transparency</a>
+to 0.8.</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-fill_opacity" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            fill_opacity
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            fill_opacity = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Defines the opacity to use for fill and other non-stroke graphics
+operations including images. Valid values are between 1.0 (fully opaque) to
+0.0 (fully transparent).  Default is 1.0 (opaque).</p>
+
+<p>Example: on left, <a
+href="Transparency.html#method-i-fill_opacity">#fill_opacity</a> = 1.0; on
+right <a href="Transparency.html#method-i-fill_opacity">#fill_opacity</a> =
+0.6</p>
+
+<p><img src="../images/Squares.png" /></p>
+          
+          
+
+          
+          <div class="method-source-code" id="fill_opacity-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Transparency.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fill_opacity</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-fill_transparency" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            fill_transparency
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            fill_transparency = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Defines the transparency to use for fill and other non-stroke graphics
+operations including images. Valid values are between 0.0 (fully opaque) to
+1.0 (fully transparent).  Default is 0.0 (opaque).</p>
+
+<p>Example: on left, <a
+href="Transparency.html#method-i-fill_transparency">#fill_transparency</a>
+= 0.0; on right <a
+href="Transparency.html#method-i-fill_transparency">#fill_transparency</a>
+= 0.4</p>
+
+<p><img src="../images/Squares.png" /></p>
+          
+          
+
+          
+          <div class="method-source-code" id="fill_transparency-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Transparency.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fill_transparency</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-opacity_for_fill" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            opacity_for_fill
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            opacity_for_fill = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Alias for fill_opacity.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="opacity_for_fill-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Transparency.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">opacity_for_fill</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-opacity_for_stroke" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            opacity_for_stroke
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            opacity_for_stroke = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Alias for stroke_opacity.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="opacity_for_stroke-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Transparency.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">opacity_for_stroke</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-stroke_opacity" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            stroke_opacity
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            stroke_opacity = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Defines the opacity to use for stroke operations. Valid values are between
+1.0 (fully opaque) to 0.0 (fully transparent).  Default is 1.0 (opaque).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="stroke_opacity-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Transparency.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stroke_opacity</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-stroke_transparency" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            stroke_transparency
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            stroke_transparency = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Defines the transparency to use for stroke operations. Valid values are
+between 0.0 (fully opaque) to 1.0 (fully transparent).  Default is 0.0
+(opaque).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="stroke_transparency-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Transparency.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stroke_transparency</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-transparency_for_fill" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            transparency_for_fill
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            transparency_for_fill = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Alias for fill_transparency.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="transparency_for_fill-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Transparency.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">transparency_for_fill</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-transparency_for_stroke" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            transparency_for_stroke
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            transparency_for_stroke = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Alias for stroke_transparency.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="transparency_for_stroke-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Transparency.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">transparency_for_stroke</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

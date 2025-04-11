@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Tioga::Arcs_and_Circles - RDoc Documentation</title>
+
+<link href="../fonts.css" rel="stylesheet">
+<link href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/search_index.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/searcher.js"></script>
+<script src="../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="Arcs_and_Circles.html#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Doc< FigureMaker
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="Arcs_and_Circles.html#method-i-append_arc_to_path">#append_arc_to_path</a>
+    
+    <li ><a href="Arcs_and_Circles.html#method-i-append_circle_to_path">#append_circle_to_path</a>
+    
+    <li ><a href="Arcs_and_Circles.html#method-i-append_oval_to_path">#append_oval_to_path</a>
+    
+    <li ><a href="Arcs_and_Circles.html#method-i-clip_circle">#clip_circle</a>
+    
+    <li ><a href="Arcs_and_Circles.html#method-i-clip_oval">#clip_oval</a>
+    
+    <li ><a href="Arcs_and_Circles.html#method-i-fill_and_stroke_circle">#fill_and_stroke_circle</a>
+    
+    <li ><a href="Arcs_and_Circles.html#method-i-fill_and_stroke_oval">#fill_and_stroke_oval</a>
+    
+    <li ><a href="Arcs_and_Circles.html#method-i-fill_circle">#fill_circle</a>
+    
+    <li ><a href="Arcs_and_Circles.html#method-i-fill_oval">#fill_oval</a>
+    
+    <li ><a href="Arcs_and_Circles.html#method-i-stroke_circle">#stroke_circle</a>
+    
+    <li ><a href="Arcs_and_Circles.html#method-i-stroke_oval">#stroke_oval</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Tioga::Arcs_and_Circles">
+  <h1 id="class-Tioga::Arcs_and_Circles" class="class">
+    class Tioga::Arcs_and_Circles
+  </h1>
+
+  <section class="description">
+    
+<p>These are the methods for creating and using arcs and circles in PDF
+graphics.</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-append_arc_to_path" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">append_arc_to_path</span><span
+            class="method-args">(x_start, y_start, x_corner, y_corner, x_end, y_end, dx, dy)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Like adding lines from <em>start</em> to <em>corner</em> to <em>end</em>,
+but with the corner rounded with a radius equal to the minimum of the
+actual output distances for <em>dx</em> and <em>dy</em>.</p>
+
+<p>The illustration shows in dark blue the arc that is added for the control
+points given in red.</p>
+
+<p><img src="../images/append_arc.png" /></p>
+          
+          
+
+          
+          <div class="method-source-code" id="append_arc_to_path-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Arcs_and_Circles.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">append_arc_to_path</span>(<span class="ruby-identifier">x_start</span>, <span class="ruby-identifier">y_start</span>, <span class="ruby-identifier">x_corner</span>, <span class="ruby-identifier">y_corner</span>, <span class="ruby-identifier">x_end</span>, <span class="ruby-identifier">y_end</span>, <span class="ruby-identifier">dx</span>, <span class="ruby-identifier">dy</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-append_circle_to_path" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">append_circle_to_path</span><span
+            class="method-args">(x, y, r)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Create a circle with center at (<em>x</em>, <em>y</em>) having radius
+<em>r</em> (given in x units).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="append_circle_to_path-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Arcs_and_Circles.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">append_circle_to_path</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">r</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-append_oval_to_path" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">append_oval_to_path</span><span
+            class="method-args">(x, y, dx, dy, angle)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Equivalent to the following: create a unit circle with center at
+(<em>x</em>, <em>y</em>), scale it by <em>dx</em> in the x direction, scale
+it by <em>dy</em> in the y direction, then rotate it counter-clockwise by
+<em>angle</em> degrees.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="append_oval_to_path-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Arcs_and_Circles.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">append_oval_to_path</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">dx</span>, <span class="ruby-identifier">dy</span>, <span class="ruby-identifier">angle</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-clip_circle" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">clip_circle</span><span
+            class="method-args">(x, y, r)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calls <a
+href="Arcs_and_Circles.html#method-i-append_circle_to_path">#append_circle_to_path</a>
+followed by clip.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="clip_circle-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Arcs_and_Circles.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clip_circle</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">r</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-clip_oval" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">clip_oval</span><span
+            class="method-args">(x, y, dx, dy, angle)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calls <a
+href="Arcs_and_Circles.html#method-i-append_oval_to_path">#append_oval_to_path</a>
+followed by clip.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="clip_oval-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Arcs_and_Circles.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clip_oval</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">dx</span>, <span class="ruby-identifier">dy</span>, <span class="ruby-identifier">angle</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-fill_and_stroke_circle" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">fill_and_stroke_circle</span><span
+            class="method-args">(x, y, r)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calls <a
+href="Arcs_and_Circles.html#method-i-append_circle_to_path">#append_circle_to_path</a>
+followed by fill_and_stroke.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="fill_and_stroke_circle-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Arcs_and_Circles.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fill_and_stroke_circle</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">r</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-fill_and_stroke_oval" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">fill_and_stroke_oval</span><span
+            class="method-args">(x, y, dx, dy, angle)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calls <a
+href="Arcs_and_Circles.html#method-i-append_oval_to_path">#append_oval_to_path</a>
+followed by fill_and_stroke.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="fill_and_stroke_oval-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Arcs_and_Circles.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fill_and_stroke_oval</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">dx</span>, <span class="ruby-identifier">dy</span>, <span class="ruby-identifier">angle</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-fill_circle" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">fill_circle</span><span
+            class="method-args">(x, y, r)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calls <a
+href="Arcs_and_Circles.html#method-i-append_circle_to_path">#append_circle_to_path</a>
+followed by fill.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="fill_circle-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Arcs_and_Circles.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fill_circle</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">r</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-fill_oval" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">fill_oval</span><span
+            class="method-args">(x, y, dx, dy, angle)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calls <a
+href="Arcs_and_Circles.html#method-i-append_oval_to_path">#append_oval_to_path</a>
+followed by fill.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="fill_oval-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Arcs_and_Circles.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fill_oval</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">dx</span>, <span class="ruby-identifier">dy</span>, <span class="ruby-identifier">angle</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-stroke_circle" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">stroke_circle</span><span
+            class="method-args">(x, y, r)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calls <a
+href="Arcs_and_Circles.html#method-i-append_circle_to_path">#append_circle_to_path</a>
+followed by stroke.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="stroke_circle-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Arcs_and_Circles.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stroke_circle</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">r</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-stroke_oval" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">stroke_oval</span><span
+            class="method-args">(x, y, dx, dy, angle)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calls <a
+href="Arcs_and_Circles.html#method-i-append_oval_to_path">#append_oval_to_path</a>
+followed by stroke.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="stroke_oval-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Arcs_and_Circles.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stroke_oval</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">dx</span>, <span class="ruby-identifier">dy</span>, <span class="ruby-identifier">angle</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

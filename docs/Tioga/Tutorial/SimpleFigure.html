@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>module Tioga::Tutorial::SimpleFigure - RDoc Documentation</title>
+
+<link href="../../fonts.css" rel="stylesheet">
+<link href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/navigation.js"></script>
+<script src="../../js/search_index.js"></script>
+<script src="../../js/search.js"></script>
+<script src="../../js/searcher.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="module">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="SimpleFigure.html#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+    
+    
+    
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="module-Tioga::Tutorial::SimpleFigure">
+  <h1 id="module-Tioga::Tutorial::SimpleFigure" class="module">
+    module Tioga::Tutorial::SimpleFigure
+  </h1>
+
+  <section class="description">
+    
+<h1 id="module-Tioga::Tutorial::SimpleFigure-label-A+first+look+at+a+nontrivial+tioga+figure+definition">A first look at a nontrivial tioga figure definition<span><a href="SimpleFigure.html#module-Tioga::Tutorial::SimpleFigure-label-A+first+look+at+a+nontrivial+tioga+figure+definition">&para;</a> <a href="SimpleFigure.html#documentation">&uarr;</a></span></h1>
+
+<p>In the samples/figures directory, enter this to the shell to make a pdf 
+show it in your viewer.</p>
+
+<pre>tioga figures -s &#39;Curve&#39;</pre>
+
+<p>This is what you should see.</p>
+
+<p><img src="../../images/append_curve.png" /></p>
+
+<p>In the source file, the definition looks like this (with line numbers added
+for this tutorial only):</p>
+
+<pre class="ruby"> <span class="ruby-value">1</span>  <span class="ruby-keyword">def</span> <span class="ruby-identifier">curve</span>
+ <span class="ruby-value">2</span>      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">landscape</span>
+ <span class="ruby-value">3</span>      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_text</span>(<span class="ruby-string">&#39;text&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;append\_curve\_to\_path&#39;</span>,
+           <span class="ruby-string">&#39;side&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">TOP</span>, <span class="ruby-string">&#39;shift&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.6</span>,
+           <span class="ruby-string">&#39;justification&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">CENTERED</span>,
+           <span class="ruby-string">&#39;scale&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.9</span>, <span class="ruby-string">&#39;position&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.5</span>)
+ <span class="ruby-value">4</span>      <span class="ruby-identifier">background</span>
+ <span class="ruby-value">5</span>      <span class="ruby-identifier">x0</span> = <span class="ruby-value">0.75</span>; <span class="ruby-identifier">y0</span> = <span class="ruby-value">0.9</span>
+ <span class="ruby-value">6</span>      <span class="ruby-identifier">x1</span> = <span class="ruby-value">0.9</span>; <span class="ruby-identifier">y1</span> = <span class="ruby-value">0.3</span>
+ <span class="ruby-value">7</span>      <span class="ruby-identifier">x2</span> = <span class="ruby-value">0.4</span>; <span class="ruby-identifier">y2</span> = <span class="ruby-value">0.1</span>
+ <span class="ruby-value">8</span>      <span class="ruby-identifier">x3</span> = <span class="ruby-value">0.1</span>; <span class="ruby-identifier">y3</span> = <span class="ruby-value">0.8</span>
+ <span class="ruby-value">9</span>      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">move_to_point</span>(<span class="ruby-identifier">x0</span>, <span class="ruby-identifier">y0</span>)
+<span class="ruby-value">10</span>      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">append_curve_to_path</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>, <span class="ruby-identifier">x3</span>, <span class="ruby-identifier">y3</span>)
+<span class="ruby-value">11</span>      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">line_width</span> = <span class="ruby-value">2.5</span>
+<span class="ruby-value">12</span>      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">line_color</span> = <span class="ruby-constant">DarkBlue</span>
+<span class="ruby-value">13</span>      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">stroke</span>
+<span class="ruby-value">14</span>      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_marker</span>(
+            <span class="ruby-string">&#39;xs&#39;</span> =<span class="ruby-operator">&gt;</span> [ <span class="ruby-identifier">x0</span>, <span class="ruby-identifier">x1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">x3</span> ],
+            <span class="ruby-string">&#39;ys&#39;</span> =<span class="ruby-operator">&gt;</span> [ <span class="ruby-identifier">y0</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">y2</span>, <span class="ruby-identifier">y3</span> ],
+            <span class="ruby-string">&#39;marker&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Bullet</span>,
+            <span class="ruby-string">&#39;scale&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.6</span>,
+            <span class="ruby-string">&#39;color&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Red</span>);
+<span class="ruby-value">15</span>      <span class="ruby-identifier">dx</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">default_text_height_dx</span> <span class="ruby-operator">*</span> <span class="ruby-value">1.4</span>
+<span class="ruby-value">16</span>      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_label</span>(<span class="ruby-string">&#39;x&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">x0</span><span class="ruby-operator">+</span><span class="ruby-identifier">dx</span>, <span class="ruby-string">&#39;y&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">y0</span>,
+            <span class="ruby-string">&#39;text&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;start&quot;</span>, <span class="ruby-string">&#39;scale&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.9</span>);
+<span class="ruby-value">17</span>      <span class="ruby-identifier">scale</span> = <span class="ruby-value">1.2</span>; <span class="ruby-identifier">dy</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">default_text_height_dy</span> <span class="ruby-operator">*</span> <span class="ruby-value">0.8</span>
+<span class="ruby-value">18</span>      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_marker</span>(
+            <span class="ruby-string">&#39;at&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span><span class="ruby-operator">+</span><span class="ruby-identifier">dy</span>],
+            <span class="ruby-string">&#39;marker&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Circled1</span>, <span class="ruby-string">&#39;scale&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">scale</span>);
+<span class="ruby-value">19</span>      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_marker</span>(
+            <span class="ruby-string">&#39;at&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span><span class="ruby-operator">+</span><span class="ruby-identifier">dy</span>],
+            <span class="ruby-string">&#39;marker&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Circled2</span>, <span class="ruby-string">&#39;scale&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">scale</span>);
+<span class="ruby-value">20</span>      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_marker</span>(
+            <span class="ruby-string">&#39;at&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">x3</span>, <span class="ruby-identifier">y3</span><span class="ruby-operator">+</span><span class="ruby-identifier">dy</span>],
+            <span class="ruby-string">&#39;marker&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Circled3</span>, <span class="ruby-string">&#39;scale&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">scale</span>);
+<span class="ruby-value">21</span>  <span class="ruby-keyword">end</span>
+</pre>
+
+<p>Everything that starts with “t.” is directed at the <a
+href="../FigureMaker.html">FigureMaker</a>.  The other things are either
+local methods or local variables.  The code starts by changing the aspect
+ratio to landscape.  Then it puts the text at the top using “show_text”. 
+Notice the backslashes before the underscores.  They are needed to keep TeX
+happy since the text will be sent to TeX for typesetting.  The call on
+“background” invokes one of our own methods to fill in the background and
+put a line around the frame.  The control points for the Bezier curve are
+stored in local variables in lines 5 to 8, and the curve is added to the
+graphics path in lines 9 and 10.  After setting the line width and color,
+it is painted by “t.stroke” in line 13.  The first call to “show_marker”
+(line 14) takes care of the four red bullets at the control points.  The
+text label is placed at point (x0,y0) by the call on “t.show_label” in line
+16.  Finally, the numbers inside circles are painted by the calls on
+“t.show_marker” to finish things off (lines 18-20).</p>
+<dl class="rdoc-list label-list"><dt>What&#39;s a “marker”?  Visit <a href="../MarkerConstants.html">MarkerConstants</a> to find out and to see lots of examples.
+<dd></dd></dl>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

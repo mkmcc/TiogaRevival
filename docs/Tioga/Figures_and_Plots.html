@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Tioga::Figures_and_Plots - RDoc Documentation</title>
+
+<link href="../fonts.css" rel="stylesheet">
+<link href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/search_index.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/searcher.js"></script>
+<script src="../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="Figures_and_Plots.html#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Doc< FigureMaker
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="Figures_and_Plots.html#method-i-context">#context</a>
+    
+    <li ><a href="Figures_and_Plots.html#method-i-doing_subfigure">#doing_subfigure</a>
+    
+    <li ><a href="Figures_and_Plots.html#method-i-doing_subplot">#doing_subplot</a>
+    
+    <li ><a href="Figures_and_Plots.html#method-i-in_subfigure">#in_subfigure</a>
+    
+    <li ><a href="Figures_and_Plots.html#method-i-in_subplot">#in_subplot</a>
+    
+    <li ><a href="Figures_and_Plots.html#method-i-rescale">#rescale</a>
+    
+    <li ><a href="Figures_and_Plots.html#method-i-root_figure">#root_figure</a>
+    
+    <li ><a href="Figures_and_Plots.html#method-i-root_plot">#root_plot</a>
+    
+    <li ><a href="Figures_and_Plots.html#method-i-show_edges">#show_edges</a>
+    
+    <li ><a href="Figures_and_Plots.html#method-i-show_plot">#show_plot</a>
+    
+    <li ><a href="Figures_and_Plots.html#method-i-show_plot_box">#show_plot_box</a>
+    
+    <li ><a href="Figures_and_Plots.html#method-i-show_plot_with_legend">#show_plot_with_legend</a>
+    
+    <li ><a href="Figures_and_Plots.html#method-i-show_plot_without_clipping">#show_plot_without_clipping</a>
+    
+    <li ><a href="Figures_and_Plots.html#method-i-subfigure">#subfigure</a>
+    
+    <li ><a href="Figures_and_Plots.html#method-i-subplot">#subplot</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Tioga::Figures_and_Plots">
+  <h1 id="class-Tioga::Figures_and_Plots" class="class">
+    class Tioga::Figures_and_Plots
+  </h1>
+
+  <section class="description">
+    
+<p>See also <a href="Tutorial/Figures.html">Tutorial::Figures</a> and <a
+href="Tutorial/Plots.html">Tutorial::Plots</a>.</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-context" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            context do ... end
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The context routine saves &#39;state&#39;, executes the given block, and
+then restores state. The state being saved and restored consists of the
+attributes defining the page setup (frame, bounds, axes), graphics (clip
+region, stroke and fill colors, line width and type, etc.), axis label
+settings, and legend layout settings.  Some of the things it saves and
+restores are arrays (such as the optional arrays of locations for major
+tick marks on the axes).  In these cases, context will save and restore the
+pointer to the array, but it doesn&#39;t do anything about the contents of
+the array.  Similarly, for text strings such as the title, it will save and
+restore the pointer but not the contents.</p>
+
+<p>Among the things that it does <strong>not</strong> save/restore is the
+saved legend information (as opposed to the legend layout attributes which
+are saved).  This makes it possible to gather legend information from a
+subplot while still isolating it in its own context.</p>
+
+<p>Routines such as <a
+href="Figures_and_Plots.html#method-i-show_plot">#show_plot</a>, <a
+href="Figures_and_Plots.html#method-i-subplot">subplot</a>, and <a
+href="Figures_and_Plots.html#method-i-subfigure">subfigure</a> make use of
+context to prevent side-effects from the execution of the code body
+&#39;leaking&#39; out to pollute the caller&#39;s environment. The
+practical result is that in writing plotting routines, you can safely
+change various settings without needing to restore the old values when you
+finish.  This becomes critical when you begin to combine several plots into
+a composite plot.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="context-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Figures_and_Plots.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">context</span> (<span class="ruby-operator">&amp;</span><span class="ruby-identifier">cmd</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-doing_subfigure" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            doing_subfigure
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Sets the <a
+href="Figures_and_Plots.html#method-i-root_figure">#root_figure</a> flag to
+<code>false</code>.  Is called on entry to the <a
+href="Figures_and_Plots.html#method-i-subfigure">subfigure</a> routine.
+Provided as a convience for your plotting routines.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="doing_subfigure-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Figures_and_Plots.rb, line 161</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">doing_subfigure</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-doing_subplot" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            doing_subplot
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Sets the <a
+href="Figures_and_Plots.html#method-i-in_subplot">#in_subplot</a> flag to
+<code>true</code>.  Is called on entry to the <a
+href="Figures_and_Plots.html#method-i-subplot">subplot</a> routine.
+Provided as a convience for your plotting routines.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="doing_subplot-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Figures_and_Plots.rb, line 153</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">doing_subplot</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-in_subfigure" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            in_subfigure
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Flag starts <code>false</code> and is set to <code>true</code> by the <a
+href="Figures_and_Plots.html#method-i-doing_subfigure">#doing_subfigure</a>
+routine which is called on entry to the <a
+href="Figures_and_Plots.html#method-i-subfigure">subfigure</a> routine.
+This is simply provided as a convenience for routines that need to know
+whether they are being called as a subfigure or as a top-level figure. Same
+as not root_figure.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="in_subfigure-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Figures_and_Plots.rb, line 253</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">in_subfigure</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-in_subplot" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            in_subplot
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Flag starts <code>false</code> and is set to <code>true</code> by the <a
+href="Figures_and_Plots.html#method-i-doing_subplot">#doing_subplot</a>
+routine which is called on entry to the <a
+href="Figures_and_Plots.html#method-i-subplot">subplot</a> routine. This is
+simply provided as a convenience for routines that need to know whether
+they are being called as a subplot or as a top-level plot.  Same as not
+root_plot.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="in_subplot-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Figures_and_Plots.rb, line 271</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">in_subplot</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-rescale" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">rescale</span><span
+            class="method-args">(factor)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calls both rescale_text and rescale_lines with the given <em>factor</em>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="rescale-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Figures_and_Plots.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rescale</span>(<span class="ruby-identifier">factor</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-root_figure" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            root_figure
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Flag starts <code>true</code> and is set to <code>false</code> by the <a
+href="Figures_and_Plots.html#method-i-doing_subfigure">#doing_subfigure</a>
+routine which is called on entry to the <a
+href="Figures_and_Plots.html#method-i-subfigure">subfigure</a> routine.
+This is simply provided as a convenience for routines that need to know
+whether they are being called as a subfigure or as a top-level figure. 
+Same as not in_subplot.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="root_figure-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Figures_and_Plots.rb, line 244</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">root_figure</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-root_plot" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            root_plot
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Flag starts <code>true</code> and is set to <code>false</code> by the <a
+href="Figures_and_Plots.html#method-i-doing_subplot">#doing_subplot</a>
+routine which is called on entry to the <a
+href="Figures_and_Plots.html#method-i-subplot">subplot</a> routine. This is
+simply provided as a convenience for routines that need to know whether
+they are being called as a subplot or as a top-level plot.  Same as not
+in_subplot.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="root_plot-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Figures_and_Plots.rb, line 262</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">root_plot</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show_edges" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            show_edges
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Makes a series of calls to show the frame edges (show_top_edge,
+show_left_edge, etc.)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="show_edges-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Figures_and_Plots.rb, line 235</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show_edges</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show_plot" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            show_plot(bounds) do ... end
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The first action of <a
+href="Figures_and_Plots.html#method-i-show_plot">#show_plot</a> is to call
+set_bounds to set up the figure coordinates for the plot. Then, inside a
+call to <a href="Figures_and_Plots.html#method-i-context">context</a> so
+that the current state will be restored later, it calls clip_to_frame
+followed by the block defining the plot.  Finally, it calls <a
+href="Figures_and_Plots.html#method-i-show_plot_box">#show_plot_box</a> to
+take care of the axes and labels.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="show_plot-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Figures_and_Plots.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show_plot</span>(<span class="ruby-identifier">bounds</span>=<span class="ruby-keyword">nil</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">cmd</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show_plot_box" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            show_plot_box
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Makes a series of calls to show the axes, edges, title, and axis labels.
+This routine is called by <a
+href="Figures_and_Plots.html#method-i-show_plot">#show_plot</a> after the
+contents of the frame have been finished.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="show_plot_box-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Figures_and_Plots.rb, line 169</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show_plot_box</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show_plot_with_legend" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            show_plot_with_legend(dict) do ... end
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            show_plot_with_legend do ... end
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Adjusts margins according to the entries in the <em>dict</em> argument,
+executes the plot definition, then calls <code>show_legend</code>. The
+dictionary entries are all optional, and default values are taken from the
+<code>legend_defaults</code> dictionary.  The margin sizes are given as
+fractions of the current frame.  The <code>plot_scale</code> applies to the
+entire plot including the legend.  The <code>legend_scale</code> only
+applies to the legend.</p>
+
+<p>Dictionary Entries</p>
+
+<pre class="ruby"><span class="ruby-string">&#39;legend_top_margin&#39;</span>       =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>
+<span class="ruby-string">&#39;legend_bottom_margin&#39;</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>
+<span class="ruby-string">&#39;legend_left_margin&#39;</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>
+<span class="ruby-string">&#39;legend_right_margin&#39;</span>     =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>
+<span class="ruby-string">&#39;plot_top_margin&#39;</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>
+<span class="ruby-string">&#39;plot_bottom_margin&#39;</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>
+<span class="ruby-string">&#39;plot_left_margin&#39;</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>
+<span class="ruby-string">&#39;plot_right_margin&#39;</span>       =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>
+<span class="ruby-string">&#39;plot_scale&#39;</span>              =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>
+<span class="ruby-string">&#39;legend_scale&#39;</span>            =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>
+</pre>
+
+<p>Examples</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">legend_outside</span>
+    <span class="ruby-identifier">read_data</span>
+    <span class="ruby-identifier">show_model_number</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_plot_with_legend</span>(<span class="ruby-string">&#39;legend_scale&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1.3</span>) { <span class="ruby-identifier">reds_blues</span> }
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">legend_inside</span>
+    <span class="ruby-identifier">read_data</span>
+    <span class="ruby-identifier">show_model_number</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_plot_with_legend</span>(
+        <span class="ruby-string">&#39;legend_left_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.7</span>,
+        <span class="ruby-string">&#39;legend_scale&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1.3</span>,
+        <span class="ruby-string">&#39;plot_right_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>) { <span class="ruby-identifier">reds_blues</span> }
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">legends</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subfigure</span>(<span class="ruby-string">&#39;top_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.6</span>) <span class="ruby-keyword">do</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">rescale</span>(<span class="ruby-value">0.5</span>)
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subplot</span>(<span class="ruby-string">&#39;right_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.6</span>) <span class="ruby-keyword">do</span>
+            <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_plot_with_legend</span>(
+                <span class="ruby-string">&#39;legend_left_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.7</span>,
+                <span class="ruby-string">&#39;legend_scale&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1.3</span>,
+                <span class="ruby-string">&#39;plot_right_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>) { <span class="ruby-identifier">reds_blues</span> }
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subplot</span>(<span class="ruby-string">&#39;left_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.56</span>) <span class="ruby-keyword">do</span>
+            <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_plot_with_legend</span>(<span class="ruby-string">&#39;legend_scale&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1.3</span>) { <span class="ruby-identifier">reds_blues</span> }
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p><img src="../images/Legends.png" /></p>
+          
+          
+
+          
+          <div class="method-source-code" id="show_plot_with_legend-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Figures_and_Plots.rb, line 228</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show_plot_with_legend</span>(<span class="ruby-identifier">dict</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">cmd</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show_plot_without_clipping" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            show_plot_without_clipping(bounds) do ... end
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>This is identical to <a
+href="Figures_and_Plots.html#method-i-show_plot">#show_plot</a> except it
+doesn&#39;t do clip_to_frame before calling the plot command.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="show_plot_without_clipping-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Figures_and_Plots.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show_plot_without_clipping</span>(<span class="ruby-identifier">bounds</span>=<span class="ruby-keyword">nil</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">cmd</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-subfigure" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            subfigure do ... end
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            subfigure(margins) do ... end
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Inside a call to <a
+href="Figures_and_Plots.html#method-i-context">context</a>, subfigure first
+calls <a
+href="Figures_and_Plots.html#method-i-doing_subfigure">#doing_subfigure</a>,
+then calls set_subframe with the margins, and finally executes the block of
+commands for the figure.</p>
+
+<p>Example</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">subfigures</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">rescale_text</span>(<span class="ruby-value">0.45</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subfigure</span>(<span class="ruby-string">&#39;right&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.5</span>, <span class="ruby-string">&#39;bottom&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.5</span>) { 
+        <span class="ruby-identifier">icon</span> }
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subfigure</span>(<span class="ruby-string">&#39;right&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.5</span>, <span class="ruby-string">&#39;top&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.5</span>) { 
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">stroke_color</span> = <span class="ruby-constant">White</span>; <span class="ruby-identifier">math_typesetting</span> }
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subfigure</span>(<span class="ruby-string">&#39;left&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.5</span>, <span class="ruby-string">&#39;bottom&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.5</span>) { 
+        <span class="ruby-identifier">transparent_squares</span> }
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subfigure</span>(<span class="ruby-string">&#39;left&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.5</span>, <span class="ruby-string">&#39;top&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.5</span>) { 
+        <span class="ruby-identifier">jpg_image_transparent</span> }
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p><img src="../images/Subfigures.png" /></p>
+          
+          
+
+          
+          <div class="method-source-code" id="subfigure-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Figures_and_Plots.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">subfigure</span>(<span class="ruby-identifier">margins</span>=<span class="ruby-keyword">nil</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">cmd</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-subplot" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            subplot do ... end
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            subplot(margins) do ... end
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Inside a call to <a
+href="Figures_and_Plots.html#method-i-context">context</a>, subplot first
+calls <a
+href="Figures_and_Plots.html#method-i-doing_subplot">#doing_subplot</a>,
+then calls set_subframe with the margins, and finally executes the block of
+commands for the plot.</p>
+
+<p>Examples</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">two_yaxes</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_title</span>(<span class="ruby-string">&#39;Same X, Different Y\s&#39;</span>); <span class="ruby-identifier">t</span>.<span class="ruby-identifier">no_title</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_xlabel</span>(<span class="ruby-string">&#39;Position&#39;</span>); <span class="ruby-identifier">t</span>.<span class="ruby-identifier">no_xlabel</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subplot</span> { <span class="ruby-identifier">t</span>.<span class="ruby-identifier">yaxis_loc</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">ylabel_side</span> = <span class="ruby-constant">LEFT</span>; <span class="ruby-identifier">t</span>.<span class="ruby-identifier">no_right_edge</span>; <span class="ruby-identifier">reds</span> }
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subplot</span> { <span class="ruby-identifier">t</span>.<span class="ruby-identifier">yaxis_loc</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">ylabel_side</span> = <span class="ruby-constant">RIGHT</span>; <span class="ruby-identifier">t</span>.<span class="ruby-identifier">no_left_edge</span>; <span class="ruby-identifier">greens</span> }
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p><img src="../images/Two_Ys.png" /></p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">side_by_side</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">do_box_labels</span>(<span class="ruby-string">&#39;Side by Side&#39;</span>, <span class="ruby-string">&#39;Position&#39;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">ylabel_angle</span> = <span class="ruby-value">-90</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">ylabel_shift</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subplot</span>(<span class="ruby-string">&#39;right_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.5</span>) { 
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">yaxis_loc</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">ylabel_side</span> = <span class="ruby-constant">LEFT</span>; <span class="ruby-identifier">t</span>.<span class="ruby-identifier">right_edge_type</span> = <span class="ruby-constant">AXIS_LINE_ONLY</span>; <span class="ruby-identifier">blues</span> }
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subplot</span>(<span class="ruby-string">&#39;left_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.5</span>) {
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">yaxis_loc</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">ylabel_side</span> = <span class="ruby-constant">RIGHT</span>; <span class="ruby-identifier">t</span>.<span class="ruby-identifier">left_edge_type</span> = <span class="ruby-constant">AXIS_LINE_ONLY</span>; <span class="ruby-identifier">reds</span> }
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p><img src="../images/Side_by_Side.png" /></p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">rows</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">do_box_labels</span>(<span class="ruby-string">&#39;Blues, Reds, Greens&#39;</span>, <span class="ruby-string">&#39;Position&#39;</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">rescale</span>(<span class="ruby-value">0.8</span>)
+    <span class="ruby-identifier">num_plots</span> = <span class="ruby-value">3</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subplot</span>(<span class="ruby-identifier">t</span>.<span class="ruby-identifier">row_margins</span>(<span class="ruby-string">&#39;num_rows&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">num_plots</span>, <span class="ruby-string">&#39;row&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>)) <span class="ruby-keyword">do</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">xaxis_type</span> = <span class="ruby-constant">AXIS_WITH_TICKS_ONLY</span>
+        <span class="ruby-identifier">blues</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subplot</span>(<span class="ruby-identifier">t</span>.<span class="ruby-identifier">row_margins</span>(<span class="ruby-string">&#39;num_rows&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">num_plots</span>, <span class="ruby-string">&#39;row&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>)) <span class="ruby-keyword">do</span> 
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">xaxis_type</span> = <span class="ruby-constant">AXIS_WITH_TICKS_ONLY</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">top_edge_type</span> = <span class="ruby-constant">AXIS_HIDDEN</span>
+        <span class="ruby-identifier">reds</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subplot</span>(<span class="ruby-identifier">t</span>.<span class="ruby-identifier">row_margins</span>(<span class="ruby-string">&#39;num_rows&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">num_plots</span>, <span class="ruby-string">&#39;row&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>)) <span class="ruby-keyword">do</span> 
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">top_edge_type</span> = <span class="ruby-constant">AXIS_HIDDEN</span>
+        <span class="ruby-identifier">greens</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p><img src="../images/Rows.png" /></p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">trio</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">rescale</span>(<span class="ruby-value">0.6</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subplot</span>(
+        <span class="ruby-string">&#39;bottom_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.55</span>,
+        <span class="ruby-string">&#39;left_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.15</span>,
+        <span class="ruby-string">&#39;right_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.15</span>) { <span class="ruby-identifier">rows</span> }
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subplot</span>(<span class="ruby-string">&#39;top_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.55</span>) { <span class="ruby-identifier">side_by_side</span> }
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p><img src="../images/Trio.png" /></p>
+          
+          
+
+          
+          <div class="method-source-code" id="subplot-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Figures_and_Plots.rb, line 145</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">subplot</span>(<span class="ruby-identifier">margins</span>=<span class="ruby-keyword">nil</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">cmd</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

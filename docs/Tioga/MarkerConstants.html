@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>module Tioga::MarkerConstants - RDoc Documentation</title>
+
+<link href="../fonts.css" rel="stylesheet">
+<link href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/search_index.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/searcher.js"></script>
+<script src="../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="module">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="MarkerConstants.html#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="MarkerConstants.html#module-Tioga::MarkerConstants-label-PDF+Fonts">PDF Fonts</a>
+    <li><a href="MarkerConstants.html#module-Tioga::MarkerConstants-label-Markers">Markers</a>
+  </ul>
+</div>
+
+
+  <div id="class-metadata">
+    
+    
+    
+    
+    
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="module-Tioga::MarkerConstants">
+  <h1 id="module-Tioga::MarkerConstants" class="module">
+    module Tioga::MarkerConstants
+  </h1>
+
+  <section class="description">
+    
+<h1 id="module-Tioga::MarkerConstants-label-PDF+Fonts">PDF Fonts<span><a href="MarkerConstants.html#module-Tioga::MarkerConstants-label-PDF+Fonts">&para;</a> <a href="MarkerConstants.html#documentation">&uarr;</a></span></h1>
+
+<p>Text is normally sent to TeX, allowing you to use any font that can be
+accessed from your TeX documents.</p>
+
+<p>However, in certain special cases you may need to use text in a “graphical”
+manner and have it processed directly in the  PDF output.  In that case,
+tioga needs to have metric information for the font (in the form of an
+“afm” file), and any  output device needs to have access to the font
+definitions.  Providing a general solution to this is still a bit messy,
+and for the  expected use in tioga, I decided that it wasn&#39;t worth it. 
+All PDF devices are guaranteed to have the 14 standard Adobe  fonts, so
+they are easy to provide – and that&#39;s what I&#39;ve done.</p>
+
+<p>Here are the abc&#39;s of the PDF fonts, clockwise from the top: <a
+href="MarkerConstants.html#Times_Roman">Times_Roman</a>, <a
+href="MarkerConstants.html#Times_Italic">Times_Italic</a>, <a
+href="MarkerConstants.html#Times_Bold">Times_Bold</a>, <a
+href="MarkerConstants.html#Times_BoldItalic">Times_BoldItalic</a>, <a
+href="MarkerConstants.html#Helvetica">Helvetica</a>, <a
+href="MarkerConstants.html#Helvetica_Oblique">Helvetica_Oblique</a>, <a
+href="MarkerConstants.html#Helvetica_Bold">Helvetica_Bold</a>, <a
+href="MarkerConstants.html#Helvetica_BoldOblique">Helvetica_BoldOblique</a>,
+<a href="MarkerConstants.html#Courier">Courier</a>, <a
+href="MarkerConstants.html#Courier_Oblique">Courier_Oblique</a>, <a
+href="MarkerConstants.html#Courier_Bold">Courier_Bold</a>, <a
+href="MarkerConstants.html#Courier_BoldOblique">Courier_BoldOblique</a>, <a
+href="MarkerConstants.html#Symbol">Symbol</a>, and <a
+href="MarkerConstants.html#ZapfDingbats">ZapfDingbats</a>.</p>
+
+<p><img src="../images/pdf_fonts.png" /></p>
+<hr>
+
+<h1 id="module-Tioga::MarkerConstants-label-Markers"><a href="Markers.html">Markers</a><span><a href="MarkerConstants.html#module-Tioga::MarkerConstants-label-Markers">&para;</a> <a href="MarkerConstants.html#documentation">&uarr;</a></span></h1>
+
+<p>Any character from any of the PDF fonts can be used as a marker. The
+predefined marker names are provided as a convenience, not as an exhaustive
+list.   <a href="Markers.html">Markers</a> are specified by  either a font
+number and character code (for filled characters), or by a font number,
+character code, and line  width (for stroked characters).  In the following
+figure many of the markers appear in both a filled form, such  as
+&#39;Arrow&#39;, and a stroked form, such as &#39;ArrowOpen&#39;.   The
+color of filled markers is determined by the current  setting of
+fill_color, and, similarly, stroke_color determines the color of stroked
+markers.</p>
+
+<p><img src="../images/Marker_Names.png" /></p>
+
+<p>Here is the full set of options from the <a
+href="MarkerConstants.html#ZapfDingbats">ZapfDingbats</a> font.  If you
+would like to use the jet plane as a marker, just write [ <a
+href="MarkerConstants.html#ZapfDingbats">ZapfDingbats</a>, 40 ] where you
+would have used one of the predefined marker names.</p>
+
+<p><img src="../images/dingbats.png" /></p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <section class="constants-list">
+      <header>
+        <h3>Constants</h3>
+      </header>
+      <dl>
+      
+        <dt id="Arrow">Arrow
+        
+        <dd>
+        
+      
+        <dt id="ArrowOpen">ArrowOpen
+        
+        <dd>
+        
+      
+        <dt id="Arrowhead">Arrowhead
+        
+        <dd>
+        
+      
+        <dt id="ArrowheadOpen">ArrowheadOpen
+        
+        <dd>
+        
+      
+        <dt id="Asterisk">Asterisk
+        
+        <dd>
+        
+      
+        <dt id="AsteriskOpen">AsteriskOpen
+        
+        <dd>
+        
+      
+        <dt id="Bar">Bar
+        
+        <dd>
+        
+      
+        <dt id="BarOpen">BarOpen
+        
+        <dd>
+        
+      
+        <dt id="BarThick">BarThick
+        
+        <dd>
+        
+      
+        <dt id="BarThickOpen">BarThickOpen
+        
+        <dd>
+        
+      
+        <dt id="BarThin">BarThin
+        
+        <dd>
+        
+      
+        <dt id="BarThinOpen">BarThinOpen
+        
+        <dd>
+        
+      
+        <dt id="Box">Box
+        
+        <dd>
+        
+      
+        <dt id="BoxOpen">BoxOpen
+        
+        <dd>
+        
+      
+        <dt id="Bullet">Bullet
+        
+        <dd>
+        
+      
+        <dt id="BulletOpen">BulletOpen
+        
+        <dd>
+        
+      
+        <dt id="Check">Check
+        
+        <dd>
+        
+      
+        <dt id="CheckOpen">CheckOpen
+        
+        <dd>
+        
+      
+        <dt id="Circle">Circle
+        
+        <dd>
+        
+      
+        <dt id="CircleOpen">CircleOpen
+        
+        <dd>
+        
+      
+        <dt id="Circled1">Circled1
+        
+        <dd>
+        
+      
+        <dt id="Circled10">Circled10
+        
+        <dd>
+        
+      
+        <dt id="Circled2">Circled2
+        
+        <dd>
+        
+      
+        <dt id="Circled3">Circled3
+        
+        <dd>
+        
+      
+        <dt id="Circled4">Circled4
+        
+        <dd>
+        
+      
+        <dt id="Circled5">Circled5
+        
+        <dd>
+        
+      
+        <dt id="Circled6">Circled6
+        
+        <dd>
+        
+      
+        <dt id="Circled7">Circled7
+        
+        <dd>
+        
+      
+        <dt id="Circled8">Circled8
+        
+        <dd>
+        
+      
+        <dt id="Circled9">Circled9
+        
+        <dd>
+        
+      
+        <dt id="Club">Club
+        
+        <dd>
+        
+      
+        <dt id="ClubOpen">ClubOpen
+        
+        <dd>
+        
+      
+        <dt id="Courier">Courier
+        
+        <dd>
+        
+      
+        <dt id="Courier_Bold">Courier_Bold
+        
+        <dd>
+        
+      
+        <dt id="Courier_BoldOblique">Courier_BoldOblique
+        
+        <dd>
+        
+      
+        <dt id="Courier_Oblique">Courier_Oblique
+        
+        <dd>
+        
+      
+        <dt id="Cross">Cross
+        
+        <dd>
+        
+      
+        <dt id="Diamond">Diamond
+        
+        <dd>
+        
+      
+        <dt id="DiamondOpen">DiamondOpen
+        
+        <dd>
+        
+      
+        <dt id="Hand">Hand
+        
+        <dd>
+        
+      
+        <dt id="Heart">Heart
+        
+        <dd>
+        
+      
+        <dt id="HeartOpen">HeartOpen
+        
+        <dd>
+        
+      
+        <dt id="HeartWide">HeartWide
+        
+        <dd>
+        
+      
+        <dt id="HeartWideOpen">HeartWideOpen
+        
+        <dd>
+        
+      
+        <dt id="Helvetica">Helvetica
+        
+        <dd>
+        
+      
+        <dt id="Helvetica_Bold">Helvetica_Bold
+        
+        <dd>
+        
+      
+        <dt id="Helvetica_BoldOblique">Helvetica_BoldOblique
+        
+        <dd>
+        
+      
+        <dt id="Helvetica_Oblique">Helvetica_Oblique
+        
+        <dd>
+        
+      
+        <dt id="OtherHand">OtherHand
+        
+        <dd>
+        
+      
+        <dt id="Plus">Plus
+        
+        <dd>
+        
+      
+        <dt id="PlusOpen">PlusOpen
+        
+        <dd>
+        
+      
+        <dt id="Semicircle">Semicircle
+        
+        <dd>
+        
+      
+        <dt id="SemicircleOpen">SemicircleOpen
+        
+        <dd>
+        
+      
+        <dt id="SolidBall1">SolidBall1
+        
+        <dd>
+        
+      
+        <dt id="SolidBall10">SolidBall10
+        
+        <dd>
+        
+      
+        <dt id="SolidBall2">SolidBall2
+        
+        <dd>
+        
+      
+        <dt id="SolidBall3">SolidBall3
+        
+        <dd>
+        
+      
+        <dt id="SolidBall4">SolidBall4
+        
+        <dd>
+        
+      
+        <dt id="SolidBall5">SolidBall5
+        
+        <dd>
+        
+      
+        <dt id="SolidBall6">SolidBall6
+        
+        <dd>
+        
+      
+        <dt id="SolidBall7">SolidBall7
+        
+        <dd>
+        
+      
+        <dt id="SolidBall8">SolidBall8
+        
+        <dd>
+        
+      
+        <dt id="SolidBall9">SolidBall9
+        
+        <dd>
+        
+      
+        <dt id="Spade">Spade
+        
+        <dd>
+        
+      
+        <dt id="SpadeOpen">SpadeOpen
+        
+        <dd>
+        
+      
+        <dt id="Square">Square
+        
+        <dd>
+        
+      
+        <dt id="SquareOpen">SquareOpen
+        
+        <dd>
+        
+      
+        <dt id="Star">Star
+        
+        <dd>
+        
+      
+        <dt id="StarOpen">StarOpen
+        
+        <dd>
+        
+      
+        <dt id="Symbol">Symbol
+        
+        <dd>
+        
+      
+        <dt id="Times">Times
+        
+        <dd>
+        
+      
+        <dt id="TimesOpen">TimesOpen
+        
+        <dd>
+        
+      
+        <dt id="Times_Bold">Times_Bold
+        
+        <dd>
+        
+      
+        <dt id="Times_BoldItalic">Times_BoldItalic
+        
+        <dd>
+        
+      
+        <dt id="Times_Italic">Times_Italic
+        
+        <dd>
+        
+      
+        <dt id="Times_Roman">Times_Roman
+        
+        <dd>
+        
+      
+        <dt id="TriangleDown">TriangleDown
+        
+        <dd>
+        
+      
+        <dt id="TriangleDownOpen">TriangleDownOpen
+        
+        <dd>
+        
+      
+        <dt id="TriangleUp">TriangleUp
+        
+        <dd>
+        
+      
+        <dt id="TriangleUpOpen">TriangleUpOpen
+        
+        <dd>
+        
+      
+        <dt id="ZapfDingbats">ZapfDingbats
+        
+        <dd>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Tioga::Markers - RDoc Documentation</title>
+
+<link href="../fonts.css" rel="stylesheet">
+<link href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/search_index.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/searcher.js"></script>
+<script src="../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="Markers.html#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Doc< FigureMaker
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="Markers.html#method-i-marker_defaults">#marker_defaults</a>
+    
+    <li ><a href="Markers.html#method-i-marker_string_info">#marker_string_info</a>
+    
+    <li ><a href="Markers.html#method-i-show_marker">#show_marker</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Tioga::Markers">
+  <h1 id="class-Tioga::Markers" class="class">
+    class Tioga::Markers
+  </h1>
+
+  <section class="description">
+    
+<p>These are the methods for using text as markers in PDF graphics.  See also
+the predefined markers in #MarkerConstants.</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-marker_defaults" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            marker_defaults
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            marker_defaults = a_dictionary
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>This dictionary holds defaults for <code>show_marker</code>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="marker_defaults-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Markers.rb, line 131</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">marker_defaults</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-marker_string_info" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">marker_string_info</span><span
+            class="method-args">(font_number, string, scale)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns an array with [<em>width</em>, <em>dx_left</em>, <em>dy_down</em>,
+<em>dx_right</em>, <em>dy_up</em>] given in figure coordinates.  The first
+is the width in figure x coordinates, the remainder is the bounding box
+relative to the reference point for showing the string.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="marker_string_info-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Markers.rb, line 123</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">marker_string_info</span>(<span class="ruby-identifier">font_number</span>, <span class="ruby-identifier">string</span>, <span class="ruby-identifier">scale</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show_marker" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show_marker</span><span
+            class="method-args">(dict)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>This routine takes care of text that is being used as a graphical element
+and consequently is going straight to PDF rather than to TeX for normal
+typesetting (see show_text).</p>
+
+<p>The most common use of markers is probably to mark points on plots (hence
+the name).  The ZapfDingbats font provides a useful collection for this
+purpose, and several glyphs from it are provided as predefined markers (see
+#MarkerConstants). A marker of this sort is represented either by an array
+of [ font_number, character_code ] for filled markers, or by an array
+holding [ font_number, character_code, line_width ] for stroked markers. 
+Often the same character can be used both for a filled marker and for an
+open one.  For example, the predefined markers include  Box and Circle
+(filled) as well as the same glyphs as BoxOpen and CircleOpen (stroked).</p>
+
+<p>For the primary purpose of marking points on plots, we could stop with just
+single characters taken from ZapfDingbats.  However, for not much more
+effort, we can broaden this to allow strings of characters and fonts other
+than the dingbats.  But the usefulness of this is limited given that
+typesetting is properly done using TeX, and the problems of dealing with
+fonts in general are notoriously awful. So the  compromise is to allow
+markers using any of the 14 standard Adobe PDF fonts which are guaranteed
+to be supported by all PDF viewers and to toss in for good measure some
+Computer Modern fonts which are likely to be around since they come with
+TeX.  These fonts are predefined in the <a
+href="FigureConstants.html">FigureConstants</a> module.  Any character (or
+string of characters) from any of these fonts can be used as a marker.</p>
+
+<p>Because markers are sent to PDF rather than TeX, they are limited
+typographically but powerful graphically. In addition to specifying color,
+scale, and rotation, as you can for TeX text, you can also stretch the
+characters either along the baseline (&#39;horizontal_scale&#39;) or
+perpendicular to it (&#39;vertical_scale&#39;). You can slant the
+individual characters (&#39;italic_angle&#39;) or shift the baseline along
+the text (&#39;ascent_angle&#39;). Finally, you can specify the
+&#39;rendering_mode&#39; for the marker to be any combination of fill,
+stroke, and clip. (So for next Valentine&#39;s Day you can take a Heart
+marker, scale it up, and use it to clip a JPEG image of yourself to send to
+your sweetheart.)</p>
+
+<p>Defaults for many of the entries come from the <a
+href="Markers.html#method-i-marker_defaults">#marker_defaults</a>
+dictionary.</p>
+
+<p>Dictionary Entries</p>
+
+<pre class="ruby"><span class="ruby-string">&#39;marker&#39;</span>            =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_marker</span>              <span class="ruby-comment"># a marker definition array</span>
+<span class="ruby-string">&#39;x&#39;</span>                 =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>               <span class="ruby-comment"># x location for marker reference point</span>
+<span class="ruby-string">&#39;y&#39;</span>                 =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>               <span class="ruby-comment"># y location for marker reference point</span>
+<span class="ruby-string">&#39;at&#39;</span>                =<span class="ruby-operator">&gt;</span> [ <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span> ]              <span class="ruby-comment"># location for marker reference point</span>
+<span class="ruby-string">&#39;point&#39;</span>                                      <span class="ruby-comment"># alias for &#39;at&#39;</span>
+<span class="ruby-string">&#39;Xs&#39;</span>                =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_Dvector</span>             <span class="ruby-comment"># x locations for marker reference points</span>
+<span class="ruby-string">&#39;Ys&#39;</span>                =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_Dvector</span>             <span class="ruby-comment"># y locations for marker reference points</span>
+<span class="ruby-string">&#39;xs&#39;</span>                                         <span class="ruby-comment"># alias for &#39;Xs&#39;</span>
+<span class="ruby-string">&#39;ys&#39;</span>                                         <span class="ruby-comment"># alias for &#39;Ys&#39;</span>
+<span class="ruby-string">&#39;font&#39;</span>              =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_integer</span>            <span class="ruby-comment"># one of the predefined font numbers</span>
+<span class="ruby-string">&#39;string&#39;</span>            =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_string</span>              <span class="ruby-comment"># to be shown as a marker</span>
+<span class="ruby-string">&#39;text&#39;</span>                                       <span class="ruby-comment"># alias for &#39;string&#39;</span>
+<span class="ruby-string">&#39;fill_color&#39;</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_color</span>               <span class="ruby-comment"># to be used for filled markers</span>
+<span class="ruby-string">&#39;stroke_color&#39;</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_color</span>               <span class="ruby-comment"># to be used for stroked markers</span>
+<span class="ruby-string">&#39;color&#39;</span>             =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_color</span>               <span class="ruby-comment"># default for fill_color and stroke_color</span>
+<span class="ruby-string">&#39;angle&#39;</span>             =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>               <span class="ruby-comment"># degrees to rotate marker</span>
+<span class="ruby-string">&#39;scale&#39;</span>             =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>               <span class="ruby-comment"># factor for rescaling marker size</span>
+<span class="ruby-string">&#39;horizontal_scale&#39;</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>               <span class="ruby-comment"># for scaling along baseline</span>
+<span class="ruby-string">&#39;vertical_scale&#39;</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>               <span class="ruby-comment"># for scaling vertical to baseline</span>
+<span class="ruby-string">&#39;italic_angle&#39;</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>               <span class="ruby-comment"># for slanting text relative to baseline</span>
+<span class="ruby-string">&#39;ascent_angle&#39;</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>               <span class="ruby-comment"># factor for slanting baseline</span>
+<span class="ruby-string">&#39;alignment&#39;</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_alignment</span>          <span class="ruby-comment"># see alignment</span>
+<span class="ruby-string">&#39;justification&#39;</span>     =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_justification</span>       <span class="ruby-comment"># see justification</span>
+<span class="ruby-string">&#39;rendering_mode&#39;</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_rendering_mode</span>      <span class="ruby-comment"># see below</span>
+<span class="ruby-string">&#39;stroke_width&#39;</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>               <span class="ruby-comment"># to be used for stroked markers</span>
+<span class="ruby-string">&#39;mode&#39;</span>                                       <span class="ruby-comment"># alias for &#39;rendering_mode&#39;</span>
+<span class="ruby-string">&#39;legend&#39;</span>            =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_dict</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">a_string</span>    <span class="ruby-comment"># for adding marker to legend</span>
+</pre>
+
+<p>You can provide a list of markers as the value of the &#39;marker&#39;
+entry in the dictionary.  In this case, the <a
+href="Markers.html#method-i-show_marker">#show_marker</a> routine will go
+through the list of markers using one per point.  If there are more points
+than markers, it will cycle through the list of markers repeatedly. 
+Similarly, you can provide a list of colors for &#39;color&#39;,
+&#39;fill_color&#39;, or &#39;stroke_color&#39;, and a list of numbers for
+&#39;font&#39;, &#39;angle&#39;, &#39;scale&#39;,
+&#39;horizontal_scale&#39;, &#39;vertical_scale&#39;,
+&#39;italic_angle&#39;, &#39;ascent_angle&#39;, or &#39;stroke_width&#39;.</p>
+
+<p>Examples</p>
+
+<p><img src="../images/Marker_Horizontal_Scaling.png" /></p>
+
+<p><img src="../images/Marker_Vertical_Scaling.png" /></p>
+
+<p><img src="../images/Marker_Italic_Angle.png" /></p>
+
+<p><img src="../images/Marker_Ascent_Angle.png" /></p>
+
+<p><img src="../images/Rendering_Modes.png" /></p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">marker_shadow_effect</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">landscape</span>
+    <span class="ruby-identifier">background</span>
+    <span class="ruby-identifier">scale</span> = <span class="ruby-value">2.6</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">line_width</span> = <span class="ruby-value">0.6</span>
+    <span class="ruby-identifier">x</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_xmin</span> <span class="ruby-operator">+</span> <span class="ruby-value">0.5</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_width</span>
+    <span class="ruby-identifier">dy</span> = <span class="ruby-value">-0.5</span>; <span class="ruby-identifier">y</span> = <span class="ruby-value">1</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">dy</span>;
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_marker</span>(
+        <span class="ruby-string">&#39;string&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;Shadow Effect&#39;</span>,
+        <span class="ruby-string">&#39;scale&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">scale</span>,
+        <span class="ruby-string">&#39;point&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>],
+        <span class="ruby-string">&#39;mode&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">FILL_AND_STROKE</span>,
+        <span class="ruby-string">&#39;alignment&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">ALIGNED_AT_BASELINE</span>,
+        <span class="ruby-string">&#39;fill_color&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Blue</span>,
+        <span class="ruby-string">&#39;stroke_color&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Black</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">fill_opacity</span> = <span class="ruby-value">0.8</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_marker</span>(
+        <span class="ruby-string">&#39;string&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;Shadow Effect&#39;</span>,
+        <span class="ruby-string">&#39;vertical_scale&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">-0.4</span>,
+        <span class="ruby-string">&#39;fill_color&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Grey</span>,
+        <span class="ruby-string">&#39;italic_angle&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">-30</span>,
+        <span class="ruby-string">&#39;scale&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">scale</span>,
+        <span class="ruby-string">&#39;point&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">x</span><span class="ruby-operator">+</span><span class="ruby-value">0.022</span>, <span class="ruby-identifier">y</span><span class="ruby-operator">-</span><span class="ruby-value">0.03</span>])
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p><img src="../images/Marker_Shadow_Effect.png" /></p>
+          
+          
+
+          
+          <div class="method-source-code" id="show_marker-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Markers.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show_marker</span>(<span class="ruby-identifier">dict</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

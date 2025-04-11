@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Tioga::TeX_Text - RDoc Documentation</title>
+
+<link href="../fonts.css" rel="stylesheet">
+<link href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/search_index.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/searcher.js"></script>
+<script src="../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="TeX_Text.html#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Doc< FigureMaker
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="TeX_Text.html#method-i-alignment">#alignment</a>
+    
+    <li ><a href="TeX_Text.html#method-i-check_label_clip">#check_label_clip</a>
+    
+    <li ><a href="TeX_Text.html#method-i-default_font_size">#default_font_size</a>
+    
+    <li ><a href="TeX_Text.html#method-i-default_text_height_dx">#default_text_height_dx</a>
+    
+    <li ><a href="TeX_Text.html#method-i-default_text_height_dy">#default_text_height_dy</a>
+    
+    <li ><a href="TeX_Text.html#method-i-default_text_scale">#default_text_scale</a>
+    
+    <li ><a href="TeX_Text.html#method-i-get_text_size">#get_text_size</a>
+    
+    <li ><a href="TeX_Text.html#method-i-justification">#justification</a>
+    
+    <li ><a href="TeX_Text.html#method-i-label_bottom_margin">#label_bottom_margin</a>
+    
+    <li ><a href="TeX_Text.html#method-i-label_left_margin">#label_left_margin</a>
+    
+    <li ><a href="TeX_Text.html#method-i-label_right_margin">#label_right_margin</a>
+    
+    <li ><a href="TeX_Text.html#method-i-label_top_margin">#label_top_margin</a>
+    
+    <li ><a href="TeX_Text.html#method-i-rescale_text">#rescale_text</a>
+    
+    <li ><a href="TeX_Text.html#method-i-set_default_font_size">#set_default_font_size</a>
+    
+    <li ><a href="TeX_Text.html#method-i-show_label">#show_label</a>
+    
+    <li ><a href="TeX_Text.html#method-i-show_text">#show_text</a>
+    
+    <li ><a href="TeX_Text.html#method-i-tex_fontfamily">#tex_fontfamily</a>
+    
+    <li ><a href="TeX_Text.html#method-i-tex_fontseries">#tex_fontseries</a>
+    
+    <li ><a href="TeX_Text.html#method-i-tex_fontshape">#tex_fontshape</a>
+    
+    <li ><a href="TeX_Text.html#method-i-tex_fontsize">#tex_fontsize</a>
+    
+    <li ><a href="TeX_Text.html#method-i-tex_xaxis_numeric_label">#tex_xaxis_numeric_label</a>
+    
+    <li ><a href="TeX_Text.html#method-i-tex_yaxis_numeric_label">#tex_yaxis_numeric_label</a>
+    
+    <li ><a href="TeX_Text.html#method-i-text_shift_from_x_origin">#text_shift_from_x_origin</a>
+    
+    <li ><a href="TeX_Text.html#method-i-text_shift_from_y_origin">#text_shift_from_y_origin</a>
+    
+    <li ><a href="TeX_Text.html#method-i-text_shift_on_bottom">#text_shift_on_bottom</a>
+    
+    <li ><a href="TeX_Text.html#method-i-text_shift_on_left">#text_shift_on_left</a>
+    
+    <li ><a href="TeX_Text.html#method-i-text_shift_on_right">#text_shift_on_right</a>
+    
+    <li ><a href="TeX_Text.html#method-i-text_shift_on_top">#text_shift_on_top</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Tioga::TeX_Text">
+  <h1 id="class-Tioga::TeX_Text" class="class">
+    class Tioga::TeX_Text
+  </h1>
+
+  <section class="description">
+    
+<p>Text in tioga goes to TeX for typesetting: you aren&#39;t using a partial
+emulation that is sort-of-like TeX, you are using the real thing.</p>
+
+<p>Since text strings in tioga are passed directly to TeX, you can basically
+do anything in the text of figures that you can do with text in TeX.  The
+text string can include embedded commands to change font size, family, or
+whatever. However, more commonly the text string will leave the font
+selection to a higher level in the document. In tioga it is easy for you to
+use the “NFSS”, TeX&#39;s “New Font Selection Scheme” that specifies the
+font by independently setting family, series, shape, and size.  Families
+include roman, sans serif, and typewriter.</p>
+
+<p>Series include medium and bold face.  Shapes include upright, italic,
+slant, and small caps.  All these, and the size, are set in the
+SetTiogaFontInfo command in the TeX file preamble.  The tioga defaults for
+size, family, series, and shape are 10 point roman, medium, and upright. 
+You can change these by means of the attributes <a
+href="TeX_Text.html#method-i-tex_fontfamily">#tex_fontfamily</a>, <a
+href="TeX_Text.html#method-i-tex_fontseries">#tex_fontseries</a>, <a
+href="TeX_Text.html#method-i-tex_fontshape">#tex_fontshape</a>, and
+tex_fontsize.  Just like for the tex_preview page and figure sizes, these
+are given as strings to be copied to the TeX preview file as part of the
+SetTiogaFontInfo definition.</p>
+
+<p>Text is sized by giving a scale factor relative to a base size.  The base
+size is given by the attribute <a
+href="TeX_Text.html#method-i-default_font_size">#default_font_size</a>,
+that is initialized to 10 and can be changed using set_default_font_size. 
+The scale factor is called <a
+href="TeX_Text.html#method-i-default_text_scale">#default_text_scale</a>,
+is  initialized to 1.0, and is changed by rescale_text.  When you do a <a
+href="TeX_Text.html#method-i-show_text">#show_text</a> command in tioga,
+the call can include an additional scale factor. The product of this extra
+factor times the <a
+href="TeX_Text.html#method-i-default_text_scale">#default_text_scale</a>
+times the <a
+href="TeX_Text.html#method-i-default_font_size">#default_font_size</a>
+determines the size in big points on the output page.  At least that&#39;s
+the size the text will have if the output page doesn&#39;t get scaled up or
+down, and the TeX document doesn&#39;t decide to change things!  With text
+that is being passed to TeX for typesetting, the final decisions aren&#39;t
+made until the last moment.  See <a
+href="Page_Frame_Bounds.html">Page_Frame_Bounds</a> for more details.</p>
+
+<p>See <a href="Tutorial/TextForTeX.html">Tutorial::TextForTeX</a> for
+information about how to add packages and how (and how not) to enter text
+for TeX.</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-alignment" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            alignment
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            alignment = an_alignment
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Default  for text vertical alignment.  Valid settings are predefined
+constants: <code>ALIGNED_AT_TOP</code>, <code>ALIGNED_AT_MIDHEIGHT</code>,
+<code>ALIGNED_AT_BASELINE</code>, and <code>ALIGNED_AT_BOTTOM</code>. See
+also <a href="TeX_Text.html#method-i-justification">justification</a>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="alignment-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 325</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">alignment</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-check_label_clip" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">check_label_clip</span><span
+            class="method-args">(x, y)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>true</code> if the point given by the figure coordinates
+(<em>x</em>, <em>y</em>) is inside the current label clipping margins.  The
+routine <a href="TeX_Text.html#method-i-show_label">#show_label</a> uses
+this to filter out unwanted text by testing the reference point. If the
+point passes this test, then <a
+href="TeX_Text.html#method-i-show_label">#show_label</a> calls <a
+href="TeX_Text.html#method-i-show_text">#show_text</a>; otherwise, it
+simply returns without showing the text.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="check_label_clip-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 303</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">check_label_clip</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-default_font_size" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            default_font_size
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Default font size in points (relative to the <a
+href="TeX_Text.html#method-i-default_font_size">#default_font_size</a>). Is
+initialized to 10.0 and changed by set_default_font_size. The intention is
+that this gets set rarely and most font sizing is done using rescale_text.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="default_font_size-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 450</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">default_font_size</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-default_text_height_dx" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            default_text_height_dx
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Height of text having the <a
+href="TeX_Text.html#method-i-default_text_scale">#default_text_scale</a> as
+measured in x figure coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="default_text_height_dx-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 332</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">default_text_height_dx</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-default_text_height_dy" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            default_text_height_dy
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Height of text having the <a
+href="TeX_Text.html#method-i-default_text_scale">#default_text_scale</a> as
+measured in y figure coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="default_text_height_dy-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 339</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">default_text_height_dy</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-default_text_scale" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            default_text_scale
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Default factor determining text size (relative to the default font size).
+Is initialized to 1.0 and changed by rescale_text.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="default_text_scale-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 439</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">default_text_scale</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_text_size" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_text_size</span><span
+            class="method-args">(name)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns information about the text measure named <em>name</em>. It returns
+a hash with the following information:</p>
+
+<pre>* _[xy][tb][lr]_ the X/Y coordinates of the Top/Bottom Left/Right point of the
+  box around the text (top, left, right and bottom are relative to the text
+  natural orientation)
+* _just_ the text justification
+* _angle_ the text&#39;s angle, in degrees
+* _tex_measured_depth_, _tex_measured_height_, tex_measured_width_, the
+  text&#39;s depth, width and height as measured by TeX,
+ (does not take scaling into accound)
+* _xanchor_, _yanchor_: the page coordinates of the position of the text
+  (the ones that were given to #show_text)
+* _points_ an array of (x,y) coordinates of the points that make the box,
+  in the order bottom left, bottom right, top right, top left.
+* _depth_, _width_, _height_ : the size of the text.
+* _align_ the alignment of the text</pre>
+
+<p>All the measures are given in postscript points, which means you need to
+multiply by 10 before using the with  <a
+href="Page_Frame_Bounds.html#method-i-convert_output_to_figure_x">Tioga::Page_Frame_Bounds#convert_output_to_figure_x</a>
+<a
+href="Page_Frame_Bounds.html#method-i-convert_output_to_figure_y">Tioga::Page_Frame_Bounds#convert_output_to_figure_y</a>.
+See the example</p>
+
+<p>Please make sure you test the presence of one key before using it, as any
+code using measures has to run <strong>twice</strong>: one first time to
+typeset the text and ask LaTeX for information about its size, and the
+second time to actually use the information. You don&#39;t need to call the
+code twice as it is done automatically, but keep in mind that in the first
+run, the returned hash will be empty.</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">text_size_with_rotation</span>
+  <span class="ruby-identifier">t</span>.<span class="ruby-identifier">stroke_rect</span>(<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">1</span>,<span class="ruby-value">1</span>)
+  <span class="ruby-identifier">t</span>.<span class="ruby-identifier">rescale</span>(<span class="ruby-value">0.5</span>)
+
+  <span class="ruby-identifier">equation</span> = <span class="ruby-string">&#39;\int_{-\infty}^{\infty} \! e^{-x^{2}}\, \! dx = \sqrt{\pi}&#39;</span>
+  <span class="ruby-identifier">text</span> = <span class="ruby-node">&quot;\\fbox{$\\displaystyle #{equation}$}&quot;</span>
+
+  <span class="ruby-identifier">nb</span> = <span class="ruby-value">5</span>
+  <span class="ruby-identifier">nb</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">scale</span> = <span class="ruby-value">0.5</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">*</span> <span class="ruby-value">0.2</span>
+    <span class="ruby-identifier">angle</span> = <span class="ruby-identifier">i</span> <span class="ruby-operator">*</span> <span class="ruby-value">37</span>
+    <span class="ruby-identifier">x</span> = (<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>)<span class="ruby-operator">/</span>(<span class="ruby-identifier">nb</span><span class="ruby-operator">+</span><span class="ruby-value">1.0</span>)
+    <span class="ruby-identifier">y</span> = <span class="ruby-identifier">x</span>
+    <span class="ruby-identifier">color</span> = [<span class="ruby-value">1.0</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">*</span> <span class="ruby-value">0.2</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">*</span><span class="ruby-value">0.2</span>, <span class="ruby-value">0</span>]
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_text</span>(<span class="ruby-string">&#39;text&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">text</span>, <span class="ruby-string">&#39;color&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">color</span>, <span class="ruby-string">&#39;x&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">x</span>, 
+                <span class="ruby-string">&#39;y&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">x</span>,
+                <span class="ruby-string">&#39;alignment&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">ALIGNED_AT_MIDHEIGHT</span>,
+                <span class="ruby-string">&#39;scale&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">scale</span> , <span class="ruby-string">&#39;measure&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;box#{i}&quot;</span>, 
+                <span class="ruby-string">&#39;angle&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">angle</span> )
+    <span class="ruby-identifier">size</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">get_text_size</span>(<span class="ruby-node">&quot;box#{i}&quot;</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">size</span>.<span class="ruby-identifier">key?</span> <span class="ruby-string">&#39;points&#39;</span>
+      <span class="ruby-identifier">xs</span> = <span class="ruby-constant">Dvector</span>.<span class="ruby-identifier">new</span>
+      <span class="ruby-identifier">ys</span> = <span class="ruby-constant">Dvector</span>.<span class="ruby-identifier">new</span>
+      <span class="ruby-keyword">for</span> <span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">size</span>[<span class="ruby-string">&#39;points&#39;</span>]
+        <span class="ruby-identifier">xs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">convert_output_to_figure_x</span>(<span class="ruby-identifier">x</span>)
+        <span class="ruby-identifier">ys</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">convert_output_to_figure_y</span>(<span class="ruby-identifier">y</span>)
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">stroke_color</span> = <span class="ruby-identifier">color</span>
+      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">line_type</span> = <span class="ruby-constant">Line_Type_Dashes</span>
+      <span class="ruby-identifier">t</span>.<span class="ruby-identifier">stroke_rect</span>(<span class="ruby-identifier">xs</span>.<span class="ruby-identifier">min</span>, <span class="ruby-identifier">ys</span>.<span class="ruby-identifier">min</span>,
+                    (<span class="ruby-identifier">xs</span>.<span class="ruby-identifier">max</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">xs</span>.<span class="ruby-identifier">min</span>),(<span class="ruby-identifier">ys</span>.<span class="ruby-identifier">max</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">ys</span>.<span class="ruby-identifier">min</span>))
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p><img src="../images/Text_size_with_rotation.png" /></p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_text_size-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 282</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_text_size</span>(<span class="ruby-identifier">name</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-justification" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            justification
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            justification = a_justification
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Default  for text horizontal justification.  Valid settings are predefined
+constants: <code>LEFT_JUSTIFIED</code>, <code>CENTERED</code>, and
+<code>RIGHT_JUSTIFIED</code>. See also <a
+href="TeX_Text.html#method-i-alignment">alignment</a>.</p>
+
+<p><img src="../images/Text_J_and_A.png" /></p>
+          
+          
+
+          
+          <div class="method-source-code" id="justification-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 315</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">justification</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-label_bottom_margin" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            label_bottom_margin
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            label_bottom_margin = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Size of margin on bottom of frame measured as a fraction of frame height,
+with positive values corresponding to margins on the inside of the frame,
+and negative values to margins on the outside. The <a
+href="TeX_Text.html#method-i-show_label">#show_label</a> routine discards
+text having its reference point below this position.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="label_bottom_margin-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 383</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">label_bottom_margin</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-label_left_margin" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            label_left_margin
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            label_left_margin = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Size of margin on left of frame measured as a fraction of frame width, with
+positive values corresponding to margins on the inside of the frame, and
+negative values to margins on the outside. The <a
+href="TeX_Text.html#method-i-show_label">#show_label</a> routine discards
+text having its reference point to the left of this position.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="label_left_margin-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 350</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">label_left_margin</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-label_right_margin" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            label_right_margin
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            label_right_margin = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Size of margin on right of frame measured as a fraction of frame width,
+with positive values corresponding to margins on the inside of the frame,
+and negative values to margins on the outside. The <a
+href="TeX_Text.html#method-i-show_label">#show_label</a> routine discards
+text having its reference point to the right of this position.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="label_right_margin-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 361</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">label_right_margin</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-label_top_margin" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            label_top_margin
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            label_top_margin = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Size of margin on top of frame measured as a fraction of frame height, with
+positive values corresponding to margins on the inside of the frame, and
+negative values to margins on the outside. The <a
+href="TeX_Text.html#method-i-show_label">#show_label</a> routine discards
+text having its reference point above this position.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="label_top_margin-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 372</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">label_top_margin</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-rescale_text" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">rescale_text</span><span
+            class="method-args">(scale)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Changes the <a
+href="TeX_Text.html#method-i-default_text_scale">#default_text_scale</a>
+attribute by multiplying it times <em>scale</em>. This also updates the <a
+href="TeX_Text.html#method-i-default_text_height_dx">#default_text_height_dx</a>
+and <a
+href="TeX_Text.html#method-i-default_text_height_dy">#default_text_height_dy</a>
+attributes to match the new setting for default_text_scale. See also
+rescale.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="rescale_text-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 289</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rescale_text</span>(<span class="ruby-identifier">scale</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-set_default_font_size" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            set_default_font_size(size, update_size_string) # size in points
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Sets the font size in points. If the &#39;update_size_string&#39; flag is
+true, then the &#39;tex_fontsize&#39; attribute will be set to match the
+new font size. The intention is that <a
+href="TeX_Text.html#method-i-set_default_font_size">#set_default_font_size</a>
+gets called rarely and most font sizing is done using rescale_text.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="set_default_font_size-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 460</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_default_font_size</span>(<span class="ruby-identifier">size</span>, <span class="ruby-identifier">update_size_string</span> = <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show_label" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show_label</span><span
+            class="method-args">(dict)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calls <a
+href="TeX_Text.html#method-i-check_label_clip">#check_label_clip</a> with
+the location for the text reference point from the <em>dict</em>. If <a
+href="TeX_Text.html#method-i-check_label_clip">#check_label_clip</a>
+returns <code>false</code>, this routine simply returns.  Otherwise, it
+passes the <em>dict</em> to show_text.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="show_label-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 295</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show_label</span>(<span class="ruby-identifier">dict</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show_text" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show_text</span><span
+            class="method-args">(dict)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>This routine takes care of text that is being sent to TeX for typesetting
+(see also show_marker for text being used as graphics and sent directly to
+PDF).</p>
+
+<p>The location of the reference point for the text can be given either in
+figure coordinates (&#39;x&#39; and &#39;y&#39;, or &#39;at&#39;) or
+relative to an edge of the frame (&#39;side&#39;, &#39;position&#39;, and
+&#39;shift&#39;).</p>
+
+<p>You can optionally provide a color as an RGB triple which will be used in a
+&#39;textcolor&#39; command for TeX enclosing the rest of the text.</p>
+
+<p>The text is scaled by the product of the &#39;scale&#39; entry times the
+current value of the <a
+href="TeX_Text.html#method-i-default_text_scale">#default_text_scale</a>
+attribute.  It is rotated by the given &#39;angle&#39;.</p>
+
+<p>The reference point can be specified horizontally (&#39;justification&#39;)
+and vertically (&#39;alignment&#39;).</p>
+
+<p>The &#39;text&#39; to be sent to TeX can contain anything that TeX will let
+you put in a box.  In addition to the usual text and inline math, you can
+also do display math, lists, tables, etc.</p>
+
+<p>You can even define your own commands in your TeX preamble and then use
+those commands as part of the text in  the figure.</p>
+
+<p>NOTE: When entering text for TeX in your Ruby program, you&#39;ll generally
+want to use single quotes around the string rather than double quotes. 
+With single quotes, backslashes are treated as normal characters (except
+for the two special cases of ' and \), so TeX commands using backslashes
+don&#39;t cause trouble.</p>
+
+<p>With double quotes, Ruby uses backslash for a variety of escape characters
+such as newline (n) and tab (t), so the backslashes for TeX need to be
+entered as \ pairs to be safe. Compare &#39;$nusimtau$&#39; to the
+equivalent form “$\\nu\\sim\\tau$” and the incorrect form “$nusimtau$”.</p>
+
+<p>Starting from <a href="../Tioga.html">Tioga</a> 1.7, <a
+href="../Tioga.html">Tioga</a> can measure the TeX text it typesets. For
+that purpose, provide <a
+href="TeX_Text.html#method-i-show_text">show_text</a> with a
+&#39;measure&#39; dictionnary entry that serves as a key to retrieve the
+information using <a
+href="TeX_Text.html#method-i-get_text_size">get_text_size</a>.</p>
+
+<p>Dictionary Entries</p>
+
+<pre class="ruby"><span class="ruby-string">&#39;text&#39;</span>            =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_string</span>        <span class="ruby-comment"># to be processed by TeX</span>
+<span class="ruby-string">&#39;side&#39;</span>            =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_side</span>          <span class="ruby-comment"># TOP, BOTTOM, LEFT, or RIGHT</span>
+<span class="ruby-string">&#39;loc&#39;</span>                                <span class="ruby-comment"># alias for &#39;side&#39;</span>
+<span class="ruby-string">&#39;position&#39;</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>         <span class="ruby-comment"># fractional distance along side from bottom left</span>
+<span class="ruby-string">&#39;pos&#39;</span>                                <span class="ruby-comment"># alias for &#39;position&#39;</span>
+<span class="ruby-string">&#39;shift&#39;</span>           =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>         <span class="ruby-comment"># distance away from side in units of text height</span>
+<span class="ruby-string">&#39;at&#39;</span>              =<span class="ruby-operator">&gt;</span> [ <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span> ]        <span class="ruby-comment"># figure coordinates for text reference point</span>
+<span class="ruby-string">&#39;point&#39;</span>                              <span class="ruby-comment"># alias for &#39;at&#39;</span>
+<span class="ruby-string">&#39;x&#39;</span>               =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>         <span class="ruby-comment"># x location for reference point</span>
+<span class="ruby-string">&#39;y&#39;</span>               =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>         <span class="ruby-comment"># y location for reference point</span>
+<span class="ruby-string">&#39;color&#39;</span>           =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_color</span>         <span class="ruby-comment"># default is to omit color specification</span>
+<span class="ruby-string">&#39;scale&#39;</span>           =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>         <span class="ruby-comment"># scale relative to default_text_scale.  default 1</span>
+<span class="ruby-string">&#39;angle&#39;</span>           =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>         <span class="ruby-comment"># degrees to rotate.  default 0</span>
+<span class="ruby-string">&#39;alignment&#39;</span>       =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_alignment</span>    <span class="ruby-comment"># see discussion of alignment</span>
+<span class="ruby-string">&#39;justification&#39;</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_justification</span> <span class="ruby-comment"># see discussion of justification</span>
+<span class="ruby-string">&#39;measure&#39;</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_string</span>        <span class="ruby-comment"># the name of the measure</span>
+</pre>
+
+<p>Examples</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">math_typesetting</span>
+    <span class="ruby-identifier">centerx</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_xmin</span> <span class="ruby-operator">+</span> <span class="ruby-value">0.5</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_width</span>
+    <span class="ruby-identifier">equation</span> =
+        <span class="ruby-string">&#39;\int_{-\infty}^{\infty} e^{\color{Red}-x^{2}}\, &#39;</span> <span class="ruby-operator">+</span>
+        <span class="ruby-string">&#39;\! dx = \color{Green}\sqrt{\pi}&#39;</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">justification</span> = <span class="ruby-constant">CENTERED</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">rescale_text</span>(<span class="ruby-value">0.8</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_text</span>(
+        <span class="ruby-string">&#39;text&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Inline Math Mode&#39;</span>,
+        <span class="ruby-string">&#39;x&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">centerx</span>,
+        <span class="ruby-string">&#39;y&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_ymin</span> <span class="ruby-operator">+</span> <span class="ruby-value">0.88</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_height</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_text</span>(
+        <span class="ruby-string">&#39;text&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;Display Math Mode&#39;</span>,
+        <span class="ruby-string">&#39;x&#39;</span>=<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">centerx</span>, 
+        <span class="ruby-string">&#39;y&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_ymin</span> <span class="ruby-operator">+</span> <span class="ruby-value">0.46</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_height</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">rescale_text</span>(<span class="ruby-value">0.8</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_text</span>(
+        <span class="ruby-string">&#39;text&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;$&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">equation</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;$&#39;</span>,
+        <span class="ruby-string">&#39;x&#39;</span>=<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">centerx</span>,
+        <span class="ruby-string">&#39;y&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_ymin</span> <span class="ruby-operator">+</span> <span class="ruby-value">0.78</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_height</span>,
+        <span class="ruby-string">&#39;scale&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">1.3</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_text</span>(
+        <span class="ruby-string">&#39;text&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&#39;$&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">equation</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;$&#39;</span>,
+        <span class="ruby-string">&#39;x&#39;</span>=<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">centerx</span>,
+        <span class="ruby-string">&#39;y&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_ymin</span> <span class="ruby-operator">+</span> <span class="ruby-value">0.64</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_height</span>,
+        <span class="ruby-string">&#39;angle&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">10</span>, <span class="ruby-string">&#39;scale&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">1.3</span>)
+    <span class="ruby-identifier">equation</span> = <span class="ruby-string">&#39;\begin{displaymath}&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">equation</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;\end{displaymath}&#39;</span>
+    <span class="ruby-identifier">equation</span> = <span class="ruby-string">&#39;\parbox{15em}{&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">equation</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;}&#39;</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_text</span>(
+        <span class="ruby-string">&#39;text&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">equation</span>,
+        <span class="ruby-string">&#39;x&#39;</span>=<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">centerx</span>,
+        <span class="ruby-string">&#39;y&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_ymin</span> <span class="ruby-operator">+</span> <span class="ruby-value">0.33</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_height</span>,
+        <span class="ruby-string">&#39;scale&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">1.3</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_text</span>(
+        <span class="ruby-string">&#39;text&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">equation</span>,
+        <span class="ruby-string">&#39;x&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">centerx</span>,
+        <span class="ruby-string">&#39;y&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_ymin</span> <span class="ruby-operator">+</span> <span class="ruby-value">0.16</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_height</span>,
+        <span class="ruby-string">&#39;angle&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">10</span>,
+        <span class="ruby-string">&#39;scale&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">1.3</span>)
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p><img src="../images/Math_Typesetting.png" /></p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">strings</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">stroke_rect</span>(<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">1</span>,<span class="ruby-value">1</span>)
+    <span class="ruby-identifier">center_x</span> = <span class="ruby-value">0.5</span>; <span class="ruby-identifier">center_y</span> = <span class="ruby-value">0.5</span>; <span class="ruby-identifier">len</span> = <span class="ruby-value">0.125</span>
+    <span class="ruby-identifier">hls</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">rgb_to_hls</span>(<span class="ruby-constant">Red</span>)
+    <span class="ruby-identifier">angles</span> = <span class="ruby-value">10</span>
+    <span class="ruby-identifier">delta</span> = <span class="ruby-value">360.0</span><span class="ruby-operator">/</span><span class="ruby-identifier">angles</span>
+    <span class="ruby-identifier">equation</span> = <span class="ruby-string">&#39;\int_{-\infty}^{\infty} \! e^{-x^{2}}\, \! dx = \sqrt{\pi}&#39;</span>
+    <span class="ruby-identifier">text</span> =
+        <span class="ruby-string">&#39;\parbox{15em}{\begin{displaymath}&#39;</span> <span class="ruby-operator">+</span> 
+        <span class="ruby-identifier">equation</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;\end{displaymath}}&#39;</span>
+    <span class="ruby-identifier">angles</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">angle</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">angle</span> <span class="ruby-operator">*=</span> <span class="ruby-identifier">delta</span>
+        <span class="ruby-identifier">dx</span> = <span class="ruby-identifier">len</span><span class="ruby-operator">*</span><span class="ruby-identifier">cos</span>(<span class="ruby-identifier">angle</span><span class="ruby-operator">*</span><span class="ruby-constant">RADIANS_PER_DEGREE</span>)
+        <span class="ruby-identifier">dy</span> = <span class="ruby-identifier">len</span><span class="ruby-operator">*</span><span class="ruby-identifier">sin</span>(<span class="ruby-identifier">angle</span><span class="ruby-operator">*</span><span class="ruby-constant">RADIANS_PER_DEGREE</span>)
+        <span class="ruby-identifier">x</span> = <span class="ruby-identifier">center_x</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span><span class="ruby-operator">*</span><span class="ruby-identifier">dx</span>; <span class="ruby-identifier">y</span> = <span class="ruby-identifier">center_y</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span><span class="ruby-operator">*</span><span class="ruby-identifier">dy</span>;
+        <span class="ruby-identifier">text_color</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">hls_to_rgb</span>([<span class="ruby-identifier">angle</span><span class="ruby-operator">/</span><span class="ruby-value">1.8</span> <span class="ruby-operator">+</span> <span class="ruby-value">200</span>, <span class="ruby-identifier">hls</span>[<span class="ruby-value">1</span>], <span class="ruby-identifier">hls</span>[<span class="ruby-value">2</span>]])
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_text</span>(<span class="ruby-string">&#39;text&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">text</span>, <span class="ruby-string">&#39;color&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">text_color</span>, <span class="ruby-string">&#39;x&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">x</span>, <span class="ruby-string">&#39;y&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">y</span>,
+            <span class="ruby-string">&#39;alignment&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">ALIGNED_AT_MIDHEIGHT</span>,
+            <span class="ruby-string">&#39;scale&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.7</span>, <span class="ruby-string">&#39;angle&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">convert_to_degrees</span>(<span class="ruby-identifier">dx</span>,<span class="ruby-identifier">dy</span>)) 
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p><img src="../images/Strings.png" /></p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">minipages</span>
+    <span class="ruby-identifier">centerx</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_xmin</span> <span class="ruby-operator">+</span> <span class="ruby-value">0.5</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_width</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_text</span>(
+        <span class="ruby-string">&#39;text&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;Examples using paragraph boxes&#39;</span>,
+        <span class="ruby-string">&#39;x&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">centerx</span>,
+        <span class="ruby-string">&#39;y&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.9</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">rescale_text</span>(<span class="ruby-value">0.5</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">justification</span> = <span class="ruby-constant">CENTERED</span>
+    <span class="ruby-identifier">str2</span> =
+        <span class="ruby-string">&#39;The \textcolor{Red}{minipage} is a vertical alignment &#39;</span> <span class="ruby-operator">+</span>
+        <span class="ruby-string">&#39;environment with a \textcolor{Red}{specified width}.  &#39;</span> <span class="ruby-operator">+</span>
+        <span class="ruby-string">&#39;It can contain paragraphs, lists, tables, &#39;</span> <span class="ruby-operator">+</span>
+        <span class="ruby-string">&#39;and equations.  Hyphenation and formatting is automatic.&#39;</span>
+    <span class="ruby-identifier">str2</span> = <span class="ruby-string">&#39;\parbox{15em}{&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">str2</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;}&#39;</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_text</span>(
+        <span class="ruby-string">&#39;text&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">str2</span>,
+        <span class="ruby-string">&#39;x&#39;</span>=<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">centerx</span>,
+        <span class="ruby-string">&#39;y&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_ymin</span> <span class="ruby-operator">+</span> <span class="ruby-value">0.68</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_height</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_text</span>(
+        <span class="ruby-string">&#39;text&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">str2</span>,
+        <span class="ruby-string">&#39;x&#39;</span>=<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">centerx</span>,
+        <span class="ruby-string">&#39;y&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_ymin</span> <span class="ruby-operator">+</span> <span class="ruby-value">0.30</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_height</span>, <span class="ruby-string">&#39;angle&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">20</span>)
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p><img src="../images/Minipages.png" /></p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">framebox</span>
+    <span class="ruby-identifier">centerx</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_xmin</span> <span class="ruby-operator">+</span> <span class="ruby-value">0.5</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_width</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">justification</span> = <span class="ruby-constant">CENTERED</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_text</span>(
+        <span class="ruby-string">&#39;text&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;Examples using \textbackslash framebox&#39;</span>,
+        <span class="ruby-string">&#39;x&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">centerx</span>, <span class="ruby-string">&#39;y&#39;</span> =<span class="ruby-operator">&gt;</span><span class="ruby-value">0.8</span>)
+    <span class="ruby-identifier">dx</span> = <span class="ruby-value">0.05</span>; <span class="ruby-identifier">y</span> = <span class="ruby-value">0.6</span>; <span class="ruby-identifier">dy</span> = <span class="ruby-value">-0.15</span>; <span class="ruby-identifier">t</span>.<span class="ruby-identifier">line_width</span> = <span class="ruby-value">0.7</span>; <span class="ruby-identifier">t</span>.<span class="ruby-identifier">stroke_color</span> = <span class="ruby-constant">Blue</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">rescale_text</span>(<span class="ruby-value">0.75</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_text</span>(
+        <span class="ruby-string">&#39;text&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;\framebox[20em][c]{\textbackslash framebox[20em][c]\{ a, b, c \}}&#39;</span>,
+        <span class="ruby-string">&#39;at&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">centerx</span>, <span class="ruby-identifier">y</span>])
+    <span class="ruby-identifier">y</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">dy</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_text</span>(
+        <span class="ruby-string">&#39;text&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;\framebox[20em][l]{\textbackslash framebox[20em][l]\{ a, b, c \}}&#39;</span>,
+        <span class="ruby-string">&#39;at&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">centerx</span>, <span class="ruby-identifier">y</span>])
+    <span class="ruby-identifier">y</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">dy</span> 
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_text</span>(
+        <span class="ruby-string">&#39;text&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;\framebox[20em][r]{\textbackslash framebox[20em][r]\{ a, b, c \}}&#39;</span>,
+        <span class="ruby-string">&#39;at&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">centerx</span>, <span class="ruby-identifier">y</span>])
+    <span class="ruby-identifier">y</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">dy</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_text</span>(
+        <span class="ruby-string">&#39;text&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;\framebox[20em][s]{\textbackslash framebox[20em][s]\{ a, b, c \}}&#39;</span>,
+        <span class="ruby-string">&#39;at&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">centerx</span>, <span class="ruby-identifier">y</span>])
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p><img src="../images/Framebox.png" /></p>
+          
+          
+
+          
+          <div class="method-source-code" id="show_text-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 209</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show_text</span>(<span class="ruby-identifier">dict</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-tex_fontfamily" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            tex_fontfamily
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            tex_fontfamily = a_string  # giving the font family
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>This string will be used as the basic font family specification in the
+preview TeX file.  Valid strings include &#39;rmdefault&#39;,
+&#39;sfdefault&#39;, and &#39;ttdefault&#39;, for roman face, sans serif
+face, and typewriter face, respectively.</p>
+
+<p>See also: <a href="TeX_Text.html#method-i-tex_fontsize">#tex_fontsize</a>,
+<a href="TeX_Text.html#method-i-tex_fontseries">#tex_fontseries</a>, and
+tex_fontshape.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="tex_fontfamily-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 483</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">tex_fontfamily</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-tex_fontseries" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            tex_fontseries
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            tex_fontseries = a_string  # giving the font series
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>This string will be used as the basic font series specification in the
+preview TeX file.  Valid strings include &#39;mddefault&#39; and
+&#39;bfdefault&#39;, for medium and bold face, respectively.</p>
+
+<p>See also: <a href="TeX_Text.html#method-i-tex_fontsize">#tex_fontsize</a>,
+<a href="TeX_Text.html#method-i-tex_fontfamily">#tex_fontfamily</a>, and
+tex_fontshape.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="tex_fontseries-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 494</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">tex_fontseries</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-tex_fontshape" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            tex_fontshape
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            tex_fontshape = a_string  # giving the font shape
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>This string will be used as the basic font shape specification in the
+preview TeX file.  Valid strings include *&#39;updefault&#39;,
+&#39;itdefault&#39;, &#39;sldefault&#39;, and &#39;scdefault&#39;, for
+upright, italic, slant, and small caps, respectively.</p>
+
+<p>See also: <a href="TeX_Text.html#method-i-tex_fontsize">#tex_fontsize</a>,
+<a href="TeX_Text.html#method-i-tex_fontfamily">#tex_fontfamily</a>, and
+tex_fontseries.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="tex_fontshape-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 506</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">tex_fontshape</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-tex_fontsize" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            tex_fontsize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            tex_fontsize = a_string  # giving the font size in points
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>This string will be used as the basic font size specification in the
+preview TeX file. Valid strings include things like &#39;10.0&#39; or
+&#39;12.0&#39;.</p>
+
+<p>See also: <a
+href="TeX_Text.html#method-i-tex_fontfamily">#tex_fontfamily</a>, <a
+href="TeX_Text.html#method-i-tex_fontseries">#tex_fontseries</a>, and
+tex_fontshape.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="tex_fontsize-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 471</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">tex_fontsize</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-tex_xaxis_numeric_label" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            tex_xaxis_numeric_label
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            tex_xaxis_numeric_label = a_string
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The string for a numeric label is put in this TeX command string to be
+formatted. For example,</p>
+
+<pre>$#1$</pre>
+
+<p>will give the numbers in math mode, while</p>
+
+<pre>$\mathsf{#1}$</pre>
+
+<p>will  show the label using the math sans-serif font. Alias for
+xaxis_numeric_label_tex.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="tex_xaxis_numeric_label-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 521</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">tex_xaxis_numeric_label</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-tex_yaxis_numeric_label" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            tex_yaxis_numeric_label
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            tex_yaxis_numeric_label = a_string
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The string for a numeric label is put in this TeX command string to be
+formatted. For example,</p>
+
+<pre>$#1$</pre>
+
+<p>will give the numbers in math mode, while</p>
+
+<pre>$\mathsf{#1}$</pre>
+
+<p>will show the label using the math sans-serif font. Alias for
+yaxis_numeric_label_tex.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="tex_yaxis_numeric_label-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 535</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">tex_yaxis_numeric_label</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-text_shift_from_x_origin" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            text_shift_from_x_origin
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            text_shift_from_x_origin = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Default value for “shift” in show_yaxis when “loc” is
+<code>AT_X_ORIGIN</code>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="text_shift_from_x_origin-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 423</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">text_shift_from_x_origin</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-text_shift_from_y_origin" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            text_shift_from_y_origin
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            text_shift_from_y_origin = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Default value for “shift” in show_xaxis when “loc” is
+<code>AT_Y_ORIGIN</code>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="text_shift_from_y_origin-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 431</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">text_shift_from_y_origin</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-text_shift_on_bottom" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            text_shift_on_bottom
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            text_shift_on_bottom = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Default value for “shift” in <a
+href="TeX_Text.html#method-i-show_text">#show_text</a> when “side” is
+<code>BOTTOM</code>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="text_shift_on_bottom-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 415</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">text_shift_on_bottom</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-text_shift_on_left" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            text_shift_on_left
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            text_shift_on_left = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Default value for “shift” in <a
+href="TeX_Text.html#method-i-show_text">#show_text</a> when “side” is
+<code>LEFT</code>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="text_shift_on_left-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 391</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">text_shift_on_left</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-text_shift_on_right" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            text_shift_on_right
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            text_shift_on_right = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Default value for “shift” in <a
+href="TeX_Text.html#method-i-show_text">#show_text</a> when “side” is
+<code>RIGHT</code>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="text_shift_on_right-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 399</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">text_shift_on_right</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-text_shift_on_top" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            text_shift_on_top
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            text_shift_on_top = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Default value for “shift” in <a
+href="TeX_Text.html#method-i-show_text">#show_text</a> when “side” is
+<code>TOP</code>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="text_shift_on_top-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/TeX_Text.rb, line 407</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">text_shift_on_top</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

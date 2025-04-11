@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Tioga::Rectangles - RDoc Documentation</title>
+
+<link href="../fonts.css" rel="stylesheet">
+<link href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/search_index.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/searcher.js"></script>
+<script src="../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="Rectangles.html#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Doc< FigureMaker
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="Rectangles.html#method-i-append_frame_to_path">#append_frame_to_path</a>
+    
+    <li ><a href="Rectangles.html#method-i-append_rect_to_path">#append_rect_to_path</a>
+    
+    <li ><a href="Rectangles.html#method-i-append_rounded_rect_to_path">#append_rounded_rect_to_path</a>
+    
+    <li ><a href="Rectangles.html#method-i-clip_rect">#clip_rect</a>
+    
+    <li ><a href="Rectangles.html#method-i-clip_rounded_rect">#clip_rounded_rect</a>
+    
+    <li ><a href="Rectangles.html#method-i-clip_to_frame">#clip_to_frame</a>
+    
+    <li ><a href="Rectangles.html#method-i-fill_and_stroke_frame">#fill_and_stroke_frame</a>
+    
+    <li ><a href="Rectangles.html#method-i-fill_and_stroke_rect">#fill_and_stroke_rect</a>
+    
+    <li ><a href="Rectangles.html#method-i-fill_and_stroke_rounded_rect">#fill_and_stroke_rounded_rect</a>
+    
+    <li ><a href="Rectangles.html#method-i-fill_frame">#fill_frame</a>
+    
+    <li ><a href="Rectangles.html#method-i-fill_rect">#fill_rect</a>
+    
+    <li ><a href="Rectangles.html#method-i-fill_rounded_rect">#fill_rounded_rect</a>
+    
+    <li ><a href="Rectangles.html#method-i-stroke_frame">#stroke_frame</a>
+    
+    <li ><a href="Rectangles.html#method-i-stroke_rect">#stroke_rect</a>
+    
+    <li ><a href="Rectangles.html#method-i-stroke_rounded_rect">#stroke_rounded_rect</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Tioga::Rectangles">
+  <h1 id="class-Tioga::Rectangles" class="class">
+    class Tioga::Rectangles
+  </h1>
+
+  <section class="description">
+    
+<p>These are the methods for creating and using rectangular paths for PDF
+graphics operations.</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-append_frame_to_path" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            append_frame_to_path
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Calls <a
+href="Rectangles.html#method-i-append_rect_to_path">#append_rect_to_path</a>
+with the current frame rectangle.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="append_frame_to_path-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Rectangles.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">append_frame_to_path</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-append_rect_to_path" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">append_rect_to_path</span><span
+            class="method-args">(x, y, width, height)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Add a rectangle with corners at (<em>x</em>, <em>y</em>), (<em>x</em> +
+<em>width</em>, <em>y</em>), (<em>x</em> + <em>width</em>, <em>y</em> +
+<em>height</em>), and (<em>x</em>, <em>y</em> + <em>height</em>).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="append_rect_to_path-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Rectangles.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">append_rect_to_path</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-append_rounded_rect_to_path" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">append_rounded_rect_to_path</span><span
+            class="method-args">(x, y, width, height, dx, dy)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Like <a
+href="Rectangles.html#method-i-append_rect_to_path">#append_rect_to_path</a>,
+but with corners rounded with curvatures given by <em>dx</em> and
+<em>dy</em>.</p>
+
+<p>The illustration shows a rounded rectangle stroked and used as a clipping
+path for showing the image.</p>
+
+<p><img src="../images/append_rounded_rect.png" /></p>
+          
+          
+
+          
+          <div class="method-source-code" id="append_rounded_rect_to_path-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Rectangles.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">append_rounded_rect_to_path</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">dx</span>, <span class="ruby-identifier">dy</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-clip_rect" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">clip_rect</span><span
+            class="method-args">(x, y, width, height)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calls <a
+href="Rectangles.html#method-i-append_rect_to_path">#append_rect_to_path</a>
+followed by clip.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="clip_rect-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Rectangles.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clip_rect</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-clip_rounded_rect" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">clip_rounded_rect</span><span
+            class="method-args">(x, y, width, height, dx, dy)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calls <a
+href="Rectangles.html#method-i-append_rounded_rect_to_path">#append_rounded_rect_to_path</a>
+followed by clip.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="clip_rounded_rect-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Rectangles.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clip_rounded_rect</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">dx</span>, <span class="ruby-identifier">dy</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-clip_to_frame" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            clip_to_frame
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Calls <a
+href="Rectangles.html#method-i-append_frame_to_path">#append_frame_to_path</a>
+followed by clip.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="clip_to_frame-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Rectangles.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clip_to_frame</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-fill_and_stroke_frame" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            fill_and_stroke_frame
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Calls <a
+href="Rectangles.html#method-i-append_frame_to_path">#append_frame_to_path</a>
+followed by fill_and_stroke.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="fill_and_stroke_frame-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Rectangles.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fill_and_stroke_frame</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-fill_and_stroke_rect" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">fill_and_stroke_rect</span><span
+            class="method-args">(x, y, width, height)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calls <a
+href="Rectangles.html#method-i-append_rect_to_path">#append_rect_to_path</a>
+followed by fill_and_stroke.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="fill_and_stroke_rect-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Rectangles.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fill_and_stroke_rect</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-fill_and_stroke_rounded_rect" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">fill_and_stroke_rounded_rect</span><span
+            class="method-args">(x, y, width, height, dx, dy)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calls <a
+href="Rectangles.html#method-i-append_rounded_rect_to_path">#append_rounded_rect_to_path</a>
+followed by fill_and_stroke.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="fill_and_stroke_rounded_rect-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Rectangles.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fill_and_stroke_rounded_rect</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">dx</span>, <span class="ruby-identifier">dy</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-fill_frame" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            fill_frame
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Calls <a
+href="Rectangles.html#method-i-append_frame_to_path">#append_frame_to_path</a>
+followed by fill.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="fill_frame-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Rectangles.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fill_frame</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-fill_rect" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">fill_rect</span><span
+            class="method-args">(x, y, width, height)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calls <a
+href="Rectangles.html#method-i-append_rect_to_path">#append_rect_to_path</a>
+followed by fill.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="fill_rect-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Rectangles.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fill_rect</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-fill_rounded_rect" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">fill_rounded_rect</span><span
+            class="method-args">(x, y, width, height, dx, dy)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calls <a
+href="Rectangles.html#method-i-append_rounded_rect_to_path">#append_rounded_rect_to_path</a>
+followed by fill.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="fill_rounded_rect-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Rectangles.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fill_rounded_rect</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">dx</span>, <span class="ruby-identifier">dy</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-stroke_frame" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            stroke_frame
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Calls <a
+href="Rectangles.html#method-i-append_frame_to_path">#append_frame_to_path</a>
+followed by stroke.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="stroke_frame-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Rectangles.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stroke_frame</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-stroke_rect" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">stroke_rect</span><span
+            class="method-args">(x, y, width, height)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calls <a
+href="Rectangles.html#method-i-append_rect_to_path">#append_rect_to_path</a>
+followed by stroke.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="stroke_rect-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Rectangles.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stroke_rect</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-stroke_rounded_rect" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">stroke_rounded_rect</span><span
+            class="method-args">(x, y, width, height, dx, dy)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calls <a
+href="Rectangles.html#method-i-append_rounded_rect_to_path">#append_rounded_rect_to_path</a>
+followed by stroke.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="stroke_rounded_rect-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Rectangles.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stroke_rounded_rect</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">dx</span>, <span class="ruby-identifier">dy</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

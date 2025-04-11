@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>module Tioga::Tutorial::Animation - RDoc Documentation</title>
+
+<link href="../../fonts.css" rel="stylesheet">
+<link href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/navigation.js"></script>
+<script src="../../js/search_index.js"></script>
+<script src="../../js/search.js"></script>
+<script src="../../js/searcher.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="module">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="Animation.html#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+    
+    
+    
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="module-Tioga::Tutorial::Animation">
+  <h1 id="module-Tioga::Tutorial::Animation" class="module">
+    module Tioga::Tutorial::Animation
+  </h1>
+
+  <section class="description">
+    
+<h1 id="module-Tioga::Tutorial::Animation-label-How+to+create+a+sequence+of+pdfs+and+convert+it+to+a+movie">How to create a sequence of pdfs and convert it to a movie<span><a href="Animation.html#module-Tioga::Tutorial::Animation-label-How+to+create+a+sequence+of+pdfs+and+convert+it+to+a+movie">&para;</a> <a href="Animation.html#documentation">&uarr;</a></span></h1>
+
+<p>If is often useful to create a series of plots showing the changes that
+occur as some parameter changes.  For example, in my stellar evolution
+work, the parameter is time and the plots are things like the profiles of
+element abundances from the center of the star to the surface.  The stellar
+evolution simulation cranks out a series of models for increasing ages, and
+for each model, or each 10th model perhaps, I may want to save a plot
+showing the profiles at that time.  In addition to providing a record that
+I can consult later, the series of pdfs can also be converted to a movie
+showing the evolution.</p>
+
+<p>This section of the documentation discusses doing this in tioga and
+outlines the method I use on the Mac for converting the series of pdfs into
+a movie.</p>
+
+<p>As a concrete example, let&#39;s how I make a stellar evolution movie. 
+First I run the simulation and save a series of data files for various
+models created during the evolution.  These files are in a directory called
+&#39;run/models&#39; and have names like model_767.log that include the
+model sequence number.  The frames of the movie will be in the same order
+as the sequence numbers of the models.</p>
+
+<p>In a different directory I have a file called &#39;profile_plots.rb&#39;
+that reads data in the format of the model files and creates tioga plots of
+various things. I want to make a movie using one of those plots for each of
+the models I&#39;ve saved. The following small file takes care of creating
+the pdfs for the movie.</p>
+
+<pre class="ruby"><span class="ruby-comment"># movie_batch.rb</span>
+
+<span class="ruby-identifier">require</span> <span class="ruby-string">&#39;Tioga/FigureMaker&#39;</span>
+<span class="ruby-identifier">require</span> <span class="ruby-string">&#39;profile_plots.rb&#39;</span>
+
+<span class="ruby-keyword">class</span> <span class="ruby-constant">ProfilePlots</span>
+
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">run</span>(<span class="ruby-identifier">movie_save_dir</span>, <span class="ruby-identifier">file_prefix</span>, <span class="ruby-identifier">file_suffix</span>, 
+            <span class="ruby-identifier">plot_number</span> = <span class="ruby-value">0</span>, <span class="ruby-identifier">first_model</span> = <span class="ruby-value">1</span>, <span class="ruby-identifier">last_model</span> = <span class="ruby-value">2000</span>)
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">save_dir</span> = <span class="ruby-identifier">movie_save_dir</span>
+        <span class="ruby-identifier">n</span> = <span class="ruby-identifier">first_model</span>
+        <span class="ruby-keyword">while</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">last_model</span>
+            <span class="ruby-identifier">fname</span> = <span class="ruby-identifier">file_prefix</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">file_suffix</span>
+            <span class="ruby-keyword">begin</span> 
+                <span class="ruby-comment"># check to see if the model file exists</span>
+                <span class="ruby-identifier">f</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">fname</span>, <span class="ruby-string">&#39;r&#39;</span>)
+                <span class="ruby-identifier">f</span>.<span class="ruby-identifier">close</span>
+                <span class="ruby-comment"># tell ProfilePlots to reload the data</span>
+                <span class="ruby-ivar">@have_data</span> = <span class="ruby-keyword">false</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\n&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">fname</span>
+                <span class="ruby-identifier">t</span>.<span class="ruby-identifier">make_pdf</span>(<span class="ruby-identifier">plot_number</span>)
+                <span class="ruby-identifier">pdf_name</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">figure_pdf</span>(<span class="ruby-identifier">plot_number</span>)
+                <span class="ruby-identifier">name</span> = <span class="ruby-identifier">pdf_name</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">-5</span>] <span class="ruby-comment"># remove the &#39;.pdf&#39;</span>
+                <span class="ruby-identifier">name</span> = <span class="ruby-identifier">append_sequence_number_to_name</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">n</span>)
+                <span class="ruby-identifier">syscmd</span> = <span class="ruby-string">&#39;mv &#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">pdf_name</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39; &#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;.pdf&#39;</span>
+                <span class="ruby-identifier">system</span>(<span class="ruby-identifier">syscmd</span>)
+            <span class="ruby-keyword">rescue</span>
+                <span class="ruby-comment"># end up here if the File.open failed</span>
+                <span class="ruby-comment"># just continue to check the next possible model number</span>
+            <span class="ruby-keyword">end</span>
+            <span class="ruby-identifier">n</span> = <span class="ruby-identifier">n</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\n&quot;</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">append_sequence_number_to_name</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">n</span>)
+      <span class="ruby-comment"># always use at least 4 digits.  add leading 0&#39;s if necessary.</span>
+      <span class="ruby-identifier">name</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&#39;_&#39;</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">10</span>
+        <span class="ruby-identifier">name</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&#39;000&#39;</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">100</span>
+        <span class="ruby-identifier">name</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&#39;00&#39;</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">1000</span>
+        <span class="ruby-identifier">name</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&#39;0&#39;</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">name</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">to_s</span>
+    <span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-constant">ProfilePlots</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;../run/EZ_status.log&#39;</span>).<span class="ruby-identifier">run</span>(<span class="ruby-string">&#39;movie_out&#39;</span>, <span class="ruby-string">&#39;../run/models/model_&#39;</span>, <span class="ruby-string">&#39;.log&#39;</span>)
+</pre>
+
+<p>This file adds a &#39;run&#39; method to my ProfilePlots class that goes
+through the run/models directory and creates a pdf file for each model. 
+The first argument to run, &#39;movie_save_dir&#39;, says where the movie
+pdfs will go.  The arguments &#39;file_prefix&#39; and
+&#39;file_suffix&#39; get wrapped around each model number to generate a
+name for a model data file.</p>
+
+<p>The &#39;plot_number&#39; argument says which plot to do from ProfilePlots.
+The last two arguments, &#39;first_model&#39; and &#39;last_model&#39;,
+give the option of selecting a section of models for the movie.</p>
+
+<p>Once we&#39;ve got movie_batch.rb set up, the movie pdfs can be created
+simply by having ruby run it.</p>
+
+<p>The next job is to convert all those pdfs into a movie.  I&#39;ll describe
+how I do it on a Mac; for linux one good choice is to use the convert tool
+from ImageMagick and mencoder from mplayer.</p>
+
+<p>On my Mac, I&#39;m currently using GraphicConverter, Version 5.9. (If you
+don&#39;t have it, or only have an earlier version, cough up the $30 or so
+and get it.  The site is <a
+href="http://www.lemkesoft.com/en/graphcon.htm">lemkesoft</a>.)
+GraphicConverter has an operation that does just what we need.  It&#39;s
+called “Export Slide Show to Movie…”, and it&#39;s found under the “File”
+menu.</p>
+
+<p>Before you create the movie, you can adjust the frame size by setting the
+Preferences for import resolution for  pdfs.  Open the GraphicConverter
+Preferences and go to the panel for PDF under Open - Formats.  Make sure it
+is set to “Open with bit depth of 32 bit”.  Change the “Open with
+resolution of 72 ppi” to “150 ppi”. The bigger the resolution number, the
+larger the movie frame.  For example, instead of 150, use 100 if you want a
+smaller movie frame.</p>
+
+<p>Close the Preferences, open up the panel for the “Export Slide Show to
+Movie…” command (under File), and navigate to the “movie_out” folder. Hit
+the “Choose” button and pick a name for the movie and a folder to hold it. 
+Click “Save”.  When the “Additional Movie Settings” panel appears, check
+the button that says “Use dimension of first image”. You might also want to
+adjust the “Delay between frames/images” – I&#39;ve used 0.1 seconds in the
+example. Select the “Compression…” button to set the parameters for the MPG
+output.  Set “MPEG-4 Video” for compression type, uncheck the “Limit data
+rate” choice, and set “Quality” to “Best”.  Click “OK” for “Compression
+Settings”, and then click “OK” again for “Additional Movie Settings”.</p>
+
+<p>That should do it.</p>
+
+<p>Open your new movie and enjoy.</p>
+
+<p>One final hint regarding movies: you should make every frame a “key frame”
+if you want to be able to  manually move back and forth to arbitrary spots
+in the movie.  Only key frames have a complete image – non-key  frames are
+represented by changes from the previous key frame.  For “normal” movies,
+it can save a  lot of storage by having lots of non-key frames, but for our
+use, it is much better to have all the  frames be complete.</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

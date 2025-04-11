@@ -1,0 +1,2747 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Tioga::Page_Frame_Bounds - RDoc Documentation</title>
+
+<link href="../fonts.css" rel="stylesheet">
+<link href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/search_index.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/searcher.js"></script>
+<script src="../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="Page_Frame_Bounds.html#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Doc< FigureMaker
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-bounds_bottom">#bounds_bottom</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-bounds_height">#bounds_height</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-bounds_left">#bounds_left</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-bounds_right">#bounds_right</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-bounds_top">#bounds_top</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-bounds_width">#bounds_width</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-bounds_xmax">#bounds_xmax</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-bounds_xmin">#bounds_xmin</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-bounds_ymax">#bounds_ymax</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-bounds_ymin">#bounds_ymin</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-column_margins">#column_margins</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_figure_to_frame_dx">#convert_figure_to_frame_dx</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_figure_to_frame_dy">#convert_figure_to_frame_dy</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_figure_to_frame_x">#convert_figure_to_frame_x</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_figure_to_frame_y">#convert_figure_to_frame_y</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_figure_to_output_dx">#convert_figure_to_output_dx</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_figure_to_output_dy">#convert_figure_to_output_dy</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_figure_to_output_x">#convert_figure_to_output_x</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_figure_to_output_y">#convert_figure_to_output_y</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_frame_to_figure_dx">#convert_frame_to_figure_dx</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_frame_to_figure_dy">#convert_frame_to_figure_dy</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_frame_to_figure_x">#convert_frame_to_figure_x</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_frame_to_figure_y">#convert_frame_to_figure_y</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_frame_to_page_dx">#convert_frame_to_page_dx</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_frame_to_page_dy">#convert_frame_to_page_dy</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_frame_to_page_x">#convert_frame_to_page_x</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_frame_to_page_y">#convert_frame_to_page_y</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_inches_to_output">#convert_inches_to_output</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_mm_to_output">#convert_mm_to_output</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_output_to_figure_dx">#convert_output_to_figure_dx</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_output_to_figure_dy">#convert_output_to_figure_dy</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_output_to_figure_x">#convert_output_to_figure_x</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_output_to_figure_y">#convert_output_to_figure_y</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_output_to_inches">#convert_output_to_inches</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_output_to_mm">#convert_output_to_mm</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_output_to_page_dx">#convert_output_to_page_dx</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_output_to_page_dy">#convert_output_to_page_dy</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_output_to_page_x">#convert_output_to_page_x</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_output_to_page_y">#convert_output_to_page_y</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_page_to_frame_dx">#convert_page_to_frame_dx</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_page_to_frame_dy">#convert_page_to_frame_dy</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_page_to_frame_x">#convert_page_to_frame_x</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_page_to_frame_y">#convert_page_to_frame_y</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_page_to_output_dx">#convert_page_to_output_dx</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_page_to_output_dy">#convert_page_to_output_dy</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_page_to_output_x">#convert_page_to_output_x</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_page_to_output_y">#convert_page_to_output_y</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-convert_to_degrees">#convert_to_degrees</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-frame_bottom">#frame_bottom</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-frame_height">#frame_height</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-frame_left">#frame_left</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-frame_right">#frame_right</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-frame_top">#frame_top</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-frame_width">#frame_width</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-page_bottom">#page_bottom</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-page_height">#page_height</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-page_left">#page_left</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-page_right">#page_right</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-page_top">#page_top</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-page_width">#page_width</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-row_margins">#row_margins</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-set_bounds">#set_bounds</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-set_device_pagesize">#set_device_pagesize</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-set_frame_sides">#set_frame_sides</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-set_subframe">#set_subframe</a>
+    
+    <li ><a href="Page_Frame_Bounds.html#method-i-tex_preamble">#tex_preamble</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Tioga::Page_Frame_Bounds">
+  <h1 id="class-Tioga::Page_Frame_Bounds" class="class">
+    class Tioga::Page_Frame_Bounds
+  </h1>
+
+  <section class="description">
+    
+<p>This section describes the coordinate systems used by tioga for page
+layout.</p>
+
+<p>The “output page” is defined in “output coordinates” having units equal to
+1/720 of an inch.  This unit is 1/10 of a “big point” that is the basic
+size used in PostScript and PDF. By making the unit this size, we can write
+output coordinates to the PDF file as integers, getting a significant size
+reduction in the file without giving up noticable accuracy.  The (0, 0)
+point of the output coordinate system is at the lower-left hand corner of
+the output page.  The x axis increases horizontally, and the y axis
+increases vertically.  The  dimensions of the page are given by the
+attributes <a
+href="Page_Frame_Bounds.html#method-i-page_width">#page_width</a> and
+page_height.</p>
+
+<p>The attributes <a
+href="Page_Frame_Bounds.html#method-i-page_right">#page_right</a> and <a
+href="Page_Frame_Bounds.html#method-i-page_top">#page_top</a> are aliases
+for these. The attributes <a
+href="Page_Frame_Bounds.html#method-i-page_left">#page_left</a> and <a
+href="Page_Frame_Bounds.html#method-i-page_bottom">#page_bottom</a> are
+always zero.  The default page size is 5 inches square,  but you can set
+the size to anything you like using the <a
+href="Page_Frame_Bounds.html#method-i-set_device_pagesize">#set_device_pagesize</a>
+routine.</p>
+
+<p>While the output coordinates have a fixed physical size, all the other
+coordinate systems are relative rather than absolute. At the next level
+comes “page coordinates” that are defined relative to the output page with
+(0, 0) in page coordinates  at the lower left corner  of the output page
+and (1, 1) at the upper right.  Page coordinates are used to define the
+location of the current “frame”.  The current frame location is held in the
+attributes <a
+href="Page_Frame_Bounds.html#method-i-frame_left">#frame_left</a>, <a
+href="Page_Frame_Bounds.html#method-i-frame_right">#frame_right</a>, <a
+href="Page_Frame_Bounds.html#method-i-frame_top">#frame_top</a>, and <a
+href="Page_Frame_Bounds.html#method-i-frame_bottom">#frame_bottom</a>, all
+in page coordinates.  In addition, the attribute <a
+href="Page_Frame_Bounds.html#method-i-frame_width">#frame_width</a> is
+defined to be <a
+href="Page_Frame_Bounds.html#method-i-frame_right">#frame_right</a> - <a
+href="Page_Frame_Bounds.html#method-i-frame_left">#frame_left</a>, and <a
+href="Page_Frame_Bounds.html#method-i-frame_height">#frame_height</a> is <a
+href="Page_Frame_Bounds.html#method-i-frame_top">#frame_top</a> -
+frame_bottom.  The defaults are (0.2, 0.2) for the lower left corner of the
+frame and (0.8, 0.8) for the upper right. You can change these by calling
+the routine set_frame_sides.</p>
+
+<p>The “frame coordinates” are defined with (0, 0) at the lower left corner of
+the frame and (1, 1) at the upper right.  Subframes are sized and located
+using frame coordinates.  The routine <a
+href="Page_Frame_Bounds.html#method-i-set_subframe">#set_subframe</a> does
+this job.  In addition, subframes are used to give a desired aspect ratio. 
+The routine set_aspect_ratio_relative_to_frame does this in terms of frame
+coordinates – in other words, it creates a subframe having the requested
+ratio of width to height relative to the frame.  In some cases that will be
+what you want, but it is more common to want to specify the width to height
+ratio relative to the output page, i.e., in absolute rather than relative
+terms.   This is provided by the routine set_physical_aspect_ratio (with
+set_aspect_ratio as an alias).</p>
+
+<p>When doing a plot, you want yet another coordinate system, one that matches
+the data.  This is called the “figure coordinate system” and is set by the
+“bounds” attributes that give the locations in figure coordinates of the
+edges of the frame.  These attributes are called <a
+href="Page_Frame_Bounds.html#method-i-bounds_right">#bounds_right</a>, <a
+href="Page_Frame_Bounds.html#method-i-bounds_left">#bounds_left</a>, <a
+href="Page_Frame_Bounds.html#method-i-bounds_top">#bounds_top</a>, and
+bounds_bottom.  Note that you can “reverse” the x axis, for example, by
+making <a
+href="Page_Frame_Bounds.html#method-i-bounds_right">#bounds_right</a>
+smaller than bounds_left.  To help with the bookkeeping for this, the
+attribute <a
+href="Page_Frame_Bounds.html#method-i-bounds_xmin">#bounds_xmin</a> holds
+the minimum of <a
+href="Page_Frame_Bounds.html#method-i-bounds_left">#bounds_left</a> and <a
+href="Page_Frame_Bounds.html#method-i-bounds_right">#bounds_right</a>,
+while <a
+href="Page_Frame_Bounds.html#method-i-bounds_ymin">#bounds_ymin</a> has the
+minimum of <a
+href="Page_Frame_Bounds.html#method-i-bounds_top">#bounds_top</a> and
+bounds_bottom.  Finally, <a
+href="Page_Frame_Bounds.html#method-i-bounds_width">#bounds_width</a> holds
+the absolute value of <a
+href="Page_Frame_Bounds.html#method-i-bounds_right">#bounds_right</a> - <a
+href="Page_Frame_Bounds.html#method-i-bounds_left">#bounds_left</a> and <a
+href="Page_Frame_Bounds.html#method-i-bounds_height">#bounds_height</a> has
+abs(bounds_top - <a
+href="Page_Frame_Bounds.html#method-i-bounds_bottom">#bounds_bottom</a>). 
+The default bounds are 0 for left and bottom and 1 for right and top,
+making figure coordinates identical to frame coordinates.  The bounds can
+be changed by calling the <a
+href="Page_Frame_Bounds.html#method-i-set_bounds">#set_bounds</a> routine.</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-bounds_bottom" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bounds_bottom
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The position of the bottom of the frame in the figure coordinate system.
+Initialized to 0.0 and changed by set_bounds.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="bounds_bottom-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 181</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bounds_bottom</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-bounds_height" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bounds_height
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The height of the frame in figure coordinates. Initialized to 1.0 and
+changed by set_bounds.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="bounds_height-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 205</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bounds_height</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-bounds_left" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bounds_left
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The position of the left of the frame in the figure coordinate system.
+Initialized to 0.0 and changed by set_bounds.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="bounds_left-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 165</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bounds_left</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-bounds_right" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bounds_right
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The position of the right of the frame in the figure coordinate system.
+Initialized to 1.0 and changed by set_bounds.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="bounds_right-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bounds_right</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-bounds_top" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bounds_top
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The position of the top of the frame in the figure coordinate system.
+Initialized to 1.0 and changed by set_bounds.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="bounds_top-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 189</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bounds_top</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-bounds_width" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bounds_width
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The width of the frame in figure coordinates. Initialized to 1.0 and
+changed by set_bounds.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="bounds_width-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bounds_width</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-bounds_xmax" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bounds_xmax
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The maximum x figure coordinate that is inside the frame. Initialized to
+1.0 and changed by set_bounds.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="bounds_xmax-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 221</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bounds_xmax</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-bounds_xmin" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bounds_xmin
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The minimum x figure coordinate that is inside the frame. Initialized to
+0.0 and changed by set_bounds.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="bounds_xmin-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 213</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bounds_xmin</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-bounds_ymax" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bounds_ymax
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The maximum y figure coordinate that is inside the frame. Initialized to
+1.0 and changed by set_bounds.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="bounds_ymax-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 237</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bounds_ymax</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-bounds_ymin" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bounds_ymin
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The minimum y figure coordinate that is inside the frame. Initialized to
+0.0 and changed by set_bounds.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="bounds_ymin-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 229</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bounds_ymin</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-column_margins" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">column_margins</span><span
+            class="method-args">(dict)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns a dictionary with entries for &#39;left_margin&#39; and
+&#39;right_margin&#39; suitable for use with set_subframe.  The margins are
+determined by the column specifications in the argument <em>dict</em>. The
+leftmost column is number 1 and the number of columns equals the column
+number for the rightmost column. The entries &#39;left_margin&#39; and
+&#39;right_margin&#39; determine the space outside the columns, and
+&#39;column_margin&#39; is the space between columns, all given as
+fractions of the frame width.  The space between the outer margins is
+divided to make room for &#39;num_columns&#39; of equally wide columns. 
+The returned margins bracket the requested &#39;column&#39;, or the
+requested range of columns from &#39;first_column&#39; to
+&#39;last_column&#39;, inclusive.  See also row_margins.</p>
+
+<p>Dictionary Entries</p>
+
+<pre class="ruby"><span class="ruby-string">&#39;left_margin&#39;</span>       =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>      <span class="ruby-comment"># default is 0</span>
+<span class="ruby-string">&#39;right_margin&#39;</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>      <span class="ruby-comment"># default is 0</span>
+<span class="ruby-string">&#39;column_margin&#39;</span>     =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>      <span class="ruby-comment"># default is 0</span>
+<span class="ruby-string">&#39;column&#39;</span>            =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_integer</span>
+<span class="ruby-string">&#39;first_column&#39;</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_integer</span>   <span class="ruby-comment"># default is 1</span>
+<span class="ruby-string">&#39;last_column&#39;</span>       =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_integer</span>   <span class="ruby-comment"># default is &#39;first_column&#39;</span>
+<span class="ruby-string">&#39;num_columns&#39;</span>       =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_integer</span>   <span class="ruby-comment"># default is &#39;last_column&#39;</span>
+</pre>
+
+<p>Example</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">columns</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">set_aspect_ratio</span>(<span class="ruby-value">2</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">rescale</span>(<span class="ruby-value">0.8</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">do_box_labels</span>(
+        <span class="ruby-string">&#39;Blues, Reds, Greens&#39;</span>,
+        <span class="ruby-string">&#39;Position&#39;</span>,
+        <span class="ruby-string">&#39;Values for Colors&#39;</span>)
+    <span class="ruby-identifier">num_plots</span> = <span class="ruby-value">3</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subplot</span>(<span class="ruby-identifier">t</span>.<span class="ruby-identifier">column_margins</span>(<span class="ruby-string">&#39;num_columns&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-string">&#39;column&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>)) <span class="ruby-keyword">do</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">right_edge_type</span> = <span class="ruby-constant">AXIS_HIDDEN</span>
+        <span class="ruby-identifier">blues</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subplot</span>(<span class="ruby-identifier">t</span>.<span class="ruby-identifier">column_margins</span>(<span class="ruby-string">&#39;num_columns&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-string">&#39;column&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>)) <span class="ruby-keyword">do</span> 
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">yaxis_type</span> = <span class="ruby-constant">AXIS_WITH_TICKS_ONLY</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">right_edge_type</span> = <span class="ruby-constant">AXIS_HIDDEN</span>
+        <span class="ruby-identifier">reds</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subplot</span>(<span class="ruby-identifier">t</span>.<span class="ruby-identifier">column_margins</span>(<span class="ruby-string">&#39;num_columns&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>, <span class="ruby-string">&#39;column&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">3</span>)) <span class="ruby-keyword">do</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">yaxis_type</span> = <span class="ruby-constant">AXIS_WITH_TICKS_ONLY</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">right_edge_type</span> = <span class="ruby-constant">AXIS_WITH_TICKS_ONLY</span>
+        <span class="ruby-identifier">greens</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p><img src="../images/Columns.png" /></p>
+          
+          
+
+          
+          <div class="method-source-code" id="column_margins-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 310</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">column_margins</span>(<span class="ruby-identifier">dict</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_figure_to_frame_dx" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_figure_to_frame_dx</span><span
+            class="method-args">(dx)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the distance <em>dx</em> measured in figure x coordinates to the 
+distance in frame x coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_figure_to_frame_dx-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 475</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_figure_to_frame_dx</span>(<span class="ruby-identifier">dx</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_figure_to_frame_dy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_figure_to_frame_dy</span><span
+            class="method-args">(dy)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the distance <em>dy</em> measured in figure y coordinates to the 
+distance in frame y coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_figure_to_frame_dy-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 480</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_figure_to_frame_dy</span>(<span class="ruby-identifier">dy</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_figure_to_frame_x" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_figure_to_frame_x</span><span
+            class="method-args">(x)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the position <em>x</em> measured in figure x coordinates to the 
+position in frame x coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_figure_to_frame_x-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 465</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_figure_to_frame_x</span>(<span class="ruby-identifier">x</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_figure_to_frame_y" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_figure_to_frame_y</span><span
+            class="method-args">(y)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the position <em>y</em> measured in figure y coordinates to the 
+position in frame y coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_figure_to_frame_y-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 470</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_figure_to_frame_y</span>(<span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_figure_to_output_dx" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_figure_to_output_dx</span><span
+            class="method-args">(dx)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the distance <em>dx</em> measured in figure x coordinates to the 
+distance in output x coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_figure_to_output_dx-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 515</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_figure_to_output_dx</span>(<span class="ruby-identifier">dx</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_figure_to_output_dy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_figure_to_output_dy</span><span
+            class="method-args">(dy)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the distance <em>dy</em> measured in figure y coordinates to the 
+distance in output y coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_figure_to_output_dy-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 520</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_figure_to_output_dy</span>(<span class="ruby-identifier">dy</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_figure_to_output_x" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_figure_to_output_x</span><span
+            class="method-args">(x)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the position <em>x</em> measured in figure x coordinates to the 
+position in output x coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_figure_to_output_x-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 505</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_figure_to_output_x</span>(<span class="ruby-identifier">x</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_figure_to_output_y" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_figure_to_output_y</span><span
+            class="method-args">(y)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the position <em>y</em> measured in figure y coordinates to the 
+position in output y coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_figure_to_output_y-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 510</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_figure_to_output_y</span>(<span class="ruby-identifier">y</span>) 
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_frame_to_figure_dx" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_frame_to_figure_dx</span><span
+            class="method-args">(dx)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the distance <em>dx</em> measured in frame x coordinates to the 
+distance in figure x coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_frame_to_figure_dx-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 495</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_frame_to_figure_dx</span>(<span class="ruby-identifier">dx</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_frame_to_figure_dy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_frame_to_figure_dy</span><span
+            class="method-args">(dy)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the distance <em>dy</em> measured in frame y coordinates to the 
+distance in figure y coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_frame_to_figure_dy-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 500</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_frame_to_figure_dy</span>(<span class="ruby-identifier">dy</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_frame_to_figure_x" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_frame_to_figure_x</span><span
+            class="method-args">(x)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the position <em>x</em> measured in frame x coordinates to the 
+position in figure x coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_frame_to_figure_x-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 485</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_frame_to_figure_x</span>(<span class="ruby-identifier">x</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_frame_to_figure_y" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_frame_to_figure_y</span><span
+            class="method-args">(y)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the position <em>y</em> measured in frame y coordinates to the 
+position in figure y coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_frame_to_figure_y-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 490</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_frame_to_figure_y</span>(<span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_frame_to_page_dx" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_frame_to_page_dx</span><span
+            class="method-args">(dx)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the distance <em>dx</em> measured in frame x coordinates to the 
+distance in page x coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_frame_to_page_dx-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 455</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_frame_to_page_dx</span>(<span class="ruby-identifier">dx</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_frame_to_page_dy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_frame_to_page_dy</span><span
+            class="method-args">(dy)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the distance <em>dy</em> measured in frame y coordinates to the 
+distance in page y coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_frame_to_page_dy-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 460</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_frame_to_page_dy</span>(<span class="ruby-identifier">dy</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_frame_to_page_x" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_frame_to_page_x</span><span
+            class="method-args">(x)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the position <em>x</em> measured in frame x coordinates to the 
+position in page x coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_frame_to_page_x-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 445</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_frame_to_page_x</span>(<span class="ruby-identifier">x</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_frame_to_page_y" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_frame_to_page_y</span><span
+            class="method-args">(y)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the position <em>y</em> measured in frame y coordinates to the 
+position in page y coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_frame_to_page_y-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 450</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_frame_to_page_y</span>(<span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_inches_to_output" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_inches_to_output</span><span
+            class="method-args">(d)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the distance <em>d</em> measured in inches to output coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_inches_to_output-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 378</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_inches_to_output</span>(<span class="ruby-identifier">d</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_mm_to_output" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_mm_to_output</span><span
+            class="method-args">(d)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the distance <em>d</em> measured in millimeters to output
+coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_mm_to_output-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 370</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_mm_to_output</span>(<span class="ruby-identifier">d</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_output_to_figure_dx" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_output_to_figure_dx</span><span
+            class="method-args">(dx)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the distance <em>dx</em> measured in output x coordinates to the 
+distance in figure x coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_output_to_figure_dx-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 535</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_output_to_figure_dx</span>(<span class="ruby-identifier">dx</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_output_to_figure_dy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_output_to_figure_dy</span><span
+            class="method-args">(dy)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the distance <em>dy</em> measured in output y coordinates to the 
+distance in figure y coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_output_to_figure_dy-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 540</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_output_to_figure_dy</span>(<span class="ruby-identifier">dy</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_output_to_figure_x" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_output_to_figure_x</span><span
+            class="method-args">(x)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the position <em>x</em> measured in output x coordinates to the 
+position in figure x coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_output_to_figure_x-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 525</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_output_to_figure_x</span>(<span class="ruby-identifier">x</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_output_to_figure_y" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_output_to_figure_y</span><span
+            class="method-args">(y)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the position <em>y</em> measured in output y coordinates to the 
+position in figure y coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_output_to_figure_y-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 530</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_output_to_figure_y</span>(<span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_output_to_inches" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_output_to_inches</span><span
+            class="method-args">(d)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the distance <em>d</em> measured in output coordinates to inches.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_output_to_inches-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 374</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_output_to_inches</span>(<span class="ruby-identifier">d</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_output_to_mm" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_output_to_mm</span><span
+            class="method-args">(d)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the distance <em>d</em> measured in output coordinates to
+millimeters.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_output_to_mm-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 366</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_output_to_mm</span>(<span class="ruby-identifier">d</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_output_to_page_dx" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_output_to_page_dx</span><span
+            class="method-args">(dx)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the distance <em>dx</em> measured in output x coordinates to the 
+distance in page x coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_output_to_page_dx-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 415</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_output_to_page_dx</span>(<span class="ruby-identifier">dx</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_output_to_page_dy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_output_to_page_dy</span><span
+            class="method-args">(dy)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the distance <em>dy</em> measured in output y coordinates to the
+same distance in page y coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_output_to_page_dy-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 420</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_output_to_page_dy</span>(<span class="ruby-identifier">dy</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_output_to_page_x" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_output_to_page_x</span><span
+            class="method-args">(x)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the position <em>x</em> measured in output x coordinates to the 
+position in page x coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_output_to_page_x-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 405</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_output_to_page_x</span>(<span class="ruby-identifier">x</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_output_to_page_y" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_output_to_page_y</span><span
+            class="method-args">(y)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the position <em>y</em> measured in output y coordinates to the 
+position in page y coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_output_to_page_y-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 410</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_output_to_page_y</span>(<span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_page_to_frame_dx" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_page_to_frame_dx</span><span
+            class="method-args">(dx)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the distance <em>dx</em> measured in page x coordinates to the 
+distance in frame x coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_page_to_frame_dx-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 435</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_page_to_frame_dx</span>(<span class="ruby-identifier">dx</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_page_to_frame_dy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_page_to_frame_dy</span><span
+            class="method-args">(dy)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the distance <em>dy</em> measured in page y coordinates to the 
+distance in frame y coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_page_to_frame_dy-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 440</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_page_to_frame_dy</span>(<span class="ruby-identifier">dy</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_page_to_frame_x" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_page_to_frame_x</span><span
+            class="method-args">(x)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the position <em>x</em> measured in page x coordinates to the 
+position in frame x coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_page_to_frame_x-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 425</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_page_to_frame_x</span>(<span class="ruby-identifier">x</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_page_to_frame_y" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_page_to_frame_y</span><span
+            class="method-args">(y)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the position <em>y</em> measured in page y coordinates to the 
+position in frame y coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_page_to_frame_y-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 430</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_page_to_frame_y</span>(<span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_page_to_output_dx" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_page_to_output_dx</span><span
+            class="method-args">(dx)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the distance <em>dx</em> measured in page x coordinates to the 
+distance in output x coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_page_to_output_dx-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 395</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_page_to_output_dx</span>(<span class="ruby-identifier">dx</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_page_to_output_dy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_page_to_output_dy</span><span
+            class="method-args">(dy)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the distance <em>dy</em> measured in page y coordinates to the 
+distance in output y coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_page_to_output_dy-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 400</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_page_to_output_dy</span>(<span class="ruby-identifier">dy</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_page_to_output_x" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_page_to_output_x</span><span
+            class="method-args">(x)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the position <em>x</em> measured in page x coordinates to the 
+position in output x coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_page_to_output_x-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 384</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_page_to_output_x</span>(<span class="ruby-identifier">x</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_page_to_output_y" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_page_to_output_y</span><span
+            class="method-args">(y)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Convert the position <em>y</em> measured in page y coordinates to the 
+position in output y coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_page_to_output_y-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 390</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_page_to_output_y</span>(<span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-convert_to_degrees" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_to_degrees</span><span
+            class="method-args">(dx, dy)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns the angle measured in degrees clockwise from the horizontal for the
+slope specified by <em>dx</em> and <em>dy</em> given in figure coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="convert_to_degrees-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 545</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_to_degrees</span>(<span class="ruby-identifier">dx</span>, <span class="ruby-identifier">dy</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-frame_bottom" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            frame_bottom
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The position of the bottom of the frame in the page y coordinate system
+which runs from 0 at the bottom to 1 at the top. Initialized to 0.2 and
+changed by set_subframe.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="frame_bottom-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 133</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">frame_bottom</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-frame_height" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            frame_height
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The height of the frame in page coordinates. Initialized to 0.6 and changed
+by set_subframe.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="frame_height-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 157</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">frame_height</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-frame_left" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            frame_left
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The position of the left of the frame in the page x coordinate system which
+runs from 0 at the left to 1 at the right. Initialized to 0.2 and changed
+by set_subframe.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="frame_left-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">frame_left</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-frame_right" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            frame_right
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The position of the right of the frame in the page x coordinate system
+which runs from 0 at the left to 1 at the right. Initialized to 0.8 and
+changed by set_subframe.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="frame_right-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">frame_right</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-frame_top" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            frame_top
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The position of the top of the frame in the page y coordinate system which
+runs from 0 at the bottom to 1 at the top. Initialized to 0.8 and changed
+by set_subframe.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="frame_top-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 141</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">frame_top</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-frame_width" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            frame_width
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The width of the frame in page coordinates. Initialized to 0.6 and changed
+by set_subframe.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="frame_width-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 149</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">frame_width</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-page_bottom" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            page_bottom
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The position of the bottom of the page in the device coordinate system –
+measured in output page coordinates (1/720 inch).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="page_bottom-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">page_bottom</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-page_height" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            page_height
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The height of the page in the device coordinate system – measured in output
+page coordinates (1/720 inch).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="page_height-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">page_height</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-page_left" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            page_left
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The position of the left of the page in the device coordinate system –
+measured in output page coordinates (1/720 inch).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="page_left-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">page_left</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-page_right" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            page_right
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The position of the right of the page in the device coordinate system –
+measured in output page coordinates (1/720 inch).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="page_right-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">page_right</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-page_top" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            page_top
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The position of the top of the page in the device coordinate system –
+measured in output page coordinates (1/720 inch).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="page_top-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">page_top</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-page_width" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            page_width
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The width of the page in the device coordinate system – measured in output
+page coordinates (1/720 inch).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="page_width-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">page_width</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-row_margins" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">row_margins</span><span
+            class="method-args">(dict)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns a dictionary with entries for &#39;top_margin&#39; and
+&#39;bottom_margin&#39; suitable for use with set_subframe.  The margins
+are determined by the row specifications in the argument <em>dict</em>. The
+uppermost row is number 1 and the number of rows equals the row number for
+the bottom-most row. The entries &#39;top_margin&#39; and
+&#39;bottom_margin&#39; determine the space above and below the rows, and
+&#39;row_margin&#39; is the space between rows, all given as fractions of
+the frame height.  The space between the outer margins is divided to make
+room for &#39;num_rows&#39; of equally tall rows.  The returned margins
+bracket the requested &#39;row&#39;, or the requested range of rows from
+&#39;first_row&#39; to &#39;last_row&#39;, inclusive.  See also
+column_margins.</p>
+
+<p>Dictionary Entries</p>
+
+<pre class="ruby"><span class="ruby-string">&#39;top_margin&#39;</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>      <span class="ruby-comment"># default is 0</span>
+<span class="ruby-string">&#39;bottom_margin&#39;</span>     =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>      <span class="ruby-comment"># default is 0</span>
+<span class="ruby-string">&#39;row_margin&#39;</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>      <span class="ruby-comment"># default is 0</span>
+<span class="ruby-string">&#39;row&#39;</span>               =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_integer</span>
+<span class="ruby-string">&#39;first_row&#39;</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_integer</span>   <span class="ruby-comment"># default is 1</span>
+<span class="ruby-string">&#39;last_row&#39;</span>          =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_integer</span>   <span class="ruby-comment"># default is &#39;first_row&#39;</span>
+<span class="ruby-string">&#39;num_rows&#39;</span>          =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_integer</span>   <span class="ruby-comment"># default is &#39;last_row&#39;</span>
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="row_margins-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 332</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">row_margins</span>(<span class="ruby-identifier">dict</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-set_bounds" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_bounds</span><span
+            class="method-args">(dict=nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Sets the bounds according to the entries in the dictionary argument (called
+by show_plot).</p>
+
+<p>The values of the entries are the figure coordinates for the edges of the
+frame.  The following attributes are changed: <a
+href="Page_Frame_Bounds.html#method-i-bounds_left">#bounds_left</a>, <a
+href="Page_Frame_Bounds.html#method-i-bounds_right">#bounds_right</a>, <a
+href="Page_Frame_Bounds.html#method-i-bounds_bottom">#bounds_bottom</a>, <a
+href="Page_Frame_Bounds.html#method-i-bounds_top">#bounds_top</a>,
+xaxis_reversed, <a
+href="Page_Frame_Bounds.html#method-i-bounds_xmin">#bounds_xmin</a>, <a
+href="Page_Frame_Bounds.html#method-i-bounds_xmax">#bounds_xmax</a>, <a
+href="Page_Frame_Bounds.html#method-i-bounds_width">#bounds_width</a>,
+yaxis_reversed, <a
+href="Page_Frame_Bounds.html#method-i-bounds_ymin">#bounds_ymin</a>, <a
+href="Page_Frame_Bounds.html#method-i-bounds_ymax">#bounds_ymax</a>, <a
+href="Page_Frame_Bounds.html#method-i-bounds_height">#bounds_height</a>,
+default_text_height_dx, and default_text_height_dy.</p>
+
+<p>Dictionary Entries</p>
+
+<pre class="ruby"><span class="ruby-string">&#39;bounds_left&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>     <span class="ruby-comment"># required</span>
+<span class="ruby-string">&#39;bounds_right&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>    <span class="ruby-comment"># required</span>
+<span class="ruby-string">&#39;bounds_top&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>      <span class="ruby-comment"># required</span>
+<span class="ruby-string">&#39;bounds_bottom&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>   <span class="ruby-comment"># required</span>
+<span class="ruby-string">&#39;left_boundary&#39;</span>              <span class="ruby-comment"># alias for &#39;bounds_left&#39;</span>
+<span class="ruby-string">&#39;right_boundary&#39;</span>             <span class="ruby-comment"># alias for &#39;bounds_right&#39;</span>
+<span class="ruby-string">&#39;top_boundary&#39;</span>               <span class="ruby-comment"># alias for &#39;bounds_top&#39;</span>
+<span class="ruby-string">&#39;bottom_boundary&#39;</span>            <span class="ruby-comment"># alias for &#39;bounds_bottom&#39;</span>
+</pre>
+
+<p>The following forms are also supported for calls to <a
+href="Page_Frame_Bounds.html#method-i-set_bounds">#set_bounds</a>:</p>
+
+<pre class="ruby"><span class="ruby-identifier">set_bounds</span>(<span class="ruby-string">&#39;boundaries&#39;</span> =<span class="ruby-operator">&gt;</span> [ <span class="ruby-identifier">left</span>, <span class="ruby-identifier">right</span>, <span class="ruby-identifier">top</span>, <span class="ruby-identifier">bottom</span> ])
+<span class="ruby-identifier">set_bounds</span>([ <span class="ruby-identifier">left</span>, <span class="ruby-identifier">right</span>, <span class="ruby-identifier">top</span>, <span class="ruby-identifier">bottom</span> ])
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="set_bounds-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 360</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_bounds</span>(<span class="ruby-identifier">dict</span>=<span class="ruby-keyword">nil</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-set_device_pagesize" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            set_device_pagesize(width, height) # measured in output page coordinates (1/720 inch)
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The page coordinates go from 0.0 to 1.0 with (0,0) at the lower left and
+(1,1) at the upper right. This command sets the physical size of this
+rectangle in the output coordinate</p>
+          
+          
+
+          
+          <div class="method-source-code" id="set_device_pagesize-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_device_pagesize</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-set_frame_sides" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            set_frame_sides(left, right, top, bottom) # sizes in page coords [0..1]
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>This command sets <a
+href="Page_Frame_Bounds.html#method-i-frame_left">#frame_left</a>, <a
+href="Page_Frame_Bounds.html#method-i-frame_right">#frame_right</a>, <a
+href="Page_Frame_Bounds.html#method-i-frame_top">#frame_top</a>, and <a
+href="Page_Frame_Bounds.html#method-i-frame_bottom">#frame_bottom</a> to
+the given values.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="set_frame_sides-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_frame_sides</span>(<span class="ruby-identifier">left</span>, <span class="ruby-identifier">right</span>, <span class="ruby-identifier">top</span>, <span class="ruby-identifier">bottom</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-set_subframe" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_subframe</span><span
+            class="method-args">(dict=nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Adjusts frame margins according to the entries in the dictionary argument.</p>
+
+<p>Note that this does not automatically adjust the clipping rectangle to the
+new frame. If you want the clipping changed, call clip_to_frame after
+calling set_subframe.</p>
+
+<p>Dictionary Entries</p>
+
+<pre class="ruby"><span class="ruby-string">&#39;left_margin&#39;</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>     <span class="ruby-comment"># optional</span>
+<span class="ruby-string">&#39;right_margin&#39;</span>     =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>     <span class="ruby-comment"># optional</span>
+<span class="ruby-string">&#39;top_margin&#39;</span>       =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>     <span class="ruby-comment"># optional</span>
+<span class="ruby-string">&#39;bottom_margin&#39;</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>     <span class="ruby-comment"># optional</span>
+<span class="ruby-string">&#39;left&#39;</span>                            <span class="ruby-comment"># alias for &#39;left_margin&#39;</span>
+<span class="ruby-string">&#39;right&#39;</span>                           <span class="ruby-comment"># alias for &#39;right_margin&#39;</span>
+<span class="ruby-string">&#39;top&#39;</span>                             <span class="ruby-comment"># alias for &#39;top_margin&#39;</span>
+<span class="ruby-string">&#39;bottom&#39;</span>                          <span class="ruby-comment"># alias for &#39;bottom_margin&#39;</span>
+</pre>
+
+<p>The following forms are also supported for calls to <a
+href="Page_Frame_Bounds.html#method-i-set_subframe">#set_subframe</a>:</p>
+
+<pre class="ruby"><span class="ruby-identifier">set_subframe</span>(<span class="ruby-string">&#39;margins&#39;</span> =<span class="ruby-operator">&gt;</span> [ <span class="ruby-identifier">left</span>, <span class="ruby-identifier">right</span>, <span class="ruby-identifier">top</span>, <span class="ruby-identifier">bottom</span> ])
+<span class="ruby-identifier">set_subframe</span>([ <span class="ruby-identifier">left</span>, <span class="ruby-identifier">right</span>, <span class="ruby-identifier">top</span>, <span class="ruby-identifier">bottom</span> ])
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="set_subframe-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 261</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_subframe</span>(<span class="ruby-identifier">dict</span>=<span class="ruby-keyword">nil</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-tex_preamble" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            tex_preamble
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            tex_preamble = a_string
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>This string will be used as the “preamble” for the TeX file. The default
+does “usepackage” commands for “color” and “geometry”. You may want to use
+some other packages as well.  Here&#39;s an example of how to do it which
+adds the &#39;marvosym&#39; package by inserting the following line into
+the &#39;initialize&#39; routine.</p>
+
+<pre>t.tex_preamble = t.tex_preamble + &quot;\n\t\\usepackage{marvosym}\n&quot;</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="tex_preamble-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Page_Frame_Bounds.rb, line 562</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">tex_preamble</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

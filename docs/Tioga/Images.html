@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Tioga::Images - RDoc Documentation</title>
+
+<link href="../fonts.css" rel="stylesheet">
+<link href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/search_index.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/searcher.js"></script>
+<script src="../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="Images.html#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Doc< FigureMaker
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="Images.html#method-i-create_image_data">#create_image_data</a>
+    
+    <li ><a href="Images.html#method-i-create_monochrome_image_data">#create_monochrome_image_data</a>
+    
+    <li ><a href="Images.html#method-i-jpg_info">#jpg_info</a>
+    
+    <li ><a href="Images.html#method-i-load_png">#load_png</a>
+    
+    <li ><a href="Images.html#method-i-register_image">#register_image</a>
+    
+    <li ><a href="Images.html#method-i-show_image">#show_image</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Tioga::Images">
+  <h1 id="class-Tioga::Images" class="class">
+    class Tioga::Images
+  </h1>
+
+  <section class="description">
+    
+<p>See also <a href="Tutorial/SampledData.html">Tutorial::SampledData</a>.</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-create_image_data" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_image_data</span><span
+            class="method-args">(data, dict)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates a data representation suitable for use with <a
+href="Images.html#method-i-show_image">#show_image</a> from the values in
+the Dtable <em>data</em> according to the entries in the dictionary
+<em>dict</em>.  Only <em>data</em> rows between &#39;first_row&#39; and
+&#39;last_row&#39; and columns between &#39;first_column&#39; and
+&#39;last_column&#39; are included. Data values between &#39;min_value&#39;
+and &#39;max_value&#39; are mapped linearly to numbers between 0 and
+&#39;max_code&#39; and then rounded to the nearest integer. Data values
+less than &#39;min_value&#39; are mapped to the integer specied by
+&#39;if_below_range&#39;, and values greater than &#39;max_value&#39; are
+mapped to the integer given by &#39;if_above_range&#39;.</p>
+
+<p>If the flag &#39;masking&#39; is <code>true</code>, then &#39;max_code&#39;
+is set to 254 and all data values out of range are assigned the code 255. 
+The result can then be used in a call to <a
+href="Images.html#method-i-show_image">#show_image</a> with
+&#39;value_mask&#39; set to 255 to prevent out-of-range values from being
+displayed.</p>
+
+<p>Dictionary Entries</p>
+
+<pre class="ruby"><span class="ruby-string">&#39;first_row&#39;</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_integer</span>     <span class="ruby-comment"># first row of data to include (default 0)</span>
+<span class="ruby-string">&#39;last_row&#39;</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_integer</span>     <span class="ruby-comment"># last row of data to include (default -1)</span>
+<span class="ruby-string">&#39;first_column&#39;</span>     =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_integer</span>     <span class="ruby-comment"># first column of data to include (default 0)</span>
+<span class="ruby-string">&#39;last_column&#39;</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_integer</span>     <span class="ruby-comment"># last column of data to include (default -1)</span>
+<span class="ruby-string">&#39;min_value&#39;</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>        <span class="ruby-comment"># lower bound on valid data</span>
+<span class="ruby-string">&#39;max_value&#39;</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>        <span class="ruby-comment"># upper bound on valid data</span>
+<span class="ruby-string">&#39;masking&#39;</span>          =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">true_or_false</span>  <span class="ruby-comment"># default false</span>
+<span class="ruby-string">&#39;max_code&#39;</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_integer</span>     <span class="ruby-comment"># integer between 1 and 255 (default 255)</span>
+<span class="ruby-string">&#39;if_below_range&#39;</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_integer</span>     <span class="ruby-comment"># integer between 0 and 255 (default 0)</span>
+<span class="ruby-string">&#39;if_above_range&#39;</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_integer</span>     <span class="ruby-comment"># integer between 0 and 255 (default max_code)</span>
+</pre>
+
+<p>Example: For an image that only shows the data values between 0 and 1 and
+masks out other values, you might do this:</p>
+
+<pre class="ruby"><span class="ruby-identifier">create_image_data</span>(<span class="ruby-identifier">data</span>, <span class="ruby-string">&#39;min_value&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-string">&#39;max_value&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-string">&#39;masking&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>)
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="create_image_data-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Images.rb, line 320</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_image_data</span>(<span class="ruby-identifier">data</span>, <span class="ruby-identifier">dict</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-create_monochrome_image_data" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_monochrome_image_data</span><span
+            class="method-args">(data, dict)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates a data representation suitable for use with <a
+href="Images.html#method-i-show_image">#show_image</a> from the values in
+the Dtable <em>data</em> according to the entries in the dictionary
+<em>dict</em>.  Only <em>data</em> rows between &#39;first_row&#39; and
+&#39;last_row&#39; and columns between &#39;first_column&#39; and
+&#39;last_column&#39; are included.</p>
+
+<p>If the &#39;reverse&#39; flag is <code>false</code>, values greater than
+&#39;boundary&#39; map to 1&#39;s and other values map to 0&#39;s. If
+&#39;reverse&#39; is <code>true</code>, then values greater than
+&#39;boundary&#39; map to 0&#39;s and other values map to 1&#39;s.</p>
+
+<p>Dictionary Entries</p>
+
+<pre class="ruby"><span class="ruby-string">&#39;first_row&#39;</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_integer</span>     <span class="ruby-comment"># first row of data to include (default 0)</span>
+<span class="ruby-string">&#39;last_row&#39;</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_integer</span>     <span class="ruby-comment"># last row of data to include (default -1)</span>
+<span class="ruby-string">&#39;first_column&#39;</span>     =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_integer</span>     <span class="ruby-comment"># first column of data to include (default 0)</span>
+<span class="ruby-string">&#39;last_column&#39;</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_integer</span>     <span class="ruby-comment"># last column of data to include (default -1)</span>
+<span class="ruby-string">&#39;boundary&#39;</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>        <span class="ruby-comment"># default 0.0</span>
+<span class="ruby-string">&#39;reverse&#39;</span>          =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">true_or_false</span>  <span class="ruby-comment"># default false</span>
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="create_monochrome_image_data-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Images.rb, line 340</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_monochrome_image_data</span>(<span class="ruby-identifier">data</span>, <span class="ruby-identifier">dict</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-jpg_info" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">jpg_info</span><span
+            class="method-args">(file)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns some information about the given JPEG file, and in particular its
+width and height.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="jpg_info-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Images.rb, line 285</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">jpg_info</span>(<span class="ruby-identifier">file</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-load_png" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">load_png</span><span
+            class="method-args">(file)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Loads a PNG image from a png file. It returns a dictionnary that can be
+passed directly to <a
+href="Images.html#method-i-register_image">register_image</a>, or to <a
+href="Images.html#method-i-show_image">show_image</a> (but in the latter
+case, you need to add the coordinates, of course).</p>
+
+<p>This function will fail on some types of PNG images for some colorspaces
+(in particular for indexed images).</p>
+
+<p>The alpha channel is transformed into a grayscale mask.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="load_png-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Images.rb, line 276</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">load_png</span>(<span class="ruby-identifier">file</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-register_image" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">register_image</span><span
+            class="method-args">(dict)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Registers an image for later use. This function does not actually display
+anythig, but the return value can be passed an arbitrary number of times as
+the &#39;ref&#39; key of the argument to <a
+href="Images.html#method-i-show_image">show_image</a>. The values
+understood for dict are the same as for <a
+href="Images.html#method-i-show_image">show_image</a>, excepted that the
+coordinates are not used.</p>
+
+<p>You can even embed images you don&#39;t display.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="register_image-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Images.rb, line 260</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">register_image</span>(<span class="ruby-identifier">dict</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show_image" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show_image</span><span
+            class="method-args">(dict)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Shows the image specified by the dictionary argument <em>dict</em>.  The
+image can be taken from a JPEG file or it can be given as sampled data to
+be mapped to colors for pixels.</p>
+
+<p>Some of the dictionary entries give the properties of the image itself and
+some deal with the placement of the image in the figure.  Conceptually the
+image is a rectangle with the first row of data at the top and the last row
+at the bottom.  The first column in each row is at the left and the last
+column is at the right.  This image rectangle is mapped to the figure by
+giving the figure coordinate locations for the lower left, lower right, and
+upper right corners of the image.  This allows the image to be rotated,
+streched, and skewed when it is placed – or even reflected in either the
+horizontal or vertical by suitable choices for the corner locations.</p>
+
+<p>For a JPEG, you can simply give the filename for the image along with the
+location and the width and height.  Sampled images can be monochrome, gray
+scale, RGB, or CMYK according to the value of the &#39;color_space&#39;
+entry. In most of the cases, it is actually unlikely that you&#39;ll know
+the widths and heights of the images. For that, you can use the <a
+href="Images.html#method-i-jpg_info">jpg_info</a> function.</p>
+
+<p>To display PNG images, use <a
+href="Images.html#method-i-load_png">load_png</a> function that returns a
+dictionnary suitable for use with <a
+href="Images.html#method-i-show_image">show_image</a>. You just need to add
+the coordinates to the dictionnary.  Be warned that some PNG images, such
+as the ones that use a fixed color palette, cannot be used for the time
+being, and <a href="Images.html#method-i-load_png">load_png</a> will raise
+an exception.</p>
+
+<p>The &#39;color_space&#39; entry is set to &#39;MONO&#39; or &#39;mono&#39;
+for a monochrome image.  The monochrome image is used as a &#39;stencil
+mask&#39; for painting in the current fill color.  The default is to paint
+places corresponding to sample values of 0 while leaving the previous
+contents unchanged where the sample value is 1. If the entry
+&#39;reversed&#39; is <code>true</code>, then this interpretation is
+reversed, and 1&#39;s are painted and 0&#39;s left unchanged. The data for
+monochrome images is stored using a single bit per sample.  The routine <a
+href="Images.html#method-i-create_monochrome_image_data">#create_monochrome_image_data</a>
+provides an easy way to create such data from a table of arbitrary sample
+values.</p>
+
+<p>Monochrome images can also be used as a stencil mask for other images.  You
+can supply a dictionary with entries for a monochrome image as the value of
+the &#39;stencil_mask&#39; entry for another call on <a
+href="Images.html#method-i-show_image">#show_image</a>, and the second
+image will then only be painted in the places where the stencil mask image
+would itself be painted.  Note that in this case, the second image and the
+stencil mask image need not have the same number or rows or columns: each
+image rectangle is mapped to the figure using the same locations for
+&#39;ll&#39;, &#39;lr&#39;, and &#39;ul&#39; so their boundaries will
+coincide even if they are different resolutions.</p>
+
+<p>The &#39;color_space&#39; entry is set to &#39;GRAY&#39;, &#39;gray&#39;,
+&#39;GREY&#39;, or &#39;grey&#39; for a grayscale image.  The data for
+grayscale images is stored using one byte per sample.  The routine <a
+href="Images.html#method-i-create_monochrome_image_data">#create_monochrome_image_data</a>
+provides a handy way to create such data from a table of values.</p>
+
+<p>Grayscale images can also be used as a “soft mask” for other images.  In
+this case, the grayscale samples are interpreted as relative opacities (a
+stencil mask, on the other hand, is “hard” in that each  sample is either
+totally opaque or totally transparent).  To use such soft masking, create a
+dictionary for the grayscale image and provide it as the
+&#39;opacity_mask&#39; entry for the image be be masked.</p>
+
+<p>The &#39;color_space&#39; entry is &#39;RGB&#39; or &#39;rgb&#39; for an
+image using the red-green-blue representation.  Samples are stored as three
+bytes, corresponding to red, green, and blue intensities  (e.g., red
+intensity in range 0.0 to 1.0 is stored as round(red*255)).</p>
+
+<p>If the &#39;color_space&#39; entry is &#39;HLS&#39; or &#39;hls&#39;, then
+samples are stored as three bytes, corresponding to hue, lightness, and
+saturation  (the hue angle in the range 0.0 to 360.0 is stored as
+round(hue*256/360)). <strong>Note</strong> internally, the hls data is
+copied and converted to rgb – see string_hls_to_rgb.</p>
+
+<p>In 4-color printing, as in ink-jet printers, images are painted using cyan,
+magenta, yellow, and black inks. The corresponding &#39;color_space&#39; is
+&#39;CMYK&#39; or &#39;cmyk&#39;.  For this case, samples are stored as
+four bytes, corresponding to cyan, magenta, yellow, and black intensitites.</p>
+
+<p>Finally, many applications use “false colored” images to represent data
+values.  The data is stored one byte per sample, and a color map is used to
+determine the RGB intensities representing different sample values. The
+routine <a
+href="Images.html#method-i-create_image_data">#create_image_data</a> is
+available to help construct such a representation from a Dtable of double
+precision samples.  In some situations, the data may contain “out-of-range”
+or “invalid” entries that should not be displayed.  This can be
+accomplished by using a certain byte value to represent such cases and
+providing a &#39;value_mask&#39; entry with the image (this is also called
+“color key masking”). The value mask entry is a pair, [min_mask_byte
+max_mask_byte], and any samples whose value falls into this range are not
+painted, allowing the existing background to show through.  (For the common
+case in which a single byte code is being used for all “out-of-range” data,
+&#39;value_mask&#39; can simply be set to this byte code.)  The use of a
+&#39;value_mask&#39; is in effect a stencil mask that is determined
+on-the-fly by the sample values themselves.  The routine <a
+href="Images.html#method-i-create_image_data">#create_image_data</a> has
+options for doing value masking.</p>
+
+<p>Image Interpolation:  When the resolution of a source image is
+significantly lower than that of the output device,  each source sample
+covers many device pixels. This can cause images to appear “jaggy”.  These
+visual artifacts can  be reduced by applying an image interpolation
+algorithm during rendering. Instead of painting all pixels covered by a
+source sample with the same color, image interpolation attempts to produce
+a smooth transition between  adjacent sample values. Image interpolation is
+enabled by default in <a href="../Tioga.html">Tioga</a>; setting the
+&#39;interpolate&#39; entry  in the image dictionary to <code>false</code>
+should disable it (but note that some PDF viewer implementations seem to
+ignore this flag).</p>
+
+<p>Defining figures for later use: when calling <a
+href="Images.html#method-i-show_image">show_image</a>, it returns an 
+internal reference to the image. If you need to display this image again 
+(with different values of the coordinates), you can skip the whole image 
+definition again, and pass the returned value as the &#39;ref&#39; key in
+the image  dictionnary. In that case, you still need the &#39;ll&#39;,
+&#39;lr&#39;, &#39;ul&#39; keys of the  image display.</p>
+
+<p>Dictionary Entries</p>
+
+<pre class="ruby"><span class="ruby-string">&#39;ll&#39;</span>           =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>]             <span class="ruby-comment"># location for the lower-left corner of the image</span>
+<span class="ruby-string">&#39;lr&#39;</span>           =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>]             <span class="ruby-comment"># location for the lower-right corner of the image</span>
+<span class="ruby-string">&#39;ul&#39;</span>           =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>]             <span class="ruby-comment"># location for the upper-left corner of the image</span>
+<span class="ruby-string">&#39;width&#39;</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_integer</span>         <span class="ruby-comment"># number of columns of samples in the image</span>
+<span class="ruby-string">&#39;w&#39;</span>                                  <span class="ruby-comment"># alias for &#39;width&#39;</span>
+<span class="ruby-string">&#39;height&#39;</span>       =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_integer</span>         <span class="ruby-comment"># number of rows of samples in the image</span>
+<span class="ruby-string">&#39;h&#39;</span>                                  <span class="ruby-comment"># alias for &#39;height&#39;</span>
+<span class="ruby-string">&#39;ref&#39;</span>          =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_value</span>            <span class="ruby-comment"># a value previously returned by #show_image or #register_image, to reuse and already defined image</span>
+<span class="ruby-string">&#39;jpg&#39;</span>          =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_string</span>           <span class="ruby-comment"># file containing the JPEG image</span>
+<span class="ruby-string">&#39;jpeg&#39;</span>, <span class="ruby-string">&#39;JPEG&#39;</span>, <span class="ruby-string">&#39;JPG&#39;</span>                <span class="ruby-comment"># aliases for &#39;jpg&#39;</span>
+<span class="ruby-string">&#39;color_space&#39;</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">string_or_colormap</span> <span class="ruby-comment"># tells how to interpret the image data</span>
+<span class="ruby-string">&#39;colormap&#39;</span>                           <span class="ruby-comment"># alias for &#39;color_space&#39;</span>
+<span class="ruby-string">&#39;color_map&#39;</span>                          <span class="ruby-comment"># alias for &#39;color_space&#39;</span>
+<span class="ruby-string">&#39;data&#39;</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_string</span>           <span class="ruby-comment"># samples with &#39;width&#39; columns and &#39;height&#39; rows</span>
+<span class="ruby-string">&#39;value_mask&#39;</span>   =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">min_mask_byte</span> <span class="ruby-identifier">max_mask_byte</span>]  <span class="ruby-comment"># for color key masking of image</span>
+<span class="ruby-string">&#39;value_mask&#39;</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">byte_code_integer</span>  <span class="ruby-comment"># sets both min_b</span>
+<span class="ruby-string">&#39;stencil_mask&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_mono_image_dict</span>  <span class="ruby-comment"># for stencil masking of image</span>
+<span class="ruby-string">&#39;opacity_mask&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_grayscale_image_dict</span> <span class="ruby-comment"># for soft masking of image</span>
+<span class="ruby-string">&#39;reversed&#39;</span>     =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">true_or_false</span>      <span class="ruby-comment"># default false.  for mono images only.</span>
+<span class="ruby-string">&#39;interpolate&#39;</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">true_or_false</span>      <span class="ruby-comment"># default true</span>
+</pre>
+
+<p>Examples</p>
+
+<pre class="ruby"><span class="ruby-constant">On</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">left</span>
+    <span class="ruby-identifier">show_image</span>( <span class="ruby-comment"># Cassini image of Jupiter with Io in foreground</span>
+        <span class="ruby-string">&#39;jpg&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;data/cassini.jpg&quot;</span>, <span class="ruby-string">&#39;width&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">999</span>, <span class="ruby-string">&#39;height&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">959</span>,
+        <span class="ruby-string">&#39;ll&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">0.01</span>, <span class="ruby-value">0.01</span>], <span class="ruby-string">&#39;lr&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">0.99</span>, <span class="ruby-value">0.01</span>], <span class="ruby-string">&#39;ul&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">0.01</span>, <span class="ruby-value">0.99</span>])
+<span class="ruby-constant">In</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">center</span>
+    <span class="ruby-identifier">show_image</span>( <span class="ruby-comment"># same image of Jupiter</span>
+        <span class="ruby-string">&#39;jpg&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;data/cassini.jpg&quot;</span>, <span class="ruby-string">&#39;width&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">999</span>, <span class="ruby-string">&#39;height&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">959</span>,
+        <span class="ruby-string">&#39;ll&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">0.01</span>, <span class="ruby-value">0.01</span>], <span class="ruby-string">&#39;lr&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">0.99</span>, <span class="ruby-value">0.01</span>], <span class="ruby-string">&#39;ul&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">0.01</span>, <span class="ruby-value">0.99</span>]) 
+    <span class="ruby-identifier">fill_opacity</span> = <span class="ruby-value">0.6</span> <span class="ruby-comment"># images can be partially transparent too</span>
+    <span class="ruby-identifier">show_image</span>( <span class="ruby-comment"># Lucy amazed by Io</span>
+        <span class="ruby-string">&#39;jpg&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;data/lucy.jpg&quot;</span>, <span class="ruby-string">&#39;width&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">148</span>, <span class="ruby-string">&#39;height&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">164</span>,
+        <span class="ruby-string">&#39;ll&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">0.52</span>, <span class="ruby-value">0.97</span>], <span class="ruby-string">&#39;lr&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">0.41</span>, <span class="ruby-value">0.52</span>], <span class="ruby-string">&#39;ul&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">0.12</span>, <span class="ruby-value">0.97</span>])
+<span class="ruby-constant">On</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">right</span>
+    <span class="ruby-value">1</span>) <span class="ruby-identifier">show_image</span> <span class="ruby-identifier">of</span> <span class="ruby-identifier">lucy</span>
+    <span class="ruby-value">2</span>) <span class="ruby-identifier">create_monochrome_image_data</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">checker</span> <span class="ruby-identifier">board</span> <span class="ruby-identifier">pattern</span>
+    <span class="ruby-value">3</span>) <span class="ruby-identifier">show_image</span> <span class="ruby-identifier">of</span> <span class="ruby-constant">Jupiter</span> <span class="ruby-identifier">using</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">monochrome</span> <span class="ruby-identifier">image</span> <span class="ruby-identifier">data</span> <span class="ruby-identifier">as</span> <span class="ruby-identifier">a</span> <span class="ruby-identifier">stencil_mask</span>
+</pre>
+
+<p><img src="../images/Sample_Jpegs.png" /></p>
+
+<p>The following is a more lengthy example showing the use of a “false
+colored” image to represent a 2 dimensional table of data.  In this case,
+the data comes from an astrophysical “equation of state” code that gives
+pressure as a function of temperature and density.  The data is read from a
+file (using Dtable.read), converted to image samples (by <a
+href="Images.html#method-i-create_image_data">#create_image_data</a>), and
+displayed (by <a href="Images.html#method-i-show_image">#show_image</a>)
+using one of the predefined colormaps (mellow_colormap).  Since there is no
+data for the high-temperature and low-density corner, that area is removed
+by a clip path (see the clip_press_image method below).  Finally, a color
+bar is added showing the values for the different colors used in the image.
+The top-level plot method is &#39;sampled_data&#39; which shows the image
+in one subplot and the colorbar in another.</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">sampled_data</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">rescale</span>(<span class="ruby-value">0.8</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subplot</span>(<span class="ruby-string">&#39;right_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.07</span>) { <span class="ruby-identifier">eos_image</span> }
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subplot</span>(
+        <span class="ruby-string">&#39;left_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.95</span>,
+        <span class="ruby-string">&#39;top_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.05</span>,
+        <span class="ruby-string">&#39;bottom_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.05</span>) { <span class="ruby-identifier">color_bar</span> }
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">eos_image</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">do_box_labels</span>(<span class="ruby-string">&#39;Pressure&#39;</span>, <span class="ruby-string">&#39;Log Density&#39;</span>, <span class="ruby-string">&#39;Log Temperature&#39;</span>)
+    <span class="ruby-identifier">data</span> = <span class="ruby-identifier">get_press_image</span>
+    <span class="ruby-identifier">xs</span> = <span class="ruby-ivar">@eos_logRHOs</span>
+    <span class="ruby-identifier">ys</span> = <span class="ruby-ivar">@eos_logTs</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_plot</span>(<span class="ruby-string">&#39;boundaries&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-ivar">@eos_xmin</span>, <span class="ruby-ivar">@eos_xmax</span>, <span class="ruby-ivar">@eos_ymax</span>, <span class="ruby-ivar">@eos_ymin</span>]) <span class="ruby-keyword">do</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">fill_color</span> = <span class="ruby-constant">Wheat</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">fill_frame</span>
+        <span class="ruby-identifier">clip_press_image</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_image</span>(
+            <span class="ruby-string">&#39;ll&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">xs</span>.<span class="ruby-identifier">min</span>, <span class="ruby-identifier">ys</span>.<span class="ruby-identifier">min</span>],
+            <span class="ruby-string">&#39;lr&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">xs</span>.<span class="ruby-identifier">max</span>, <span class="ruby-identifier">ys</span>.<span class="ruby-identifier">min</span>],
+            <span class="ruby-string">&#39;ul&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">xs</span>.<span class="ruby-identifier">min</span>, <span class="ruby-identifier">ys</span>.<span class="ruby-identifier">max</span>], 
+            <span class="ruby-string">&#39;color_space&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">mellow_colormap</span>,
+            <span class="ruby-string">&#39;data&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">data</span>, <span class="ruby-string">&#39;value_mask&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">255</span>,
+            <span class="ruby-string">&#39;w&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@eos_data_xlen</span>, <span class="ruby-string">&#39;h&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@eos_data_ylen</span>)
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_press_image</span>
+    <span class="ruby-ivar">@eos_xmin</span> = <span class="ruby-value">-8.5</span>; <span class="ruby-ivar">@eos_xmax</span> = <span class="ruby-value">2.5</span>
+    <span class="ruby-ivar">@eos_ymin</span> = <span class="ruby-value">5.7</span>; <span class="ruby-ivar">@eos_ymax</span> = <span class="ruby-value">7.0</span>
+    <span class="ruby-ivar">@image_zmin</span> = <span class="ruby-value">8</span>
+    <span class="ruby-ivar">@image_zmax</span> = <span class="ruby-value">18</span>
+    <span class="ruby-identifier">data</span> = <span class="ruby-constant">Dvector</span>.<span class="ruby-identifier">read</span>(<span class="ruby-string">&quot;data/density.data&quot;</span>)
+    <span class="ruby-ivar">@eos_logRHOs</span> = <span class="ruby-identifier">data</span>[<span class="ruby-value">0</span>]
+    <span class="ruby-ivar">@eos_data_xlen</span> = <span class="ruby-ivar">@eos_logRHOs</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-identifier">data</span> = <span class="ruby-constant">Dvector</span>.<span class="ruby-identifier">read</span>(<span class="ruby-string">&quot;data/temperature.data&quot;</span>)
+    <span class="ruby-ivar">@eos_logTs</span> = <span class="ruby-identifier">data</span>[<span class="ruby-value">0</span>]
+    <span class="ruby-ivar">@eos_data_ylen</span> = <span class="ruby-ivar">@eos_logTs</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-ivar">@pres_data</span> = <span class="ruby-constant">Dtable</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@eos_data_xlen</span>, <span class="ruby-ivar">@eos_data_ylen</span>)
+    <span class="ruby-ivar">@pres_data</span>.<span class="ruby-identifier">read</span>(<span class="ruby-string">&quot;data/pressure.data&quot;</span>)
+    <span class="ruby-ivar">@pres_data</span>.<span class="ruby-identifier">safe_log10!</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">create_image_data</span>(<span class="ruby-ivar">@pres_data</span>.<span class="ruby-identifier">rotate_ccw90</span>,
+        <span class="ruby-string">&#39;min_value&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@image_zmin</span>,
+        <span class="ruby-string">&#39;max_value&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@image_zmax</span>,
+        <span class="ruby-string">&#39;masking&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">clip_press_image</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">move_to_point</span>(<span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_left</span>, <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_bottom</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">append_point_to_path</span>(<span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_left</span>, <span class="ruby-value">6.355</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">append_point_to_path</span>(<span class="ruby-value">-6.05</span>, <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_top</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">append_point_to_path</span>(<span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_right</span>, <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_top</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">append_point_to_path</span>(<span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_right</span>, <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_bottom</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">close_path</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">clip</span>
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">color_bar</span>
+    <span class="ruby-identifier">xmin</span> = <span class="ruby-value">0</span>; <span class="ruby-identifier">xmax</span> = <span class="ruby-value">1</span>; <span class="ruby-identifier">xmid</span> = <span class="ruby-value">0.5</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">rescale</span>(<span class="ruby-value">0.8</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">xaxis_type</span> = <span class="ruby-constant">AXIS_LINE_ONLY</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">xaxis_loc</span> = <span class="ruby-constant">BOTTOM</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">top_edge_type</span> = <span class="ruby-constant">AXIS_LINE_ONLY</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">yaxis_loc</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">ylabel_side</span> = <span class="ruby-constant">RIGHT</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">yaxis_type</span> = <span class="ruby-constant">AXIS_WITH_TICKS_AND_NUMERIC_LABELS</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">left_edge_type</span> = <span class="ruby-constant">AXIS_WITH_TICKS_ONLY</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">ylabel_shift</span> <span class="ruby-operator">+=</span> <span class="ruby-value">0.5</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">yaxis_major_tick_length</span> <span class="ruby-operator">*=</span> <span class="ruby-value">0.6</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">yaxis_minor_tick_length</span> <span class="ruby-operator">*=</span> <span class="ruby-value">0.5</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">do_box_labels</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-string">&#39;Log Pressure&#39;</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_plot</span>(<span class="ruby-string">&#39;boundaries&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">xmin</span>, <span class="ruby-identifier">xmax</span>, <span class="ruby-ivar">@image_zmax</span>, <span class="ruby-ivar">@image_zmin</span>]) <span class="ruby-keyword">do</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">axial_shading</span>(
+            <span class="ruby-string">&#39;start_point&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">xmid</span>, <span class="ruby-ivar">@image_zmin</span>],
+            <span class="ruby-string">&#39;end_point&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">xmid</span>, <span class="ruby-ivar">@image_zmax</span>], 
+            <span class="ruby-string">&#39;colormap&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">mellow_colormap</span>
+        )
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p><img src="../images/Sampled_Data.png" /></p>
+          
+          
+
+          
+          <div class="method-source-code" id="show_image-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Images.rb, line 243</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show_image</span>(<span class="ruby-identifier">dict</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

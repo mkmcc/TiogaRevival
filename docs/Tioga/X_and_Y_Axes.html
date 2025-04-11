@@ -1,0 +1,3781 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Tioga::X_and_Y_Axes - RDoc Documentation</title>
+
+<link href="../fonts.css" rel="stylesheet">
+<link href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/search_index.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/searcher.js"></script>
+<script src="../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="X_and_Y_Axes.html#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Doc< FigureMaker
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-axis_information">#axis_information</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-bottom_edge_type">#bottom_edge_type</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-bottom_edge_visible">#bottom_edge_visible</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-left_edge_type">#left_edge_type</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-left_edge_visible">#left_edge_visible</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-right_edge_type">#right_edge_type</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-right_edge_visible">#right_edge_visible</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-show_axis">#show_axis</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-show_bottom_edge">#show_bottom_edge</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-show_edge">#show_edge</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-show_left_edge">#show_left_edge</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-show_right_edge">#show_right_edge</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-show_top_edge">#show_top_edge</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-show_xaxis">#show_xaxis</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-show_yaxis">#show_yaxis</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-top_edge_type">#top_edge_type</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-top_edge_visible">#top_edge_visible</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_digits_max">#xaxis_digits_max</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_line_width">#xaxis_line_width</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_loc">#xaxis_loc</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_locations_for_major_ticks">#xaxis_locations_for_major_ticks</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_locations_for_minor_ticks">#xaxis_locations_for_minor_ticks</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_log_values">#xaxis_log_values</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_major_tick_length">#xaxis_major_tick_length</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_major_tick_width">#xaxis_major_tick_width</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_min_between_major_ticks">#xaxis_min_between_major_ticks</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_minor_tick_length">#xaxis_minor_tick_length</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_minor_tick_width">#xaxis_minor_tick_width</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_number_of_minor_intervals">#xaxis_number_of_minor_intervals</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_numeric_label_alignment">#xaxis_numeric_label_alignment</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_numeric_label_angle">#xaxis_numeric_label_angle</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_numeric_label_decimal_digits">#xaxis_numeric_label_decimal_digits</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_numeric_label_frequency">#xaxis_numeric_label_frequency</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_numeric_label_justification">#xaxis_numeric_label_justification</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_numeric_label_phase">#xaxis_numeric_label_phase</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_numeric_label_scale">#xaxis_numeric_label_scale</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_numeric_label_shift">#xaxis_numeric_label_shift</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_numeric_label_tex">#xaxis_numeric_label_tex</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_reversed">#xaxis_reversed</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_stroke_color">#xaxis_stroke_color</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_tick_interval">#xaxis_tick_interval</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_tick_labels">#xaxis_tick_labels</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_ticks_inside">#xaxis_ticks_inside</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_ticks_outside">#xaxis_ticks_outside</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_type">#xaxis_type</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_use_fixed_pt">#xaxis_use_fixed_pt</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-xaxis_visible">#xaxis_visible</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_digits_max">#yaxis_digits_max</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_line_width">#yaxis_line_width</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_loc">#yaxis_loc</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_locations_for_major_ticks">#yaxis_locations_for_major_ticks</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_locations_for_minor_ticks">#yaxis_locations_for_minor_ticks</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_log_values">#yaxis_log_values</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_major_tick_length">#yaxis_major_tick_length</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_major_tick_width">#yaxis_major_tick_width</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_min_between_major_ticks">#yaxis_min_between_major_ticks</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_minor_tick_length">#yaxis_minor_tick_length</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_minor_tick_width">#yaxis_minor_tick_width</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_number_of_minor_intervals">#yaxis_number_of_minor_intervals</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_numeric_label_alignment">#yaxis_numeric_label_alignment</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_numeric_label_angle">#yaxis_numeric_label_angle</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_numeric_label_decimal_digits">#yaxis_numeric_label_decimal_digits</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_numeric_label_frequency">#yaxis_numeric_label_frequency</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_numeric_label_justification">#yaxis_numeric_label_justification</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_numeric_label_phase">#yaxis_numeric_label_phase</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_numeric_label_scale">#yaxis_numeric_label_scale</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_numeric_label_shift">#yaxis_numeric_label_shift</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_numeric_label_tex">#yaxis_numeric_label_tex</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_reversed">#yaxis_reversed</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_stroke_color">#yaxis_stroke_color</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_tick_interval">#yaxis_tick_interval</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_tick_labels">#yaxis_tick_labels</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_ticks_inside">#yaxis_ticks_inside</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_ticks_outside">#yaxis_ticks_outside</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_type">#yaxis_type</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_use_fixed_pt">#yaxis_use_fixed_pt</a>
+    
+    <li ><a href="X_and_Y_Axes.html#method-i-yaxis_visible">#yaxis_visible</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Tioga::X_and_Y_Axes">
+  <h1 id="class-Tioga::X_and_Y_Axes" class="class">
+    class Tioga::X_and_Y_Axes
+  </h1>
+
+  <section class="description">
+    
+<p>These are the methods and attributes for the plot axes.</p>
+
+<p>See <a href="Tutorial/Plots.html">Tutorial::Plots</a> for more information.</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-axis_information" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">axis_information</span><span
+            class="method-args">(loc)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Takes the same argument as <a
+href="X_and_Y_Axes.html#method-i-show_axis">show_axis</a>, and returns some
+information about the way the corresponding axis would be organized, in the
+form of a hash with the following keys:</p>
+<ul><li>
+<p>&#39;major&#39;: the position of major ticks</p>
+</li><li>
+<p>&#39;labels&#39;: their corresponding numeric labels (as given to LaTeX, so
+that includes things like tiogayaxisnumericlabel)</p>
+</li><li>
+<p>&#39;vertical&#39;: whether the axis is vertical or horizontal</p>
+</li><li>
+<p>&#39;scale&#39;, &#39;shift&#39;, &#39;angle&#39; : the shift, scale and
+angle of</p>
+
+<pre>the tick labels</pre>
+</li><li>
+<p>&#39;line_width&#39;: the axis line width</p>
+</li><li>
+<p>&#39;x0&#39;, &#39;y0&#39;, &#39;x1&#39;, &#39;y1&#39;: the axis position
+in figure coordinates</p>
+</li><li>
+<p>&#39;major_tick_width&#39;, &#39;major_tick_length&#39;,
+&#39;minor_tick_length&#39;, &#39;minor_tick_width&#39;: ticks widths and
+lengths</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="axis_information-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">axis_information</span>(<span class="ruby-identifier">loc</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-bottom_edge_type" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bottom_edge_type
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bottom_edge_type = an_edge_type
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Determines the axis type to use when showing the bottom edge of a plot. 
+Valid types are the following predefined constants:
+<code>AXIS_HIDDEN</code>, <code>AXIS_LINE_ONLY</code>,
+<code>AXIS_WITH_MAJOR_TICKS_ONLY</code>, <code>AXIS_WITH_TICKS_ONLY</code>,
+<code>AXIS_WITH_MAJOR_TICKS_AND_NUMERIC_LABELS</code>, and
+<code>AXIS_WITH_TICKS_AND_NUMERIC_LABELS</code>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="bottom_edge_type-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bottom_edge_type</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-bottom_edge_visible" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bottom_edge_visible
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bottom_edge_visible = false
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If <code>true</code>, then it is okay for tioga to show the bottom edge of
+a plot.  If <code>false</code>, then calls on <a
+href="X_and_Y_Axes.html#method-i-show_bottom_edge">#show_bottom_edge</a>
+return immediately. This attribute is “one-way-only” in that it starts
+<code>true</code> and can be set <code>false</code>, but cannot be reset to
+<code>true</code> except by restoring the graphics state in which is was
+still <code>true</code>.  This is intended to help control the behavior of
+plots when embedded as subplots in a larger configuration.  Note that this
+does not effect showing the x axis on the bottom; it only applies to calls
+on show_bottom_edge.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="bottom_edge_visible-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 146</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bottom_edge_visible</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-left_edge_type" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            left_edge_type
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            left_edge_type = an_edge_type
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Determines the axis type to use when showing the left edge of a plot. 
+Valid types are the following predefined constants:
+<code>AXIS_HIDDEN</code>, <code>AXIS_LINE_ONLY</code>,
+<code>AXIS_WITH_MAJOR_TICKS_ONLY</code>, <code>AXIS_WITH_TICKS_ONLY</code>,
+<code>AXIS_WITH_MAJOR_TICKS_AND_NUMERIC_LABELS</code>, and
+<code>AXIS_WITH_TICKS_AND_NUMERIC_LABELS</code>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="left_edge_type-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 158</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">left_edge_type</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-left_edge_visible" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            left_edge_visible
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            left_edge_visible = false
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If <code>true</code>, then it is okay for tioga to show the left edge of a
+plot.  If <code>false</code>, then calls on <a
+href="X_and_Y_Axes.html#method-i-show_left_edge">#show_left_edge</a> return
+immediately. This attribute is “one-way-only” in that it starts
+<code>true</code> and can be set <code>false</code>, but cannot be reset to
+<code>true</code> except by restoring the graphics state in which is was
+still <code>true</code>.  This is intended to help control the behavior of
+plots when embedded as subplots in a larger configuration.  Note that this
+does not effect showing the y axis on the left; it only applies to calls on
+show_left_edge.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="left_edge_visible-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 174</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">left_edge_visible</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-right_edge_type" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            right_edge_type
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            right_edge_type = an_edge_type
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Determines the axis type to use when showing the right edge of a plot. 
+Valid types are the following predefined constants:
+<code>AXIS_HIDDEN</code>, <code>AXIS_LINE_ONLY</code>,
+<code>AXIS_WITH_MAJOR_TICKS_ONLY</code>, <code>AXIS_WITH_TICKS_ONLY</code>,
+<code>AXIS_WITH_MAJOR_TICKS_AND_NUMERIC_LABELS</code>, and
+<code>AXIS_WITH_TICKS_AND_NUMERIC_LABELS</code>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="right_edge_type-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 185</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">right_edge_type</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-right_edge_visible" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            right_edge_visible
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            right_edge_visible = false
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If <code>true</code>, then it is okay for tioga to show the right edge of a
+plot.  If <code>false</code>, then calls on <a
+href="X_and_Y_Axes.html#method-i-show_right_edge">#show_right_edge</a>
+return immediately. This attribute is “one-way-only” in that it starts
+<code>true</code> and can be set <code>false</code>, but cannot be reset to
+<code>true</code> except by restoring the graphics state in which is was
+still <code>true</code>.  This is intended to help control the behavior of
+plots when embedded as subplots in a larger configuration.  Note that this
+does not effect showing the y axis on the right; it only applies to calls
+on show_right_edge.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="right_edge_visible-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 200</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">right_edge_visible</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show_axis" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show_axis</span><span
+            class="method-args">(loc)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Show one of the plot axes.  If <em>loc</em> is <code>LEFT</code>,
+<code>RIGHT</code>, or <code>AT_X_ORIGIN</code>, and <a
+href="X_and_Y_Axes.html#method-i-yaxis_visible">#yaxis_visible</a> is
+<code>true</code>, then the axis is shown using the current y axis
+settings.  If <em>loc</em> is  <code>TOP</code>, <code>BOTTOM</code>,  or
+<code>AT_Y_ORIGIN</code>, and <a
+href="X_and_Y_Axes.html#method-i-xaxis_visible">#xaxis_visible</a> is
+<code>true</code>, then the axis is shown using the current x axis
+settings.</p>
+
+<p>Sarting from <a href="../Tioga.html">Tioga</a> 1.8, you can specify a
+dictionary instead of the position. This dictionary must either have a
+&#39;location&#39; or a &#39;from&#39; and &#39;to&#39; entry to specify
+the position of the axis. See <a
+href="X_and_Y_Axes.html#method-i-axis_information">axis_information</a> for
+more dictionary entries understood.</p>
+
+<p>NOTE: using a dictionnary bypasses the checks <a
+href="X_and_Y_Axes.html#method-i-xaxis_visible">xaxis_visible</a> and <a
+href="X_and_Y_Axes.html#method-i-yaxis_visible">yaxis_visible</a> !</p>
+
+<pre class="ruby">[<span class="ruby-identifier">from</span> <span class="ruby-identifier">samples</span><span class="ruby-operator">/</span><span class="ruby-identifier">plots</span><span class="ruby-operator">/</span><span class="ruby-identifier">plots</span>.<span class="ruby-identifier">rb</span>]
+
+<span class="ruby-comment"># This plot is to demonstrate the new power of #show_axis.</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">axes_fun</span>
+  <span class="ruby-identifier">t</span>.<span class="ruby-identifier">do_box_labels</span>(<span class="ruby-string">&quot;Funny axes&quot;</span>, <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-string">&quot;&quot;</span>)
+  <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_plot</span>([<span class="ruby-value">-1</span>, <span class="ruby-value">19</span>, <span class="ruby-value">8</span>, <span class="ruby-value">2</span>]) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">spec</span> = {
+      <span class="ruby-string">&#39;from&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">3</span>,<span class="ruby-value">3</span>],
+      <span class="ruby-string">&#39;to&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">3</span>,<span class="ruby-value">7</span>],
+      <span class="ruby-string">&#39;ticks_outside&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>,
+      <span class="ruby-string">&#39;ticks_inside&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>,
+    }
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_axis</span>(<span class="ruby-identifier">spec</span>)
+    <span class="ruby-identifier">spec2</span> = {
+      <span class="ruby-string">&#39;from&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">12</span>,<span class="ruby-value">3</span>],
+      <span class="ruby-string">&#39;to&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">12</span>,<span class="ruby-value">7</span>],
+      <span class="ruby-string">&#39;ticks_outside&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>,
+      <span class="ruby-string">&#39;ticks_inside&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>,
+      <span class="ruby-string">&#39;major_ticks&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">4</span>,<span class="ruby-value">6</span>],
+      <span class="ruby-string">&#39;labels&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">&quot;$a$&quot;</span>, <span class="ruby-string">&quot;$b$&quot;</span>]
+    }
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_axis</span>(<span class="ruby-identifier">spec2</span>)
+    <span class="ruby-identifier">spec3</span> = {
+      <span class="ruby-string">&#39;from&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">17</span>,<span class="ruby-value">3</span>],
+      <span class="ruby-string">&#39;to&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">17</span>,<span class="ruby-value">7</span>],
+      <span class="ruby-string">&#39;ticks_outside&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>,
+      <span class="ruby-string">&#39;ticks_inside&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>,
+      <span class="ruby-string">&#39;labels&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">&quot;$a$&quot;</span>, <span class="ruby-string">&quot;$b$&quot;</span>, <span class="ruby-string">&#39;c&#39;</span>, <span class="ruby-string">&#39;d&#39;</span>, <span class="ruby-string">&#39;e&#39;</span>]
+    }
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_axis</span>(<span class="ruby-identifier">spec3</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">t</span>.<span class="ruby-identifier">context</span> <span class="ruby-keyword">do</span> 
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">set_bounds</span>([<span class="ruby-value">-1</span>, <span class="ruby-value">19</span>, <span class="ruby-value">8</span>, <span class="ruby-value">2</span>])
+    <span class="ruby-identifier">spec</span> = {
+      <span class="ruby-string">&#39;from&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">4</span>,<span class="ruby-value">1.2</span>],
+      <span class="ruby-string">&#39;to&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">12</span>,<span class="ruby-value">1.2</span>],
+      <span class="ruby-string">&#39;major_ticks&#39;</span> =<span class="ruby-operator">&gt;</span> [ <span class="ruby-value">4.5</span>, <span class="ruby-value">8.8</span>]
+    }
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_axis</span>(<span class="ruby-identifier">spec</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p><img src="../images/Axes_fun.png" /></p>
+          
+          
+
+          
+          <div class="method-source-code" id="show_axis-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 261</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show_axis</span>(<span class="ruby-identifier">loc</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show_bottom_edge" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            show_bottom_edge
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If the flag <a
+href="X_and_Y_Axes.html#method-i-bottom_edge_visible">#bottom_edge_visible</a>
+is <code>true</code> and the <a
+href="X_and_Y_Axes.html#method-i-xaxis_loc">#xaxis_loc</a> is not
+<code>BOTTOM</code>, then shows the bottom edge of the frame.  Otherwise,
+simply returns.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="show_bottom_edge-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show_bottom_edge</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show_edge" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show_edge</span><span
+            class="method-args">(loc)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Show one of the plot edges.  The <em>loc</em> argument must be one of
+<code>LEFT</code>, <code>RIGHT</code>, <code>TOP</code>, or
+<code>BOTTOM</code>. Left and right edges are shown using the current y
+axis settings.  Top and bottom edges are shown using the x axis settings. 
+If the corresponding edge_visible attribute has been set false, this
+command simply returns without doing anything.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="show_edge-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 268</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show_edge</span>(<span class="ruby-identifier">loc</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show_left_edge" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            show_left_edge
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If the flag <a
+href="X_and_Y_Axes.html#method-i-left_edge_visible">#left_edge_visible</a>
+is <code>true</code> and the <a
+href="X_and_Y_Axes.html#method-i-yaxis_loc">#yaxis_loc</a> is not
+<code>LEFT</code>, then shows the left edge of the frame.  Otherwise,
+simply returns.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="show_left_edge-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show_left_edge</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show_right_edge" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            show_right_edge
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If the flag <a
+href="X_and_Y_Axes.html#method-i-right_edge_visible">#right_edge_visible</a>
+is <code>true</code> and the <a
+href="X_and_Y_Axes.html#method-i-yaxis_loc">#yaxis_loc</a> is not
+<code>RIGHT</code>, then shows the right edge of the frame.  Otherwise,
+simply returns.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="show_right_edge-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show_right_edge</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show_top_edge" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            show_top_edge
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If the flag <a
+href="X_and_Y_Axes.html#method-i-top_edge_visible">#top_edge_visible</a> is
+<code>true</code> and the <a
+href="X_and_Y_Axes.html#method-i-xaxis_loc">#xaxis_loc</a> is not
+<code>TOP</code>, then shows the top edge of the frame.  Otherwise, simply
+returns.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="show_top_edge-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show_top_edge</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show_xaxis" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            show_xaxis
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If the flag <a
+href="X_and_Y_Axes.html#method-i-xaxis_visible">#xaxis_visible</a> is
+currently <code>true</code>, then this routine shows the x axis  at the
+location specified by xaxis_loc.  If the flag is <code>false</code>, it
+simply returns.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="show_xaxis-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show_xaxis</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show_yaxis" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            show_yaxis
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If the flag <a
+href="X_and_Y_Axes.html#method-i-yaxis_visible">#yaxis_visible</a> is
+currently <code>true</code>, then this routine shows the y axis  at the
+location specified by yaxis_loc.  If the flag is <code>false</code>, it
+simply returns.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="show_yaxis-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show_yaxis</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-top_edge_type" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            top_edge_type
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            top_edge_type = an_edge_type
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Determines the axis type to use when showing the top edge of a plot.  Valid
+types are the following predefined constants: <code>AXIS_HIDDEN</code>,
+<code>AXIS_LINE_ONLY</code>, <code>AXIS_WITH_MAJOR_TICKS_ONLY</code>,
+<code>AXIS_WITH_TICKS_ONLY</code>,
+<code>AXIS_WITH_MAJOR_TICKS_AND_NUMERIC_LABELS</code>, and
+<code>AXIS_WITH_TICKS_AND_NUMERIC_LABELS</code>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="top_edge_type-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">top_edge_type</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-top_edge_visible" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            top_edge_visible
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            top_edge_visible = false
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If <code>true</code>, then it is okay for tioga to show the top edge of a
+plot.  If <code>false</code>, then calls on <a
+href="X_and_Y_Axes.html#method-i-show_top_edge">#show_top_edge</a> return
+immediately. This attribute is “one-way-only” in that it starts
+<code>true</code> and can be set <code>false</code>, but cannot be reset to
+<code>true</code> except by restoring the graphics state in which is was
+still <code>true</code>.  This is intended to help control the behavior of
+plots when embedded as subplots in a larger configuration.  Note that this
+does not effect showing the x axis on the top; it only applies to calls on
+show_top_edge.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="top_edge_visible-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">top_edge_visible</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_digits_max" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_digits_max
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_digits_max = an_integer_value
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If non-zero (and <a
+href="X_and_Y_Axes.html#method-i-xaxis_use_fixed_pt">#xaxis_use_fixed_pt</a>
+is not true), then x axis numeric labels will be switched to exponential
+format if they require more than this number of digits. If <a
+href="X_and_Y_Axes.html#method-i-yaxis_digits_max">#yaxis_digits_max</a> is
+set to zero, then a system-choosen default value is used instead. See also
+xaxis_use_fixed_pt.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_digits_max-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 346</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_digits_max</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_line_width" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_line_width
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_line_width = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Value for the line_width attribute when painting the x axis line.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_line_width-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 467</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_line_width</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_loc" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_loc
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_loc = a_location
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Determines the location of the x axis.  Valid locations are given as the
+following predefined constants: <code>BOTTOM</code>, <code>TOP</code>, and
+<code>AT_Y_ORIGIN</code>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_loc-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 292</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_loc</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_locations_for_major_ticks" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_locations_for_major_ticks
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_locations_for_major_ticks = a_dvector_or_nil
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If <code>nil</code>, then tioga will pick locations for major ticks on the
+x axis.  Otherwise, this should be Dvector of locations in x figure
+coordinates in strictly increasing order.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_locations_for_major_ticks-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 398</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_locations_for_major_ticks</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_locations_for_minor_ticks" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_locations_for_minor_ticks
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_locations_for_minor_ticks = a_dvector_or_nil
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If <code>nil</code>, then tioga will pick locations for minor ticks on the
+x axis.  Otherwise, this should be Dvector of locations in x figure
+coordinates in strictly increasing order.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_locations_for_minor_ticks-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 407</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_locations_for_minor_ticks</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_log_values" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_log_values
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_log_values = true_or_false
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If <code>true</code>, then locations along the x axis are to be treated as
+log values (base 10). This changes both the default placing of tick marks
+and the appearance of numeric labels.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_log_values-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 425</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_log_values</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_major_tick_length" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_major_tick_length
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_major_tick_length = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Length of major ticks on the x axis measured in units of the default text
+height.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_major_tick_length-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 451</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_major_tick_length</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_major_tick_width" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_major_tick_width
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_major_tick_width = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Value for the line_width attribute when painting the x axis major tick
+marks.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_major_tick_width-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 475</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_major_tick_width</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_min_between_major_ticks" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_min_between_major_ticks
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_min_between_major_ticks = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>When tioga picks the interval between major tick marks on the x axis, it
+will ensure that the interval is at least this large.  Note that this
+distance is given in units of the default text height rather than in x
+coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_min_between_major_ticks-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 377</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_min_between_major_ticks</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_minor_tick_length" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_minor_tick_length
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_minor_tick_length = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Length of minor ticks on the x axis measured in units of the default text
+height.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_minor_tick_length-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 459</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_minor_tick_length</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_minor_tick_width" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_minor_tick_width
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_minor_tick_width = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Value for the line_width attribute when painting the x axis minor tick
+marks.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_minor_tick_width-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 483</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_minor_tick_width</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_number_of_minor_intervals" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_number_of_minor_intervals
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_number_of_minor_intervals = an_integer_value
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Determines the number of minor intervals making up the distance between
+major ticks marks on the x axis.  If this is set to 0, then tioga will pick
+the number.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_number_of_minor_intervals-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 367</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_number_of_minor_intervals</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_numeric_label_alignment" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_numeric_label_alignment
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_numeric_label_alignment = an_alignment
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The alignment setting for numeric labels on the x axis. See also
+tex_xaxis_numeric_label.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_numeric_label_alignment-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 529</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_numeric_label_alignment</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_numeric_label_angle" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_numeric_label_angle
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_numeric_label_angle = a_float_in_degrees
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Numeric labels on the x axis are rotated by this angle from vertical. See
+also tex_xaxis_numeric_label.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_numeric_label_angle-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 520</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_numeric_label_angle</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_numeric_label_decimal_digits" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_numeric_label_decimal_digits
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_numeric_label_decimal_digits = an_integer_value
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If non-negative, then use this number of digits after the decimal when
+creating numeric labels for the x axis. See also tex_xaxis_numeric_label.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_numeric_label_decimal_digits-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 335</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_numeric_label_decimal_digits</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_numeric_label_frequency" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_numeric_label_frequency
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_numeric_label_frequency = an_integer
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The frequency setting for numeric labels on the x axis. Major ticks are
+numbered from 0 at the small x end of the axis.  Tick number k gets a label
+only if mod(i+j,k)==0 where j=xaxis_numeric_label_phase and
+k=xaxis_numeric_label_frequency. The default for <a
+href="X_and_Y_Axes.html#method-i-xaxis_numeric_label_frequency">#xaxis_numeric_label_frequency</a>
+is 1 so that every major tick gets a label. See also
+xaxis_numeric_label_phase.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_numeric_label_frequency-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 555</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_numeric_label_frequency</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_numeric_label_justification" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_numeric_label_justification
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_numeric_label_justification = a_justification
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The justification setting for numeric labels on the x axis. See also
+tex_xaxis_numeric_label.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_numeric_label_justification-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 538</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_numeric_label_justification</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_numeric_label_phase" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_numeric_label_phase
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_numeric_label_phase = an_integer
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The phase setting for numeric labels on the x axis. The default phase is 0.
+See <a
+href="X_and_Y_Axes.html#method-i-xaxis_numeric_label_frequency">#xaxis_numeric_label_frequency</a>
+for details.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_numeric_label_phase-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 565</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_numeric_label_phase</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_numeric_label_scale" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_numeric_label_scale
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_numeric_label_scale = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Scaling factor relative to default_text_scale for the numeric labels on the
+x axis in plots. See also tex_xaxis_numeric_label.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_numeric_label_scale-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 500</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_numeric_label_scale</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_numeric_label_shift" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_numeric_label_shift
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_numeric_label_shift = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Distance to shift the reference point for showing numeric labels on the x
+axis measured in character heights with positive directed out away from the
+plot for x axis on top or bottom, or toward positive y values for x axis at
+y origin. See also tex_xaxis_numeric_label.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_numeric_label_shift-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 511</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_numeric_label_shift</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_numeric_label_tex" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_numeric_label_tex
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_numeric_label_tex = a_string
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The string for a numeric label is put in this TeX command string to be
+formatted. For example, `$#1$&#39; will give the numbers in math mode,
+while `$mathsf{#1}$&#39; will  show the label using the math sans-serif
+font.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_numeric_label_tex-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 313</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_numeric_label_tex</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_reversed" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_reversed
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Flag is <code>true</code> if the bounds_left is not the bounds_xmin.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_reversed-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_reversed</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_stroke_color" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_stroke_color
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_stroke_color = color_value
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Value for the stroke_color attribute when painting the x axis.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_stroke_color-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 491</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_stroke_color</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_tick_interval" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_tick_interval
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_tick_interval = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If 0, then tioga will pick the interval between major tick marks on the x
+axis. Otherwise, this will be used as the interval in x coordinates for the
+spacing between major ticks.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_tick_interval-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 872</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_tick_interval</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_tick_labels" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_tick_labels
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_tick_labels = array_or_nil
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If <code>nil</code>, then tioga will create numeric labels for the major
+ticks on the x axis. Otherwise, you must also specify <a
+href="X_and_Y_Axes.html#method-i-xaxis_locations_for_major_ticks">#xaxis_locations_for_major_ticks</a>,
+and <a
+href="X_and_Y_Axes.html#method-i-xaxis_tick_labels">#xaxis_tick_labels</a>
+must be an equal length array of strings giving the corresponding labels.</p>
+
+<p>See also yaxis_tick_labels.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_tick_labels-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 389</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_tick_labels</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_ticks_inside" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_ticks_inside
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_ticks_inside = true_or_false
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If <code>true</code>, then ticks will be added along the x axis inside the
+plot frame. If <code>false</code>, then no ticks will appear inside the
+frame along the x axis.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_ticks_inside-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 434</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_ticks_inside</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_ticks_outside" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_ticks_outside
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_ticks_outside = true_or_false
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If <code>true</code>, then ticks will be added along the x axis outside the
+plot frame. If <code>false</code>, then no ticks will appear outside the
+frame along the x axis.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_ticks_outside-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 443</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_ticks_outside</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_type" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_type
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_type = an_axis_type_value
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Determines the axis type to use when showing the x axis of a plot.  Valid
+types are the following predefined constants: <code>AXIS_HIDDEN</code>,
+<code>AXIS_LINE_ONLY</code>, <code>AXIS_WITH_MAJOR_TICKS_ONLY</code>,
+<code>AXIS_WITH_TICKS_ONLY</code>,
+<code>AXIS_WITH_MAJOR_TICKS_AND_NUMERIC_LABELS</code>, and
+<code>AXIS_WITH_TICKS_AND_NUMERIC_LABELS</code>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_type-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 303</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_type</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_use_fixed_pt" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_use_fixed_pt
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_use_fixed_pt = true_or_false
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If this flag is <code>true</code>, then numeric labels for the x axis will
+always use fixed point notation rather than exponential. If
+<code>false</code>, then the value of <a
+href="X_and_Y_Axes.html#method-i-xaxis_digits_max">#xaxis_digits_max</a>
+will be used to decide between fixed point or exponential notation. See
+also xaxis_digits_max.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_use_fixed_pt-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 358</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_use_fixed_pt</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-xaxis_visible" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_visible
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_visible = false
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If <code>true</code>, then it is okay for tioga to show the x axis of a
+plot.  If <code>false</code>, then calls on <a
+href="X_and_Y_Axes.html#method-i-show_axis">#show_axis</a> for the x axis
+return immediately. This attribute is “one-way-only” in that it starts
+<code>true</code> and can be set <code>false</code>, but cannot be reset to
+<code>true</code> except by restoring the graphics state in which is was
+still <code>true</code>.  This is intended to help control the behavior of
+plots when embedded as subplots in a larger configuration.  Note that this
+does not effect showing the top or bottom edges; it only applies to calls
+on show_axis.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="xaxis_visible-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 283</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xaxis_visible</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_digits_max" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_digits_max
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_digits_max = an_integer_value
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If non-zero (and <a
+href="X_and_Y_Axes.html#method-i-yaxis_use_fixed_pt">#yaxis_use_fixed_pt</a>
+is not true), then y axis numeric labels will be switched to exponential
+format if they require more than this number of digits. If <a
+href="X_and_Y_Axes.html#method-i-yaxis_digits_max">#yaxis_digits_max</a> is
+set to zero, then a system-choosen default value is used instead. See also
+yaxis_use_fixed_pt.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_digits_max-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 651</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_digits_max</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_line_width" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_line_width
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_line_width = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Value for the line_width attribute when painting the y axis line.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_line_width-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 792</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_line_width</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_loc" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_loc
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_loc = a_location
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Determines the location of the y axis.  Valid locations are given as the
+following predefined constants: <code>LEFT</code>, <code>RIGHT</code>, and
+<code>AT_X_ORIGIN</code>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_loc-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 619</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_loc</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_locations_for_major_ticks" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_locations_for_major_ticks
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_locations_for_major_ticks = a_dvector_or_nil
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If <code>nil</code>, then tioga will pick locations for major ticks on the
+y axis.  Otherwise, this should be Dvector of locations in y figure
+coordinates in strictly increasing order.</p>
+
+<p>See also yaxis_tick_labels.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_locations_for_major_ticks-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 732</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_locations_for_major_ticks</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_locations_for_minor_ticks" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_locations_for_minor_ticks
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_locations_for_minor_ticks = a_dvector_or_nil
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If <code>nil</code>, then tioga will pick locations for minor ticks on the
+y axis.  Otherwise, this should be Dvector of locations in x figure
+coordinates in strictly increasing order.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_locations_for_minor_ticks-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 741</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_locations_for_minor_ticks</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_log_values" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_log_values
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_log_values = true_or_false
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If <code>true</code>, then locations along the y axis are to be treated as
+log values (base 10). This changes both the default placing of tick marks
+and the appearance of numeric labels.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_log_values-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 750</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_log_values</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_major_tick_length" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_major_tick_length
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_major_tick_length = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Length of major ticks on the y axis measured in units of the default text
+height.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_major_tick_length-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 776</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_major_tick_length</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_major_tick_width" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_major_tick_width
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_major_tick_width = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Value for the line_width attribute when painting the y axis major tick
+marks.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_major_tick_width-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 800</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_major_tick_width</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_min_between_major_ticks" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_min_between_major_ticks
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_min_between_major_ticks = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>When tioga picks the interval between major tick marks on the y axis, it
+will ensure that the interval is at least this large.  Note that this
+distance is given in units of the default text height rather than in y
+coordinates.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_min_between_major_ticks-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 681</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_min_between_major_ticks</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_minor_tick_length" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_minor_tick_length
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_minor_tick_length = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Length of minor ticks on the y axis measured in units of the default text
+height.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_minor_tick_length-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 784</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_minor_tick_length</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_minor_tick_width" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_minor_tick_width
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_minor_tick_width = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Value for the line_width attribute when painting the y axis minor tick
+marks.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_minor_tick_width-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 808</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_minor_tick_width</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_number_of_minor_intervals" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_number_of_minor_intervals
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_number_of_minor_intervals = an_integer_value
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Determines the number of minor intervals making up the distance between
+major ticks marks on the y axis.  If this is set to 0, then tioga will pick
+the number.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_number_of_minor_intervals-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 672</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_number_of_minor_intervals</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_numeric_label_alignment" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_numeric_label_alignment
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_numeric_label_alignment = an_alignment
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The alignment setting for numeric labels on the y axis. See also
+tex_yaxis_numeric_label.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_numeric_label_alignment-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 854</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_numeric_label_alignment</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_numeric_label_angle" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_numeric_label_angle
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_numeric_label_angle = a_float_in_degrees
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Numeric labels on the y axis are rotated by this angle from horizontal. See
+also tex_yaxis_numeric_label.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_numeric_label_angle-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 845</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_numeric_label_angle</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_numeric_label_decimal_digits" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_numeric_label_decimal_digits
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_numeric_label_decimal_digits = an_integer_value
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If non-negative, then use this number of digits after the decimal when
+creating numeric labels for the y axis. See also tex_yaxis_numeric_label.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_numeric_label_decimal_digits-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 640</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_numeric_label_decimal_digits</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_numeric_label_frequency" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_numeric_label_frequency
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_numeric_label_frequency = an_integer
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The frequency setting for numeric labels on the y axis. Major ticks are
+numbered from 0 at the small y end of the axis.  Tick number k gets a label
+only if mod(i+j,k)==0 where j=yaxis_numeric_label_phase and
+k=yaxis_numeric_label_frequency. The default for <a
+href="X_and_Y_Axes.html#method-i-yaxis_numeric_label_frequency">#yaxis_numeric_label_frequency</a>
+is 1 so that every major tick gets a label. See also
+yaxis_numeric_label_phase.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_numeric_label_frequency-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 582</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_numeric_label_frequency</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_numeric_label_justification" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_numeric_label_justification
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_numeric_label_justification = a_justification
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The justification setting for numeric labels on the y axis.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_numeric_label_justification-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 863</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_numeric_label_justification</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_numeric_label_phase" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_numeric_label_phase
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_numeric_label_phase = an_integer
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The phase setting for numeric labels on the y axis. The default phase is 0.
+See <a
+href="X_and_Y_Axes.html#method-i-yaxis_numeric_label_frequency">#yaxis_numeric_label_frequency</a>
+for details.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_numeric_label_phase-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 592</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_numeric_label_phase</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_numeric_label_scale" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_numeric_label_scale
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_numeric_label_scale = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Scaling factor relative to default_text_scale for the numeric labels on the
+y axis in plots. See also tex_yaxis_numeric_label.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_numeric_label_scale-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 825</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_numeric_label_scale</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_numeric_label_shift" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_numeric_label_shift
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_numeric_label_shift = a_float
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Distance to shift the reference point for showing numeric labels on the y
+axis measured in character heights with positive directed out away from the
+plot for y axis on left or right, or toward positive x values for y axis at
+x origin. See also tex_yaxis_numeric_label.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_numeric_label_shift-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 836</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_numeric_label_shift</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_numeric_label_tex" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_numeric_label_tex
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_numeric_label_tex = a_string
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The string for a numeric label is put in this TeX command string to be
+formatted. For example, `$#1$&#39; will give the numbers in math mode,
+while `$mathsf{#1}$&#39; will  show the label using the math sans-serif
+font.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_numeric_label_tex-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 323</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_numeric_label_tex</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_reversed" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_reversed
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Flag is <code>true</code> if the bounds_bottom is not the bounds_ymin.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_reversed-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 91</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_reversed</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_stroke_color" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_stroke_color
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_stroke_color = color_value
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Value for the stroke_color attribute when painting the y axis.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_stroke_color-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 816</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_stroke_color</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_tick_interval" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_numeric_label_decimal_digits
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            xaxis_numeric_label_decimal_digits = an_integer_value
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If 0, then tioga will pick the interval between major tick marks on the y
+axis. Otherwise, this will be used as the interval in y coordinates for the
+spacing between major ticks.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_tick_interval-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 416</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_tick_interval</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_tick_labels" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_tick_labels
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_tick_labels = array_or_nil
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If <code>nil</code>, then tioga will create numeric labels for the major
+ticks on the y axis. Otherwise, you must also specify <a
+href="X_and_Y_Axes.html#method-i-yaxis_locations_for_major_ticks">#yaxis_locations_for_major_ticks</a>,
+and <a
+href="X_and_Y_Axes.html#method-i-yaxis_tick_labels">#yaxis_tick_labels</a>
+must be an equal length array of strings giving the corresponding labels.</p>
+
+<p>See also xaxis_tick_labels.</p>
+
+<p>Examples</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">special_y</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">ylabel_shift</span> <span class="ruby-operator">+=</span> <span class="ruby-value">2</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">do_box_labels</span>(<span class="ruby-string">&#39;Special Y Axis&#39;</span>, <span class="ruby-string">&#39;Position&#39;</span>, <span class="ruby-string">&#39;Y Values&#39;</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">yaxis_numeric_label_angle</span> = <span class="ruby-value">-90</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">yaxis_locations_for_major_ticks</span> = [ 
+        <span class="ruby-value">-10.0</span>, <span class="ruby-value">-6.0</span>, <span class="ruby-operator">-</span><span class="ruby-constant">PI</span>, <span class="ruby-value">0.0</span>, <span class="ruby-constant">PI</span>, <span class="ruby-value">6.0</span>, <span class="ruby-value">10.0</span> ]
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">yaxis_tick_labels</span> = [ 
+        <span class="ruby-string">&quot;-IX&quot;</span>, <span class="ruby-string">&quot;-VI&quot;</span>, <span class="ruby-string">&quot;$-\\pi$&quot;</span>, <span class="ruby-string">&quot;$\\mathcal{ZERO}$&quot;</span>, <span class="ruby-string">&quot;$\\pi$&quot;</span>, <span class="ruby-string">&quot;VI&quot;</span>, <span class="ruby-string">&quot;IX&quot;</span> ]
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">yaxis_type</span> = <span class="ruby-constant">AXIS_WITH_MAJOR_TICKS_AND_NUMERIC_LABELS</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">stroke_color</span> = <span class="ruby-constant">Blue</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">yaxis_numeric_label_justification</span> = <span class="ruby-constant">RIGHT_JUSTIFIED</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">right_edge_type</span> = <span class="ruby-constant">AXIS_WITH_MAJOR_TICKS_ONLY</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">yaxis_numeric_label_shift</span> = <span class="ruby-value">0</span>
+    <span class="ruby-identifier">xs</span> = <span class="ruby-ivar">@positions</span>; <span class="ruby-identifier">ys</span> = <span class="ruby-ivar">@big_blues</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_plot</span>(<span class="ruby-string">&#39;boundaries&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">plot_boundaries</span>(<span class="ruby-identifier">xs</span>,<span class="ruby-identifier">ys</span>,<span class="ruby-ivar">@margin</span>,<span class="ruby-value">-11</span>, <span class="ruby-value">11</span>)) <span class="ruby-keyword">do</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">append_points_to_path</span>(<span class="ruby-identifier">xs</span>,<span class="ruby-identifier">ys</span>)
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">stroke</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p><img src="../images/Special_Y.png" /></p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_tick_labels-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 720</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_tick_labels</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_ticks_inside" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_ticks_inside
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_ticks_inside = true_or_false
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If <code>true</code>, then ticks will be added along the y axis inside the
+plot frame. If <code>false</code>, then no ticks will appear inside the
+frame along the y axis.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_ticks_inside-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 759</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_ticks_inside</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_ticks_outside" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_ticks_outside
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_ticks_outside = true_or_false
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If <code>true</code>, then ticks will be added along the y axis outside the
+plot frame. If <code>false</code>, then no ticks will appear outside the
+frame along the y axis.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_ticks_outside-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 768</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_ticks_outside</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_type" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_type
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_type = an_axis_type_value
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Determines the axis type to use when showing the y axis of a plot.  Valid
+types are the following predefined constants: <code>AXIS_HIDDEN</code>,
+<code>AXIS_LINE_ONLY</code>, <code>AXIS_WITH_MAJOR_TICKS_ONLY</code>,
+<code>AXIS_WITH_TICKS_ONLY</code>,
+<code>AXIS_WITH_MAJOR_TICKS_AND_NUMERIC_LABELS</code>, and
+<code>AXIS_WITH_TICKS_AND_NUMERIC_LABELS</code>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_type-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 630</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_type</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_use_fixed_pt" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_use_fixed_pt
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_use_fixed_pt = true_or_false
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If this flag is <code>true</code>, then numeric labels for the y axis will
+always use fixed point notation rather than exponential. If
+<code>false</code>, then the value of <a
+href="X_and_Y_Axes.html#method-i-yaxis_digits_max">#yaxis_digits_max</a>
+will be used to decide between fixed point or exponential notation. See
+also yaxis_digits_max.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_use_fixed_pt-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 663</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_use_fixed_pt</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-yaxis_visible" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_visible
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yaxis_visible = false
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>If <code>true</code>, then it is okay for tioga to show the y axis of a
+plot.  If <code>false</code>, then calls on <a
+href="X_and_Y_Axes.html#method-i-show_axis">#show_axis</a> for the y axis
+return immediately. This attribute is “one-way-only” in that it starts
+<code>true</code> and can be set <code>false</code>, but cannot be reset to
+<code>true</code> except by restoring the graphics state in which is was
+still <code>true</code>.  This is intended to help control the behavior of
+plots when embedded as subplots in a larger configuration.  Note that this
+does not effect showing the left or right edges; it only applies to calls
+on show_axis.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yaxis_visible-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/X_and_Y_Axes.rb, line 610</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">yaxis_visible</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

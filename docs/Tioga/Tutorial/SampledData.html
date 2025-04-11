@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>module Tioga::Tutorial::SampledData - RDoc Documentation</title>
+
+<link href="../../fonts.css" rel="stylesheet">
+<link href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/navigation.js"></script>
+<script src="../../js/search_index.js"></script>
+<script src="../../js/search.js"></script>
+<script src="../../js/searcher.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="module">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="SampledData.html#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+    
+    
+    
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="module-Tioga::Tutorial::SampledData">
+  <h1 id="module-Tioga::Tutorial::SampledData" class="module">
+    module Tioga::Tutorial::SampledData
+  </h1>
+
+  <section class="description">
+    
+<h1 id="module-Tioga::Tutorial::SampledData-label-Making+plots+showing+sampled+data+as+a+false-color+image">Making plots showing sampled data as a false-color image<span><a href="SampledData.html#module-Tioga::Tutorial::SampledData-label-Making+plots+showing+sampled+data+as+a+false-color+image">&para;</a> <a href="SampledData.html#documentation">&uarr;</a></span></h1>
+
+<p>Let&#39;s finish “plots.rb” with a  look at the code that shows a sampled
+data array with contours.  (By the way, the data comes from an
+astrophysical calculation.  The temperatures are in Kelvin and the
+densities are in grams per cubic centimeter. The array of data gives the
+calculated opacity for each temperature and density.  Typical stars have
+conditions covered by the data.)</p>
+
+<p><img src="../../images/plot_contours.png" /></p>
+
+<p>This is a more complex example than we&#39;ve done before, so the amount of
+code will be correspondingly larger.  We&#39;ll actually start with a
+somewhat simpler case by doing the plot without contours.  Then we&#39;ll
+look at the code for adding contour lines.</p>
+
+<p><img src="../../images/samples.png" /></p>
+
+<p>Here&#39;s the top-level routine for this plot:</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">sampled_data</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">rescale</span>(<span class="ruby-value">0.8</span>)
+    <span class="ruby-identifier">title</span> = <span class="ruby-string">&#39;Log Opacity&#39;</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subplot</span>(<span class="ruby-string">&#39;right_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@image_right_margin</span>) { 
+        <span class="ruby-identifier">sampled_image</span>(<span class="ruby-identifier">title</span>) }
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subplot</span>(<span class="ruby-string">&#39;left_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.95</span>, 
+        <span class="ruby-string">&#39;top_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.05</span>, 
+        <span class="ruby-string">&#39;bottom_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.05</span>) { <span class="ruby-identifier">color_bar</span>(<span class="ruby-identifier">title</span>) }
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p>It pulls in the right margin and shows the image, then pulls in the other
+margins and shows the color bar.  Let&#39;s look at the “sampled_image”
+routine first.</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">sampled_image</span>(<span class="ruby-identifier">title</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">do_box_labels</span>(<span class="ruby-identifier">title</span>, <span class="ruby-string">&#39;Log Density&#39;</span>, <span class="ruby-string">&#39;Log Temperature&#39;</span>)
+    <span class="ruby-identifier">data</span> = <span class="ruby-identifier">get_press_image</span>
+    <span class="ruby-identifier">xs</span> = <span class="ruby-ivar">@eos_logRHOs</span>
+    <span class="ruby-identifier">ys</span> = <span class="ruby-ivar">@eos_logTs</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_plot</span>([<span class="ruby-ivar">@eos_xmin</span>, <span class="ruby-ivar">@eos_xmax</span>, <span class="ruby-ivar">@eos_ymax</span>, <span class="ruby-ivar">@eos_ymin</span>]) <span class="ruby-keyword">do</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">fill_color</span> = <span class="ruby-constant">Wheat</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">fill_frame</span>
+        <span class="ruby-identifier">clip_press_image</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_image</span>(
+            <span class="ruby-string">&#39;ll&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">xs</span>.<span class="ruby-identifier">min</span>, <span class="ruby-identifier">ys</span>.<span class="ruby-identifier">min</span>], 
+            <span class="ruby-string">&#39;lr&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">xs</span>.<span class="ruby-identifier">max</span>, <span class="ruby-identifier">ys</span>.<span class="ruby-identifier">min</span>], 
+            <span class="ruby-string">&#39;ul&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">xs</span>.<span class="ruby-identifier">min</span>, <span class="ruby-identifier">ys</span>.<span class="ruby-identifier">max</span>], 
+            <span class="ruby-string">&#39;color_space&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">mellow_colormap</span>, 
+            <span class="ruby-string">&#39;data&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">data</span>, <span class="ruby-string">&#39;value_mask&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">255</span>,
+            <span class="ruby-string">&#39;w&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@eos_data_xlen</span>, <span class="ruby-string">&#39;h&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@eos_data_ylen</span>)
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p>After showing the title and labels, it calls the “get_press_image” routine
+in “plots.rb” to read the data and save it in various local attributes such
+as “@eos_logRHOs” and “@eos_logTs”. It also calls the <a
+href="../FigureMaker.html">FigureMaker</a> create_image_data routine to
+convert the samples to a form that is understood by show_image.</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">get_press_image</span>
+    <span class="ruby-ivar">@eos_xmin</span> = <span class="ruby-value">-8.5</span>; <span class="ruby-ivar">@eos_xmax</span> = <span class="ruby-value">2.5</span>
+    <span class="ruby-ivar">@eos_ymin</span> = <span class="ruby-value">5.7</span>; <span class="ruby-ivar">@eos_ymax</span> = <span class="ruby-value">7.0</span>
+    <span class="ruby-ivar">@image_zmin</span> = <span class="ruby-value">-3</span>
+    <span class="ruby-ivar">@image_zmax</span> = <span class="ruby-value">6</span>
+    <span class="ruby-identifier">data</span> = <span class="ruby-constant">Dvector</span>.<span class="ruby-identifier">read</span>(<span class="ruby-string">&quot;data/logRHOs_for_EoS.data&quot;</span>)
+    <span class="ruby-ivar">@eos_logRHOs</span> = <span class="ruby-identifier">data</span>[<span class="ruby-value">0</span>]
+    <span class="ruby-ivar">@eos_data_xlen</span> = <span class="ruby-ivar">@eos_logRHOs</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-ivar">@eos_xmin</span> = <span class="ruby-ivar">@eos_logRHOs</span>.<span class="ruby-identifier">min</span>; <span class="ruby-ivar">@eos_xmax</span> = <span class="ruby-ivar">@eos_logRHOs</span>.<span class="ruby-identifier">max</span>
+    <span class="ruby-identifier">data</span> = <span class="ruby-constant">Dvector</span>.<span class="ruby-identifier">read</span>(<span class="ruby-string">&quot;data/logTs_for_EoS.data&quot;</span>)
+    <span class="ruby-ivar">@eos_logTs</span> = <span class="ruby-identifier">data</span>[<span class="ruby-value">0</span>]
+    <span class="ruby-ivar">@eos_data_ylen</span> = <span class="ruby-ivar">@eos_logTs</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-ivar">@eos_ymin</span> = <span class="ruby-ivar">@eos_logTs</span>.<span class="ruby-identifier">min</span>; <span class="ruby-ivar">@eos_ymax</span> = <span class="ruby-ivar">@eos_logTs</span>.<span class="ruby-identifier">max</span>
+    <span class="ruby-ivar">@opacity_data</span> = <span class="ruby-constant">Dtable</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@eos_data_xlen</span>, <span class="ruby-ivar">@eos_data_ylen</span>)
+    <span class="ruby-ivar">@opacity_data</span>.<span class="ruby-identifier">read</span>(<span class="ruby-string">&quot;data/Opacity_EoS.data&quot;</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">create_image_data</span>(
+        <span class="ruby-ivar">@opacity_data</span>,
+        <span class="ruby-string">&#39;min_value&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@image_zmin</span>, 
+        <span class="ruby-string">&#39;max_value&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@image_zmax</span>, 
+        <span class="ruby-string">&#39;masking&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p>Before calling show_image, we set up a clipping region in our routine,
+cllp_press_image.  This takes care of the upper left corner where we
+don&#39;t have valid data. (Our equation of state code doesn&#39;t need to
+handle those combinations of temperature and density for our stellar
+models.)</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">clip_press_image</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">move_to_point</span>(<span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_left</span>, <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_bottom</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">append_point_to_path</span>(<span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_left</span>, <span class="ruby-value">4.2</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">append_point_to_path</span>(<span class="ruby-value">-3</span>, <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_top</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">append_point_to_path</span>(<span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_right</span>, <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_top</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">append_point_to_path</span>(<span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_right</span>, <span class="ruby-identifier">t</span>.<span class="ruby-identifier">bounds_bottom</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">close_path</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">clip</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p>That takes care of the image of the sampled data.  Now let&#39;s add the
+color bar.</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">color_bar</span>(<span class="ruby-identifier">ylabel</span>, <span class="ruby-identifier">levels</span> = <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">xmin</span> = <span class="ruby-value">0</span>; <span class="ruby-identifier">xmax</span> = <span class="ruby-value">1</span>; <span class="ruby-identifier">xmid</span> = <span class="ruby-value">0.5</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">rescale</span>(<span class="ruby-value">0.8</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">xaxis_type</span> = <span class="ruby-constant">AXIS_LINE_ONLY</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">xaxis_loc</span> = <span class="ruby-constant">BOTTOM</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">top_edge_type</span> = <span class="ruby-constant">AXIS_LINE_ONLY</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">yaxis_loc</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">ylabel_side</span> = <span class="ruby-constant">RIGHT</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">yaxis_type</span> = <span class="ruby-constant">AXIS_WITH_TICKS_AND_NUMERIC_LABELS</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">left_edge_type</span> = <span class="ruby-constant">AXIS_WITH_TICKS_ONLY</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">ylabel_shift</span> <span class="ruby-operator">+=</span> <span class="ruby-value">0.5</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">yaxis_major_tick_length</span> <span class="ruby-operator">*=</span> <span class="ruby-value">0.6</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">yaxis_minor_tick_length</span> <span class="ruby-operator">*=</span> <span class="ruby-value">0.5</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_ylabel</span>(<span class="ruby-identifier">ylabel</span>); <span class="ruby-identifier">t</span>.<span class="ruby-identifier">no_ylabel</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_plot</span>(<span class="ruby-string">&#39;boundaries&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">xmin</span>, <span class="ruby-identifier">xmax</span>, <span class="ruby-ivar">@image_zmax</span>, <span class="ruby-ivar">@image_zmin</span>]) <span class="ruby-keyword">do</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">axial_shading</span>(
+            <span class="ruby-string">&#39;start_point&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">xmid</span>, <span class="ruby-ivar">@image_zmin</span>], <span class="ruby-string">&#39;end_point&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">xmid</span>, <span class="ruby-ivar">@image_zmax</span>], 
+            <span class="ruby-string">&#39;colormap&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">mellow_colormap</span> )
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">levels</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+            <span class="ruby-identifier">t</span>.<span class="ruby-identifier">stroke_color</span> = <span class="ruby-constant">Gray</span>
+            <span class="ruby-identifier">t</span>.<span class="ruby-identifier">line_width</span> = <span class="ruby-value">1.5</span>
+            <span class="ruby-identifier">levels</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">level</span><span class="ruby-operator">|</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">stroke_line</span>(<span class="ruby-identifier">xmin</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">xmax</span>, <span class="ruby-identifier">level</span>) }
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p>The colors are painted by the axial_shading routine.  The rest of the code
+is setting up the axes to give the appearance I happen to like.</p>
+
+<p>Finally, here&#39;s the plot routine that includes contour lines.</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">samples_with_contours</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">rescale</span>(<span class="ruby-value">0.8</span>)
+    <span class="ruby-identifier">title</span> = <span class="ruby-string">&#39;Log Opacity&#39;</span>
+    <span class="ruby-identifier">levels</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+    (<span class="ruby-value">-3</span><span class="ruby-operator">..</span><span class="ruby-value">5</span>).<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">levels</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">0.4</span> }
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subplot</span>(<span class="ruby-string">&#39;right_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@image_right_margin</span>) { <span class="ruby-identifier">sampled_image</span>(<span class="ruby-identifier">title</span>) }
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subplot</span>(<span class="ruby-string">&#39;left_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.95</span>, 
+        <span class="ruby-string">&#39;top_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.05</span>, 
+        <span class="ruby-string">&#39;bottom_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.05</span>) { <span class="ruby-identifier">color_bar</span>(<span class="ruby-identifier">title</span>, <span class="ruby-identifier">levels</span>) }
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">subplot</span>(<span class="ruby-string">&#39;right_margin&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@image_right_margin</span>) <span class="ruby-keyword">do</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">xaxis_type</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">yaxis_type</span> = <span class="ruby-constant">AXIS_WITH_TICKS_ONLY</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">no_title</span>; <span class="ruby-identifier">t</span>.<span class="ruby-identifier">no_xlabel</span>; <span class="ruby-identifier">t</span>.<span class="ruby-identifier">no_ylabel</span>
+        <span class="ruby-identifier">bounds</span> = [<span class="ruby-ivar">@eos_xmin</span>, <span class="ruby-ivar">@eos_xmax</span>, <span class="ruby-ivar">@eos_ymax</span>, <span class="ruby-ivar">@eos_ymin</span>]
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_plot</span>(<span class="ruby-identifier">bounds</span>) <span class="ruby-keyword">do</span>
+            <span class="ruby-identifier">clip_press_image</span>
+            <span class="ruby-identifier">t</span>.<span class="ruby-identifier">stroke_color</span> = <span class="ruby-constant">SlateGray</span>
+            <span class="ruby-identifier">t</span>.<span class="ruby-identifier">line_width</span> = <span class="ruby-value">1</span>
+            <span class="ruby-identifier">dest_xs</span> = <span class="ruby-constant">Dvector</span>.<span class="ruby-identifier">new</span>; <span class="ruby-identifier">dest_ys</span> = <span class="ruby-constant">Dvector</span>.<span class="ruby-identifier">new</span>; <span class="ruby-identifier">gaps</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+            <span class="ruby-identifier">dict</span> = { <span class="ruby-string">&#39;dest_xs&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">dest_xs</span>, 
+                    <span class="ruby-string">&#39;dest_ys&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">dest_ys</span>, 
+                    <span class="ruby-string">&#39;gaps&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">gaps</span>,
+                    <span class="ruby-string">&#39;xs&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@eos_logRHOs</span>, 
+                    <span class="ruby-string">&#39;ys&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@eos_logTs</span>,
+                    <span class="ruby-string">&#39;data&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@opacity_data</span> }
+            <span class="ruby-identifier">levels</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">level</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">dict</span>[<span class="ruby-string">&#39;level&#39;</span>] = <span class="ruby-identifier">level</span>
+                <span class="ruby-identifier">t</span>.<span class="ruby-identifier">make_contour</span>(<span class="ruby-identifier">dict</span>)
+                <span class="ruby-identifier">t</span>.<span class="ruby-identifier">append_points_with_gaps_to_path</span>(<span class="ruby-identifier">dest_xs</span>, <span class="ruby-identifier">dest_ys</span>, <span class="ruby-identifier">gaps</span>, <span class="ruby-keyword">true</span>)
+                <span class="ruby-identifier">t</span>.<span class="ruby-identifier">stroke</span>
+            <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p>The first thing it does is show the image and the colorbar.  Next, it sets
+up to do a plot with exactly the same frame and bounds as the image, and
+then adds the contour lines.  Each line is created by the make_contour
+routine and then painted by appending it to the path and calling stroke. 
+Since the contour line for particular level may come in many disconnected
+pieces, we use the “append_points_with_gaps_to_path” routine which knows
+how to deal with such things.</p>
+
+<p>BTW: If you&#39;re looking for the routine to add labels to contours
+automatically, you won&#39;t find it in tioga. I&#39;ve never been
+particularly pleased with the job done by standard algorithms.  Instead,  I
+decided to go at the problem in a different way and give you the actual
+contour data in a form that you can work with to make your own choices. 
+This also means you can try using different line styles for different
+contour levels, and perhaps you might even want to use a legend to identify
+the levels if there aren&#39;t too many.</p>
+
+<p>Of course, if someone develops a great algorithm for doing contour labels,
+they can package it up as a Ruby extension and let us all share.  I&#39;d
+love to see that happen, and Ruby is a great platform for it.</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

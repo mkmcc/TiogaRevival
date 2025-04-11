@@ -1,0 +1,2161 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Dobjects::Function - RDoc Documentation</title>
+
+<link href="../fonts.css" rel="stylesheet">
+<link href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/search_index.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/searcher.js"></script>
+<script src="../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="Function.html#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Object
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="Function.html#method-c-joint_sort">::joint_sort</a>
+    
+    <li ><a href="Function.html#method-c-new">::new</a>
+    
+    <li ><a href="Function.html#method-i-5B-5D">#[]</a>
+    
+    <li ><a href="Function.html#method-i-bound_values">#bound_values</a>
+    
+    <li ><a href="Function.html#method-i-bounds">#bounds</a>
+    
+    <li ><a href="Function.html#method-i-compute_spline">#compute_spline</a>
+    
+    <li ><a href="Function.html#method-i-compute_spline_data">#compute_spline_data</a>
+    
+    <li ><a href="Function.html#method-i-derivative">#derivative</a>
+    
+    <li ><a href="Function.html#method-i-diff2_5p">#diff2_5p</a>
+    
+    <li ><a href="Function.html#method-i-diff_5p">#diff_5p</a>
+    
+    <li ><a href="Function.html#method-i-distance">#distance</a>
+    
+    <li ><a href="Function.html#method-i-each">#each</a>
+    
+    <li ><a href="Function.html#method-i-fuzzy_sub-21">#fuzzy_sub!</a>
+    
+    <li ><a href="Function.html#method-i-integrate">#integrate</a>
+    
+    <li ><a href="Function.html#method-i-interpolate">#interpolate</a>
+    
+    <li ><a href="Function.html#method-i-is_sorted">#is_sorted</a>
+    
+    <li ><a href="Function.html#method-i-length">#length</a>
+    
+    <li ><a href="Function.html#method-i-make_interpolant">#make_interpolant</a>
+    
+    <li ><a href="Function.html#method-i-max">#max</a>
+    
+    <li ><a href="Function.html#method-i-min">#min</a>
+    
+    <li ><a href="Function.html#method-i-point">#point</a>
+    
+    <li ><a href="Function.html#method-i-primitive">#primitive</a>
+    
+    <li ><a href="Function.html#method-i-reglin">#reglin</a>
+    
+    <li ><a href="Function.html#method-i-reverse-21">#reverse!</a>
+    
+    <li ><a href="Function.html#method-i-size">#size</a>
+    
+    <li ><a href="Function.html#method-i-smooth_pick">#smooth_pick</a>
+    
+    <li ><a href="Function.html#method-i-sort">#sort</a>
+    
+    <li ><a href="Function.html#method-i-sorted-3F">#sorted?</a>
+    
+    <li ><a href="Function.html#method-i-spline_approximation">#spline_approximation</a>
+    
+    <li ><a href="Function.html#method-i-split_monotonic">#split_monotonic</a>
+    
+    <li ><a href="Function.html#method-i-split_on_nan">#split_on_nan</a>
+    
+    <li ><a href="Function.html#method-i-strip_nan">#strip_nan</a>
+    
+    <li ><a href="Function.html#method-i-x">#x</a>
+    
+    <li ><a href="Function.html#method-i-y">#y</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Dobjects::Function">
+  <h1 id="class-Dobjects::Function" class="class">
+    class Dobjects::Function
+  </h1>
+
+  <section class="description">
+    
+<p><a href="Function.html">Function</a> is a class that embeds two Dvectors,
+one for X data and one for Y  data. It provides</p>
+<ul><li>
+<p>facilities for sorting the X while keeping the Y matching, with <a
+href="Function.html#method-i-sort">sort</a> and <a
+href="Function.html#method-c-joint_sort">::joint_sort</a>;</p>
+</li><li>
+<p>to check if X data is sorted: <a
+href="Function.html#method-i-sorted-3F">sorted?</a>, <a
+href="Function.html#method-i-is_sorted">is_sorted</a>;</p>
+</li><li>
+<p>interpolation, with <a
+href="Function.html#method-i-compute_spline">compute_spline</a>, <a
+href="Function.html#method-i-compute_spline_data">compute_spline_data</a>
+and <a href="Function.html#method-i-interpolate">interpolate</a></p>
+</li><li>
+<p>some functions for data access : <a href="Function.html#method-i-x">x</a>,
+<a href="Function.html#method-i-y">y</a>, <a
+href="Function.html#method-i-point">point</a>;</p>
+</li><li>
+<p>some utiliy functions: <a
+href="Function.html#method-i-split_monotonic">split_monotonic</a>, <a
+href="Function.html#method-i-strip_nan">strip_nan</a>, <a
+href="Function.html#method-i-reverse-21">reverse!</a></p>
+</li><li>
+<p>data inspection: <a href="Function.html#method-i-min">min</a>, <a
+href="Function.html#method-i-max">max</a>;</p>
+</li><li>
+<p>some computational functions: <a
+href="Function.html#method-i-integrate">integrate</a>, <a
+href="Function.html#method-i-primitive">primitive</a>, <a
+href="Function.html#method-i-derivative">derivative</a>, and now 4th-order
+accurate first and second derivatives: <a
+href="Function.html#method-i-diff_5p">diff_5p</a> and <a
+href="Function.html#method-i-diff2_5p">diff2_5p</a></p>
+</li><li>
+<p>utility for fuzzy operations, when the X values of two functions differ,
+but only slightly, of when points are missing:  <a
+href="Function.html#method-i-fuzzy_sub-21">fuzzy_sub!</a></p>
+</li><li>
+<p>linear regression <a href="Function.html#method-i-reglin">reglin</a></p>
+</li><li>
+<p>a function to approximate data using a low-order spline: <a
+href="Function.html#method-i-spline_approximation">spline_approximation</a></p>
+</li></ul>
+
+<p>And getting bigger (almost) everyday…</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-joint_sort" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            joint_sort(x,y)
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Sorts <code>x</code>, while ensuring that the corresponding <code>y</code>
+values keep matching. Should be pretty fast, as it is derived from 
+glibc&#39;s quicksort.</p>
+
+<pre>a = Dvector[3,2,1]
+b = a * 2                 -&gt; [6,4,2]
+Function.joint_sort(a,b)  -&gt; [[1,2,3], [2,4,6]]</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="joint_sort-source">
+            <pre>static VALUE function_joint_sort(VALUE self, VALUE x, VALUE y)
+{
+  long x_len, y_len;
+  double * x_values = Dvector_Data_for_Write(x, &amp;x_len);
+  double * y_values = Dvector_Data_for_Write(y, &amp;y_len);
+  if(x_len != y_len)
+    rb_raise(rb_eArgError,&quot;both vectors must have the same size&quot;);
+  else 
+    {
+      /* we temporarily freeze both Dvectors before sorting */
+      FL_SET(x, DVEC_TMPLOCK);
+      FL_SET(y, DVEC_TMPLOCK);
+      joint_quicksort(x_values, y_values, (size_t) x_len);
+      /* and unfreeze them */
+      FL_UNSET(x, DVEC_TMPLOCK);
+      FL_UNSET(y, DVEC_TMPLOCK);
+    }
+  /* we return the array of both Dvectors */
+  return rb_ary_new3(2,x,y); 
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            new(x,y)
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Creates a <a href="Function.html">Function</a> object with given
+<code>x</code> and <code>y</code> values.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre>static VALUE function_initialize(VALUE self, VALUE x, VALUE y)
+{
+  if(IS_A_DVECTOR(x) &amp;&amp; IS_A_DVECTOR(y)) 
+    {
+      if(DVECTOR_SIZE(x) == DVECTOR_SIZE(y)) {
+        set_x_vector(self, x);
+        set_y_vector(self, y);
+        /* fine, this could have been written in pure Ruby...*/
+        set_spline_vector(self,Qnil);
+        /* We initialize the @spline_cache var */
+      }
+      else
+        rb_raise(rb_eArgError,&quot;both vectors must have the same size&quot;);
+    }
+  else 
+    rb_raise(rb_eArgError,&quot;both arguments must be Dvector&quot;);
+  return self;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-5B-5D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">[]</span><span
+            class="method-args">(p1)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns a <a href="Dvector.html">Dvector</a> with two elements: the X and Y
+values of the point at the given index.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="5B-5D-source">
+            <pre>static VALUE function_point(VALUE self, VALUE index)
+{
+  if(! NUMERIC(index))
+    rb_raise(rb_eArgError, &quot;index has to be numeric&quot;);
+  else
+    {
+      long i = NUM2LONG(index);
+      long size = function_sanity_check(self);
+      if(size &gt; 0 &amp;&amp; i &lt; size)
+        {
+          VALUE point = rb_funcall(cDvector, idNew, 1, INT2NUM(2));
+          double * dat = Dvector_Data_for_Write(point, NULL);
+          double *x = Dvector_Data_for_Read(get_x_vector(self),NULL);
+          double *y = Dvector_Data_for_Read(get_y_vector(self),NULL);
+          dat[0] = x[i];
+          dat[1] = y[i];
+          return point;
+        }
+      else
+        return Qnil;
+    }
+  return Qnil;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-bound_values" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bound_values(xmin, xmax, ymin, ymax)
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>This function browses the points inside the <a
+href="Function.html">Function</a> and stores in the resulting new function
+only points which are within boundaries, and the points just next to them
+(so the general direction on the sides looks fine).</p>
+
+<p>Make sure <em>xmin</em> &lt; <em>xmax</em> and <em>ymin</em> &lt;
+<em>ymax</em>, else you simply won&#39;t get any output.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="bound_values-source">
+            <pre>static VALUE function_bound_values(VALUE self, 
+                                   VALUE vxmin, VALUE vxmax,
+                                   VALUE vymin, VALUE vymax)
+{
+  long ss = function_sanity_check(self);
+  const double *xs = Dvector_Data_for_Read(get_x_vector(self),NULL);
+  const double *ys = Dvector_Data_for_Read(get_y_vector(self),NULL);
+  double xmin = NUM2DBL(vxmin);
+  double xmax = NUM2DBL(vxmax);
+  double ymin = NUM2DBL(vymin);
+  double ymax = NUM2DBL(vymax);
+
+  /* Now, two dvectors for writing: */
+  VALUE x_out = rb_funcall(cDvector, idNew, 0);
+  VALUE y_out = rb_funcall(cDvector, idNew, 0);
+
+  /* No forward computation of the size of the targets, meaning
+     memory allocation penalty.
+  */
+  
+  int last_point_in = 0;        /* Whether the last point was in */
+  long i;
+  for(i = 0; i &lt; ss; i++) {
+    double x = xs[i];
+    double y = ys[i];
+    if( (xmin &lt;= x) &amp;&amp; (xmax &gt;= x) &amp;&amp; (ymin &lt;= y) &amp;&amp; (ymax &gt;= y)) {
+      if(! last_point_in) {
+        last_point_in = 1;
+        if(i) {                        /* Not for the first element */
+          Dvector_Push_Double(x_out, xs[i-1]);
+          Dvector_Push_Double(y_out, ys[i-1]);
+        }
+      }
+      Dvector_Push_Double(x_out, x);
+      Dvector_Push_Double(y_out, y);
+    }
+    else {                      /* Outside boundaries */
+      if(last_point_in) {
+        last_point_in = 0;
+        Dvector_Push_Double(x_out, x);
+        Dvector_Push_Double(y_out, y);
+      }
+    }
+  }
+  return Function_Create(x_out, y_out);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-bounds" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">bounds</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns [xmin, ymin, xmax, ymax]</p>
+          
+          
+
+          
+          <div class="method-source-code" id="bounds-source">
+            <pre><span class="ruby-comment"># File lib/Dobjects/Function_extras.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bounds</span>
+  <span class="ruby-identifier">xmin</span>,<span class="ruby-identifier">xmax</span> = <span class="ruby-identifier">x</span>.<span class="ruby-identifier">bounds</span>
+  <span class="ruby-identifier">ymin</span>,<span class="ruby-identifier">ymax</span> = <span class="ruby-identifier">y</span>.<span class="ruby-identifier">bounds</span>
+  <span class="ruby-keyword">return</span> [<span class="ruby-identifier">xmin</span>, <span class="ruby-identifier">ymin</span>, <span class="ruby-identifier">xmax</span>, <span class="ruby-identifier">ymax</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-compute_spline" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">compute_spline</span><span
+            class="method-args">(p1)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Interpolates the value of the function at the points given. Returns a brand
+new <a href="Dvector.html">Dvector</a>. The X values must be sorted !</p>
+          
+          
+
+          
+          <div class="method-source-code" id="compute_spline-source">
+            <pre>static VALUE function_compute_spline(VALUE self, VALUE x_values)
+{
+  VALUE x_vec = get_x_vector(self);
+  VALUE y_vec = get_y_vector(self);
+  VALUE cache;
+  VALUE ret_val;
+  long dat_size = function_sanity_check(self);
+  long size = DVECTOR_SIZE(x_values);
+  
+  function_ensure_spline_data_present(self);
+
+  cache = get_spline_vector(self);
+
+  ret_val = rb_funcall(cDvector, rb_intern(&quot;new&quot;),
+                       1, LONG2NUM(size));
+  double * x_dat = Dvector_Data_for_Read(x_vec,NULL);
+  double * y_dat = Dvector_Data_for_Read(y_vec,NULL);
+  double * spline = Dvector_Data_for_Read(cache,NULL);
+  double * x = Dvector_Data_for_Read(x_values,NULL);
+  double * y = Dvector_Data_for_Write(ret_val,NULL);
+  
+  function_compute_spline_interpolation(dat_size, x_dat,
+                                        y_dat, spline,
+                                        size, x, y);
+  return ret_val;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-compute_spline_data" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">compute_spline_data</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Computes spline data and caches it inside the object. Both X and Y vectors
+are cleared (see <a
+href="Dvector.html#method-i-clear">Dobjects::Dvector#clear</a>) to make
+sure the cache is kept up-to-date. If the function is not sorted, sorts it.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="compute_spline_data-source">
+            <pre>static VALUE function_compute_spline_data(VALUE self)
+{
+  VALUE x_vec = get_x_vector(self);
+  VALUE y_vec = get_y_vector(self);
+  VALUE cache = get_spline_vector(self);
+  long size = DVECTOR_SIZE(x_vec);
+
+  if(DVECTOR_SIZE(y_vec) != size)
+    rb_raise(rb_eRuntimeError, 
+             &quot;x and y should have the same size !&quot;);
+  if(! IS_A_DVECTOR(cache))    /* create it -- and silently ignores
+                                  its previous values */
+      cache = rb_funcall(cDvector, idNew,
+                         1, LONG2NUM(size));
+  if(DVECTOR_SIZE(cache) != size) /* switch to the required size for cache */
+    Dvector_Data_Resize(cache, size);
+
+  /* we make sure that the X values are sorted */
+  if(! RTEST(function_is_sorted(self)))
+     function_sort(self);
+  
+  double * x, *y, *spline;
+  x = Dvector_Data_for_Read(x_vec, NULL);
+  y = Dvector_Data_for_Read(y_vec, NULL);
+  spline = Dvector_Data_for_Write(cache, NULL);
+
+  function_fill_second_derivatives(size, x, y, spline,1.0/0.0, 1.0/0.0);
+  set_spline_vector(self, cache);
+
+  /* now, we clear both X and Y */
+  DVECTOR_CLEAR(x_vec);
+  DVECTOR_CLEAR(y_vec);
+  return self;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-derivative" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">derivative</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Computes the derivative of the <a href="Function.html">Function</a> and
+returns it as a new <a href="Function.html">Function</a>. The newly created
+function shares the X vector with the previous one.</p>
+
+<p>WARNING: this is a very naive 3-points algorithm; you should consider using
+<a href="Function.html#method-i-diff_5p">#diff_5p</a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="derivative-source">
+            <pre>static VALUE function_derivative(VALUE self)
+{
+  long size = function_sanity_check(self);
+  const double *x = Dvector_Data_for_Read(get_x_vector(self),NULL);
+  const double *y = Dvector_Data_for_Read(get_y_vector(self),NULL);
+  VALUE derivative = Dvector_Create();
+  long i = 0;
+  /* First value */
+  Dvector_Push_Double(derivative, (y[i+1] - y[i]) /(x[i+1] - x[i]));
+  i++;
+  while(i &lt; (size - 1))
+    {
+      Dvector_Push_Double(derivative, 
+                          .5 * (
+                                (y[i+1] - y[i]) /(x[i+1] - x[i]) + 
+                                (y[i] - y[i-1]) /(x[i] - x[i-1])
+                                ));
+      i++;
+    }
+  Dvector_Push_Double(derivative, (y[i] - y[i-1]) /(x[i] - x[i-1]));
+  return Function_Create(get_x_vector(self), derivative);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-diff2_5p" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">diff2_5p</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Computes a 4th order accurate second derivative of the <a
+href="Function.html">Function</a>.</p>
+
+<p>This function <strong>requires</strong> that there are at the very least 5
+data points!</p>
+          
+          
+
+          
+          <div class="method-source-code" id="diff2_5p-source">
+            <pre>static VALUE function_diff2_5p(VALUE self)
+{
+  long size = function_sanity_check(self);
+  const double *x = Dvector_Data_for_Read(get_x_vector(self),NULL);
+  const double *y = Dvector_Data_for_Read(get_y_vector(self),NULL);
+  VALUE derivative = Dvector_Create();
+  long i = 0;
+  double delta_1, delta_2, delta_3, delta_4;
+  double alpha_1, alpha_2, alpha_3, alpha_4;
+  double v0,v1,v2,v3,v4;
+
+  for(i = 0; i &lt; size; i++) {
+    /* First initialize values, though this is very suboptimal */
+    v0 = y[i];
+    if(i == 0) {
+      delta_1 = x[1] - x[0]; v1 = y[1];
+      delta_2 = x[2] - x[0]; v2 = y[2];
+      delta_3 = x[3] - x[0]; v3 = y[3];
+      delta_4 = x[4] - x[0]; v4 = y[4];
+    } else if(i == 1) {
+      delta_1 = x[0] - x[1]; v1 = y[0];
+      delta_2 = x[2] - x[1]; v2 = y[2];
+      delta_3 = x[3] - x[1]; v3 = y[3];
+      delta_4 = x[4] - x[1]; v4 = y[4];
+    } else if(i == size - 2) {
+      delta_1 = x[size-1] - x[size-2]; v1 = y[size-1];
+      delta_2 = x[size-3] - x[size-2]; v2 = y[size-3];
+      delta_3 = x[size-4] - x[size-2]; v3 = y[size-4];
+      delta_4 = x[size-5] - x[size-2]; v4 = y[size-5];
+    } else if(i == size - 1) {
+      delta_1 = x[size-2] - x[size-1]; v1 = y[size-2];
+      delta_2 = x[size-3] - x[size-1]; v2 = y[size-3];
+      delta_3 = x[size-4] - x[size-1]; v3 = y[size-4];
+      delta_4 = x[size-5] - x[size-1]; v4 = y[size-5];
+    } else {
+      delta_1 = x[i-2] - x[i]; v1 = y[i-2];
+      delta_2 = x[i-1] - x[i]; v2 = y[i-1];
+      delta_3 = x[i+2] - x[i]; v3 = y[i+2];
+      delta_4 = x[i+1] - x[i]; v4 = y[i+1];
+    }
+    alpha_1 = -2 * (delta_2*delta_3 + delta_2*delta_4 + delta_3*delta_4)/
+      (delta_1 * (delta_2 - delta_1) * (delta_3 - delta_1) 
+       * (delta_4 - delta_1));
+    alpha_2 = -2 * (delta_1*delta_3 + delta_1*delta_4 + delta_3*delta_4)/
+      (delta_2 * (delta_1 - delta_2) * (delta_3 - delta_2) 
+       * (delta_4 - delta_2));
+    alpha_3 = -2 * (delta_2*delta_1 + delta_2*delta_4 + delta_1*delta_4)/
+      (delta_3 * (delta_1 - delta_3) * (delta_2 - delta_3) 
+       * (delta_4 - delta_3));
+    alpha_4 = -2 * (delta_2*delta_3 + delta_2*delta_1 + delta_3*delta_1)/
+      (delta_4 * (delta_1 - delta_4) * (delta_2 - delta_4) 
+       * (delta_3 - delta_4));
+    Dvector_Push_Double(derivative,
+                        -(alpha_1 + alpha_2 + alpha_3 + alpha_4) * v0 +
+                        alpha_1 * v1 + alpha_2 * v2 + 
+                        alpha_3 * v3 + alpha_4 * v4);
+  }
+  return Function_Create(get_x_vector(self), derivative);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-diff_5p" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">diff_5p</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Computes a 4th order accurate derivative of the <a
+href="Function.html">Function</a>.</p>
+
+<p>This function <strong>requires</strong> that there are at the very least 5
+data points !</p>
+          
+          
+
+          
+          <div class="method-source-code" id="diff_5p-source">
+            <pre>static VALUE function_diff_5p(VALUE self)
+{
+  long size = function_sanity_check(self);
+  const double *x = Dvector_Data_for_Read(get_x_vector(self),NULL);
+  const double *y = Dvector_Data_for_Read(get_y_vector(self),NULL);
+  VALUE derivative = Dvector_Create();
+  long i = 0;
+  double delta_1, delta_2, delta_3, delta_4;
+  double alpha_1, alpha_2, alpha_3, alpha_4;
+  double v0,v1,v2,v3,v4;
+  /* TODO: what happens when there are less than 5 points ? */
+
+  for(i = 0; i &lt; size; i++) {
+    /* First initialize values, though this is very suboptimal */
+    v0 = y[i];
+    if(i == 0) {
+      delta_1 = x[1] - x[0]; v1 = y[1];
+      delta_2 = x[2] - x[0]; v2 = y[2];
+      delta_3 = x[3] - x[0]; v3 = y[3];
+      delta_4 = x[4] - x[0]; v4 = y[4];
+    } else if(i == 1) {
+      delta_1 = x[0] - x[1]; v1 = y[0];
+      delta_2 = x[2] - x[1]; v2 = y[2];
+      delta_3 = x[3] - x[1]; v3 = y[3];
+      delta_4 = x[4] - x[1]; v4 = y[4];
+    } else if(i == size - 2) {
+      delta_1 = x[size-1] - x[size-2]; v1 = y[size-1];
+      delta_2 = x[size-3] - x[size-2]; v2 = y[size-3];
+      delta_3 = x[size-4] - x[size-2]; v3 = y[size-4];
+      delta_4 = x[size-5] - x[size-2]; v4 = y[size-5];
+    } else if(i == size - 1) {
+      delta_1 = x[size-2] - x[size-1]; v1 = y[size-2];
+      delta_2 = x[size-3] - x[size-1]; v2 = y[size-3];
+      delta_3 = x[size-4] - x[size-1]; v3 = y[size-4];
+      delta_4 = x[size-5] - x[size-1]; v4 = y[size-5];
+    } else {
+      delta_1 = x[i-2] - x[i]; v1 = y[i-2];
+      delta_2 = x[i-1] - x[i]; v2 = y[i-1];
+      delta_3 = x[i+2] - x[i]; v3 = y[i+2];
+      delta_4 = x[i+1] - x[i]; v4 = y[i+1];
+    }
+    alpha_1 = delta_2*delta_3*delta_4/
+      (delta_1 * (delta_2 - delta_1) * (delta_3 - delta_1) 
+       * (delta_4 - delta_1));
+    alpha_2 = delta_1*delta_3*delta_4/
+      (delta_2 * (delta_1 - delta_2) * (delta_3 - delta_2) 
+       * (delta_4 - delta_2));
+    alpha_3 = delta_1*delta_2*delta_4/
+      (delta_3 * (delta_1 - delta_3) * (delta_2 - delta_3) 
+       * (delta_4 - delta_3));
+    alpha_4 = delta_1*delta_2*delta_3/
+      (delta_4 * (delta_1 - delta_4) * (delta_2 - delta_4) 
+       * (delta_3 - delta_4));
+    Dvector_Push_Double(derivative,
+                        -(alpha_1 + alpha_2 + alpha_3 + alpha_4) * v0 +
+                        alpha_1 * v1 + alpha_2 * v2 + 
+                        alpha_3 * v3 + alpha_4 * v4);
+  }
+  return Function_Create(get_x_vector(self), derivative);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-distance" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            distance(x,y) &rarr; a_number
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            distance(x,y, xscale, yscale) &rarr; a_number
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the distance of the function to the given point. Optionnal xscale
+and yscale says by how much we should divide the x and y coordinates before
+computing the distance. Use it if the distance is not homogeneous.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="distance-source">
+            <pre>static VALUE function_distance(int argc, VALUE *argv, VALUE self)
+{
+  switch(argc)
+    {
+    case 2:
+      return rb_float_new(private_function_distance(self, 
+                                                    NUM2DBL(argv[0]),
+                                                    NUM2DBL(argv[1]),
+                                                    1.0,1.0,NULL));
+    case 4:
+      return rb_float_new(private_function_distance(self, 
+                                                    NUM2DBL(argv[0]),
+                                                    NUM2DBL(argv[1]),
+                                                    NUM2DBL(argv[2]),
+                                                    NUM2DBL(argv[3]),
+                                                    NULL));
+    default:
+      rb_raise(rb_eArgError, &quot;distance should have 2 or 4 parameters&quot;);
+    }
+  return Qnil;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-each" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            each do |x,y| _code_ end
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Iterates over all the points in the <a href="Function.html">Function</a>,
+yielding X and Y for each point.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="each-source">
+            <pre>static VALUE function_each(VALUE self) /* :yields: x,y */
+{
+
+  long x_len, y_len;
+  VALUE x = get_x_vector(self);
+  VALUE y = get_y_vector(self);
+  double * x_values = Dvector_Data_for_Write(x, &amp;x_len);
+  double * y_values = Dvector_Data_for_Write(y, &amp;y_len);
+  if(x_len != y_len)
+    rb_raise(rb_eRuntimeError,&quot;X and Y must have the same size&quot;);
+  else 
+    {
+      /* we temporarily freeze both Dvectors during iteration */
+      FL_SET(x, DVEC_TMPLOCK);
+      FL_SET(y, DVEC_TMPLOCK);
+      while(x_len--)
+        {
+          VALUE flt_x = rb_float_new(*x_values++);
+          VALUE flt_y = rb_float_new(*y_values++);
+          rb_yield_values(2, flt_x, flt_y);
+        }
+      /* and unfreeze them */
+      FL_UNSET(x, DVEC_TMPLOCK);
+      FL_UNSET(y, DVEC_TMPLOCK);
+    }
+  return self; /* nothing interesting */
+  
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-fuzzy_sub-21" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">fuzzy_sub!</span><span
+            class="method-args">(p1)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Fuzzy substraction of two curves. Substracts the Y values of <em>op</em> to
+the current <a href="Function.html">Function</a>, by making sure that the Y
+value substracted to a given point corresponds to the closest X_ value of
+the point in <em>op</em>. This function somehow assumes that the data is
+reasonably organised, and will never go backwards to find a matching X
+value in <em>op</em>.</p>
+
+<p>In any case, you really should consider using <a
+href="Function.html#method-i-split_monotonic">#split_monotonic</a> on it
+first.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="fuzzy_sub-21-source">
+            <pre>static VALUE function_fuzzy_substract(VALUE self, VALUE op)
+{
+  long ss = function_sanity_check(self);
+  const double *xs = Dvector_Data_for_Read(get_x_vector(self),NULL);
+  double *ys = Dvector_Data_for_Write(get_y_vector(self),NULL);
+  long so = function_sanity_check(op);
+  const double *xo = Dvector_Data_for_Read(get_x_vector(op),NULL);
+  const double *yo = Dvector_Data_for_Read(get_y_vector(op),NULL);
+  long i,j = 0;
+  double diff;
+  double fuzz = 0;              /* The actual sum of the terms */
+  
+  for(i = 0; i &lt; ss; i++) 
+    {
+      /* We first look for the closest point */
+      diff = fabs(xs[i] - xo[j]);
+      while((j &lt; (so - 1)) &amp;&amp; (fabs(xs[i] - xo[j+1]) &lt;  diff))
+        diff = fabs(xs[i] - xo[++j]);
+      fuzz += diff;
+      ys[i] -= yo[j];
+    }
+  return rb_float_new(fuzz);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-integrate" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            integrate()  &rarr; value
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            integrate(start_index, end_index) &rarr; value
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the value of the integral of the function between the two indexes
+given, or over the whole function if no indexes are specified.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="integrate-source">
+            <pre>static VALUE function_integrate(int argc, VALUE *argv, VALUE self)
+{
+  long start,end;
+  switch(argc) 
+    {
+    case 0:
+      start = 0;
+      end = function_sanity_check(self) - 1; 
+      break;
+    case 2:
+      start = NUM2LONG(argv[0]);
+      end = NUM2LONG(argv[1]);
+      break;
+    default:
+      rb_raise(rb_eArgError, &quot;integrate should have 0 or 2 parameters&quot;);
+    }
+  return rb_float_new(private_function_integrate(self,start,end));
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-interpolate" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            interpolate(x_values)
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            interpolate(a_number)
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Computes interpolated values of the data contained in <code>f</code> and 
+returns a <a href="Function.html">Function</a> object holding both
+<code>x_values</code> and the computed Y values. <code>x_values</code> will
+be sorted if necessary.</p>
+
+<p>With the second form, specify only the number of points, and the function
+will construct the appropriate vector with equally spaced points within the
+function range.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="interpolate-source">
+            <pre>static VALUE function_interpolate(VALUE self, VALUE x_values)
+{
+  if(NUMERIC(x_values))
+    {
+      /* we&#39;re in the second case, although I sincerely doubt it would
+         come useful 
+      */
+      long size,i;
+      /* we make sure the function is sorted */
+      function_ensure_sorted(self);
+      double * data;
+      double x_min;
+      double x_max;
+      data = Dvector_Data_for_Read(get_x_vector(self), &amp;size);
+      x_min = *data;
+      x_max = *(data + size -1);
+      x_values = rb_funcall(cDvector, idNew, 1, x_values);
+      data = Dvector_Data_for_Write(x_values, &amp;size);
+      for(i = 0;i &lt; size; i++)
+        data[i] = x_min + ((x_max - x_min)/((double) (size-1))) * i;
+    }
+  if(! IS_A_DVECTOR(x_values))
+    rb_raise(rb_eArgError, &quot;x_values should be a Dvector or a number&quot;);
+  else 
+    {
+      /* sort x_values */
+      if(! dvector_is_sorted(x_values))
+        rb_funcall(x_values, idSort,0);
+      VALUE y_values = function_compute_spline(self, x_values);
+      return rb_funcall(cFunction, idNew, 2, x_values, y_values);
+    }
+  return Qnil;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-is_sorted" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">is_sorted</span><span
+            class="method-args">()</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Function.html#method-i-sorted-3F">sorted?</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-length" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">length</span><span
+            class="method-args">()</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Function.html#method-i-size">size</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-make_interpolant" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">make_interpolant</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns an interpolant that can be fed to 
+Special_Paths#append_interpolant_to_path to make nice splines.</p>
+
+<p>Can be used this way:</p>
+
+<pre>f = Function.new(x,y)
+t.append_interpolant_to_path(f.make_interpolant)
+t.stroke</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="make_interpolant-source">
+            <pre>static VALUE function_make_interpolant(VALUE self)
+{
+  VALUE x_vec = get_x_vector(self);
+  VALUE y_vec = get_y_vector(self);
+  VALUE cache;
+  VALUE a_vec,b_vec,c_vec;
+  VALUE ret_val;
+  double *x, *y, *a, *b, *c, *y2;
+  double delta_x;
+  long size = function_sanity_check(self);
+  long i;
+  
+  function_ensure_spline_data_present(self);
+
+  cache = get_spline_vector(self);
+  x = Dvector_Data_for_Read(x_vec,NULL);
+  y = Dvector_Data_for_Read(y_vec,NULL);
+  y2 = Dvector_Data_for_Read(cache,NULL);
+
+  a_vec  = rb_funcall(cDvector, idNew, 1, LONG2NUM(size));
+  a = Dvector_Data_for_Write(a_vec, NULL);
+  b_vec  = rb_funcall(cDvector, idNew, 1, LONG2NUM(size));
+  b = Dvector_Data_for_Write(b_vec, NULL);
+  c_vec  = rb_funcall(cDvector, idNew, 1, LONG2NUM(size));
+  c = Dvector_Data_for_Write(c_vec, NULL);
+
+  /* from my computations, the formula is the following:
+     A = (y_2n+1 - y_2n)/(6 * delta_x)
+     B = 0.5 * y_2n
+     C = (y_n+1 - y_n)/delta_x - (2 * y_2n + y_2n+1) * delta_x/6
+  */
+
+  for(i = 0; i &lt; size - 1; i++)
+    {
+      delta_x = x[i+1] - x[i];
+      a[i] = (y2[i+1] - y2[i]) / (6.0 * delta_x);
+      b[i] = 0.5 * y2[i];
+      c[i] = (y[i+1] - y[i])/delta_x - 
+        (2 * y2[i] + y2[i+1]) * (delta_x / 6.0);
+    }
+  a[i] = b[i] = c[i] = 0.0;
+  ret_val = rb_ary_new();
+  rb_ary_push(ret_val, x_vec);
+  rb_ary_push(ret_val, y_vec);
+  rb_ary_push(ret_val, a_vec);
+  rb_ary_push(ret_val, b_vec);
+  rb_ary_push(ret_val, c_vec);
+
+  return ret_val;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-max" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">max</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns the point where Y is the maximum</p>
+          
+          
+
+          
+          <div class="method-source-code" id="max-source">
+            <pre><span class="ruby-comment"># File lib/Dobjects/Function_extras.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">max</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">point</span>(<span class="ruby-identifier">y</span>.<span class="ruby-identifier">where_max</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-min" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">min</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns the point where Y is the minimum</p>
+          
+          
+
+          
+          <div class="method-source-code" id="min-source">
+            <pre><span class="ruby-comment"># File lib/Dobjects/Function_extras.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">min</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">point</span>(<span class="ruby-identifier">y</span>.<span class="ruby-identifier">where_min</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-point" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">point</span><span
+            class="method-args">(p1)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns a <a href="Dvector.html">Dvector</a> with two elements: the X and Y
+values of the point at the given index.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="point-source">
+            <pre>static VALUE function_point(VALUE self, VALUE index)
+{
+  if(! NUMERIC(index))
+    rb_raise(rb_eArgError, &quot;index has to be numeric&quot;);
+  else
+    {
+      long i = NUM2LONG(index);
+      long size = function_sanity_check(self);
+      if(size &gt; 0 &amp;&amp; i &lt; size)
+        {
+          VALUE point = rb_funcall(cDvector, idNew, 1, INT2NUM(2));
+          double * dat = Dvector_Data_for_Write(point, NULL);
+          double *x = Dvector_Data_for_Read(get_x_vector(self),NULL);
+          double *y = Dvector_Data_for_Read(get_y_vector(self),NULL);
+          dat[0] = x[i];
+          dat[1] = y[i];
+          return point;
+        }
+      else
+        return Qnil;
+    }
+  return Qnil;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-primitive" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">primitive</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Computes the primitive of the <a href="Function.html">Function</a> (whose
+value for the first point is 0) and returns it as a new <a
+href="Function.html">Function</a>. The newly created function shares the X
+vector with the previous one.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="primitive-source">
+            <pre>static VALUE function_primitive(VALUE self)
+{
+  long size = function_sanity_check(self);
+  const double *x = Dvector_Data_for_Read(get_x_vector(self),NULL);
+  const double *y = Dvector_Data_for_Read(get_y_vector(self),NULL);
+  VALUE primitive = Dvector_Create();
+  long i = 0;
+  double val = 0;
+  while(i &lt; (size - 1))
+    {
+      Dvector_Push_Double(primitive, val);
+      val += (y[i] + y[i+1]) * (x[i+1] - x[i]) * 0.5;
+      i++;
+    }
+  Dvector_Push_Double(primitive, val);
+  return Function_Create(get_x_vector(self), primitive);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-reglin" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">reglin</span><span
+            class="method-args">(*args)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Performs a linear regression of the <a href="Function.html">Function</a>;
+returns the pair</p>
+
+<pre>[ a, b]</pre>
+
+<p>where f(x) = a*x + b</p>
+
+<p>if the optional arguments <em>first</em> and <em>last</em> are provided,
+they represent the indices of the first and last elements.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="reglin-source">
+            <pre>static VALUE function_reglin(int argc, VALUE *argv, VALUE self)
+{
+  long len = function_sanity_check(self);
+  const double *x = Dvector_Data_for_Read(get_x_vector(self),NULL);
+  const double *y = Dvector_Data_for_Read(get_y_vector(self),NULL);
+  VALUE ret = rb_funcall(cDvector, idNew, 1, INT2NUM(2));
+  double * dat = Dvector_Data_for_Write(ret, NULL);
+  long nb;
+  if(argc == 2) {
+    long f = NUM2LONG(argv[0]);
+    long l = NUM2LONG(argv[1]);
+    if(f &lt; 0)
+      f = len + f;
+    if(l &lt; 0)
+      l = len + l;
+    x += f;
+    y += f;
+    nb = l - f;
+  }
+  else if(argc == 0) {
+    nb = len;
+  }
+  else {
+    rb_raise(rb_eArgError, &quot;reglin should have 0 or 2 parameters&quot;);
+  }
+  reglin(x,y,nb,dat,dat+1);
+  return ret;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-reverse-21" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">reverse!</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <pre>Reverses the function. Equivalent to doing 
+
+x.reverse!
+y.reverse!</pre>
+
+<p>excepted that it is faster (though not <strong>much</strong> faster).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="reverse-21-source">
+            <pre>static VALUE function_reverse(VALUE self)
+{
+  long len = function_sanity_check(self);
+  double *xs = Dvector_Data_for_Write(get_x_vector(self),NULL);
+  double *ys = Dvector_Data_for_Write(get_y_vector(self),NULL);
+  
+  double *xe = xs+len-1;
+  double *ye = ys+len-1;
+  double tmp;
+  long i;
+  for(i = 0; i &lt; len/2; i++, xs++, ys++, xe--, ye--) {
+    tmp = *xe; *xe = *xs; *xs = tmp;
+    tmp = *ye; *ye = *ys; *ys = tmp;
+  }
+  return self;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-size" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">size</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns the number of points inside the function.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="size-source">
+            <pre>static VALUE function_size(VALUE self)
+{
+  long size = function_sanity_check(self);
+  return LONG2NUM(size);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Function.html#method-i-length">length</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-smooth_pick" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">smooth_pick</span><span
+            class="method-args">(*args)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Attempts to pick a smooth value for a point, according to the algorithm
+implented for “smooth” markers in Soas. See DOI:
+10.1016/j.bioelechem.2009.02.010</p>
+
+<p>Warning: be wary of this function as it will return a correct value only
+for rather noisy data !</p>
+          
+          
+
+          
+          <div class="method-source-code" id="smooth_pick-source">
+            <pre>static VALUE function_smooth_pick(int argc, VALUE *argv, VALUE self)
+{
+  long len = function_sanity_check(self);
+  const double *x = Dvector_Data_for_Read(get_x_vector(self),NULL);
+  const double *y = Dvector_Data_for_Read(get_y_vector(self),NULL);
+  long idx;
+  long range;
+  switch(argc) {
+  case 2:
+    range = NUM2LONG(argv[1]);
+    break;
+  case 1:
+    range = len &gt; 500 ? 50 : len/10;
+    break;
+  default:
+    rb_raise(rb_eArgError, &quot;smooth_a=t should have 1 or 2 parameters&quot;);
+  }
+  idx = NUM2LONG(argv[0]);
+  if(idx &lt; 0)
+    idx = len + idx;
+  return rb_float_new(smooth_pick(x,y,len,idx,range));
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-sort" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">sort</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Sorts the X values while keeping the matching Y values.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="sort-source">
+            <pre>static VALUE function_sort(VALUE self)
+{
+  return function_joint_sort(self,get_x_vector(self), get_y_vector(self));
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-sorted-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">sorted?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Checks if the X values of the <a href="Function.html">Function</a> are
+sorted.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="sorted-3F-source">
+            <pre>static VALUE function_is_sorted(VALUE self)
+{
+  if(dvector_is_sorted(get_x_vector(self)))
+    return Qtrue;
+  else
+    return Qfalse;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Function.html#method-i-is_sorted">is_sorted</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-spline_approximation" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">spline_approximation</span><span
+            class="method-args">(p1)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Filters the <a href="Function.html">Function</a> through interpolation.
+<em>params</em> holds a  hash with the following values:</p>
+
+<pre>??</pre>
+
+<p>It returns a hash.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="spline_approximation-source">
+            <pre>static VALUE function_spline_approximation(VALUE self, VALUE params)
+{
+  long len = function_sanity_check(self);
+  const double *x = Dvector_Data_for_Read(get_x_vector(self),NULL);
+  const double *y = Dvector_Data_for_Read(get_y_vector(self),NULL);
+  VALUE xiret, yiret, y2iret, yintret,ret;
+  double * xi, *yi, *y2i, *yint;
+  long nbavg = 9;  
+  long nbmax = 20;
+  if(RTEST(rb_hash_aref(params, rb_str_new2(&quot;number&quot;))))
+    nbmax = NUM2LONG(rb_hash_aref(params, rb_str_new2(&quot;number&quot;)));
+  if(RTEST(rb_hash_aref(params, rb_str_new2(&quot;average&quot;))))
+    nbavg = NUM2LONG(rb_hash_aref(params, rb_str_new2(&quot;average&quot;)));
+
+  /* TODO: add checks that monotonic and growing. */
+  
+  xiret = rb_funcall(cDvector, idNew, 1, INT2NUM(nbmax)); 
+  xi = Dvector_Data_for_Write(xiret, NULL);
+  yiret = rb_funcall(cDvector, idNew, 1, INT2NUM(nbmax)); 
+  yi = Dvector_Data_for_Write(yiret, NULL);
+  y2iret = rb_funcall(cDvector, idNew, 1, INT2NUM(nbmax)); 
+  y2i = Dvector_Data_for_Write(y2iret, NULL);
+  yintret = rb_funcall(cDvector, idNew, 1, INT2NUM(len)); 
+  yint = Dvector_Data_for_Write(yintret, NULL);
+
+  internal_spline_approximation(x, y, len, xi, yi, y2i,
+                                nbmax, nbavg, yint);
+  ret = rb_hash_new();
+  rb_hash_aset(ret, rb_str_new2(&quot;xi&quot;), xiret);
+  rb_hash_aset(ret, rb_str_new2(&quot;yi&quot;), yiret);
+  rb_hash_aset(ret, rb_str_new2(&quot;y2i&quot;), y2iret);
+  rb_hash_aset(ret, rb_str_new2(&quot;y&quot;), yintret);
+  return ret;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-split_monotonic" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">split_monotonic</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Splits the function into strictly monotonic sub-functions. Returns the
+array of the subfunctions. The returned values are necessarily new values.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="split_monotonic-source">
+            <pre>static VALUE function_split_monotonic(VALUE self)
+{
+  VALUE ret = rb_ary_new();
+  VALUE cur_x = Dvector_Create();
+  VALUE cur_y = Dvector_Create();
+
+  long size = function_sanity_check(self);
+  long i;
+  if(size &lt; 2)
+    rb_raise(rb_eRuntimeError, &quot;Function needs to have at least 2 points&quot;);
+
+  double *x = Dvector_Data_for_Read(get_x_vector(self),NULL);
+  double *y = Dvector_Data_for_Read(get_y_vector(self),NULL);
+
+  double last_x;
+  double direction; /* -1 if down, +1 if up, so that the product of 
+                       (x - last_x) with direction should always be positive
+                    */
+  VALUE f;
+                     
+                       
+  /* bootstrap */
+  if(x[1] &gt; x[0])
+    direction = 1;
+  else
+    direction = -1;
+  last_x = x[1];
+  for(i = 0; i &lt; 2; i++)
+    {
+      Dvector_Push_Double(cur_x, x[i]);
+      Dvector_Push_Double(cur_y, y[i]);
+    }
+
+  for(i = 2; i &lt; size; i++) 
+    {
+      if(direction * (x[i] - last_x) &lt;= 0) 
+        {
+          /* we need to add a new set of Dvectors */
+          f = Function_Create(cur_x, cur_y);
+          rb_ary_push(ret, f);
+          cur_x = Dvector_Create();
+          cur_y = Dvector_Create();
+          /* We don&#39;t store the previous point if 
+           the X value is the same*/
+          if(x[i] != last_x) 
+            {
+              Dvector_Push_Double(cur_x, x[i-1]);
+              Dvector_Push_Double(cur_y, y[i-1]);
+            }
+          direction *= -1;
+        }
+      /* store the current point */
+      Dvector_Push_Double(cur_x, x[i]);
+      Dvector_Push_Double(cur_y, y[i]);
+      last_x = x[i];
+    }
+  f = Function_Create(cur_x, cur_y);
+  rb_ary_push(ret, f);
+  return ret;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-split_on_nan" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">split_on_nan</span><span
+            class="method-args">(p1)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Splits the function on NaN values for x, y or xy, depending on whether
+<em>sym</em> is <code>:x</code>, <code>:y</code> or <code>:xy</code> (or,
+as a matter of fact, anything else than <code>:x</code> or
+<code>:y</code>).</p>
+
+<p>This returns an array of new <a href="Function.html">Function</a> objects.</p>
+
+<p>This function will return empty <a href="Function.html">Function</a>
+objects between consecutive NaN values.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="split_on_nan-source">
+            <pre>static VALUE function_split_on_nan(VALUE self, VALUE sym)
+{
+  VALUE ret = rb_ary_new();
+  VALUE cur_x = Dvector_Create();
+  VALUE cur_y = Dvector_Create();
+  int on_x = 1;
+  int on_y = 1;
+  long size = function_sanity_check(self);
+  long cur_size = 0;
+  long i;
+  if(size &lt; 2)
+    rb_raise(rb_eRuntimeError, &quot;Function needs to have at least 2 points&quot;);
+
+  double *x = Dvector_Data_for_Read(get_x_vector(self),NULL);
+  double *y = Dvector_Data_for_Read(get_y_vector(self),NULL);
+
+  VALUE f;
+  
+  if(sym == ID2SYM(rb_intern(&quot;x&quot;)))
+    on_y = 0;
+  else if(sym == ID2SYM(rb_intern(&quot;y&quot;)))
+    on_x = 0;
+
+
+  for(i = 0; i &lt; size; i++) {
+    if((on_x &amp;&amp; isnan(x[i])) ||
+       (on_y &amp;&amp; isnan(y[i]))) {
+      /* We split */
+      f = Function_Create(cur_x, cur_y);
+      rb_ary_push(ret, f);
+      cur_x = Dvector_Create();
+      cur_y = Dvector_Create();
+    }
+    else {
+      Dvector_Push_Double(cur_x, x[i]);
+      Dvector_Push_Double(cur_y, y[i]);
+    }
+  }
+  f = Function_Create(cur_x, cur_y);
+  rb_ary_push(ret, f);
+  return ret;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-strip_nan" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">strip_nan</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Strips all the points containing NaN values from the function, and returns
+the number of points stripped.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="strip_nan-source">
+            <pre>static VALUE function_strip_nan(VALUE self)
+{
+  long size = function_sanity_check(self);
+  long nb_stripped = 0;
+  long i;
+
+  double *x = Dvector_Data_for_Write(get_x_vector(self),NULL);
+  double *y = Dvector_Data_for_Write(get_y_vector(self),NULL);
+  for( i = 0; i &lt; size; i++)
+    {
+      if(isnan(x[i]) || isnan(y[i]))
+        nb_stripped ++;
+      else
+        {
+          x[i - nb_stripped] = x[i];
+          y[i - nb_stripped] = y[i];
+        }
+    }
+  if(nb_stripped)
+    {
+      Dvector_Data_Resize(get_x_vector(self), size - nb_stripped);
+      Dvector_Data_Resize(get_y_vector(self), size - nb_stripped);
+    }
+  return INT2NUM(nb_stripped);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-x" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">x</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>The X vector.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="x-source">
+            <pre>static VALUE get_x_vector(VALUE self) 
+{
+  return rb_iv_get(self, X_VAL);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-y" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">y</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>The Y vector.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="y-source">
+            <pre>static VALUE get_y_vector(VALUE self) 
+{
+  return rb_iv_get(self, Y_VAL);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

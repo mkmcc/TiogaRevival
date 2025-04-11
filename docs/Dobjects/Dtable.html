@@ -1,0 +1,5360 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Dobjects::Dtable - RDoc Documentation</title>
+
+<link href="../fonts.css" rel="stylesheet">
+<link href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/search_index.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/searcher.js"></script>
+<script src="../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="Dtable.html#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Object
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="Dtable.html#method-c-_load">::_load</a>
+    
+    <li ><a href="Dtable.html#method-c-new">::new</a>
+    
+    <li ><a href="Dtable.html#method-i-25">#%</a>
+    
+    <li ><a href="Dtable.html#method-i-2A">#*</a>
+    
+    <li ><a href="Dtable.html#method-i-2A-2A">#**</a>
+    
+    <li ><a href="Dtable.html#method-i-2B">#+</a>
+    
+    <li ><a href="Dtable.html#method-i-2D">#-</a>
+    
+    <li ><a href="Dtable.html#method-i-2D-40">#-@</a>
+    
+    <li ><a href="Dtable.html#method-i-2F">#/</a>
+    
+    <li ><a href="Dtable.html#method-i-5B-5D">#[]</a>
+    
+    <li ><a href="Dtable.html#method-i-5B-5D-3D">#[]=</a>
+    
+    <li ><a href="Dtable.html#method-i-_dump">#_dump</a>
+    
+    <li ><a href="Dtable.html#method-i-abs">#abs</a>
+    
+    <li ><a href="Dtable.html#method-i-abs-21">#abs!</a>
+    
+    <li ><a href="Dtable.html#method-i-acos">#acos</a>
+    
+    <li ><a href="Dtable.html#method-i-acos-21">#acos!</a>
+    
+    <li ><a href="Dtable.html#method-i-acosh">#acosh</a>
+    
+    <li ><a href="Dtable.html#method-i-acosh-21">#acosh!</a>
+    
+    <li ><a href="Dtable.html#method-i-add">#add</a>
+    
+    <li ><a href="Dtable.html#method-i-add-21">#add!</a>
+    
+    <li ><a href="Dtable.html#method-i-as_exponent_of">#as_exponent_of</a>
+    
+    <li ><a href="Dtable.html#method-i-as_exponent_of-21">#as_exponent_of!</a>
+    
+    <li ><a href="Dtable.html#method-i-asin">#asin</a>
+    
+    <li ><a href="Dtable.html#method-i-asin-21">#asin!</a>
+    
+    <li ><a href="Dtable.html#method-i-asinh">#asinh</a>
+    
+    <li ><a href="Dtable.html#method-i-asinh-21">#asinh!</a>
+    
+    <li ><a href="Dtable.html#method-i-at">#at</a>
+    
+    <li ><a href="Dtable.html#method-i-atan">#atan</a>
+    
+    <li ><a href="Dtable.html#method-i-atan-21">#atan!</a>
+    
+    <li ><a href="Dtable.html#method-i-atan2">#atan2</a>
+    
+    <li ><a href="Dtable.html#method-i-atan2-21">#atan2!</a>
+    
+    <li ><a href="Dtable.html#method-i-atanh">#atanh</a>
+    
+    <li ><a href="Dtable.html#method-i-atanh-21">#atanh!</a>
+    
+    <li ><a href="Dtable.html#method-i-ceil">#ceil</a>
+    
+    <li ><a href="Dtable.html#method-i-ceil-21">#ceil!</a>
+    
+    <li ><a href="Dtable.html#method-i-clear">#clear</a>
+    
+    <li ><a href="Dtable.html#method-i-column">#column</a>
+    
+    <li ><a href="Dtable.html#method-i-cos">#cos</a>
+    
+    <li ><a href="Dtable.html#method-i-cos-21">#cos!</a>
+    
+    <li ><a href="Dtable.html#method-i-cosh">#cosh</a>
+    
+    <li ><a href="Dtable.html#method-i-cosh-21">#cosh!</a>
+    
+    <li ><a href="Dtable.html#method-i-div">#div</a>
+    
+    <li ><a href="Dtable.html#method-i-div-21">#div!</a>
+    
+    <li ><a href="Dtable.html#method-i-dup">#dup</a>
+    
+    <li ><a href="Dtable.html#method-i-each_column">#each_column</a>
+    
+    <li ><a href="Dtable.html#method-i-each_row">#each_row</a>
+    
+    <li ><a href="Dtable.html#method-i-exp">#exp</a>
+    
+    <li ><a href="Dtable.html#method-i-exp-21">#exp!</a>
+    
+    <li ><a href="Dtable.html#method-i-exp10">#exp10</a>
+    
+    <li ><a href="Dtable.html#method-i-exp10-21">#exp10!</a>
+    
+    <li ><a href="Dtable.html#method-i-floor">#floor</a>
+    
+    <li ><a href="Dtable.html#method-i-floor-21">#floor!</a>
+    
+    <li ><a href="Dtable.html#method-i-interpolate">#interpolate</a>
+    
+    <li ><a href="Dtable.html#method-i-inv">#inv</a>
+    
+    <li ><a href="Dtable.html#method-i-inv-21">#inv!</a>
+    
+    <li ><a href="Dtable.html#method-i-log">#log</a>
+    
+    <li ><a href="Dtable.html#method-i-log-21">#log!</a>
+    
+    <li ><a href="Dtable.html#method-i-log10">#log10</a>
+    
+    <li ><a href="Dtable.html#method-i-log10-21">#log10!</a>
+    
+    <li ><a href="Dtable.html#method-i-max">#max</a>
+    
+    <li ><a href="Dtable.html#method-i-max_lt">#max_lt</a>
+    
+    <li ><a href="Dtable.html#method-i-min">#min</a>
+    
+    <li ><a href="Dtable.html#method-i-min_gt">#min_gt</a>
+    
+    <li ><a href="Dtable.html#method-i-minus">#minus</a>
+    
+    <li ><a href="Dtable.html#method-i-minus-21">#minus!</a>
+    
+    <li ><a href="Dtable.html#method-i-mod">#mod</a>
+    
+    <li ><a href="Dtable.html#method-i-mod-21">#mod!</a>
+    
+    <li ><a href="Dtable.html#method-i-modulo">#modulo</a>
+    
+    <li ><a href="Dtable.html#method-i-modulo-21">#modulo!</a>
+    
+    <li ><a href="Dtable.html#method-i-mul">#mul</a>
+    
+    <li ><a href="Dtable.html#method-i-mul-21">#mul!</a>
+    
+    <li ><a href="Dtable.html#method-i-neg">#neg</a>
+    
+    <li ><a href="Dtable.html#method-i-neg-21">#neg!</a>
+    
+    <li ><a href="Dtable.html#method-i-num_cols">#num_cols</a>
+    
+    <li ><a href="Dtable.html#method-i-num_rows">#num_rows</a>
+    
+    <li ><a href="Dtable.html#method-i-plus">#plus</a>
+    
+    <li ><a href="Dtable.html#method-i-plus-21">#plus!</a>
+    
+    <li ><a href="Dtable.html#method-i-pow">#pow</a>
+    
+    <li ><a href="Dtable.html#method-i-pow-21">#pow!</a>
+    
+    <li ><a href="Dtable.html#method-i-raised_to">#raised_to</a>
+    
+    <li ><a href="Dtable.html#method-i-raised_to-21">#raised_to!</a>
+    
+    <li ><a href="Dtable.html#method-i-read">#read</a>
+    
+    <li ><a href="Dtable.html#method-i-remainder">#remainder</a>
+    
+    <li ><a href="Dtable.html#method-i-remainder-21">#remainder!</a>
+    
+    <li ><a href="Dtable.html#method-i-reverse_cols">#reverse_cols</a>
+    
+    <li ><a href="Dtable.html#method-i-reverse_rows">#reverse_rows</a>
+    
+    <li ><a href="Dtable.html#method-i-rotate_ccw90">#rotate_ccw90</a>
+    
+    <li ><a href="Dtable.html#method-i-rotate_cw90">#rotate_cw90</a>
+    
+    <li ><a href="Dtable.html#method-i-round">#round</a>
+    
+    <li ><a href="Dtable.html#method-i-round-21">#round!</a>
+    
+    <li ><a href="Dtable.html#method-i-row">#row</a>
+    
+    <li ><a href="Dtable.html#method-i-safe_acos">#safe_acos</a>
+    
+    <li ><a href="Dtable.html#method-i-safe_acos-21">#safe_acos!</a>
+    
+    <li ><a href="Dtable.html#method-i-safe_asin">#safe_asin</a>
+    
+    <li ><a href="Dtable.html#method-i-safe_asin-21">#safe_asin!</a>
+    
+    <li ><a href="Dtable.html#method-i-safe_inv">#safe_inv</a>
+    
+    <li ><a href="Dtable.html#method-i-safe_inv-21">#safe_inv!</a>
+    
+    <li ><a href="Dtable.html#method-i-safe_log">#safe_log</a>
+    
+    <li ><a href="Dtable.html#method-i-safe_log-21">#safe_log!</a>
+    
+    <li ><a href="Dtable.html#method-i-safe_log10">#safe_log10</a>
+    
+    <li ><a href="Dtable.html#method-i-safe_log10-21">#safe_log10!</a>
+    
+    <li ><a href="Dtable.html#method-i-safe_sqrt">#safe_sqrt</a>
+    
+    <li ><a href="Dtable.html#method-i-safe_sqrt-21">#safe_sqrt!</a>
+    
+    <li ><a href="Dtable.html#method-i-set">#set</a>
+    
+    <li ><a href="Dtable.html#method-i-set_column">#set_column</a>
+    
+    <li ><a href="Dtable.html#method-i-set_row">#set_row</a>
+    
+    <li ><a href="Dtable.html#method-i-sin">#sin</a>
+    
+    <li ><a href="Dtable.html#method-i-sin-21">#sin!</a>
+    
+    <li ><a href="Dtable.html#method-i-sinh">#sinh</a>
+    
+    <li ><a href="Dtable.html#method-i-sinh-21">#sinh!</a>
+    
+    <li ><a href="Dtable.html#method-i-sqrt">#sqrt</a>
+    
+    <li ><a href="Dtable.html#method-i-sqrt-21">#sqrt!</a>
+    
+    <li ><a href="Dtable.html#method-i-sub">#sub</a>
+    
+    <li ><a href="Dtable.html#method-i-sub-21">#sub!</a>
+    
+    <li ><a href="Dtable.html#method-i-sum">#sum</a>
+    
+    <li ><a href="Dtable.html#method-i-tan">#tan</a>
+    
+    <li ><a href="Dtable.html#method-i-tan-21">#tan!</a>
+    
+    <li ><a href="Dtable.html#method-i-tanh">#tanh</a>
+    
+    <li ><a href="Dtable.html#method-i-tanh-21">#tanh!</a>
+    
+    <li ><a href="Dtable.html#method-i-times">#times</a>
+    
+    <li ><a href="Dtable.html#method-i-times-21">#times!</a>
+    
+    <li ><a href="Dtable.html#method-i-transpose">#transpose</a>
+    
+    <li ><a href="Dtable.html#method-i-trim">#trim</a>
+    
+    <li ><a href="Dtable.html#method-i-trim-21">#trim!</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Dobjects::Dtable">
+  <h1 id="class-Dobjects::Dtable" class="class">
+    class Dobjects::Dtable
+  </h1>
+
+  <section class="description">
+    
+<p>Dtables are a specialized implementation of two-dimensional arrays of
+double precision floating point numbers.  They are intended for use in
+applications needing efficient processing of large 2D tables of numeric
+data. Essentially any of the operations you might do with a Ruby Array of
+numbers can also be done with a <a href="Dtable.html">Dtable</a>. Dtables
+follow the same design philosophy as <a href="Dvector.html">Dvector</a> and
+uses Dvectors for several operations.</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-_load" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">_load</span><span
+            class="method-args">(p1)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Called by the marshalling mechanism to retrieve a permanent copy of a  <a
+href="Dtable.html">Dtable</a>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="_load-source">
+            <pre>VALUE dtable_load(VALUE klass, VALUE str)
+{
+  VALUE ret = Qnil;
+  VALUE s = StringValue(str);
+  unsigned char * buf = (unsigned char *) StringValuePtr(s);
+  unsigned char * dest = buf + RSTRING_LEN(s);
+  unsigned i; /* for GET_UNSIGNED */
+  unsigned tmp = 0;
+  long rows, cols;
+  long x,y;
+  double ** data;
+  double * col;
+  /*  depending on the first byte, the decoding will be different */
+  switch(*(buf++)) 
+    {
+    case 1:
+      GET_UNSIGNED(tmp, buf);
+      rows = tmp;
+      GET_UNSIGNED(tmp, buf);
+      cols = tmp;
+      /* create a new Dtable with the right size */
+      ret = dtable_init(dtable_alloc(cDtable), cols, rows);
+      data = Dtable_Ptr(ret, NULL, NULL);
+      for(x = 0; x &lt; rows; x++) 
+        {
+          col = data[x];
+          for(y = 0; y&lt; cols; y++)
+            {
+              if(buf + 8 &gt; dest)
+                {
+                  rb_raise(rb_eRuntimeError, 
+                           &quot;corrupted data given to Dtable._load&quot;);
+                  break;
+                }     
+              else 
+                {
+                  col[y] = get_double(buf);
+                  buf += 8;
+                }
+            }
+        }
+      break;
+    default:
+      rb_raise(rb_eRuntimeError, &quot;corrupted data given to Dtable._load&quot;);
+    }
+  return ret;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            new(num_cols, num_rows)      &rarr; a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a new <a href="Dtable.html">Dtable</a> with the requested
+dimensions.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre>VALUE dtable_initialize(int argc, VALUE *argv, VALUE ary) {
+   if (argc != 2) rb_raise(rb_eArgError, &quot;need 2 args for Dtable.new(num_cols, num_rows)&quot;);
+   int num_cols = NUM2INT(argv[0]), num_rows = NUM2INT(argv[1]);
+   return dtable_init(ary, num_cols, num_rows);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-25" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">%</span><span
+            class="method-args">(p1)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Dtable.html#method-i-modulo">modulo</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-2A" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">*</span><span
+            class="method-args">(p1)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Dtable.html#method-i-mul">mul</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-2A-2A" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">**</span><span
+            class="method-args">(p1)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Dtable.html#method-i-pow">pow</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-2B" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">+</span><span
+            class="method-args">(p1)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Dtable.html#method-i-add">add</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-2D" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">-</span><span
+            class="method-args">(p1)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Dtable.html#method-i-sub">sub</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-2D-40" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">-@</span><span
+            class="method-args">()</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Dtable.html#method-i-neg">neg</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-2F" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">/</span><span
+            class="method-args">(p1)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Dtable.html#method-i-div">div</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-5B-5D" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">[]</span><span
+            class="method-args">(p1, p2)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Dtable.html#method-i-at">at</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-5B-5D-3D" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            dtable[row,col] = number  &rarr;  number
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replaces the element at location <em>row</em>, <em>col</em> by the given
+<em>number</em>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="5B-5D-3D-source">
+            <pre>VALUE dtable_aset(VALUE ary, VALUE xloc, VALUE yloc, VALUE val) {
+   dtable_store(ary, NUM2LONG(xloc), NUM2LONG(yloc), NUM2DBL(val));
+   return val;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-_dump" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">_dump</span><span
+            class="method-args">(p1)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Called by the marshalling mechanism to store a permanent copy of a  <a
+href="Dtable.html">Dtable</a>. <em>limit</em> is simply ignored.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="_dump-source">
+            <pre>VALUE dtable_dump(VALUE ary, VALUE limit)
+{
+  int i; /* for STORE_UNSIGNED */
+  long rows, cols;
+  long x, y;
+  double ** data = Dtable_Ptr(ary, &amp;cols, &amp;rows);
+  double * col;
+  long target_len = 1 /* first signature byte */
+    + 8 /* 2 * length */
+    + cols * rows * 8 ;
+  unsigned u_len;
+  VALUE str = rb_str_new2(&quot;&quot;);
+  rb_str_resize(str,target_len); /* This seems to do the trick */
+  /* \begin{playing with ruby&#39;s internals} */
+  unsigned char * ptr = (unsigned char *) RSTRING_PTR(str);
+  /* signature byte */
+  (*ptr++) = DTABLE_DUMP_VERSION;
+  u_len = (unsigned) rows; /* limits to 4 billions rows */
+  STORE_UNSIGNED(u_len, ptr); /* destroys u_len */
+  u_len = (unsigned) cols; /* limits to 4 billions columns */
+  STORE_UNSIGNED(u_len, ptr); /* destroys u_len */
+  for(x = 0; x &lt; rows; x++)
+    {
+      col = data[x];
+      for(y = 0; y &lt; cols; y++)
+        {
+          store_double(*(col++), ptr);
+          ptr += 8;
+        }
+    }
+  /*  RSTRING_LEN(str) = target_len;*/
+  return str;
+  /* \end{playing with ruby&#39;s internals} */
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-abs" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            abs   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns of copy of <em>dtable</em> with all entries replaced by their
+absolute values.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="abs-source">
+            <pre>VALUE dtable_abs(VALUE ary) {
+   return dtable_apply_math_op(ary, fabs);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-abs-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            abs!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replace each entry x of <em>dtable</em> with abs(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="abs-21-source">
+            <pre>VALUE dtable_abs_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, fabs);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-acos" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            acos   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns of copy of <em>dtable</em> with entry x replaced by acos(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="acos-source">
+            <pre>VALUE dtable_acos(VALUE ary) {
+   return dtable_apply_math_op(ary, acos);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-acos-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            acos!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replace each entry x of <em>dtable</em> with acos(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="acos-21-source">
+            <pre>VALUE dtable_acos_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, acos);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-acosh" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            acosh   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns of copy of <em>dtable</em> with entry x replaced by acosh(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="acosh-source">
+            <pre>VALUE dtable_acosh(VALUE ary) {
+   return dtable_apply_math_op(ary, do_acosh);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-acosh-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            acosh!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replace each entry x of <em>dtable</em> with acosh(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="acosh-21-source">
+            <pre>VALUE dtable_acosh_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, do_acosh);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-add" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            add(number)       &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            add(other)        &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            dtable + number          &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            number + dtable          &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            dtable + other           &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>When argument is a number, this operation returns a copy of <em>dtable</em>
+with each entry x replaced by x + <em>number</em>. When argument is a data
+array, this operation returns a copy of <em>dtable</em> with each entry x
+replaced by x + the corresponding entry in the <em>other</em> data array.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="add-source">
+            <pre>VALUE dtable_add(VALUE ary, VALUE arg) {
+   return dtable_apply_math_op2(ary, arg, do_add);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Dtable.html#method-i-2B">+</a>, <a href="Dtable.html#method-i-plus">plus</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-add-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            add!(number)       &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            add!(other)        &rarr;  dtable
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>When argument is a number, each entry x in <em>dtable</em> is replaced by x
++ <em>number</em>. When argument is a data array, each entry x in
+<em>dtable</em> is replaced by x +  the corresponding entry in the
+<em>other</em> data array.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="add-21-source">
+            <pre>VALUE dtable_add_bang(VALUE ary, VALUE arg) {
+   return dtable_apply_math_op2_bang(ary, arg, do_add);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Dtable.html#method-i-plus-21">plus!</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-as_exponent_of" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            as_exponent_of(number)                &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            as_exponent_of(other)                 &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>When argument is a number, this operation returns a copy of <em>dtable</em>
+with each entry x replaced by <em>number</em> ** x. When argument is a data
+array, this operation returns a copy of <em>dtable</em> with each entry x
+replaced by the corresponding entry in the <em>other</em> data array raised
+to the power x.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="as_exponent_of-source">
+            <pre>VALUE dtable_as_exponent_of(VALUE ary, VALUE arg) {
+   return dtable_apply_math_op2(ary, arg, do_as_exponent_of);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-as_exponent_of-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            as_exponent_of!(number)                &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            as_exponent_of!(other)                 &rarr;  dtable
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>When argument is a number, this operation replaces each entry x of
+<em>dtable</em> by <em>number</em> ** x. When argument is a data array,
+this operation replaces each entry x of <em>dtable</em> by the
+corresponding entry in the <em>other</em> data array raised to the power x.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="as_exponent_of-21-source">
+            <pre>VALUE dtable_as_exponent_of_bang(VALUE ary, VALUE arg) {
+   return dtable_apply_math_op2_bang(ary, arg, do_as_exponent_of);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-asin" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            asin   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns of copy of <em>dtable</em> with entry x replaced by asin(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="asin-source">
+            <pre>VALUE dtable_asin(VALUE ary) {
+   return dtable_apply_math_op(ary, asin);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-asin-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            asin!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replace each entry x of <em>dtable</em> with asin(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="asin-21-source">
+            <pre>VALUE dtable_asin_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, asin);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-asinh" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            asinh   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns of copy of <em>dtable</em> with entry x replaced by asinh(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="asinh-source">
+            <pre>VALUE dtable_asinh(VALUE ary) {
+   return dtable_apply_math_op(ary, do_asinh);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-asinh-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            asinh!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replace each entry x of <em>dtable</em> with asinh(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="asinh-21-source">
+            <pre>VALUE dtable_asinh_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, do_asinh);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-at" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            dtable[row,col]  &rarr;  number or nil
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            at(row,col)  &rarr;  number or nil
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the element at location <em>row</em>, <em>col</em>.  Returns
+<code>nil</code> if the location is out of range.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="at-source">
+            <pre>VALUE dtable_at(VALUE ary, VALUE xloc, VALUE yloc) {
+   return dtable_entry(ary, NUM2LONG(xloc), NUM2LONG(yloc));
+}</pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Dtable.html#method-i-5B-5D">[]</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-atan" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            atan   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns of copy of <em>dtable</em> with entry x replaced by atan(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="atan-source">
+            <pre>VALUE dtable_atan(VALUE ary) {
+   return dtable_apply_math_op(ary, atan);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-atan-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            atan!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replace each entry x of <em>dtable</em> with atan(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="atan-21-source">
+            <pre>VALUE dtable_atan_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, atan);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-atan2" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            atan2(number)       &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            atan2(other)        &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>When argument is a number, this operation returns a copy of <em>dtable</em>
+with each entry x replaced by the angle whose tangent is x/<em>number</em>.
+When argument is a data array, this operation returns a copy of
+<em>dtable</em> with each entry x replaced by the angle whose tangent is x
+divided by the corresponding entry in the <em>other</em> data array.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="atan2-source">
+            <pre>VALUE dtable_atan2(VALUE ary, VALUE arg) {
+   return dtable_apply_math_op2(ary, arg, atan2);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-atan2-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            atan2!(number)       &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            atan2!(other)        &rarr;  dtable
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>When argument is a number, this operation replaces each entry x of
+<em>dtable</em> by the angle whose tangent is x/<em>number</em>. When
+argument is a data array, this operation replaces each entry x of
+<em>dtable</em> by the angle whose tangent is x divided by the
+corresponding entry in the <em>other</em> data array.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="atan2-21-source">
+            <pre>VALUE dtable_atan2_bang(VALUE ary, VALUE arg) {
+   return dtable_apply_math_op2_bang(ary, arg, atan2);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-atanh" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            atanh   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns of copy of <em>dtable</em> with entry x replaced by atanh(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="atanh-source">
+            <pre>VALUE dtable_atanh(VALUE ary) {
+   return dtable_apply_math_op(ary, do_atanh);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-atanh-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            atanh!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replace each entry x of <em>dtable</em> with atanh(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="atanh-21-source">
+            <pre>VALUE dtable_atanh_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, do_atanh);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-ceil" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            ceil   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns of copy of <em>dtable</em> with entry x replaced by smallest
+integer not less than x.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="ceil-source">
+            <pre>VALUE dtable_ceil(VALUE ary) {
+   return dtable_apply_math_op(ary, ceil);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-ceil-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            ceil!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replace each entry x of <em>dtable</em> with the smallest integer not less
+than x.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="ceil-21-source">
+            <pre>VALUE dtable_ceil_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, ceil);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-clear" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            clear  &rarr; dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Sets the entries of <em>dtable</em> array to zero.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="clear-source">
+            <pre>VALUE dtable_clear(VALUE ary, VALUE val) {
+   set_dtable_vals(ary, 0.0);
+   return ary;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-column" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            column(int)  &rarr; a_dvec
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Creates a <a href="Dvector.html">Dvector</a> holding a copy of the contents
+of the requested column.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="column-source">
+            <pre>VALUE dtable_column(VALUE ary, VALUE column_num) {
+   Dtable *d = Get_Dtable(ary);
+   column_num = rb_Integer(column_num);
+   int i, column = NUM2INT(column_num), len;
+   if (column &lt; 0 || column &gt;= d-&gt;num_cols)
+      rb_raise(rb_eArgError, &quot;Asking for column i = %i from array with only %li columns&quot;, column, d-&gt;num_cols);
+   VALUE dvec = Dvector_Create();
+   len = d-&gt;num_rows;
+   Dvector_Data_Resize(dvec, len);
+   for (i=0; i &lt; len; i++)
+      Dvector_Store_Double(dvec, i, d-&gt;ptr[i][column]);
+   return dvec;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-cos" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            cos   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns of copy of <em>dtable</em> with entry x replaced by cos(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="cos-source">
+            <pre>VALUE dtable_cos(VALUE ary) {
+   return dtable_apply_math_op(ary, cos);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-cos-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            cos!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replace each entry x of <em>dtable</em> with cos(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="cos-21-source">
+            <pre>VALUE dtable_cos_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, cos);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-cosh" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            cosh   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns of copy of <em>dtable</em> with entry x replaced by cosh(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="cosh-source">
+            <pre>VALUE dtable_cosh(VALUE ary) {
+   return dtable_apply_math_op(ary, cosh);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-cosh-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            cosh!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replace each entry x of <em>dtable</em> with cosh(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="cosh-21-source">
+            <pre>VALUE dtable_cosh_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, cosh);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-div" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            div(number)       &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            div(other)        &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            dtable - number          &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            number - dtable          &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            dtable - other           &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>When argument is a number, this operation returns a copy of <em>dtable</em>
+with each entry x replaced by x / <em>number</em>. When argument is a data
+array, this operation returns a copy of <em>dtable</em> with each entry x
+replaced by x / the corresponding entry in the <em>other</em> data array.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="div-source">
+            <pre>VALUE dtable_div(VALUE ary, VALUE arg) {
+   return dtable_apply_math_op2(ary, arg, do_div);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Dtable.html#method-i-2F">/</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-div-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            div!(number)       &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            div!(other)        &rarr;  dtable
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>When argument is a number, each entry x in <em>dtable</em> is replaced by x
+/ <em>number</em>. When argument is a data array, each entry x in
+<em>dtable</em> is replaced by x /  the corresponding entry in the
+<em>other</em> data array.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="div-21-source">
+            <pre>VALUE dtable_div_bang(VALUE ary, VALUE arg) {
+   return dtable_apply_math_op2_bang(ary, arg, do_div);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-dup" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            dup  &rarr; a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a copy of <em>dtable</em>.  For performance sensitive situations
+involving a series of operations, first make a copy using dup and then do
+“bang” operations to modify the result without further copying.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="dup-source">
+            <pre>VALUE dtable_dup(VALUE ary) {
+   Dtable *d = Get_Dtable(ary);
+   int i, j, num_cols = d-&gt;num_cols, num_rows = d-&gt;num_rows;
+   VALUE new = dtable_init(dtable_alloc(cDtable), num_cols, num_rows);
+   Dtable *d2 = Get_Dtable(new);
+   double **src, **dest;
+   src = d-&gt;ptr; dest = d2-&gt;ptr;
+   for (i = 0; i &lt; num_rows; i++) {
+      for (j = 0; j &lt; num_cols; j++) {
+         dest[i][j] = src[i][j];
+      }
+   }
+   return new;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-each_column" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            each_column{|col| }
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Iterates over all columns and executes the given block</p>
+          
+          
+
+          
+          <div class="method-source-code" id="each_column-source">
+            <pre>VALUE dtable_each_column(VALUE ary){</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-each_row" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            each_row{|row| }
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Iterates over all rows and executes the given block</p>
+          
+          
+
+          
+          <div class="method-source-code" id="each_row-source">
+            <pre>VALUE dtable_each_row(VALUE ary){</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-exp" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            exp   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns of copy of <em>dtable</em> with each entry x replaced by exp(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="exp-source">
+            <pre>VALUE dtable_exp(VALUE ary) {
+   return dtable_apply_math_op(ary, exp);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-exp-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            exp!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replace each entry x of <em>dtable</em> with exp(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="exp-21-source">
+            <pre>VALUE dtable_exp_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, exp);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-exp10" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            exp10   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns of copy of <em>dtable</em> with each entry x replaced by 10**x.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="exp10-source">
+            <pre>VALUE dtable_exp10(VALUE ary) {
+   return dtable_apply_math_op(ary, do_exp10);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-exp10-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            exp10!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replace each entry x of <em>dtable</em> with 10**x.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="exp10-21-source">
+            <pre>VALUE dtable_exp10_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, do_exp10);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-floor" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            floor   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns of copy of <em>dtable</em> with each entry x replaced by largest
+integer not greater than x.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="floor-source">
+            <pre>VALUE dtable_floor(VALUE ary) {
+   return dtable_apply_math_op(ary, floor);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-floor-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            floor!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replace each entry x of <em>dtable</em> with the largest integer not
+greater than x.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="floor-21-source">
+            <pre>VALUE dtable_floor_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, floor);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-interpolate" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            interpolate(Xs, Ys, nx, ny, x_start, x_end, y_start, y_end)  &rarr; a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a copy of <em>dtable</em> with the values interpolated given the
+proper X and Y axis to create a uniform spaced result in the X- and Y 
+direction consisting of nx- and ny values for each direction.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="interpolate-source">
+            <pre>VALUE dtable_interpolate(VALUE ary, VALUE x_vec, VALUE y_vec, VALUE nx_val, VALUE ny_val, VALUE xstart_val, VALUE xend_val, VALUE ystart_val, VALUE yend_val)
+{
+   Dtable *d = Get_Dtable(ary);
+        int nx = NUM2DBL(rb_Integer(nx_val));
+        int ny = NUM2DBL(rb_Integer(ny_val));
+        int i, j, num_cols = d-&gt;num_cols, num_rows = d-&gt;num_rows/*, last_row = num_rows - 1*/;
+        
+   long xsrc_len, ysrc_len;
+   double *xsrc = Dvector_Data_for_Read(x_vec, &amp;xsrc_len);
+   double *ysrc = Dvector_Data_for_Read(y_vec, &amp;ysrc_len);
+        if(xsrc_len != num_cols) rb_raise(rb_eArgError, &quot;Number of x values (%ld) do not match the number of columns (%d)&quot;, xsrc_len, num_cols);
+        if(ysrc_len != num_rows) rb_raise(rb_eArgError, &quot;Number of y values (%ld) do not match the number of rows (%d)&quot;, ysrc_len, num_rows);
+   VALUE new = dtable_init(dtable_alloc(cDtable), nx, ny);
+   Dtable *d2 = Get_Dtable(new);
+   double **src, **dest;
+        xstart_val = rb_Float(xstart_val);
+        double xstart = NUM2DBL(rb_Float(xstart_val));
+        if(xstart &lt; xsrc[0]) rb_raise(rb_eArgError, &quot;The start x value %g is smaller than the bound (%g)&quot;, xstart, xsrc[0]);
+        double xend = NUM2DBL(rb_Float(xend_val));
+        if(xend &gt; xsrc[xsrc_len-1]) rb_raise(rb_eArgError, &quot;The end x value %g is bigger than the bound (%g)&quot;, xend, xsrc[xsrc_len-1]);
+        double ystart = NUM2DBL(rb_Float(ystart_val));
+        if(ystart &lt; ysrc[0]) rb_raise(rb_eArgError, &quot;The start y value %g is smaller than the bound (%g)&quot;, ystart, ysrc[0]);
+        double yend = NUM2DBL(rb_Float(yend_val));
+        if(yend &gt; ysrc[ysrc_len-1]) rb_raise(rb_eArgError, &quot;The end y value %g is bigger than the bound (%g)&quot;, yend, ysrc[ysrc_len-1]);
+        double dx = (xend-xstart)/(nx-1);
+        double dy = (yend-ystart)/(ny-1);
+        double xcurrent = xstart;
+        double ycurrent = ystart;
+        double intvalue;
+        int isrc = 1;
+        int jsrc = 1;
+   src = d-&gt;ptr; dest = d2-&gt;ptr;
+   for (i = 1; i &lt; ny+1; i++) {
+                while(ysrc[isrc] &lt; ycurrent &amp;&amp; ycurrent &lt; ysrc[ysrc_len-1]){
+                        isrc++;
+                }
+      for (j = 1; j &lt; nx+1; j++) {
+                        while(xsrc[jsrc] &lt; xcurrent &amp;&amp; xcurrent &lt; xsrc[xsrc_len-1]){
+                                jsrc++;
+                        }
+                        intvalue = (
+                                ( src[isrc-1][jsrc-1]*(ysrc[isrc]-ycurrent)*(xsrc[jsrc]-xcurrent)) +
+                                ( src[isrc][jsrc - 1] * (ycurrent - ysrc[isrc - 1]) * (xsrc[jsrc] - xcurrent) ) +
+                                ( src[isrc - 1][jsrc] * (ysrc[isrc] - ycurrent) * (xcurrent - xsrc[jsrc - 1]) ) +
+                                ( src[isrc][jsrc] * (ycurrent - ysrc[isrc - 1]) * (xcurrent - xsrc[jsrc - 1]) )
+                        );
+                        intvalue = intvalue / ( (ysrc[isrc] - ysrc[isrc - 1]) * (xsrc[jsrc] - xsrc[jsrc - 1]) );
+         dest[i-1][j-1] = intvalue;
+                        xcurrent += dx;
+      }
+                xcurrent = xstart;
+                jsrc = 1;
+                ycurrent += dy;
+   }
+   return new;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-inv" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            inv   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns of copy of <em>dtable</em> with each entry x replaced by 1/x.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="inv-source">
+            <pre>VALUE dtable_inv(VALUE ary) {
+   return dtable_apply_math_op(ary, do_inv);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-inv-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            inv!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replace each entry x of <em>dtable</em> with 1/x.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="inv-21-source">
+            <pre>VALUE dtable_inv_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, do_inv);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-log" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            log   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns of copy of <em>dtable</em> with each entry x replaced by log(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="log-source">
+            <pre>VALUE dtable_log(VALUE ary) {
+   return dtable_apply_math_op(ary, log);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-log-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            log!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replace each entry x of <em>dtable</em> with log(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="log-21-source">
+            <pre>VALUE dtable_log_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, log);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-log10" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            log10   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns of copy of <em>dtable</em> with each entry x replaced by log10(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="log10-source">
+            <pre>VALUE dtable_log10(VALUE ary) {
+   return dtable_apply_math_op(ary, log10);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-log10-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            log10!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replace each entry x of <em>dtable</em> with log10(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="log10-21-source">
+            <pre>VALUE dtable_log10_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, log10);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-max" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            max  &rarr; float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the maximum entry in <em>dtable</em>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="max-source">
+            <pre>VALUE dtable_max(VALUE ary) {
+   Dtable *d = Get_Dtable(ary);
+   double zmax = Max2dGrid(d-&gt;ptr, d-&gt;num_cols, d-&gt;num_rows);
+   return rb_float_new(zmax);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-max_lt" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            max_lt(val)  &rarr; float or nil
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the maximum entry in <em>dtable</em> which is less than
+<em>val</em>, or <code>nil</code> if no such entry if found.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="max_lt-source">
+            <pre>VALUE dtable_max_lt(VALUE ary, VALUE val) {
+   Dtable *d = Get_Dtable(ary);
+   val = rb_Float(val);
+   double zmax, z = NUM2DBL(val);
+   if (Max_Lt_2dGrid(d-&gt;ptr, z, d-&gt;num_cols, d-&gt;num_rows, &amp;zmax))
+      return rb_float_new(zmax);
+   return Qnil;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-min" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            min  &rarr; float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the minimum entry in <em>dtable</em>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="min-source">
+            <pre>VALUE dtable_min(VALUE ary) {
+   Dtable *d = Get_Dtable(ary);
+   double zmin = Min2dGrid(d-&gt;ptr, d-&gt;num_cols, d-&gt;num_rows);
+   return rb_float_new(zmin);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-min_gt" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            min_gt(val)  &rarr; float or nil
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the minimum entry in <em>dtable</em> which is greater than
+<em>val</em>, or <code>nil</code> if no such entry if found.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="min_gt-source">
+            <pre>VALUE dtable_min_gt(VALUE ary, VALUE val) {
+   Dtable *d = Get_Dtable(ary);
+   val = rb_Float(val);
+   double zmin, z = NUM2DBL(val);
+   if (Min_Gt_2dGrid(d-&gt;ptr, z, d-&gt;num_cols, d-&gt;num_rows, &amp;zmin))
+      return rb_float_new(zmin);
+   return Qnil;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-minus" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">minus</span><span
+            class="method-args">(p1)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Dtable.html#method-i-sub">sub</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-minus-21" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">minus!</span><span
+            class="method-args">(p1)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Dtable.html#method-i-sub-21">sub!</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-mod" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">mod</span><span
+            class="method-args">(p1)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Dtable.html#method-i-modulo">modulo</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-mod-21" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">mod!</span><span
+            class="method-args">(p1)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Dtable.html#method-i-modulo-21">modulo!</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-modulo" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            modulo(number)       &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            mod(number)          &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            modulo(other)        &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            mod(other)           &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            dtable % number             &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            dtable % other              &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>When argument is a number, this operation returns a copy of <em>dtable</em>
+with each entry x replaced by x % <em>number</em>. When argument is a data
+array, this operation returns a copy of <em>dtable</em> with each entry x
+replaced by x % the corresponding entry in the <em>other</em> data array.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="modulo-source">
+            <pre>VALUE dtable_mod(VALUE ary, VALUE arg) {
+   return dtable_apply_math_op2(ary, arg, do_mod);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Dtable.html#method-i-mod">mod</a>, <a href="Dtable.html#method-i-25">%</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-modulo-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            modulo!(number)       &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            mod!(number)          &rarr;  dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            modulo!(other)        &rarr;  dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            mod!(other)           &rarr;  dtable
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>When argument is a number, this operation returns a copy of <em>dtable</em>
+with each entry x replaced by x % <em>number</em>. When argument is a data
+array, this operation returns a copy of <em>dtable</em> with each entry x
+replaced by x % the corresponding entry in the <em>other</em> data array.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="modulo-21-source">
+            <pre>VALUE dtable_modulo_bang(VALUE ary, VALUE arg) {
+   return dtable_apply_math_op2_bang(ary, arg, do_mod);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Dtable.html#method-i-mod-21">mod!</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-mul" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            mul(number)       &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            mul(other)        &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            dtable - number          &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            number - dtable          &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            dtable - other           &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>When argument is a number, this operation returns a copy of <em>dtable</em>
+with each entry x replaced by x * <em>number</em>. When argument is a data
+array, this operation returns a copy of <em>dtable</em> with each entry x
+replaced by x * the corresponding entry in the <em>other</em> data array.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="mul-source">
+            <pre>VALUE dtable_mul(VALUE ary, VALUE arg) {
+   return dtable_apply_math_op2(ary, arg, do_mul);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Dtable.html#method-i-2A">*</a>, <a href="Dtable.html#method-i-times">times</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-mul-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            mul!(number)       &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            mul!(other)        &rarr;  dtable
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>When argument is a number, each entry x in <em>dtable</em> is replaced by x
+* <em>number</em>. When argument is a data array, each entry x in
+<em>dtable</em> is replaced by x *  the corresponding entry in the
+<em>other</em> data array.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="mul-21-source">
+            <pre>VALUE dtable_mul_bang(VALUE ary, VALUE arg) {
+   return dtable_apply_math_op2_bang(ary, arg, do_mul);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Dtable.html#method-i-times-21">times!</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-neg" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            neg   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns of copy of <em>dtable</em> with each entry x replaced by -x.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="neg-source">
+            <pre>VALUE dtable_neg(VALUE ary) {
+   return dtable_apply_math_op(ary, do_neg);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Dtable.html#method-i-2D-40">-@</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-neg-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            neg!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replace each entry x of <em>dtable</em> with -x.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="neg-21-source">
+            <pre>VALUE dtable_neg_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, do_neg);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-num_cols" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            num_cols  &rarr; integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the number of entries in the x dimension of <em>dtable</em>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="num_cols-source">
+            <pre>VALUE dtable_num_cols(VALUE ary) {
+   Dtable *d = Get_Dtable(ary);
+   return LONG2NUM(d-&gt;num_cols);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-num_rows" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            num_rows  &rarr; integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the number of entries in the y dimension of <em>dtable</em>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="num_rows-source">
+            <pre>VALUE dtable_num_rows(VALUE ary) {
+   Dtable *d = Get_Dtable(ary);
+   return LONG2NUM(d-&gt;num_rows);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-plus" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">plus</span><span
+            class="method-args">(p1)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Dtable.html#method-i-add">add</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-plus-21" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">plus!</span><span
+            class="method-args">(p1)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Dtable.html#method-i-add-21">add!</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-pow" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            pow(number)                &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            pow(other)                 &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            raised_to(number)          &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            raised_to(other)           &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            dtable ** number                  &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            dtable ** other                   &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>When argument is a number, this operation returns a copy of <em>dtable</em>
+with each entry x replaced by x ** <em>number</em>. When argument is a data
+array, this operation returns a copy of <em>dtable</em> with each entry x
+replaced by x ** the corresponding entry in the <em>other</em> data array.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="pow-source">
+            <pre>VALUE dtable_pow(VALUE ary, VALUE arg) {
+   return dtable_apply_math_op2(ary, arg, pow);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Dtable.html#method-i-raised_to">raised_to</a>, <a href="Dtable.html#method-i-2A-2A">**</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-pow-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            pow!(number)                &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            pow!(other)                 &rarr;  dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            raised_to!(number)          &rarr;  dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            raised_to!(other)           &rarr;  dtable
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>When argument is a number, this operation returns a copy of <em>dtable</em>
+with each entry x replaced by x ** <em>number</em>. When argument is a data
+array, this operation returns a copy of <em>dtable</em> with each entry x
+replaced by x ** the corresponding entry in the <em>other</em> data array.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="pow-21-source">
+            <pre>VALUE dtable_pow_bang(VALUE ary, VALUE arg) {
+   return dtable_apply_math_op1_bang(ary, arg, pow);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Dtable.html#method-i-raised_to-21">raised_to!</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-raised_to" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">raised_to</span><span
+            class="method-args">(p1)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Dtable.html#method-i-pow">pow</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-raised_to-21" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">raised_to!</span><span
+            class="method-args">(p1)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Dtable.html#method-i-pow-21">pow!</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-read" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            read(filename, skip_lines=0) &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>The contents of <em>dtable</em> are replaced by the contents of the file,
+starting after skipping the specified number of lines.  The values in the
+file are listed with row number 0 first.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="read-source">
+            <pre>VALUE dtable_read(int argc, VALUE *argv, VALUE self) {
+   if ((argc &lt; 1) || (argc &gt; 2))
+      rb_raise(rb_eArgError, &quot;wrong # of arguments(%d for 1 or 2)&quot;,argc);
+   VALUE filename = argv[0];
+   int skip_lines = (argc==2)? NUM2INT(rb_Integer(argv[1])) : 0;
+   return Read_Dtable(self, StringValuePtr(filename), skip_lines);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-remainder" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            remainder(number)          &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            remainder(other)           &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>When the argument is a number, this operation returns a copy of
+<em>dtable</em> with each entry x replaced by the remainder of x divided by
+<em>number</em>. When the argument is a data array, this operation returns
+a copy of <em>dtable</em> with each entry x replaced by the remainder of x
+divided by the corresponding entry in the <em>other</em> data array.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="remainder-source">
+            <pre>VALUE dtable_remainder(VALUE ary, VALUE arg) {
+   return dtable_apply_math_op2(ary, arg, do_remainder);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-remainder-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            remainder!(number)          &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            remainder!(other)           &rarr;  dtable
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>When the argument is a number, this operation replaces with each entry x of
+<em>dtable</em> by the remainder of x divided by <em>number</em>. When the
+argument is a data array, this operation replaces with each entry x of
+<em>dtable</em> by remainder of x divided by the corresponding entry in the
+<em>other</em> data array.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="remainder-21-source">
+            <pre>VALUE dtable_remainder_bang(VALUE ary, VALUE arg) {
+   return dtable_apply_math_op2_bang(ary, arg, do_remainder);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-reverse_cols" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            reverse_cols  &rarr; a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a copy of <em>dtable</em> with the order of columns reversed.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="reverse_cols-source">
+            <pre>VALUE dtable_reverse_cols(VALUE ary)
+{
+   Dtable *d = Get_Dtable(ary);
+   int i, j, num_cols = d-&gt;num_cols, num_rows = d-&gt;num_rows, last_col = num_cols - 1;
+   VALUE new = dtable_init(dtable_alloc(cDtable), num_cols, num_rows);
+   Dtable *d2 = Get_Dtable(new);
+   double **src, **dest;
+   src = d-&gt;ptr; dest = d2-&gt;ptr;
+   for (i = 0; i &lt; num_rows; i++) {
+      for (j = 0; j &lt; num_cols; j++) {
+         dest[i][last_col-j] = src[i][j];
+      }
+   }
+   return new;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-reverse_rows" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            reverse_rows  &rarr; a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a copy of <em>dtable</em> with the order of rows reversed.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="reverse_rows-source">
+            <pre>VALUE dtable_reverse_rows(VALUE ary)
+{
+   Dtable *d = Get_Dtable(ary);
+   int i, j, num_cols = d-&gt;num_cols, num_rows = d-&gt;num_rows, last_row = num_rows - 1;
+   VALUE new = dtable_init(dtable_alloc(cDtable), num_cols, num_rows);
+   Dtable *d2 = Get_Dtable(new);
+   double **src, **dest;
+   src = d-&gt;ptr; dest = d2-&gt;ptr;
+   for (i = 0; i &lt; num_rows; i++) {
+      for (j = 0; j &lt; num_cols; j++) {
+         dest[last_row-i][j] = src[i][j];
+      }
+   }
+   return new;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-rotate_ccw90" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            rotate_ccw90  &rarr; a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a copy of <em>dtable</em> rotated 90 degrees counter-clockwise.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="rotate_ccw90-source">
+            <pre>VALUE dtable_rotate_ccw90(VALUE ary)
+{
+   Dtable *d = Get_Dtable(ary);
+   int i, j, num_cols = d-&gt;num_cols, num_rows = d-&gt;num_rows, last_col = num_cols - 1;
+   VALUE new = dtable_init(dtable_alloc(cDtable), num_rows, num_cols);
+   Dtable *d2 = Get_Dtable(new);
+   double **src, **dest;
+   src = d-&gt;ptr; dest = d2-&gt;ptr;
+   for (i = 0; i &lt; num_rows; i++) {
+      for (j = 0; j &lt; num_cols; j++) {
+         dest[last_col-j][i] = src[i][j];
+      }
+   }
+   return new;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-rotate_cw90" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            rotate_cw90  &rarr; a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a copy of <em>dtable</em> rotated 90 degrees clockwise.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="rotate_cw90-source">
+            <pre>VALUE dtable_rotate_cw90(VALUE ary)
+{
+   Dtable *d = Get_Dtable(ary);
+   int i, j, num_cols = d-&gt;num_cols, num_rows = d-&gt;num_rows, last_row = num_rows - 1;
+   VALUE new = dtable_init(dtable_alloc(cDtable), num_rows, num_cols);
+   Dtable *d2 = Get_Dtable(new);
+   double **src, **dest;
+   src = d-&gt;ptr; dest = d2-&gt;ptr;
+   for (i = 0; i &lt; num_rows; i++) {
+      for (j = 0; j &lt; num_cols; j++) {
+         dest[j][last_row-i] = src[i][j];
+      }
+   }
+   return new;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-round" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            round   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns of copy of <em>dtable</em> with each entry x replaced by round(x).
+(Numbers midway between integers round away from zero.)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="round-source">
+            <pre>VALUE dtable_round(VALUE ary) {
+   return dtable_apply_math_op(ary, do_round);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-round-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            round!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replace each entry x of <em>dtable</em> with the integer closest to x.
+(Numbers midway between integers round away from zero.)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="round-21-source">
+            <pre>VALUE dtable_round_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, do_round);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-row" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            row(int)  &rarr; a_dvec
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Creates a <a href="Dvector.html">Dvector</a> holding a copy of the contents
+of the requested row.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="row-source">
+            <pre>VALUE dtable_row(VALUE ary, VALUE row_num) {
+   Dtable *d = Get_Dtable(ary);
+   row_num = rb_Integer(row_num);
+   int row = NUM2INT(row_num);
+   if (row &lt; 0 || row &gt;= d-&gt;num_rows)
+      rb_raise(rb_eArgError, &quot;Asking for row i = %i from array with only %li rows&quot;, row, d-&gt;num_rows);
+   VALUE dvec = Dvector_Create();
+   Dvector_Data_Replace(dvec, d-&gt;num_cols, d-&gt;ptr[row]);
+   return dvec;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-safe_acos" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            safe_acos   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a copy of <em>dtable</em> with each entry x replaced by
+acos(max(-1,min(1,x))).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="safe_acos-source">
+            <pre>VALUE dtable_safe_acos(VALUE ary) {
+   return dtable_apply_math_op(ary, do_safe_acos);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-safe_acos-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            safe_acos!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replaces each entry x in <em>dtable</em> by acos(max(-1,min(1,x)))..</p>
+          
+          
+
+          
+          <div class="method-source-code" id="safe_acos-21-source">
+            <pre>VALUE dtable_safe_acos_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, do_safe_acos);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-safe_asin" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            safe_asin   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a copy of <em>dtable</em> with each entry x replaced by
+asin(max(-1,min(1,x))).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="safe_asin-source">
+            <pre>VALUE dtable_safe_asin(VALUE ary) {
+   return dtable_apply_math_op(ary, do_safe_asin);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-safe_asin-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            safe_asin!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replaces each entry x in <em>dtable</em> by asin(max(-1,min(1,x)))..</p>
+          
+          
+
+          
+          <div class="method-source-code" id="safe_asin-21-source">
+            <pre>VALUE dtable_safe_asin_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, do_safe_asin);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-safe_inv" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            safe_inv(cutoff=1e-99)   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a copy of <em>dtable</em> with each entry x replaced by
+sign(x)/<em>cutoff</em> if abs(x) &lt; <em>cutoff</em>, 1/x otherwise.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="safe_inv-source">
+            <pre>VALUE dtable_safe_inv(int argc, VALUE *argv, VALUE self) {
+   VALUE arg1;
+   if ((argc &lt; 0) || (argc &gt; 1))
+      rb_raise(rb_eArgError, &quot;wrong # of arguments(%d for 0 or 1)&quot;,argc);
+   arg1 = (argc &gt; 0)? argv[0] : rb_float_new(1e-99);
+   return dtable_apply_math_op1(self, arg1, do_safe_inv);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-safe_inv-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            safe_inv!(cutoff)   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replaces each entry x in <em>dtable</em> by sign(x)/<em>cutoff</em> if
+abs(x) &lt; <em>cutoff</em>, 1/x otherwise.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="safe_inv-21-source">
+            <pre>VALUE dtable_safe_inv_bang(int argc, VALUE *argv, VALUE self) {
+   VALUE arg1;
+   if ((argc &lt; 0) || (argc &gt; 1))
+      rb_raise(rb_eArgError, &quot;wrong # of arguments(%d for 0 or 1)&quot;,argc);
+   arg1 = (argc &gt; 0)? argv[0] : rb_float_new(1e-99);
+   return dtable_apply_math_op1_bang(self, arg1, do_safe_inv);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-safe_log" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            safe_log(cutoff=1e-99)   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a copy of <em>dtable</em> with each entry x replaced by
+log(max(x,<em>cutoff</em>)).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="safe_log-source">
+            <pre>VALUE dtable_safe_log(int argc, VALUE *argv, VALUE self) {
+   VALUE arg1;
+   if ((argc &lt; 0) || (argc &gt; 1))
+      rb_raise(rb_eArgError, &quot;wrong # of arguments(%d for 0 or 1)&quot;,argc);
+   arg1 = (argc &gt; 0)? argv[0] : rb_float_new(1e-99);
+   return dtable_apply_math_op1(self, arg1, do_safe_log);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-safe_log-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            safe_log!(cutoff=1e-99)   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replaces each entry x in <em>dtable</em> by log(max(x,<em>cutoff</em>)).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="safe_log-21-source">
+            <pre>VALUE dtable_safe_log_bang(int argc, VALUE *argv, VALUE self) {
+   VALUE arg1;
+   if ((argc &lt; 0) || (argc &gt; 1))
+      rb_raise(rb_eArgError, &quot;wrong # of arguments(%d for 0 or 1)&quot;,argc);
+   arg1 = (argc &gt; 0)? argv[0] : rb_float_new(1e-99);
+   return dtable_apply_math_op1_bang(self, arg1, do_safe_log);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-safe_log10" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            safe_log10(cutoff=1e-99)   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a copy of <em>dtable</em> with each entry x replaced by
+log10(max(x,<em>cutoff</em>)).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="safe_log10-source">
+            <pre>VALUE dtable_safe_log10(int argc, VALUE *argv, VALUE self) {
+   VALUE arg1;
+   if ((argc &lt; 0) || (argc &gt; 1))
+      rb_raise(rb_eArgError, &quot;wrong # of arguments(%d for 0 or 1)&quot;,argc);
+   arg1 = (argc &gt; 0)? argv[0] : rb_float_new(1e-99);
+   return dtable_apply_math_op1(self, arg1, do_safe_log10);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-safe_log10-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            safe_log10!(cutoff)   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replaces each entry x in <em>dtable</em> by log10(max(x,<em>cutoff</em>)).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="safe_log10-21-source">
+            <pre>VALUE dtable_safe_log10_bang(int argc, VALUE *argv, VALUE self) {
+   VALUE arg1;
+   if ((argc &lt; 0) || (argc &gt; 1))
+      rb_raise(rb_eArgError, &quot;wrong # of arguments(%d for 0 or 1)&quot;,argc);
+   arg1 = (argc &gt; 0)? argv[0] : rb_float_new(1e-99);
+   return dtable_apply_math_op1_bang(self, arg1, do_safe_log10);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-safe_sqrt" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            safe_sqrt   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a copy of <em>dtable</em> with each entry x replaced by
+sqrt(max(x,0)).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="safe_sqrt-source">
+            <pre>VALUE dtable_safe_sqrt(VALUE ary) {
+   return dtable_apply_math_op(ary, do_safe_sqrt);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-safe_sqrt-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            safe_sqrt!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replaces each entry x in <em>dtable</em> by sqrt(max(x,0)).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="safe_sqrt-21-source">
+            <pre>VALUE dtable_safe_sqrt_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, do_safe_sqrt);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-set" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            set(float)  &rarr; dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            set(a_dtable)  &rarr; dtable
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Modifies the entries of <em>dtable</em> array.  If the argument is a float,
+then all of the entries are set to that value.  If the argument is another
+<a href="Dtable.html">Dtable</a> array, then it must be the size as
+<em>dtable</em>, and its contents are copied to <em>dtable</em>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="set-source">
+            <pre>VALUE dtable_set(VALUE ary, VALUE val) {
+   if (is_a_dtable(val)) {
+      Dtable *d = Get_Dtable(ary);
+      Dtable *d2 = Get_Dtable(val);
+      int num_cols = d-&gt;num_cols, num_rows = d-&gt;num_rows, i, j;
+      double **data = d-&gt;ptr;
+      double **data2 = d2-&gt;ptr;
+      if (d2-&gt;num_cols != num_cols || d2-&gt;num_rows != num_rows)
+         rb_raise(rb_eArgError, &quot;Arrays must be same size for Dtable set&quot;);
+      for (i = 0; i &lt; num_rows; i++) {
+         for (j = 0; j &lt; num_cols; j++) {
+            data[i][j] = data2[i][j];
+         }
+      }
+   } else {
+      double v = NUM2DBL(val);
+      set_dtable_vals(ary, v);
+   }
+   return ary;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-set_column" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            set_column(int,a_dvec) &rarr; a_dvec
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Stores the contents of <em>a_dec</em> in the specified column of the array.
+The length of the vector must equal the number of rows in the array.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="set_column-source">
+            <pre>VALUE dtable_set_column(VALUE ary, VALUE col_num, VALUE dvec) {
+   Dtable *d = Get_Dtable(ary);
+   long len, i;
+   double *data = Dvector_Data_for_Read(dvec, &amp;len);
+   col_num = rb_Integer(col_num);
+   int col = NUM2INT(col_num);
+   if (col &lt; 0 || col &gt;= d-&gt;num_cols)
+      rb_raise(rb_eArgError, &quot;Asking for column i = %i from array with only %li columns&quot;, col, d-&gt;num_cols);
+   if (len != d-&gt;num_rows)
+      rb_raise(rb_eArgError, &quot;Length of vector (%li) does not match number of rows (%li)&quot;, len, d-&gt;num_rows);
+   for (i=0; i &lt; len; i++)
+      d-&gt;ptr[i][col] = data[i];
+   return dvec;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-set_row" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            set_row(int,a_dvec) &rarr; a_dvec
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Stores the contents of <em>a_dec</em> in the specified row of the array.
+The length of the vector must equal the number of columns in the array.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="set_row-source">
+            <pre>VALUE dtable_set_row(VALUE ary, VALUE row_num, VALUE dvec) {
+   Dtable *d = Get_Dtable(ary);
+   long len, j;
+   double *data = Dvector_Data_for_Read(dvec, &amp;len);
+   row_num = rb_Integer(row_num);
+   int row = NUM2INT(row_num);
+   if (row &lt; 0 || row &gt;= d-&gt;num_rows)
+      rb_raise(rb_eArgError, &quot;Asking for row i = %i from array with only %li rows&quot;, row, d-&gt;num_rows);
+   if (len != d-&gt;num_cols)
+      rb_raise(rb_eArgError, &quot;Length of vector (%li) does not match number of columns (%li)&quot;, len, d-&gt;num_cols);
+   for (j=0; j &lt; len; j++)
+      d-&gt;ptr[row][j] = data[j];
+   return dvec;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-sin" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            sin   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns of copy of <em>dtable</em> with entry x replaced by sin(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="sin-source">
+            <pre>VALUE dtable_sin(VALUE ary) {
+   return dtable_apply_math_op(ary, sin);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-sin-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            sin!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replace each entry x of <em>dtable</em> with sin(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="sin-21-source">
+            <pre>VALUE dtable_sin_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, sin);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-sinh" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            sinh   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns of copy of <em>dtable</em> with entry x replaced by sinh(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="sinh-source">
+            <pre>VALUE dtable_sinh(VALUE ary) {
+   return dtable_apply_math_op(ary, sinh);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-sinh-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            sinh!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replace each entry x of <em>dtable</em> with sinh(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="sinh-21-source">
+            <pre>VALUE dtable_sinh_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, sinh);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-sqrt" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            sqrt   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns of copy of <em>dtable</em> with each entry x replaced by sqrt(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="sqrt-source">
+            <pre>VALUE dtable_sqrt(VALUE ary) {
+   return dtable_apply_math_op(ary, sqrt);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-sqrt-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            sqrt!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replace each entry x of <em>dtable</em> with sqrt(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="sqrt-21-source">
+            <pre>VALUE dtable_sqrt_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, sqrt);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-sub" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            sub(number)       &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            sub(other)        &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            dtable - number          &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            number - dtable          &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            dtable - other           &rarr;  a_dtable
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>When argument is a number, this operation returns a copy of <em>dtable</em>
+with each entry x replaced by x - <em>number</em>. When argument is a data
+array, this operation returns a copy of <em>dtable</em> with each entry x
+replaced by x - the corresponding entry in the <em>other</em> data array.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="sub-source">
+            <pre>VALUE dtable_sub(VALUE ary, VALUE arg) {
+   return dtable_apply_math_op2(ary, arg, do_sub);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Dtable.html#method-i-2D">-</a>, <a href="Dtable.html#method-i-minus">minus</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-sub-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            sub!(number)       &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            sub!(other)        &rarr;  dtable
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>When argument is a number, each entry x in <em>dtable</em> is replaced by x
+- <em>number</em>. When argument is a data array, each entry x in
+<em>dtable</em> is replaced by x -  the corresponding entry in the
+<em>other</em> data array.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="sub-21-source">
+            <pre>VALUE dtable_sub_bang(VALUE ary, VALUE arg) {
+   return dtable_apply_math_op2_bang(ary, arg, do_sub);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+        <div class="aliases">
+          Also aliased as: <a href="Dtable.html#method-i-minus-21">minus!</a>
+        </div>
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-sum" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            sum   &rarr;  number
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the sum of the entries in <em>dtable</em>. Returns 0.0 if
+<em>dtable</em> is empty.</p>
+
+<pre>a = Dtable.new(2,4)
+a.set_column(0, Dvector[1,2,3,4])
+a.set_column(1, Dvector[0, 1, 0, 1])
+a.sum        -&gt; 12.0
+Dtable.new(2,2).sum   -&gt; 0.0</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="sum-source">
+            <pre>VALUE dtable_sum(VALUE tabl){</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-tan" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            tan   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns of copy of <em>dtable</em> with entry x replaced by tan(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="tan-source">
+            <pre>VALUE dtable_tan(VALUE ary) {
+   return dtable_apply_math_op(ary, tan);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-tan-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            tan!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replace each entry x of <em>dtable</em> with tan(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="tan-21-source">
+            <pre>VALUE dtable_tan_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, tan);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-tanh" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            tanh   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns of copy of <em>dtable</em> with entry x replaced by tanh(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="tanh-source">
+            <pre>VALUE dtable_tanh(VALUE ary) {
+   return dtable_apply_math_op(ary, tanh);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-tanh-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            tanh!   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Replace each entry x of <em>dtable</em> with tanh(x).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="tanh-21-source">
+            <pre>VALUE dtable_tanh_bang(VALUE ary) {
+   return dtable_apply_math_op_bang(ary, tanh);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-times" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">times</span><span
+            class="method-args">(p1)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Dtable.html#method-i-mul">mul</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-times-21" class="method-detail method-alias">
+        
+        <div class="method-heading">
+          <span class="method-name">times!</span><span
+            class="method-args">(p1)</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+        </div>
+
+        
+
+        
+        <div class="aliases">
+          Alias for: <a href="Dtable.html#method-i-mul-21">mul!</a>
+        </div>
+        
+      </div>
+
+    
+      <div id="method-i-transpose" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            transpose  &rarr; a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a transposed copy of <em>dtable</em> (i.e., exchange rows and
+columns).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="transpose-source">
+            <pre>VALUE dtable_transpose(VALUE ary) {
+   Dtable *d = Get_Dtable(ary);
+   int i, j, num_cols = d-&gt;num_cols, num_rows = d-&gt;num_rows;
+   VALUE new = dtable_init(dtable_alloc(cDtable), num_rows, num_cols);
+   Dtable *d2 = Get_Dtable(new);
+   double **src, **dest;
+   src = d-&gt;ptr; dest = d2-&gt;ptr;
+   for (i = 0; i &lt; num_rows; i++) {
+      for (j = 0; j &lt; num_cols; j++) {
+         dest[j][i] = src[i][j];
+      }
+   }
+   return new;
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-trim" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            trim(cutoff=1e-6)   &rarr;  a_dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a copy of <em>dtable</em> with any entry with absolute value less
+than <em>cutoff</em> replaced by 0.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="trim-source">
+            <pre>VALUE dtable_trim(int argc, VALUE *argv, VALUE self) {
+   VALUE arg1;
+   if ((argc &lt; 0) || (argc &gt; 1))
+      rb_raise(rb_eArgError, &quot;wrong # of arguments(%d for 0 or 1)&quot;,argc);
+   arg1 = (argc &gt; 0)? argv[0] : rb_float_new(1e-6);
+   return dtable_apply_math_op1(self, arg1, do_trim);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-trim-21" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            trim!(cutoff=1e-6)   &rarr;  dtable
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Each entry x in <em>dtable</em> having absolute value less than
+<em>cutoff</em> is replaced by 0.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="trim-21-source">
+            <pre>VALUE dtable_trim_bang(int argc, VALUE *argv, VALUE self) {
+   VALUE arg1;
+   if ((argc &lt; 0) || (argc &gt; 1))
+      rb_raise(rb_eArgError, &quot;wrong # of arguments(%d for 0 or 1)&quot;,argc);
+   arg1 = (argc &gt; 0)? argv[0] : rb_float_new(1e-6);
+   return dtable_apply_math_op1_bang(self, arg1, do_trim);
+}</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

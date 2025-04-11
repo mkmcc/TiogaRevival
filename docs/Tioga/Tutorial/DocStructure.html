@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>module Tioga::Tutorial::DocStructure - RDoc Documentation</title>
+
+<link href="../../fonts.css" rel="stylesheet">
+<link href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/navigation.js"></script>
+<script src="../../js/search_index.js"></script>
+<script src="../../js/search.js"></script>
+<script src="../../js/searcher.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="module">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="DocStructure.html#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+    
+    
+    
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="module-Tioga::Tutorial::DocStructure">
+  <h1 id="module-Tioga::Tutorial::DocStructure" class="module">
+    module Tioga::Tutorial::DocStructure
+  </h1>
+
+  <section class="description">
+    
+<h1 id="module-Tioga::Tutorial::DocStructure-label-The+basic+anatomy+of+a+tioga+document%3A+%22sample.rb%22">The basic anatomy of a tioga document: “sample.rb”<span><a href="DocStructure.html#module-Tioga::Tutorial::DocStructure-label-The+basic+anatomy+of+a+tioga+document%3A+%22sample.rb%22">&para;</a> <a href="DocStructure.html#documentation">&uarr;</a></span></h1>
+
+<p>Source files for tioga are Ruby programs of a particular form and content.</p>
+
+<p>The overall form is described in this section.</p>
+
+<p>Some details of the content are discussed in the rest of the tutorial.</p>
+
+<p>We&#39;ll use a very simple case to illustrate the general form: a file
+that defines two figures, one that fills  the frame with blue and one that
+fills it with red.  The file will define a class, “MyFigures”, and create
+an instance of it.  We&#39;ll start with those operations, then add
+bit-by-bit until  we have a complete definition.</p>
+
+<pre class="ruby"><span class="ruby-keyword">class</span> <span class="ruby-constant">MyFigures</span>
+
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-constant">MyFigures</span>.<span class="ruby-identifier">new</span>
+</pre>
+
+<p>We start adding the missing pieces by requiring rubygems (`require&#39;
+tells Ruby to load the required item if it hasn&#39;t already been loaded).
+The <a href="http://docs.rubygems.org/">rubygems</a> package is the Ruby
+standard for managing add-on software libraries.  Once you&#39;ve done the
+“require rubygems” command, the following require command for the tioga <a
+href="../FigureMaker.html">FigureMaker</a> will work whether  tioga was
+downloaded as a gem or independently.</p>
+
+<pre class="ruby"><span class="ruby-operator">&gt;&gt;</span> <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;rubygems&#39;</span>
+<span class="ruby-operator">&gt;&gt;</span> <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;Tioga/FigureMaker&#39;</span>
+
+   <span class="ruby-keyword">class</span> <span class="ruby-constant">MyFigures</span>
+
+   <span class="ruby-keyword">end</span>
+
+   <span class="ruby-constant">MyFigures</span>.<span class="ruby-identifier">new</span>
+</pre>
+
+<p>Here we are using “&gt;&gt;” to mark the newly added lines.  At the end,
+we&#39;ll give a complete listing without any of those marks which are not
+really part of the code.</p>
+
+<p>Next we&#39;ll  `include&#39; the <a href="../../Tioga.html">Tioga</a> and
+<a href="../FigureConstants.html">FigureConstants</a> modules to make it
+easy to reference the methods and attributes  they define – include makes 
+everything defined in the module available as if defined here.</p>
+
+<pre class="ruby">   <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;rubygems&#39;</span>
+   <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;Tioga/FigureMaker&#39;</span>
+
+   <span class="ruby-keyword">class</span> <span class="ruby-constant">MyFigures</span>
+
+<span class="ruby-operator">&gt;&gt;</span>     <span class="ruby-identifier">include</span> <span class="ruby-constant">Tioga</span>
+<span class="ruby-operator">&gt;&gt;</span>     <span class="ruby-identifier">include</span> <span class="ruby-constant">FigureConstants</span>
+
+   <span class="ruby-keyword">end</span>
+
+   <span class="ruby-constant">MyFigures</span>.<span class="ruby-identifier">new</span>
+</pre>
+
+<p>The default tioga <a href="../FigureMaker.html">FigureMaker</a> will be
+doing the work for us, so our initialize method will get it and put it in
+an instance variable for us that we&#39;ll name “@figure_maker” (the “@” is
+Ruby&#39;s way of saying  that this is an attribute associated with a
+particular object).  The various tioga user interfaces will also be talking
+to the default <a href="../FigureMaker.html">FigureMaker</a> to find out
+what figures we&#39;ve defined and ask for various ones to be created in
+response to our commands.</p>
+
+<pre class="ruby">   <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;rubygems&#39;</span>
+   <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;Tioga/FigureMaker&#39;</span>
+
+   <span class="ruby-keyword">class</span> <span class="ruby-constant">MyFigures</span>
+
+       <span class="ruby-identifier">include</span> <span class="ruby-constant">Tioga</span>
+       <span class="ruby-identifier">include</span> <span class="ruby-constant">FigureConstants</span>
+
+<span class="ruby-operator">&gt;&gt;</span>     <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+<span class="ruby-operator">&gt;&gt;</span>         <span class="ruby-ivar">@figure_maker</span> = <span class="ruby-constant">FigureMaker</span>.<span class="ruby-identifier">default</span>
+<span class="ruby-operator">&gt;&gt;</span>     <span class="ruby-keyword">end</span>
+
+   <span class="ruby-keyword">end</span>
+
+   <span class="ruby-constant">MyFigures</span>.<span class="ruby-identifier">new</span>
+</pre>
+
+<p>The “MyFigures.new” command is asking Ruby to create an instance of the
+MyFigures class which in turn involves  Ruby calling the class&#39;s
+initialize routine.  The command does NOT automatically make the figures at
+the time  the class object is created.  The figures get constructed in
+response to user requests that will be forwarded  from the user interface
+to the figure maker and then on to our routines.</p>
+
+<p>But all that comes later.  For now, our next step is to add a method called
+“t” that simply returns the  local attribute @figure_maker.  Then we can
+use “t.” to talk to our instance of the <a
+href="../FigureMaker.html">FigureMaker</a> rather  than having to type
+“@figure_maker” all the time.</p>
+
+<p>The “.” in “t.” is part of the “object.name” idiom in Ruby.  It refers to
+the named attribute or method  in the given object.  In turn, the object
+can come from some other evaluation.  In the “t.” case, our method called
+“t” will return the object we&#39;ve saved in our local attribute called
+“@figure_maker”.</p>
+
+<pre class="ruby">   <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;rubygems&#39;</span>
+   <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;Tioga/FigureMaker&#39;</span>
+
+   <span class="ruby-keyword">class</span> <span class="ruby-constant">MyFigures</span>
+
+       <span class="ruby-identifier">include</span> <span class="ruby-constant">Tioga</span>
+       <span class="ruby-identifier">include</span> <span class="ruby-constant">FigureConstants</span>
+
+<span class="ruby-operator">&gt;&gt;</span>     <span class="ruby-keyword">def</span> <span class="ruby-identifier">t</span>
+<span class="ruby-operator">&gt;&gt;</span>         <span class="ruby-ivar">@figure_maker</span>
+<span class="ruby-operator">&gt;&gt;</span>     <span class="ruby-keyword">end</span>
+
+       <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+           <span class="ruby-ivar">@figure_maker</span> = <span class="ruby-constant">FigureMaker</span>.<span class="ruby-identifier">default</span>
+       <span class="ruby-keyword">end</span>
+
+   <span class="ruby-keyword">end</span>
+
+   <span class="ruby-constant">MyFigures</span>.<span class="ruby-identifier">new</span>
+</pre>
+
+<p>When we write something like “t.line_width”, we&#39;re talking about the
+thing referenced by the name “line_width” in the  object that is returned
+by evaluating our method called “t”.  It sounds complicated, but you can
+safely forget the  details and just remember this:</p>
+<dl class="rdoc-list label-list"><dt>
+<dd>
+<p><strong><em>“t.” is talking to <a
+href="../../Tioga.html">Tioga</a></strong></em>.</p>
+</dd></dl>
+
+<p>The next step is to add to the initialize routine to tell the <a
+href="../FigureMaker.html">FigureMaker</a> about the figures defined in
+this file.  That is done by calling “def_figure” for each one, giving a
+string name and a body of code that will produce the figure.  The names are
+“Blue” and “Red”, and the command bodies are given inside the curly braces.
+In this case the commands are simply calls on methods with the
+corresponding name, but in lowercase since all method names begin with
+lowercase (Ruby is picky about that).</p>
+
+<pre class="ruby">   <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;rubygems&#39;</span>
+   <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;Tioga/FigureMaker&#39;</span>
+
+   <span class="ruby-keyword">class</span> <span class="ruby-constant">MyFigures</span>
+
+       <span class="ruby-identifier">include</span> <span class="ruby-constant">Tioga</span>
+       <span class="ruby-identifier">include</span> <span class="ruby-constant">FigureConstants</span>
+
+       <span class="ruby-keyword">def</span> <span class="ruby-identifier">t</span>
+           <span class="ruby-ivar">@figure_maker</span>
+       <span class="ruby-keyword">end</span>
+
+       <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+           <span class="ruby-ivar">@figure_maker</span> = <span class="ruby-constant">FigureMaker</span>.<span class="ruby-identifier">default</span>
+<span class="ruby-operator">&gt;&gt;</span>         <span class="ruby-identifier">t</span>.<span class="ruby-identifier">def_figure</span>(<span class="ruby-string">&#39;Blue&#39;</span>) { <span class="ruby-identifier">blue</span> }
+<span class="ruby-operator">&gt;&gt;</span>         <span class="ruby-identifier">t</span>.<span class="ruby-identifier">def_figure</span>(<span class="ruby-string">&#39;Red&#39;</span>) { <span class="ruby-identifier">red</span> }
+       <span class="ruby-keyword">end</span>
+
+   <span class="ruby-keyword">end</span>
+
+   <span class="ruby-constant">MyFigures</span>.<span class="ruby-identifier">new</span>
+</pre>
+
+<p>The figures are defined to call routines “blue” and “red”, so we&#39;ll add
+those next.</p>
+
+<pre class="ruby">   <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;rubygems&#39;</span>
+   <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;Tioga/FigureMaker&#39;</span>
+
+   <span class="ruby-keyword">class</span> <span class="ruby-constant">MyFigures</span>
+
+       <span class="ruby-identifier">include</span> <span class="ruby-constant">Tioga</span>
+       <span class="ruby-identifier">include</span> <span class="ruby-constant">FigureConstants</span>
+
+       <span class="ruby-keyword">def</span> <span class="ruby-identifier">t</span>
+           <span class="ruby-ivar">@figure_maker</span>
+       <span class="ruby-keyword">end</span>
+
+       <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+           <span class="ruby-ivar">@figure_maker</span> = <span class="ruby-constant">FigureMaker</span>.<span class="ruby-identifier">default</span>
+           <span class="ruby-identifier">t</span>.<span class="ruby-identifier">def_figure</span>(<span class="ruby-string">&#39;Blue&#39;</span>) { <span class="ruby-identifier">blue</span> }
+           <span class="ruby-identifier">t</span>.<span class="ruby-identifier">def_figure</span>(<span class="ruby-string">&#39;Red&#39;</span>) { <span class="ruby-identifier">red</span> }
+       <span class="ruby-keyword">end</span>
+
+<span class="ruby-operator">&gt;&gt;</span>     <span class="ruby-keyword">def</span> <span class="ruby-identifier">blue</span>
+<span class="ruby-operator">&gt;&gt;</span>         <span class="ruby-identifier">t</span>.<span class="ruby-identifier">fill_color</span> = <span class="ruby-constant">Blue</span>
+<span class="ruby-operator">&gt;&gt;</span>         <span class="ruby-identifier">t</span>.<span class="ruby-identifier">fill_frame</span>
+<span class="ruby-operator">&gt;&gt;</span>     <span class="ruby-keyword">end</span>
+
+<span class="ruby-operator">&gt;&gt;</span>     <span class="ruby-keyword">def</span> <span class="ruby-identifier">red</span>
+<span class="ruby-operator">&gt;&gt;</span>         <span class="ruby-identifier">t</span>.<span class="ruby-identifier">fill_color</span> = <span class="ruby-constant">Red</span>
+<span class="ruby-operator">&gt;&gt;</span>         <span class="ruby-identifier">t</span>.<span class="ruby-identifier">fill_frame</span>
+<span class="ruby-operator">&gt;&gt;</span>     <span class="ruby-keyword">end</span>
+
+   <span class="ruby-keyword">end</span>
+
+   <span class="ruby-constant">MyFigures</span>.<span class="ruby-identifier">new</span>
+</pre>
+
+<p>We could use the file as it is now, but I like to have the output files go
+in a subfolder rather than cluttering up the top level folder where the
+definition file lives.  We can specify a “save directory” by setting the <a
+href="../FigureMaker.html">FigureMaker</a> “save_dir” attribute.  That will
+be our last addition.  Here&#39;s the final version  of “sample.rb”.</p>
+
+<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&#39;rubygems&#39;</span>
+<span class="ruby-identifier">require</span> <span class="ruby-string">&#39;Tioga/FigureMaker&#39;</span>
+
+<span class="ruby-keyword">class</span> <span class="ruby-constant">MyFigures</span>
+
+    <span class="ruby-identifier">include</span> <span class="ruby-constant">Tioga</span>
+    <span class="ruby-identifier">include</span> <span class="ruby-constant">FigureConstants</span>
+
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">t</span>
+        <span class="ruby-ivar">@figure_maker</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+        <span class="ruby-ivar">@figure_maker</span> = <span class="ruby-constant">FigureMaker</span>.<span class="ruby-identifier">default</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">def_figure</span>(<span class="ruby-string">&#39;Blue&#39;</span>) { <span class="ruby-identifier">blue</span> }
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">def_figure</span>(<span class="ruby-string">&#39;Red&#39;</span>) { <span class="ruby-identifier">red</span> }
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">save_dir</span> = <span class="ruby-string">&#39;figures_out&#39;</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">blue</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">fill_color</span> = <span class="ruby-constant">Blue</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">fill_frame</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">red</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">fill_color</span> = <span class="ruby-constant">Red</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">fill_frame</span>
+    <span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-constant">MyFigures</span>.<span class="ruby-identifier">new</span>
+</pre>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

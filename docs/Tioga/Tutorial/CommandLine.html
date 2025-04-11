@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>module Tioga::Tutorial::CommandLine - RDoc Documentation</title>
+
+<link href="../../fonts.css" rel="stylesheet">
+<link href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/navigation.js"></script>
+<script src="../../js/search_index.js"></script>
+<script src="../../js/search.js"></script>
+<script src="../../js/searcher.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="module">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="CommandLine.html#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="CommandLine.html#module-Tioga::Tutorial::CommandLine-label-How+to+run+and+debug+your+tioga+programs">How to run and debug your tioga programs</a>
+    <li><a href="CommandLine.html#module-Tioga::Tutorial::CommandLine-label-Getting+files+redisplayed+after+they%27ve+been+modified">Getting files redisplayed after they&#39;ve been modified</a>
+    <li><a href="CommandLine.html#module-Tioga::Tutorial::CommandLine-label-Commands+for+operating+on+all+of+the+figures+at+once">Commands for operating on all of the figures at once</a>
+    <li><a href="CommandLine.html#module-Tioga::Tutorial::CommandLine-label-The+Edit-View-Edit+cycle">The Edit-View-Edit cycle</a>
+    <li><a href="CommandLine.html#module-Tioga::Tutorial::CommandLine-label-Debugging+your+tioga+figures">Debugging your tioga figures</a>
+  </ul>
+</div>
+
+
+  <div id="class-metadata">
+    
+    
+    
+    
+    
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="module-Tioga::Tutorial::CommandLine">
+  <h1 id="module-Tioga::Tutorial::CommandLine" class="module">
+    module Tioga::Tutorial::CommandLine
+  </h1>
+
+  <section class="description">
+    
+<h1 id="module-Tioga::Tutorial::CommandLine-label-How+to+run+and+debug+your+tioga+programs">How to run and debug your tioga programs<span><a href="CommandLine.html#module-Tioga::Tutorial::CommandLine-label-How+to+run+and+debug+your+tioga+programs">&para;</a> <a href="CommandLine.html#documentation">&uarr;</a></span></h1>
+
+<p>Our starting place is samples/sample.rb containing the little program
+described in #DocStructure. After you &#39;cd&#39; to the samples
+directory, type &#39;tioga&#39; and hit <code>RETURN</code>.  If the
+install worked okay, you&#39;ll see something like this.  Take a moment to
+read it since the rest of this section of the tutorial will be based on the
+description given here.</p>
+
+<pre class="ruby"><span class="ruby-constant">This</span> <span class="ruby-identifier">program</span> <span class="ruby-identifier">is</span> <span class="ruby-identifier">a</span> <span class="ruby-identifier">command</span> <span class="ruby-identifier">line</span> <span class="ruby-identifier">interface</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">open</span><span class="ruby-operator">-</span><span class="ruby-identifier">source</span> <span class="ruby-identifier">tioga</span> <span class="ruby-identifier">kernel</span>.
+<span class="ruby-constant">The</span> <span class="ruby-identifier">tioga</span> <span class="ruby-identifier">kernel</span> <span class="ruby-identifier">is</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">creating</span> <span class="ruby-identifier">figures</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">plots</span> <span class="ruby-identifier">using</span> <span class="ruby-constant">Ruby</span>, <span class="ruby-constant">PDF</span>, <span class="ruby-keyword">and</span> <span class="ruby-constant">TeX</span>.
+<span class="ruby-constant">Following</span> <span class="ruby-identifier">is</span> <span class="ruby-identifier">a</span> <span class="ruby-identifier">brief</span> <span class="ruby-identifier">description</span> <span class="ruby-identifier">of</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">tioga</span> <span class="ruby-identifier">command</span> <span class="ruby-identifier">line</span> <span class="ruby-identifier">options</span>.
+<span class="ruby-constant">For</span> <span class="ruby-identifier">more</span> <span class="ruby-identifier">information</span>, <span class="ruby-identifier">visit</span> <span class="ruby-identifier">http</span>:<span class="ruby-operator">/</span><span class="ruby-regexp">/www.kitp.ucsb.edu/</span><span class="ruby-operator">~</span><span class="ruby-identifier">paxton</span><span class="ruby-operator">/</span><span class="ruby-identifier">tioga</span>.<span class="ruby-identifier">html</span>.
+
+<span class="ruby-constant">Before</span> <span class="ruby-identifier">any</span> <span class="ruby-identifier">command</span> <span class="ruby-identifier">line</span> <span class="ruby-identifier">information</span> <span class="ruby-identifier">is</span> <span class="ruby-identifier">processed</span>, <span class="ruby-identifier">tioga</span> <span class="ruby-identifier">runs</span> <span class="ruby-operator">~</span><span class="ruby-regexp">/.tiogainit if it exists.
+    The primary use of this file is to set your default pdf viewer command (see below).
+
+If there are no command line arguments, or the argument is -h, this help info is output.
+
+Otherwise, the command line should start with a tioga file name (with extension .rb).
+     Since the extension is known, you can skip typing it if you like.
+
+The remainder of the command line should consist of an optional series of control commands
+    followed by a figure command.
+
+Any control commands are done after ~/</span>.<span class="ruby-identifier">tiogainit</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">before</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">figure</span> <span class="ruby-identifier">file</span> <span class="ruby-identifier">is</span> <span class="ruby-identifier">loaded</span>.
+     <span class="ruby-operator">-</span><span class="ruby-identifier">r</span> <span class="ruby-identifier">file</span>      <span class="ruby-identifier">runs</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">file</span> (<span class="ruby-identifier">using</span> <span class="ruby-constant">Ruby</span><span class="ruby-string">&#39;s require method).
+     -C dir       changes the working directory. If there is no -C command, 
+                  tioga changes the working directory to the location of the figure file.
+     -v           prints version information.
+
+The figure command comes last and should be one of these:
+     -l           output a list of the defined figures by number and name.
+     -&lt;num&gt;       make and show figure with index equal &lt;num&gt; (0 &lt;= num &lt; num_figures).
+     -m &lt;figs&gt;    make PDFs without showing them in the viewer.
+     -s &lt;figs&gt;    make and show PDFs, each in a separate viewer window.
+     -p &lt;figs&gt;    make PDFs and show the portfolio as a multi-page document.
+
+If the figure command is omitted, then it defaults to -0.
+
+If &lt;figs&gt; is omitted, then tioga does all the figures defined in the file
+     ordered by their definition index numbers.
+
+Otherwise, &lt;figs&gt; must be either
+     a defined figure name (as supplied to def_figure in the tioga file), or
+     a valid ruby array index number for a figure (can be negative), or
+     a valid ruby range specification selecting a sequence of figures, or
+     a space-less, comma-separated list of figure indices and ranges.
+
+     For example, -s Plot1 makes and shows the pdf for the figure named Plot1,
+     and -p 5,0..3,-1 makes a portfolio with the figure having index 5 on page 1,
+     followed by pages showing the figures with indices 0, 1, 2, 3, and -1.
+
+The viewer for showing PDFs is specified by the $pdf_viewer variable in tioga.
+     The default value can be set by creating a .tiogainit file in your home directory.
+     The .tiogainit file is run before any command line options are processed.
+     Your current setting for $pdf_viewer is repreview.
+     To change it, edit ~/.tiogainit to add the line $pdf_viewer = &#39;</span><span class="ruby-identifier">my</span> <span class="ruby-identifier">viewer</span> <span class="ruby-identifier">command</span><span class="ruby-string">&#39;.
+     The command tioga uses to show a pdf is $pdf_viewer + &#39;</span> <span class="ruby-string">&#39; + full_PDF_filename.
+     You can use the -e control command to try a different viewer setting
+     by doing the $pdf_viewer assignment from the command line.
+</span></pre>
+
+<p>Let&#39;s begin exploring these commands by making a PDF for one of the
+figures defined in sample.rb – enter this line to the shell (that&#39;s a
+lowercase L after the dash, not the numeral one):</p>
+
+<pre>tioga sample.rb -l</pre>
+
+<p>You should see this in response</p>
+
+<pre>0    Blue
+1    Red</pre>
+
+<p>This lists the figures that are defined in the file, giving the sequence
+numbers starting from 0 and the corresponding names.  The “show” command
+(-s) and the “make” command (-m) both take either names or numbers to
+indicate which figure you want.  Let&#39;s make a pdf for one of the
+figures.  Type this to the shell.</p>
+
+<pre>tioga sample.rb -m Blue</pre>
+
+<p>You should get a line of output from tioga saying that it has loaded the
+sample.rb file, followed by another  giving the full file name of the pdf
+it has made.  In addition, the samples directory should have a new
+subdirectory called &#39;figures_out&#39;.  That was created automatically
+to hold the output.  Look inside it and you should find “Blue.pdf” – open
+that in your PDF viewer just to see the lovely blue square you&#39;ve just
+created.</p>
+
+<p>Now let&#39;s have tioga make the second figure and then open it for us in
+our PDF viewer.  You can pick which viewer you want to use, but tioga makes
+a guess as a default – on linux it guesses “xpdf” and on the Mac it guesses
+“Preview”.   If you want something else, create .tiogainit in your $HOME
+directory and enter a line of the form:</p>
+
+<pre>$pdf_viewer = &#39;viewer command&#39;</pre>
+
+<p>The value of $pdf_viewer followed by a space and the full file name is used
+by tioga  as a command line for the shell to show the pdf file.</p>
+
+<p>Assuming you&#39;re happy with the default, or have setup ~/.tiogainit to
+do something else, enter this line (here we&#39;ve intentionally dropped
+the `.rb&#39; extension from the file name since tioga will supply it for
+us):</p>
+
+<pre>tioga sample -s Red</pre>
+
+<p>You should be looking at a newly created Red.pdf in your PDF viewer.</p>
+
+<p>And in figures_out you should now find Red.pdf along with the previous Blue
+one.</p>
+
+<h2 id="module-Tioga::Tutorial::CommandLine-label-Getting+files+redisplayed+after+they%27ve+been+modified">Getting files redisplayed after they&#39;ve been modified<span><a href="CommandLine.html#module-Tioga::Tutorial::CommandLine-label-Getting+files+redisplayed+after+they%27ve+been+modified">&para;</a> <a href="CommandLine.html#documentation">&uarr;</a></span></h2>
+
+<p>Let&#39;s suppose that you&#39;re working on sample.rb to pick the right
+colors.  Open the ruby file sample.rb in your text editor. If necessary,
+get the current version of the Red figure in a viewer window again:</p>
+
+<pre>tioga sample -s Red</pre>
+
+<p>In the editor, change the line in after &#39;def red&#39; from this</p>
+
+<pre>t.fill_color = Red</pre>
+
+<p>to a different color, green for example:</p>
+
+<pre>t.fill_color = Green</pre>
+
+<p>after you&#39;ve made that edit and saved the file, so back to the shell. 
+With the previous Red.pdf visible in the viewer, reenter the command:</p>
+
+<pre>tioga sample -s Red</pre>
+
+<p>It will rebuild Red.pdf and call the viewer to redisplay it.  So, the
+question is “What&#39;s in the window?” – are you looking at the new
+version with a green square or the old version with it&#39;s red square? 
+It all depends on how the viewer decides to treat a request to open a file
+that it already is showing.  At the time of writing, xpdf on linux reloads
+the file while Preview on the Mac doesn&#39;t.  But as part of the tioga
+installation we&#39;ve installed an AppleScript that asks Preview to do 
+Revert to update the image.  The default $pdf_viewer command on the mac
+runs that AppleScript, and, with a little luck, it all works to redisplay
+the pdf as we want.  If that is working and you&#39;re looking at the new
+version of the PDF, great – you can skip the rest of this section.  If not,
+read on for suggestions about how to deal with  the Preview problem on the
+Mac.</p>
+
+<p>Before the script can do it&#39;s thing, you may need to enable
+AppleScripts on your machine.</p>
+
+<p>Do the following if you&#39;re uncertain.</p>
+
+<pre>1) In Apple Menu, open System Preferences...
+
+2) In the System section of the preferences panel, click on &quot;Universal Access&quot; to open that section.
+
+3) At the bottom of Universal Access, check the box for &quot;Enable access for assistive devices&quot;,
+then close the window.</pre>
+
+<p>That takes care of enabling AppleScripts in general, but you may still need
+to tell Preview to allow script access. If Preview seems to be ignoring our
+Open/Revert script, enter this line to the shell to change a flag in
+Preview&#39;s settings:</p>
+
+<pre>defaults write /Applications/Preview.app/Contents/Info NSAppleScriptEnabled -bool YES</pre>
+
+<h2 id="module-Tioga::Tutorial::CommandLine-label-Commands+for+operating+on+all+of+the+figures+at+once">Commands for operating on all of the figures at once<span><a href="CommandLine.html#module-Tioga::Tutorial::CommandLine-label-Commands+for+operating+on+all+of+the+figures+at+once">&para;</a> <a href="CommandLine.html#documentation">&uarr;</a></span></h2>
+
+<p>Doing one figure at a time is very useful when you&#39;re working to make
+it look just right. But at other times, you want to turn the crank on the
+entire set of figures that are defined in the file.  Both the show and the
+make commands will do this if you don&#39;t give them a specific figure to
+do.  In other words, if you just do -m without any following name or
+number, all the pdfs will be made,  and if you just do -s, they&#39;ll all
+be made and opened in separate windows in the viewer.</p>
+
+<p>Before trying this, let&#39;s quit the viewer just to confirm that is will
+be launched properly.  Then do</p>
+
+<pre>tioga sample -s</pre>
+
+<p>You should now have both figures displayed in viewer windows.</p>
+
+<p>If the file defines more than a couple of figures, it can be very useful to
+have them combined in a single multi-page pdf file for viewing.  The
+“portfolio” command (-p) does this for you.  First, it makes all of the
+pdfs (same as -m), and then it uses the pdfpages latex package to create a
+portfolio pdf.</p>
+
+<pre>tioga sample -p</pre>
+
+<p>With luck, your pdf viewer will even provide thumbnails for the figures.</p>
+
+<h2 id="module-Tioga::Tutorial::CommandLine-label-The+Edit-View-Edit+cycle">The Edit-View-Edit cycle<span><a href="CommandLine.html#module-Tioga::Tutorial::CommandLine-label-The+Edit-View-Edit+cycle">&para;</a> <a href="CommandLine.html#documentation">&uarr;</a></span></h2>
+
+<p>Let&#39;s look at a more interesting figure. In the samples directory, find
+sine.rb and open it in your text editor. There&#39;s a lot going on here
+that won&#39;t make sense yet – we will start getting into the details in 
+the next section of the tutorial – but we can still have some fun with it
+now.  Go to the end of  the file where the &#39;exec_plot&#39; method is
+defined. We are going to make some changes to alter the appearance of the
+figure.  First, however, let&#39;s see  what it looks like now.  Enter this
+to the shell:</p>
+
+<pre>tioga sine</pre>
+
+<p>You should now be viewing a plot of a blue sine wave going from 0 to 2 pi
+with the title “Curve y = sin x”. Well, actually, it&#39;s just a set of
+straight lines connecting some values of sin(x) sampled uniformly in x, but
+for this example that&#39;s good enough.</p>
+
+<p>Leaving the pdf still in a viewer window, go back to the editor.  Find
+where it says “t.show_polyline(xs,ys,Blue)” and change Blue to Red.  Then
+redo the shell call on tioga.  Now the sine curve should be red.  Right? 
+Presuming that you have command line history, you should only need to type
+something like UpArrow and Return (perhaps preceeded by click to get the
+input focus from the editor to the shell) to go from saving your edits to
+looking at the new pdf. After taking a look at the pdf in the viewer
+window, it&#39;s back to the editor to make another change.  That&#39;s the
+Edit-View-Edit cycle, and the goal is to make it as quick and painless as
+possible.  Here&#39;s another example to show how it goes in tioga.</p>
+
+<p>Let&#39;s consider broadening our palette – type this to the shell:</p>
+
+<pre>tioga figures/figures.rb -s Colors2</pre>
+
+<p>Before considering the result, notice that it isn&#39;t necessary to
+&#39;cd&#39; to the directory containing the ruby file we want to see. The
+current working directory will automatically be set by tioga based on the
+file name.  Now, back to Colors2.pdf in its viewer window: you should be
+looking at a page of color samples.  Pick one you like and enter the name
+in the call on show_polyline in the sine.rb window.  Save the file and redo
+&#39;tioga sine&#39; in the shell.  By the way, you can browse the
+predefined color choices by opening <a
+href="../ColorConstants.html">ColorConstants</a>.  And if you don&#39;t
+find what you want there, you can always specify colors using RGB triples.</p>
+
+<p>Now let&#39;s add markers to show the data points on the plot.  Right after
+show_polyline there&#39;s a call on show_marker.  Change the &#39;if
+false&#39; to &#39;if true&#39; to turn it on, and again redo &#39;tioga
+sine&#39; in the shell.  You should see a string of blue asterisks along
+the curve.</p>
+
+<p>What other kinds of markers are available?  Do the following to show a
+figure with the standard markers:</p>
+
+<pre>tioga figures/figures.rb -s Marker_Names</pre>
+
+<p>Still want more options?  Okay, do this:</p>
+
+<pre>tioga figures/figures.rb -s Dingbats</pre>
+
+<p>These are given in <a href="../MarkerConstants.html">MarkerConstants</a>
+where it tells how to use a dingbat.  Let&#39;s change the figure to use 
+number 114 to mark points on the curve.  Find the line in sine.rb where it
+says</p>
+
+<pre class="ruby"><span class="ruby-string">&#39;marker&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Asterisk</span>,
+</pre>
+
+<p>and replace it by</p>
+
+<pre class="ruby"><span class="ruby-string">&#39;marker&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-constant">ZapfDingbats</span>, <span class="ruby-value">114</span>],
+</pre>
+
+<p>While you&#39;re at it, change the marker color to Crimson, set the line
+color to Teal, and then  redo &#39;tioga sine&#39; in the shell.  The
+result should look like this.</p>
+
+<p><img src="../../images/sine.png" /></p>
+
+<h2 id="module-Tioga::Tutorial::CommandLine-label-Debugging+your+tioga+figures">Debugging your tioga figures<span><a href="CommandLine.html#module-Tioga::Tutorial::CommandLine-label-Debugging+your+tioga+figures">&para;</a> <a href="CommandLine.html#documentation">&uarr;</a></span></h2>
+
+<p>To get an idea of the debugging process, let&#39;s introduce some of the
+usual kinds of bugs into the sine.rb program to see what happens. 
+We&#39;ll start with a syntax error that prevents the file from loading
+properly.  Find the line in  the exec_plot method that calls do_box_labels
+and remove the final &#39;)&#39; from the line.  Now when you do &#39;tioga
+sine&#39; you should get something like this:</p>
+
+<pre>loading /Users/billpaxton/tioga/samples/sine.rb
+ERROR: load failed for /Users/billpaxton/tioga/samples/sine.rb
+
+    /Users/billpaxton/tioga/samples/sine.rb:64: parse error, unexpected tIDENTIFIER, expecting &#39;)&#39;
+    xs = @data[0]; ys = @data[1]
+      ^
+
+Can&#39;t build pdf because failed to define any figures.</pre>
+
+<p>The indented lines hold the important information: the problem was
+discovered on line 64, it was a parse error, and ruby found an identifier
+when it was expecting &#39;)&#39;.  With those clues, it&#39;s not too hard
+to fix things.</p>
+
+<p>Put the &#39;)&#39; back where it belongs and we&#39;ll go the to next kind
+of problem.  Remove the final `s&#39; from &#39;do_box_labels&#39; and
+rerun sine.  Now you&#39;ll get a message like this:</p>
+
+<pre>  undefined method `do_box_label&#39; for #&lt;Tioga::FigureMaker:0x1d271c&gt;
+  /Users/billpaxton/tioga/samples/sine.rb:63:in `exec_plot&#39;
+  /Users/billpaxton/tioga/samples/sine.rb:27:in `initialize&#39;
+ERROR while executing command: #&lt;Proc:0x001d087c@/Users/billpaxton/tioga/samples/sine.rb:28&gt;
+
+  Sorry: Empty plot!  [version: CVS_version]
+
+Failed during attempt to create pdf file.</pre>
+
+<p>Again, we get the information we need to find the problem: the method
+&#39;do_box_label&#39; is undefined, and the call to it is on line 63.</p>
+
+<p>Put the `s&#39; back, and we&#39;ll look at the final kind of bug, one that
+shows up when TeX is running. In the same line in sine, change `$y$&#39; to
+`$y&#39;.  Recall that text such as this gets passed along to TeX, and the
+`$&#39; tells TeX to enter or leave math mode.  By removing the closing
+`$&#39; we&#39;ll make TeX very unhappy.  Here&#39;s the output:</p>
+
+<pre>ERROR: pdflatex failed.
+! Extra }, or forgotten $.
+&lt;argument&gt; \tiogasetfont {$y\BS }
+
+l.6 ...{\makebox(0,0)[cB]{\tiogasetfont{$y\BS}}}}}
+
+! Extra }, or forgotten $.
+\@imakepicbox ...t@ #1\unitlength {\mb@l #4\mb@r }
+                                                  \mb@b \kern \z@ }
+l.6 ...{\makebox(0,0)[cB]{\tiogasetfont{$y\BS}}}}}
+
+ERROR: invalid pdf file.</pre>
+
+<p>This time we don&#39;t get a specific line number in the tioga file, but we
+still get some good hints. TeX suggests that either we have an extra
+`}&#39; or we&#39;ve forgotten a `$&#39;. Then it outputs the line
+`&lt;argument&gt; tiogasetfont {$yBS }&#39; that contains the problem line
+of text `$y&#39;. Clues like that are typically enough to let you quickly
+find the problem.</p>
+
+<p>When there is a failure while running TeX, the temporary files are not
+deleted since they might contain helpful hints. So if you now list the
+files in the samples directory, you&#39;ll find several files whose name
+starts with &#39;sine&#39;:</p>
+
+<pre>&#39;sine_figure.pdf&#39; holds the graphics for the figure (open it in your pdf viewer to see).
+
+&#39;sine_figure.txt&#39; has the TeX commands to place the text in the figure.
+
+&#39;sine.tex&#39; has the little TeX file created by tioga to drive pdflatex.
+
+&#39;sine.log&#39; is the pdflatex log.</pre>
+
+<p>During normal, error-free, running, these files are all removed
+automatically.  But after an error while executing in pdflatex, you&#39;ll
+have to delete them yourself.</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

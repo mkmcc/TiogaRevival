@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Tioga::Special_Paths - RDoc Documentation</title>
+
+<link href="../fonts.css" rel="stylesheet">
+<link href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/search_index.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/searcher.js"></script>
+<script src="../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="Special_Paths.html#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Doc< FigureMaker
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="Special_Paths.html#method-i-append_interpolant_to_path">#append_interpolant_to_path</a>
+    
+    <li ><a href="Special_Paths.html#method-i-make_contour">#make_contour</a>
+    
+    <li ><a href="Special_Paths.html#method-i-make_interpolant">#make_interpolant</a>
+    
+    <li ><a href="Special_Paths.html#method-i-make_spline_interpolated_points">#make_spline_interpolated_points</a>
+    
+    <li ><a href="Special_Paths.html#method-i-make_steps">#make_steps</a>
+    
+    <li ><a href="Special_Paths.html#method-i-show_arrow">#show_arrow</a>
+    
+    <li ><a href="Special_Paths.html#method-i-show_contour">#show_contour</a>
+    
+    <li ><a href="Special_Paths.html#method-i-show_error_bars">#show_error_bars</a>
+    
+    <li ><a href="Special_Paths.html#method-i-show_polyline">#show_polyline</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Tioga::Special_Paths">
+  <h1 id="class-Tioga::Special_Paths" class="class">
+    class Tioga::Special_Paths
+  </h1>
+
+  <section class="description">
+    
+<p>These are the methods for creating and using various special paths
+including contours, splines, steps, arrows, and error bars.</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-append_interpolant_to_path" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">append_interpolant_to_path</span><span
+            class="method-args">(interp)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Appends a series of Bezier curves to the path based on the cubic spline
+interpolant <em>interp</em>. See make_interpolant.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="append_interpolant_to_path-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Special_Paths.rb, line 208</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">append_interpolant_to_path</span>(<span class="ruby-identifier">interp</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-make_contour" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">make_contour</span><span
+            class="method-args">(dict)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates a path following a contour in a two dimensional table of data using
+an algorithm from <a href="http://gri.sourceforge.net/">Gri</a> done by Dan
+Kelley. (There is also an option to use the <a
+href="http://local.wasp.uwa.edu.au/~pbourke/papers/conrec/">CONREC</a>
+algorithm of Paul D. Bourke.) The results are returned in 2-element array
+with first element a vector of the x values for the contour and second
+element a vector of the y values.  See show_contour.</p>
+
+<p>Dictionary Entries</p>
+
+<pre class="ruby"><span class="ruby-string">&#39;zs&#39;</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_dtable</span>    <span class="ruby-comment"># The data table</span>
+<span class="ruby-string">&#39;data&#39;</span>                     <span class="ruby-comment"># Alias for &#39;zs&#39;</span>
+<span class="ruby-string">&#39;xs&#39;</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_dvector</span>   <span class="ruby-comment"># The x figure coordinates for the columns of data</span>
+<span class="ruby-string">&#39;ys&#39;</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_dvector</span>   <span class="ruby-comment"># The y figure coordinates for the rows of data</span>
+<span class="ruby-string">&#39;legit&#39;</span>     =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_dtable</span>    <span class="ruby-comment"># Optional table, same size as zs, non-zero means corresponding data is okay.</span>
+<span class="ruby-string">&#39;dest_xs&#39;</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_dvector</span>   <span class="ruby-comment"># The contour x values will be placed in this vector (optional).</span>
+<span class="ruby-string">&#39;dest_ys&#39;</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_dvector</span>   <span class="ruby-comment"># The contour y values will be placed in this vector (optional).</span>
+<span class="ruby-string">&#39;gaps&#39;</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">an_array</span>    <span class="ruby-comment"># Indices for gaps will be placed in this Array.</span>
+<span class="ruby-string">&#39;z_level&#39;</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>     <span class="ruby-comment"># The contour level</span>
+<span class="ruby-string">&#39;z&#39;</span>                        <span class="ruby-comment"># Alias for &#39;z_level&#39;</span>
+<span class="ruby-string">&#39;level&#39;</span>                    <span class="ruby-comment"># Alias for &#39;z_level&#39;</span>
+<span class="ruby-string">&#39;method&#39;</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_string</span>     <span class="ruby-comment"># (Optional) set to &#39;conrec&#39; to use that algorithm instead of the one from Gri.</span>
+</pre>
+
+<p>Example</p>
+
+<pre class="ruby"><span class="ruby-identifier">levels</span> = [<span class="ruby-value">9</span>,<span class="ruby-value">10</span>,<span class="ruby-value">11</span>,<span class="ruby-value">12</span>,<span class="ruby-value">13</span>,<span class="ruby-value">14</span>,<span class="ruby-value">15</span>,<span class="ruby-value">16</span>,<span class="ruby-value">17</span>]
+<span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_plot</span>(<span class="ruby-string">&#39;boundaries&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">bounds</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">clip_press_image</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">stroke_color</span> = <span class="ruby-constant">SlateGray</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">line_width</span> = <span class="ruby-value">1</span>
+    <span class="ruby-identifier">dict</span> = { <span class="ruby-string">&#39;gaps&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">gaps</span>, <span class="ruby-string">&#39;xs&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@eos_logRHOs</span>, <span class="ruby-string">&#39;ys&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@eos_logTs</span>, <span class="ruby-string">&#39;data&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@pres_data</span> }
+    <span class="ruby-identifier">levels</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">level</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">dict</span>[<span class="ruby-string">&#39;level&#39;</span>] = <span class="ruby-identifier">level</span>
+        <span class="ruby-identifier">pts_array</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">make_contour</span>(<span class="ruby-identifier">dict</span>)
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">append_points_with_gaps_to_path</span>(<span class="ruby-identifier">pts_array</span>[<span class="ruby-value">0</span>], <span class="ruby-identifier">pts_array</span>[<span class="ruby-value">1</span>], <span class="ruby-identifier">gaps</span>, <span class="ruby-keyword">true</span>)
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">stroke</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p><img src="../images/Contours.png" /></p>
+          
+          
+
+          
+          <div class="method-source-code" id="make_contour-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Special_Paths.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">make_contour</span>(<span class="ruby-identifier">dict</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-make_interpolant" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">make_interpolant</span><span
+            class="method-args">(dict)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>A cubic spline interpolant is created using &#39;start_slope&#39;,
+&#39;end_slope&#39;, &#39;xs&#39;, and &#39;ys&#39;.  The result can passed
+to <a
+href="Special_Paths.html#method-i-append_interpolant_to_path">#append_interpolant_to_path</a>
+or Dvector.spline_interpolate.</p>
+
+<p>If &#39;start_slope&#39; is given, it is used as the initial slope of the
+curve. Otherwise, the starting slope is determined by the best fit with the
+starting second derivative set to 0 (known as a “free” or “natural”
+spline).  The &#39;end_slope&#39; is treated similarly.</p>
+
+<p>Dictionary Entries</p>
+
+<pre class="ruby"><span class="ruby-string">&#39;start_slope&#39;</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>    <span class="ruby-comment"># optional</span>
+<span class="ruby-string">&#39;end_slope&#39;</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>    <span class="ruby-comment"># optional</span>
+<span class="ruby-string">&#39;xs&#39;</span>               =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_dvector</span>  <span class="ruby-comment"># The data x in figure coordinates</span>
+<span class="ruby-string">&#39;ys&#39;</span>               =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_dvector</span>  <span class="ruby-comment"># The data y in figure coordinates</span>
+</pre>
+
+<p>Example</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">splines</span> <span class="ruby-comment"># append bezier curves</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">do_box_labels</span>(<span class="ruby-string">&quot;Splines&quot;</span>, <span class="ruby-string">&quot;Position&quot;</span>, <span class="ruby-string">&quot;Average Count&quot;</span>)
+    <span class="ruby-identifier">xs</span> = <span class="ruby-constant">Dvector</span>[ <span class="ruby-value">1.0</span>, <span class="ruby-value">2.0</span>, <span class="ruby-value">5.0</span>, <span class="ruby-value">6.0</span>, <span class="ruby-value">7.0</span>, <span class="ruby-value">8.0</span>, <span class="ruby-value">10.0</span>, <span class="ruby-value">13.0</span>, <span class="ruby-value">17.0</span> ]
+    <span class="ruby-identifier">ys</span> = <span class="ruby-constant">Dvector</span>[ <span class="ruby-value">3.0</span>, <span class="ruby-value">3.7</span>, <span class="ruby-value">3.9</span>, <span class="ruby-value">4.2</span>, <span class="ruby-value">5.7</span>, <span class="ruby-value">6.6</span>,  <span class="ruby-value">7.1</span>,  <span class="ruby-value">6.7</span>,  <span class="ruby-value">4.5</span> ]
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_plot</span>(<span class="ruby-string">&#39;boundaries&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">-1</span>, <span class="ruby-value">19</span>, <span class="ruby-value">8</span>, <span class="ruby-value">2</span>]) <span class="ruby-keyword">do</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">fill_color</span> = <span class="ruby-constant">FloralWhite</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">fill_frame</span>
+        <span class="ruby-identifier">start_slope</span> = <span class="ruby-value">2.5</span><span class="ruby-operator">*</span>(<span class="ruby-identifier">ys</span>[<span class="ruby-value">1</span>]<span class="ruby-operator">-</span><span class="ruby-identifier">ys</span>[<span class="ruby-value">0</span>])<span class="ruby-operator">/</span>(<span class="ruby-identifier">xs</span>[<span class="ruby-value">1</span>]<span class="ruby-operator">-</span><span class="ruby-identifier">xs</span>[<span class="ruby-value">0</span>])
+        <span class="ruby-identifier">interp</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">make_interpolant</span>(<span class="ruby-string">&#39;xs&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">xs</span>, <span class="ruby-string">&#39;ys&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ys</span>,
+            <span class="ruby-string">&#39;start_slope&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">start_slope</span>)
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">append_interpolant_to_path</span>(<span class="ruby-identifier">interp</span>)
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">stroke_color</span> = <span class="ruby-constant">Black</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">stroke</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_marker</span>(<span class="ruby-string">&#39;Xs&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">xs</span>, <span class="ruby-string">&#39;Ys&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ys</span>,
+            <span class="ruby-string">&#39;marker&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Bullet</span>, <span class="ruby-string">&#39;scale&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.6</span>, <span class="ruby-string">&#39;color&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Red</span>);
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p><img src="../images/Splines.png" /></p>
+          
+          
+
+          
+          <div class="method-source-code" id="make_interpolant-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Special_Paths.rb, line 203</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">make_interpolant</span>(<span class="ruby-identifier">dict</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-make_spline_interpolated_points" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">make_spline_interpolated_points</span><span
+            class="method-args">(dict)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates an interpolated series of points smoothly connecting the given data
+points.</p>
+
+<p>See also <a
+href="Special_Paths.html#method-i-append_interpolant_to_path">#append_interpolant_to_path</a>
+for creating smooth paths based on Bezier curves rather than on sampled
+points joined by straight line segments. Returns a vector of the y values
+corresponding to the requested &#39;sample_ys&#39;.</p>
+
+<p>Dictionary Entries</p>
+
+<pre class="ruby"><span class="ruby-string">&#39;start_slope&#39;</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>    <span class="ruby-comment"># optional</span>
+<span class="ruby-string">&#39;end_slope&#39;</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>    <span class="ruby-comment"># optional</span>
+<span class="ruby-string">&#39;xs&#39;</span>               =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_dvector</span>  <span class="ruby-comment"># The data x in figure coordinates</span>
+<span class="ruby-string">&#39;ys&#39;</span>               =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_dvector</span>  <span class="ruby-comment"># The data y in figure coordinates</span>
+<span class="ruby-string">&#39;sample_xs&#39;</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_dvector</span>  <span class="ruby-comment"># The x values where will interpolate</span>
+<span class="ruby-string">&#39;result_ys&#39;</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_dvector</span>  <span class="ruby-comment"># The y values will be placed here (optional).</span>
+</pre>
+
+<p>A cubic spline interpolant is created (see <a
+href="Special_Paths.html#method-i-make_interpolant">#make_interpolant</a>)
+using &#39;start_slope&#39;, &#39;end_slope&#39;, &#39;xs&#39;, and
+&#39;ys&#39;.  At each x location in &#39;sample_xs&#39;, the interpolant
+is used to find the corresponding y location which is then returned as the
+value (and optionally also placed in the &#39;result_ys&#39; vector).</p>
+
+<p>The results can passed to routines such as append_points_to_path or
+show_polyline.</p>
+
+<p>Example</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">sampled_splines</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">do_box_labels</span>(<span class="ruby-string">&quot;Sampled Splines&quot;</span>, <span class="ruby-string">&quot;Position&quot;</span>, <span class="ruby-string">&quot;Average Count&quot;</span>)
+    <span class="ruby-identifier">xs</span> = <span class="ruby-constant">Dvector</span>[ <span class="ruby-value">1.0</span>, <span class="ruby-value">2.0</span>, <span class="ruby-value">5.0</span>, <span class="ruby-value">6.0</span>, <span class="ruby-value">7.0</span>, <span class="ruby-value">8.0</span>, <span class="ruby-value">10.0</span>, <span class="ruby-value">13.0</span>, <span class="ruby-value">17.0</span> ]
+    <span class="ruby-identifier">ys</span> = <span class="ruby-constant">Dvector</span>[ <span class="ruby-value">3.0</span>, <span class="ruby-value">3.7</span>, <span class="ruby-value">3.9</span>, <span class="ruby-value">4.2</span>, <span class="ruby-value">5.7</span>, <span class="ruby-value">6.6</span>,  <span class="ruby-value">7.1</span>,  <span class="ruby-value">6.7</span>,  <span class="ruby-value">4.5</span> ]
+    <span class="ruby-identifier">data_pts</span> = <span class="ruby-identifier">xs</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-identifier">x_first</span> = <span class="ruby-value">0.0</span>; <span class="ruby-identifier">x_last</span> = <span class="ruby-value">18.0</span>; <span class="ruby-identifier">y_first</span> = <span class="ruby-identifier">y_last</span> = <span class="ruby-value">2.5</span>
+    <span class="ruby-identifier">x_results</span> = <span class="ruby-constant">Dvector</span>[]
+    <span class="ruby-identifier">y_results</span> = <span class="ruby-constant">Dvector</span>[]
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">make_steps</span>(
+        <span class="ruby-string">&#39;dest_xs&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">x_results</span>, <span class="ruby-string">&#39;dest_ys&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">y_results</span>,
+        <span class="ruby-string">&#39;xs&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">xs</span>, <span class="ruby-string">&#39;ys&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ys</span>,
+        <span class="ruby-string">&#39;x_first&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">x_first</span>, <span class="ruby-string">&#39;y_first&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">y_first</span>,
+        <span class="ruby-string">&#39;x_last&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">x_last</span>, <span class="ruby-string">&#39;y_last&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">y_last</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_plot</span>(<span class="ruby-string">&#39;boundaries&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">-1</span>, <span class="ruby-value">19</span>, <span class="ruby-value">8</span>, <span class="ruby-value">2</span>]) <span class="ruby-keyword">do</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">fill_color</span> = <span class="ruby-constant">FloralWhite</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">fill_frame</span>
+        <span class="ruby-identifier">smooth_pts</span> = <span class="ruby-value">4</span><span class="ruby-operator">*</span>(<span class="ruby-identifier">data_pts</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>) <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+        <span class="ruby-identifier">dx</span> = (<span class="ruby-identifier">xs</span>[<span class="ruby-identifier">data_pts</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>] <span class="ruby-operator">-</span> <span class="ruby-identifier">xs</span>[<span class="ruby-value">0</span>])<span class="ruby-operator">/</span>(<span class="ruby-identifier">smooth_pts</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>)
+        <span class="ruby-identifier">sample_xs</span> = <span class="ruby-constant">Dvector</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">smooth_pts</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span><span class="ruby-operator">*</span><span class="ruby-identifier">dx</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">xs</span>[<span class="ruby-value">0</span>] }
+        <span class="ruby-identifier">result_ys</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">make_spline_interpolated_points</span>(
+            <span class="ruby-string">&#39;sample_xs&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">sample_xs</span>, <span class="ruby-string">&#39;xs&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">xs</span>, <span class="ruby-string">&#39;ys&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ys</span>,
+            <span class="ruby-string">&#39;start_slope&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2.5</span><span class="ruby-operator">*</span>(<span class="ruby-identifier">ys</span>[<span class="ruby-value">1</span>]<span class="ruby-operator">-</span><span class="ruby-identifier">ys</span>[<span class="ruby-value">0</span>])<span class="ruby-operator">/</span>(<span class="ruby-identifier">xs</span>[<span class="ruby-value">1</span>]<span class="ruby-operator">-</span><span class="ruby-identifier">xs</span>[<span class="ruby-value">0</span>]))
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">stroke_color</span> = <span class="ruby-constant">Blue</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">append_points_to_path</span>(<span class="ruby-identifier">sample_xs</span>, <span class="ruby-identifier">result_ys</span>)
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">stroke</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_marker</span>(<span class="ruby-string">&#39;Xs&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">sample_xs</span>, <span class="ruby-string">&#39;Ys&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">result_ys</span>,
+            <span class="ruby-string">&#39;marker&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Bullet</span>, <span class="ruby-string">&#39;scale&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.4</span>, <span class="ruby-string">&#39;color&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Green</span>);
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_marker</span>(<span class="ruby-string">&#39;Xs&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">xs</span>, <span class="ruby-string">&#39;Ys&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ys</span>,
+            <span class="ruby-string">&#39;marker&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Bullet</span>, <span class="ruby-string">&#39;scale&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.6</span>, <span class="ruby-string">&#39;color&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Red</span>);
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p><img src="../images/Sampled_Splines.png" /></p>
+          
+          
+
+          
+          <div class="method-source-code" id="make_spline_interpolated_points-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Special_Paths.rb, line 163</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">make_spline_interpolated_points</span>(<span class="ruby-identifier">dict</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-make_steps" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">make_steps</span><span
+            class="method-args">(dict)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates a &#39;staircase&#39; path with steps matching the given data
+points; returns 2-element array with first element a vector of the x values
+for the steps and second element a vector of the y values.</p>
+
+<p>Dictionary Entries</p>
+
+<pre class="ruby"><span class="ruby-string">&#39;xfirst&#39;</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>    <span class="ruby-comment"># x location for the start of the steps</span>
+<span class="ruby-string">&#39;x_first&#39;</span>                     <span class="ruby-comment"># Alias for &#39;xfirst&#39;</span>
+<span class="ruby-string">&#39;yfirst&#39;</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>    <span class="ruby-comment"># y location for the start of the steps</span>
+<span class="ruby-string">&#39;y_first&#39;</span>                     <span class="ruby-comment"># Alias for &#39;yfirst&#39;</span>
+<span class="ruby-string">&#39;xlast&#39;</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>    <span class="ruby-comment"># x location for the end of the steps</span>
+<span class="ruby-string">&#39;x_last&#39;</span>                      <span class="ruby-comment"># Alias for &#39;xlast&#39;</span>
+<span class="ruby-string">&#39;ylast&#39;</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>    <span class="ruby-comment"># y location for the end of the steps</span>
+<span class="ruby-string">&#39;y_last&#39;</span>                      <span class="ruby-comment"># Alias for &#39;ylast&#39;</span>
+<span class="ruby-string">&#39;xs&#39;</span>            =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_dvector</span>  <span class="ruby-comment"># The data x in figure coordinates</span>
+<span class="ruby-string">&#39;ys&#39;</span>            =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_dvector</span>  <span class="ruby-comment"># The data y in figure coordinates</span>
+<span class="ruby-string">&#39;dest_xs&#39;</span>       =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_dvector</span>  <span class="ruby-comment"># The x values for the steps will go here (optional).</span>
+<span class="ruby-string">&#39;dest_ys&#39;</span>       =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_dvector</span>  <span class="ruby-comment"># The y values for the steps will go here (optional).</span>
+</pre>
+
+<p>The widths of steps are determined by &#39;xfirst&#39;, &#39;xs&#39;, and
+&#39;xlast&#39;; the heights of steps are determined by &#39;yfirst&#39;,
+&#39;ys&#39;, and &#39;ylast&#39;.   The steps up and down occur at the
+midpoints between the given x locations.  If &#39;dest_xs&#39; are given in
+the dictionary, that vector will be set to the x values for the steps. 
+Similarly for &#39;dest_ys&#39;.</p>
+
+<p>Example</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">steps</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">do_box_labels</span>(<span class="ruby-string">&quot;Steps&quot;</span>, <span class="ruby-string">&quot;Position&quot;</span>, <span class="ruby-string">&quot;Average Count&quot;</span>)
+    <span class="ruby-identifier">xs</span> = <span class="ruby-constant">Dvector</span>[ <span class="ruby-value">1.0</span>, <span class="ruby-value">2.0</span>, <span class="ruby-value">5.0</span>, <span class="ruby-value">6.0</span>, <span class="ruby-value">7.0</span>, <span class="ruby-value">8.0</span>, <span class="ruby-value">10.0</span>, <span class="ruby-value">13.0</span>, <span class="ruby-value">17.0</span> ]
+    <span class="ruby-identifier">ys</span> = <span class="ruby-constant">Dvector</span>[ <span class="ruby-value">3.0</span>, <span class="ruby-value">3.7</span>, <span class="ruby-value">3.9</span>, <span class="ruby-value">4.2</span>, <span class="ruby-value">5.7</span>, <span class="ruby-value">6.6</span>,  <span class="ruby-value">7.1</span>,  <span class="ruby-value">6.7</span>,  <span class="ruby-value">4.5</span> ]
+    <span class="ruby-identifier">data_pts</span> = <span class="ruby-identifier">xs</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-identifier">x_first</span> = <span class="ruby-value">0.0</span>; <span class="ruby-identifier">x_last</span> = <span class="ruby-value">18.0</span>; <span class="ruby-identifier">y_first</span> = <span class="ruby-identifier">y_last</span> = <span class="ruby-value">2.5</span>
+    <span class="ruby-identifier">x_results</span> = <span class="ruby-constant">Dvector</span>[]
+    <span class="ruby-identifier">y_results</span> = <span class="ruby-constant">Dvector</span>[]
+    <span class="ruby-identifier">stps</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">make_steps</span>(
+        <span class="ruby-string">&#39;xs&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">xs</span>, <span class="ruby-string">&#39;ys&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ys</span>,
+        <span class="ruby-string">&#39;x_first&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">x_first</span>, <span class="ruby-string">&#39;y_first&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">y_first</span>,
+        <span class="ruby-string">&#39;x_last&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">x_last</span>, <span class="ruby-string">&#39;y_last&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">y_last</span>)
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_plot</span>(<span class="ruby-string">&#39;boundaries&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">-1</span>, <span class="ruby-value">19</span>, <span class="ruby-value">8</span>, <span class="ruby-value">2</span>]) <span class="ruby-keyword">do</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">fill_color</span> = <span class="ruby-constant">FloralWhite</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">fill_frame</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">stroke_color</span> = <span class="ruby-constant">Blue</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">append_points_to_path</span>(<span class="ruby-identifier">stps</span>[<span class="ruby-value">0</span>], <span class="ruby-identifier">stps</span>[<span class="ruby-value">1</span>])
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">stroke</span>
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_marker</span>(<span class="ruby-string">&#39;Xs&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">xs</span>, <span class="ruby-string">&#39;Ys&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ys</span>, <span class="ruby-string">&#39;marker&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Bullet</span>,
+            <span class="ruby-string">&#39;scale&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0.6</span>, <span class="ruby-string">&#39;color&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Red</span>);
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p><img src="../images/Steps.png" /></p>
+          
+          
+
+          
+          <div class="method-source-code" id="make_steps-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Special_Paths.rb, line 104</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">make_steps</span>(<span class="ruby-identifier">dict</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show_arrow" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show_arrow</span><span
+            class="method-args">(dict)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Draws an arrow connecting the given head and tail points and optionally
+adds head and tail markers rotated to match the slope of the line.</p>
+
+<p>Dictionary Entries</p>
+
+<pre class="ruby"><span class="ruby-string">&#39;x_head&#39;</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>      <span class="ruby-comment"># x coordinate of the head of the arrow</span>
+<span class="ruby-string">&#39;y_head&#39;</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>      <span class="ruby-comment"># y coordinate of the head of the arrow</span>
+<span class="ruby-string">&#39;head&#39;</span>          =<span class="ruby-operator">&gt;</span> [ <span class="ruby-identifier">x_head</span>, <span class="ruby-identifier">y_head</span> ] <span class="ruby-comment"># coordinates of the head of the arrow</span>
+<span class="ruby-string">&#39;x_tail&#39;</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>      <span class="ruby-comment"># x coordinate of the tail of the arrow</span>
+<span class="ruby-string">&#39;y_tail&#39;</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>      <span class="ruby-comment"># y coordinate of the tail of the arrow</span>
+<span class="ruby-string">&#39;tail&#39;</span>          =<span class="ruby-operator">&gt;</span> [ <span class="ruby-identifier">x_tail</span>, <span class="ruby-identifier">y_tail</span> ] <span class="ruby-comment"># coordinates of the tail of the arrow</span>
+<span class="ruby-string">&#39;line_width&#39;</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>      <span class="ruby-comment"># for the line joining head to tail</span>
+<span class="ruby-string">&#39;head_marker&#39;</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_marker</span>     <span class="ruby-comment"># default is Arrowhead (use &#39;None&#39; to omit)</span>
+<span class="ruby-string">&#39;tail_marker&#39;</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_marker</span>     <span class="ruby-comment"># default is BarThin (use &#39;None&#39; to omit)</span>
+<span class="ruby-string">&#39;head_scale&#39;</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>      <span class="ruby-comment"># scale for head_marker</span>
+<span class="ruby-string">&#39;tail_scale&#39;</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>      <span class="ruby-comment"># scale for tail_marker</span>
+<span class="ruby-string">&#39;color&#39;</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_color</span>      <span class="ruby-comment"># default for the following colors</span>
+<span class="ruby-string">&#39;head_color&#39;</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_color</span>      <span class="ruby-comment"># color for show_marker with head_marker</span>
+<span class="ruby-string">&#39;tail_color&#39;</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_color</span>      <span class="ruby-comment"># color for show_marker with tail_marker</span>
+<span class="ruby-string">&#39;line_color&#39;</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_color</span>      <span class="ruby-comment"># color for line from head to tail</span>
+</pre>
+
+<p>Example: &#39;t&#39; in this is the default <a
+href="FigureMaker.html">FigureMaker</a>.</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">show_arrows</span>
+    <span class="ruby-identifier">t</span>.<span class="ruby-identifier">stroke_rect</span>(<span class="ruby-value">0</span>,<span class="ruby-value">0</span>,<span class="ruby-value">1</span>,<span class="ruby-value">1</span>)
+    <span class="ruby-identifier">center_x</span> = <span class="ruby-value">0.5</span>; <span class="ruby-identifier">center_y</span> = <span class="ruby-value">0.5</span>; <span class="ruby-identifier">len</span> = <span class="ruby-value">0.45</span>
+    <span class="ruby-identifier">hls</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">rgb_to_hls</span>(<span class="ruby-constant">Red</span>)
+    <span class="ruby-identifier">angles</span> = <span class="ruby-value">36</span>
+    <span class="ruby-identifier">delta</span> = <span class="ruby-value">360.0</span><span class="ruby-operator">/</span><span class="ruby-identifier">angles</span>
+    <span class="ruby-identifier">angles</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">angle</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">angle</span> <span class="ruby-operator">*=</span> <span class="ruby-identifier">delta</span>
+        <span class="ruby-identifier">dx</span> = <span class="ruby-identifier">len</span><span class="ruby-operator">*</span><span class="ruby-identifier">cos</span>(<span class="ruby-identifier">angle</span><span class="ruby-operator">*</span><span class="ruby-constant">RADIANS_PER_DEGREE</span>)
+        <span class="ruby-identifier">dy</span> = <span class="ruby-identifier">len</span><span class="ruby-operator">*</span><span class="ruby-identifier">sin</span>(<span class="ruby-identifier">angle</span><span class="ruby-operator">*</span><span class="ruby-constant">RADIANS_PER_DEGREE</span>)
+        <span class="ruby-identifier">x</span> = <span class="ruby-identifier">center_x</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">dx</span>; <span class="ruby-identifier">y</span> = <span class="ruby-identifier">center_y</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">dy</span>
+        <span class="ruby-identifier">clr</span> = <span class="ruby-identifier">t</span>.<span class="ruby-identifier">hls_to_rgb</span>([<span class="ruby-identifier">angle</span>, <span class="ruby-identifier">hls</span>[<span class="ruby-value">1</span>], <span class="ruby-identifier">hls</span>[<span class="ruby-value">2</span>]])
+        <span class="ruby-identifier">t</span>.<span class="ruby-identifier">show_arrow</span>(
+            <span class="ruby-string">&#39;head&#39;</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>],
+            <span class="ruby-string">&#39;tail&#39;</span>=<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">center_x</span>, <span class="ruby-identifier">center_y</span>],
+            <span class="ruby-string">&#39;head_scale&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1.5</span>,
+            <span class="ruby-string">&#39;tail_marker&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;None&#39;</span>,
+            <span class="ruby-string">&#39;head_color&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">clr</span>)
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p><img src="../images/Arrows.png" /></p>
+          
+          
+
+          
+          <div class="method-source-code" id="show_arrow-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Special_Paths.rb, line 302</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show_arrow</span>(<span class="ruby-identifier">dict</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show_contour" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show_contour</span><span
+            class="method-args">(xs, ys, gaps = nil, color = nil, type = nil, legend = nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calls <a
+href="Special_Paths.html#method-i-show_polyline">#show_polyline</a> with
+the close_subpaths argument set to <code>false</code>.  See make_contour.</p>
+
+<p>Note: If you zoom in on a contour line, you&#39;ll discover that it is made
+up of lots of very short, disconnected line segments.  This may be a bug in
+the implementation, or it may be inherent in the algorithm.  I don&#39;t
+know which. It only becomes a problem if you try to use dashes or dots to
+stroke the contour line. The sequence of dashes and dots restarts at each
+section of the stroked line, so. for contours, it is constantly restarting
+and never getting very far.  The result is definitely NOT what you&#39;d
+expect.</p>
+
+<p>Rather than using dots and dashes for contours, you might consider using
+different colors and line widths.  For example, you might make every
+N&#39;th contour line thicker and darker to emphasize it.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="show_contour-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Special_Paths.rb, line 231</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show_contour</span>(<span class="ruby-identifier">xs</span>, <span class="ruby-identifier">ys</span>, <span class="ruby-identifier">gaps</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">color</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">type</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">legend</span> = <span class="ruby-keyword">nil</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show_error_bars" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show_error_bars</span><span
+            class="method-args">(dict)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Draws error bars at the given point.  The horizontal extent is given by
+&#39;dx&#39; or by &#39;dx_plus&#39; and &#39;dx_minus&#39; in case they
+are different.  Similarly, the vertical extent is either &#39;dy&#39; or
+&#39;dy_plus&#39; and &#39;dy_minus&#39;. The &#39;end_cap&#39; parameter
+specifies the length of end caps on the error bars in units of the text
+height.</p>
+
+<p>Dictionary Entries</p>
+
+<pre class="ruby"><span class="ruby-string">&#39;x&#39;</span>           =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>    <span class="ruby-comment"># x coordinate of the point</span>
+<span class="ruby-string">&#39;y&#39;</span>           =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>    <span class="ruby-comment"># x coordinate of the point</span>
+<span class="ruby-string">&#39;dx&#39;</span>          =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>    <span class="ruby-comment"># horizontal error bar from x - dx to x + dx</span>
+<span class="ruby-string">&#39;dy&#39;</span>          =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>    <span class="ruby-comment"># vertical error bar from y - dy to y + dy</span>
+<span class="ruby-string">&#39;dx_plus&#39;</span>     =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>    <span class="ruby-comment"># horizontal error bar from x to x + dx_plus</span>
+<span class="ruby-string">&#39;dx_minus&#39;</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>    <span class="ruby-comment"># horizontal error bar from x - dx_minus to x</span>
+<span class="ruby-string">&#39;dy_plus&#39;</span>     =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>    <span class="ruby-comment"># vertical error bar from y to y + dy_plus</span>
+<span class="ruby-string">&#39;dy_minus&#39;</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>    <span class="ruby-comment"># vertical error bar from y - dy_minus to y</span>
+<span class="ruby-string">&#39;color&#39;</span>       =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_color</span>    <span class="ruby-comment"># default is Black.</span>
+<span class="ruby-string">&#39;end_cap&#39;</span>     =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>    <span class="ruby-comment"># length in text heights (default is 0.15)</span>
+<span class="ruby-string">&#39;line_width&#39;</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a_float</span>    <span class="ruby-comment"># default is 1</span>
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="show_error_bars-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Special_Paths.rb, line 253</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show_error_bars</span>(<span class="ruby-identifier">dict</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show_polyline" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show_polyline</span><span
+            class="method-args">(xs, ys, color = nil, legend = nil, type = nil, gaps = nil, close_subpaths = nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Calls context, then, inside the new context, changes line_type and
+stroke_color (if those arguments are not <code>nil</code>), calls
+append_points_with_gaps_to_path, calls stroke, and then saves the legend
+information (if <em>legend</em> is not <code>nil</code>).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="show_polyline-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Special_Paths.rb, line 214</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show_polyline</span>(<span class="ruby-identifier">xs</span>, <span class="ruby-identifier">ys</span>, <span class="ruby-identifier">color</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">legend</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">type</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">gaps</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">close_subpaths</span> = <span class="ruby-keyword">nil</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

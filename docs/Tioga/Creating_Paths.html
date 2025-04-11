@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Tioga::Creating_Paths - RDoc Documentation</title>
+
+<link href="../fonts.css" rel="stylesheet">
+<link href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/search_index.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/searcher.js"></script>
+<script src="../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="Creating_Paths.html#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Doc< FigureMaker
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="Creating_Paths.html#method-i-append_curve_to_path">#append_curve_to_path</a>
+    
+    <li ><a href="Creating_Paths.html#method-i-append_point_to_path">#append_point_to_path</a>
+    
+    <li ><a href="Creating_Paths.html#method-i-append_points_to_path">#append_points_to_path</a>
+    
+    <li ><a href="Creating_Paths.html#method-i-append_points_with_gaps_to_path">#append_points_with_gaps_to_path</a>
+    
+    <li ><a href="Creating_Paths.html#method-i-bezier_control_points">#bezier_control_points</a>
+    
+    <li ><a href="Creating_Paths.html#method-i-close_path">#close_path</a>
+    
+    <li ><a href="Creating_Paths.html#method-i-croak_on_nonok_numbers">#croak_on_nonok_numbers</a>
+    
+    <li ><a href="Creating_Paths.html#method-i-croak_on_nonok_numbers-3D">#croak_on_nonok_numbers=</a>
+    
+    <li ><a href="Creating_Paths.html#method-i-discard_path">#discard_path</a>
+    
+    <li ><a href="Creating_Paths.html#method-i-move_to_point">#move_to_point</a>
+    
+    <li ><a href="Creating_Paths.html#method-i-update_bbox">#update_bbox</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Tioga::Creating_Paths">
+  <h1 id="class-Tioga::Creating_Paths" class="class">
+    class Tioga::Creating_Paths
+  </h1>
+
+  <section class="description">
+    
+<p>These are the general methods for creating paths for later use in PDF
+graphics operations.  See also <a
+href="Tutorial/SimpleFigure.html">Tutorial::SimpleFigure</a>.</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-append_curve_to_path" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">append_curve_to_path</span><span
+            class="method-args">(x1, y1, x2, y2, x3, y3)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Append a cubic Bezier curve to the current path. The curve extends from the
+current path end to the point given by the figure coordinates (x3, y3),
+using (x1, y1) and (x2, y2) as the Bezier control points (also in figure
+coordinates).  The new path end is (x3, y3).  See also
+bezier_control_points.</p>
+
+<p>The illustration shows in dark blue the curve that is added for the control
+points given in red.</p>
+
+<p><img src="../images/append_curve.png" /></p>
+          
+          
+
+          
+          <div class="method-source-code" id="append_curve_to_path-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Creating_Paths.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">append_curve_to_path</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>, <span class="ruby-identifier">x3</span>, <span class="ruby-identifier">y3</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-append_point_to_path" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">append_point_to_path</span><span
+            class="method-args">(x, y)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Append a straight line segment from the current path end to the point given
+by the figure coordinates (<em>x</em>, <em>y</em>).  The new path end point
+is (<em>x</em>, <em>y</em>).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="append_point_to_path-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Creating_Paths.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">append_point_to_path</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-append_points_to_path" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">append_points_to_path</span><span
+            class="method-args">(x_vec, y_vec)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>The arguments <em>x_vec</em> and <em>y_vec</em> should be Dvectors of equal
+lengths holding figure coordinates for points.  If there is an open subpath
+already under construction, the first point is added with <a
+href="Creating_Paths.html#method-i-append_point_to_path">#append_point_to_path</a>,
+but if the path is empty or has just been closed, then the first point is
+passed to <a
+href="Creating_Paths.html#method-i-move_to_point">#move_to_point</a>
+instead.  All subsequent points are used for calls to append_point_to_path.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="append_points_to_path-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Creating_Paths.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">append_points_to_path</span>(<span class="ruby-identifier">x_vec</span>, <span class="ruby-identifier">y_vec</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-append_points_with_gaps_to_path" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">append_points_with_gaps_to_path</span><span
+            class="method-args">(x_vec, y_vec, gaps, close_subpaths)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Like <a
+href="Creating_Paths.html#method-i-append_points_to_path">#append_points_to_path</a>,
+but where there is a gap, it does <a
+href="Creating_Paths.html#method-i-move_to_point">#move_to_point</a>
+instead of append_point_to_path.  If the flag <em>close_subpaths</em> is
+<code>true</code>, then does <a
+href="Creating_Paths.html#method-i-close_path">#close_path</a> before doing
+the <a href="Creating_Paths.html#method-i-move_to_point">#move_to_point</a>
+for each gap. The array <em>gaps</em> holds integer indices in
+<em>x_vec</em> and <em>y_vec</em> for locations that should be moved to.
+This routine is useful with sources that provide paths that may consist of
+many subpaths (such as make_contour).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="append_points_with_gaps_to_path-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Creating_Paths.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">append_points_with_gaps_to_path</span>(<span class="ruby-identifier">x_vec</span>, <span class="ruby-identifier">y_vec</span>, <span class="ruby-identifier">gaps</span>, <span class="ruby-identifier">close_subpaths</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-bezier_control_points" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">bezier_control_points</span><span
+            class="method-args">(x0, y0, delta_x, a, b, c)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Computes bezier control points corresponding to a given cubic. The cubic,
+y(x), is defined from x0 to x0+delta_x. At location x = x0 + dx, with dx
+between 0 and delta_x, define y = a*dx^3 + b*dx^2 + c*dx + y0. This routine
+returns [x1, y1, x2, y2, x3, y3], the Bezier control points to match this
+cubic.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="bezier_control_points-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Creating_Paths.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bezier_control_points</span>(<span class="ruby-identifier">x0</span>, <span class="ruby-identifier">y0</span>, <span class="ruby-identifier">delta_x</span>, <span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span>, <span class="ruby-identifier">c</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-close_path" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            close_path
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Closing a path has the effect of adding a line from the end of the current
+subpath to the start of that subpath as determined by the previous
+move_to_point. Typically, the last action for a closed path should be a
+call to <a href="Creating_Paths.html#method-i-close_path">#close_path</a>
+so that the line join will be done properly at the junction point; see
+stroke for details.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="close_path-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Creating_Paths.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">close_path</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-croak_on_nonok_numbers" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">croak_on_nonok_numbers</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>If <a
+href="Creating_Paths.html#method-i-croak_on_nonok_numbers">croak_on_nonok_numbers</a>
+is set, the kernel will emit a warning when it encounters a weird point
+(such as with infinite or NaN coordinates) in a primitive path operation.
+In any case, the faulty element in the path will be discarded.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="croak_on_nonok_numbers-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Creating_Paths.rb, line 95</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">croak_on_nonok_numbers</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-croak_on_nonok_numbers-3D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">croak_on_nonok_numbers=</span><span
+            class="method-args">(bool)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Sets the <a
+href="Creating_Paths.html#method-i-croak_on_nonok_numbers">croak_on_nonok_numbers</a>
+warning. On by default.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="croak_on_nonok_numbers-3D-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Creating_Paths.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">croak_on_nonok_numbers=</span>(<span class="ruby-identifier">bool</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-discard_path" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            discard_path
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Reset the path to empty.  This is done automatically after each stroke,
+fill, or clip.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="discard_path-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Creating_Paths.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">discard_path</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-move_to_point" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">move_to_point</span><span
+            class="method-args">(x, y)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Begin a new subpath by moving to the point given by the figure coordinates
+(x, y), omitting any connecting line segment. If the previous path
+construction operator in the current path was also <a
+href="Creating_Paths.html#method-i-move_to_point">#move_to_point</a>, the
+new <a href="Creating_Paths.html#method-i-move_to_point">#move_to_point</a>
+overrides it; no vestige of the previous <a
+href="Creating_Paths.html#method-i-move_to_point">#move_to_point</a>
+operation remains in the path.</p>
+
+<p>Note that once you start a path, you must finish with it before going on to
+anything else. So you need to do a sequence of path producer operations
+followed by a single path consumer operation. After the path consumer
+operation finishes, the current path is reset to empty and you can then
+safely do other operations such as change the line width or the line type.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="move_to_point-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Creating_Paths.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">move_to_point</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-update_bbox" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update_bbox</span><span
+            class="method-args">(x, y)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Adds the figure coordinates point (<em>x</em>, <em>y</em>) to the bounding
+box.  Not usually needed, but can be helpful with text that is outside the
+box determined by the graphics since the tioga kernel does not have exact
+information about how large the text bbox will be once TeX has done the
+typesetting.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="update_bbox-source">
+            <pre><span class="ruby-comment"># File lib/Tioga/Creating_Paths.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_bbox</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
