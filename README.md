@@ -73,5 +73,5 @@ But it has allowed me to remake plots from my thesis, website, and my research p
 I haven't been able to build for nearly a decade.
 And if you're looking at this repo, you're probably desperate to be able to use some old work of yours.
 
-Or maybe you just want to plot like it's 2010, we're coming out of the great recession, and Obamacare has just been passed.
+Or maybe you just want to plot like it's 2010, we're coming out of the great recession, the Iraq War is still raging, Occupy Wall Street is picking up, the DeepWater Horizon oil spill just happened, the first iPad just came out, Eyjafjallajökull is erupting, the Arab Spring uprisings are going on, and Obamacare has just been passed.
 More power to you!
