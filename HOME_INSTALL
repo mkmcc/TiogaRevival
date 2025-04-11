@@ -1,18 +1,27 @@
-#! /bin/sh 
+#! /bin/sh
 set -e
 if [ -z "$HOME_LIB" ]; then
     HOME_LIB=$HOME/lib/ruby
 fi
 if [ -z "$RUBY" ]; then
-    RUBY=ruby
+    # use OSX system ruby (2.x)
+    RUBY="/usr/bin/ruby"
 fi
+
+# ruby seems not to read current directory anymore.
+# add current directory to the rubylib path
+export RUBYLIB="$(pwd):${HOME_LIB}:$RUBYLIB"
 
 $RUBY setup.rb config --prefix=$HOME --siteruby=$HOME_LIB \
     --siterubyver=$HOME_LIB \
     --siterubyverarch=$HOME_LIB
-$RUBY setup.rb setup 
+
+$RUBY setup.rb setup
+
 $RUBY setup.rb install
+
 export RUBYLIB=$HOME_LIB
-cd tests 
-$RUBY ts_Tioga.rb 
+
+cd tests
+$RUBY ts_Tioga.rb
 echo "Don't" 'forget to set RUBYLIB='"$HOME_LIB"' in your shell config file !'

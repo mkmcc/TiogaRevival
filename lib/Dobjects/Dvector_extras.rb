@@ -348,7 +348,8 @@ class Float # :nodoc: all
     
 end
 
-class Fixnum # :nodoc: all
+# class Fixnum # :nodoc: all
+class Integer # :nodoc: all
     alias :pre_dvec_add :+
     def +(a)
         if a.class == Dobjects::Dvector

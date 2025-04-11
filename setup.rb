@@ -1264,25 +1264,29 @@ class Installer
   alias setup_dir_man noop
 
   def update_shebang_line(path)
-    return if no_harm?
-    return if config('shebang') == 'never'
-    old = Shebang.load(path)
-    if old
-      $stderr.puts "warning: #{path}: Shebang line includes too many args.  It is not portable and your program may not work." if old.args.size > 1
-      new = new_shebang(old)
-      return if new.to_s == old.to_s
-    else
-      return unless config('shebang') == 'all'
-      new = Shebang.new(config('rubypath'))
-    end
-    $stderr.puts "updating shebang: #{File.basename(path)}" if verbose?
-    open_atomic_writer(path) {|output|
-      File.open(path, 'rb') {|f|
-        f.gets if old   # discard
-        output.puts new.to_s
-        output.print f.read
-      }
-    }
+    return
+    # seems to be having issues with utf-8...
+    # however, this is not really needed if we are using system ruby
+    #
+    # return if no_harm?
+    # return if config('shebang') == 'never'
+    # old = Shebang.load(path)
+    # if old
+    #   $stderr.puts "warning: #{path}: Shebang line includes too many args.  It is not portable and your program may not work." if old.args.size > 1
+    #   new = new_shebang(old)
+    #   return if new.to_s == old.to_s
+    # else
+    #   return unless config('shebang') == 'all'
+    #   new = Shebang.new(config('rubypath'))
+    # end
+    # $stderr.puts "updating shebang: #{File.basename(path)}" if verbose?
+    # open_atomic_writer(path) {|output|
+    #   File.open(path, 'rb') {|f|
+    #     f.gets if old   # discard
+    #     output.puts new.to_s
+    #     output.print f.read
+    #   }
+    # }
   end
 
   def new_shebang(old)

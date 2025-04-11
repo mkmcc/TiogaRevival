@@ -214,8 +214,10 @@ class TestFunction < Test::Unit::TestCase
     end
     f = Function.new(x,y)
     a,b = f.reglin
-    assert_equal(a, 1.23)
-    assert_equal(b, 2.04)
+    # assert_equal(a, 1.23)
+    # assert_equal(b, 2.04)
+    assert_in_delta(1.23, a, 1e-12)
+    assert_in_delta(2.04, b, 1e-12)
   end
 
   # There is unfortunately no simple way to test the interpolations...

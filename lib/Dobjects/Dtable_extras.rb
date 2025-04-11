@@ -45,7 +45,8 @@ class Float
     end
 end
 
-class Fixnum
+#class Fixnum
+class Integer
     alias :pre_ddata_add :+
     def +(a)
         if a.class == Dobjects::Dtable
