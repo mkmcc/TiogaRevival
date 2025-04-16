@@ -8,12 +8,12 @@ This project updates and preserves Tioga for use on macOS Sequoia and Ruby 2.x.
 ## What is Tioga?
 
 Tioga is a Ruby library for creating publication-quality scientific figures, with:
-* Full LaTeX math rendering
+* Full LaTeX rendering for math and text
 * Fine-grained control over layout, axes, and everything on the page
-* Scripting flexibility for automating plots
+* Scripting for automating plots
 
 Originally developed in the mid-2000s, it saw use in astrophysics, physics, and other computational sciences.
-While development has long since stopped, its easy of use and the quality of its output remains unmatched (in my humble opinion).
+While development seems to have stopped, its ease of use and the quality of its output remains unmatched (in my humble opinion).
 
 
 ## How did I make this repo?
