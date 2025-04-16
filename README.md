@@ -79,7 +79,7 @@ It is under the folder `docs/`, and mirrored here: [Offline RDoc Documentation](
 Not really, no.  And neither do I know how to code in Ruby.
 But it has allowed me to remake plots from my thesis, website, and my research posters, without issue.
 I hadn't been able to build any of them for nearly a decade.
-And if you're looking at this repo, you probably also want to be able to use some old work of yours.
+And if you're looking at this repo, you probably also want to be able to reuse some old work of yours.
 
 Or maybe you just want to plot like it's 2010, we're two years into the great recession, the Iraq War is raging, Greece is about to default, Occupy Wall Street is picking up, DeepWater Horizon is spewing oil into the Gulf of Mexico, the first iPad just came out, Eyjafjallajökull is disrupting air travel worldwide, the Arab Spring uprisings are going on, Instagram just launched, and Obamacare has just been passed (to find out what was in it).
 If so, more power to you!
