@@ -8,8 +8,8 @@ This project updates and preserves Tioga for use on macOS Sequoia and Ruby 2.x.
 ## What is Tioga?
 
 Tioga is a Ruby library for creating publication-quality scientific figures, with:
-* Full LaTeX math rendering via embedded PDF
-* Fine-grained control over layout, axes, styles
+* Full LaTeX math rendering
+* Fine-grained control over layout, axes, and everything on the page
 * Scripting flexibility for automating plots
 
 Originally developed in the mid-2000s, it saw use in astrophysics, physics, and other computational sciences.
@@ -78,8 +78,8 @@ It is under the folder `docs/`, and mirrored here: [Offline RDoc Documentation](
 
 Not really, no.  And neither do I know how to code in Ruby.
 But it has allowed me to remake plots from my thesis, website, and my research posters, without issue.
-I haven't been able to build for nearly a decade.
-And if you're looking at this repo, you're probably desperate to be able to use some old work of yours.
+I hadn't been able to build any of them for nearly a decade.
+And if you're looking at this repo, you probably also want to be able to use some old work of yours.
 
-Or maybe you just want to plot like it's 2010, we're coming out of the great recession, the Iraq War is still raging, Occupy Wall Street is picking up, the DeepWater Horizon oil spill just happened, the first iPad just came out, Eyjafjallajökull is erupting, the Arab Spring uprisings are going on, Instagram just launched, and Obamacare has just been passed.
-More power to you!
+Or maybe you just want to plot like it's 2010, we're two years into the great recession, the Iraq War is raging, Greece is about to default, Occupy Wall Street is picking up, DeepWater Horizon is spewing oil into the Gulf of Mexico, the first iPad just came out, Eyjafjallajökull is disrupting air travel worldwide, the Arab Spring uprisings are going on, Instagram just launched, and Obamacare has just been passed (to find out what was in it).
+If so, more power to you!
